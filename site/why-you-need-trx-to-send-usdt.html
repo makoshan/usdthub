@@ -21,6 +21,14 @@ permalink: /why-you-need-trx-to-send-usdt.html
 <h2>为什么具体要 TRX，不是 USDT</h2>
 <p>TRON 上所有「矿工费」都以 TRX 结算。USDT 只是跑在 TRON 上的一个资产，它自己不能支付手续费 —— 就像你把一瓶水装进快递箱寄出去，水不能当运费，要另付邮费。TRX 就是这个邮费。</p>
 
+<h2>地址激活：新地址的隐藏成本</h2>
+<p>这是一条很多新手到真正转账失败才发现的规则：<strong>TRON 上一个全新地址，必须先被「激活」才能正常收币</strong>。激活的做法很简单 —— 向这个地址转入任意数量的 TRX（<a href="https://help.tokenpocket.pro/en/wallet-faq-en/tron-wallet/activation" target="_blank" rel="noopener noreferrer">TokenPocket 官方说明</a>指出通常 <strong>0.1 TRX 就够</strong>），但<strong>激活这个动作本身会从发送方的账户再扣一次资源</strong>：</p>
+<ul>
+  <li>如果发送方带宽足够，优先扣带宽（约 100 字节）。</li>
+  <li>如果带宽不够，<strong>直接扣 1 TRX 左右</strong> 作为激活费（这是 TRON 原生设计，不是钱包多收的）。</li>
+</ul>
+<p>所以第一次给新地址转 USDT 时，你实际要准备的资源 = 合约调用能量（~130k，新地址翻倍） + 激活 1 TRX + 带宽。imToken 官方文档也明确建议：<strong>钱包里至少存 50 TRX 以上，以确保转账能顺利发起</strong>。</p>
+
 <h2>要准备多少 TRX</h2>
 <table>
   <thead><tr><th>场景</th><th>建议准备</th><th>2026-04 估算</th></tr></thead>
@@ -50,6 +58,15 @@ permalink: /why-you-need-trx-to-send-usdt.html
   <li><strong>以为 TRX 不够时可以用 USDT 自动补</strong> —— 不能。链本身无法拿 USDT 当 gas。</li>
 </ul>
 
-<div class="risk"><strong>新手建议</strong><br>第一次用 TRC20，钱包里至少留 20 TRX。这是最便宜的保险。别等真正要转 10,000 USDT 时才发现自己少那 20 TRX。</div>
+<div class="risk"><strong>新手建议</strong><br>第一次用 TRC20，钱包里至少留 20 TRX（imToken 官方甚至建议 <strong>50 TRX 以上</strong>，尤其是收款方可能是新地址时）。这是最便宜的保险。别等真正要转 10,000 USDT 时才发现自己少那 20 TRX。</div>
+
+<h2>参考资料</h2>
+<p>下面是我觉得值得直接去看的官方文档，比任何中文二手解读都更准确：</p>
+<ul>
+  <li><a href="https://support.token.im/hc/zh-cn/articles/4513324315929-%E8%BD%AC%E8%B4%A6%E6%97%B6%E6%8F%90%E7%A4%BA-%E5%AF%B9%E6%96%B9%E5%9C%B0%E5%9D%80%E6%9C%AA%E6%BF%80%E6%B4%BB" target="_blank" rel="noopener noreferrer">imToken：转账时提示「对方地址未激活」</a> — 官方对这个最高频错误的完整解释。</li>
+  <li><a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">imToken：如何获得带宽与能量</a> — 免费额度、一键租能量、质押三种路径的官方说明。</li>
+  <li><a href="https://help.tokenpocket.pro/en/wallet-faq-en/tron-wallet/activation" target="_blank" rel="noopener noreferrer">TokenPocket：About TRON Address Activation</a> — 0.1 TRX 激活、四种激活方式。</li>
+  <li><a href="https://github.tokenpocket.pro/BlockchainGuide-TRON-EN/" target="_blank" rel="noopener noreferrer">TokenPocket《The Past, Present and Future of TRON Wallet》</a> — 完整 TRON 钱包机制说明（英文）。</li>
+</ul>
 
 <footer>继续读：<a href="./tron-energy-guide.html">TRON 能量指南</a>（完整机制 + 租能量路径）· <a href="./tron-bandwidth-and-energy.html">带宽和能量到底分别指什么</a> · 返回：<a href="./index.html">USDT 新手手册</a></footer>

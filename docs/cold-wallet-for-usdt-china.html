@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>冷钱包（硬件钱包）给 USDT 长期持有人的选择指南：Ledger / Trezor / OneKey / imKey | USDT 新手手册</title>
+  <meta name="description" content="当你的 USDT 从几千涨到几万美金之后，下一步该想的是「不归零」。本文整理 Ledger / Trezor / OneKey / imKey 四家主流硬件钱包的客观对比、4 个评价维度、中国大陆用户的供应链和物流考虑、硬件钱包到底防什么、不防什么。" />
+  <link rel="stylesheet" href="/usdthub/assets/css/style.css" />
+  
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+<a href="./index.html"><strong>USDT 新手手册</strong></a>
+        <a href="./start-here.html">Start Here</a>
+        <a href="./what-is-usdt.html">USDT 是什么</a>
+        <a href="./how-to-buy-usdt.html">怎么买 USDT</a>
+        <a href="./china-buy-crypto-notes.html">人在中国怎么买币</a>
+        <a href="./how-to-choose-a-wallet.html">怎么选钱包</a>
+        <a href="./how-to-send-usdt.html">怎么发送 USDT</a>
+        <a href="./usdt-networks-explained.html">USDT 网络</a>
+        <a href="./tron-energy-guide.html">TRON 能量</a>
+        <a href="./what-can-you-do-with-usdt.html">USDT 能做什么</a>
+        <a href="./use-usdt-for-ai.html">AI 支付</a>
+        <a href="./changelog.html">Changelog</a>
+        <a href="./editorial-policy.html">Editorial Policy</a>
+</nav>
+
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <h1>冷钱包（硬件钱包）给 USDT 长期持有人的选择指南</h1>
+<div class="meta">Chapter 2.7 · Wallets · Last updated: 2026-04-14</div>
+
+<p>当你钱包里的 USDT 从几百美金涨到几万美金之后，真正该想的就不再是「下一笔怎么赚」，而是「这笔钱怎么不归零」。手册前面讲过为什么不要把大额资产放在交易所（平台跑路、账号被风控、KYC 问题），但<strong>自托管热钱包</strong>（imToken / TokenPocket / 手机上的 MetaMask）也不是终点——它们仍然实时联网。对于真正打算<strong>长期囤 USDT / BTC / ETH</strong> 的人，下一步是<strong>冷钱包（硬件钱包）</strong>。</p>
+
+<p>本文基于一支中文视频整理，把「中国用户到底要不要买冷钱包、买哪一款、从哪里买」这三个问题讲清楚。<strong>没有邀请码，没有返佣</strong>——原视频里嵌入的推广链接和 Telegram 私信返现都没有搬运过来。</p>
+
+<div class="note"><strong>TL;DR</strong><br>
+① 冷钱包 = 离线保存私钥的物理设备，等于给你的链上资产多加一层「保险柜」。<br>
+② 主流四家：<strong>Ledger</strong>（全球装机量最大）、<strong>Trezor</strong>（最老牌，全开源）、<strong>OneKey</strong>（多链 + 开源 + 国内可直发）、<strong>imKey</strong>（imToken 出品，与 imToken App 深度集成，国内可直发）。<br>
+③ 中国大陆用户：能走<strong>国内仓直发</strong>的品牌（OneKey / imKey）在物流 / 供应链上更可控，不用过海关；Ledger / Trezor 需走国际直邮。<br>
+④ 没有唯一正确答案——按<strong>你平时用的生态</strong>来选：在用 imToken → imKey；多链 DeFi → OneKey / Ledger / Trezor；囤 BTC → Trezor；需要最大生态 → Ledger。<br>
+⑤ <strong>重要</strong>：冷钱包只解决「私钥被网络窃取」，解决不了「你自己被骗去签授权」——Drainer 钓鱼、假客服照样能骗走你硬件钱包里的钱。
+</div>
+
+<h2>一、什么是冷钱包（以及它到底防什么）</h2>
+
+<p>先回到区块链钱包的本质：<strong>谁拿到私钥 / 助记词，谁就能签名转走里面的钱</strong>。不是谁「登录」，不是谁「有账号」——而是谁能签名。</p>
+
+<p>热钱包（imToken、MetaMask、TokenPocket 等手机 / 浏览器钱包）在这件事上有一个结构性弱点：<strong>私钥存在联网设备里</strong>。哪怕钱包 App 本身做得再好，只要你的手机 / 电脑中了木马、剪贴板被劫持、浏览器装了恶意插件，私钥理论上就可能被远程拿到。</p>
+
+<p>冷钱包把这块切了：<strong>私钥生成和签名都在一块离线的小硬件里完成</strong>，电脑 / 手机全程只负责发送「未签名的交易」过去、拿回「已签名的交易」广播出去。即使你接入的电脑完全中毒，私钥也不会被带出来。</p>
+
+<table>
+  <thead><tr><th>对比</th><th>热钱包</th><th>冷钱包</th></tr></thead>
+  <tbody>
+    <tr><td>打个比方</td><td>手机里的支付宝</td><td>银行保险柜</td></tr>
+    <tr><td>私钥储存</td><td>联网设备</td><td>离线硬件</td></tr>
+    <tr><td>用的时候</td><td>随时能转</td><td>要拿出来、插上、按确认</td></tr>
+    <tr><td>被黑客远程偷走</td><td>理论上可能</td><td>几乎不可能</td></tr>
+    <tr><td>被社工 / 钓鱼骗去签</td><td>会</td><td><strong>一样会</strong></td></tr>
+  </tbody>
+</table>
+
+<p>最后一行特别重要：<strong>冷钱包不防自己被骗</strong>。你点了一个 Drainer 页面、硬件钱包弹出一个你看不懂的授权、你按了「确认」——钱一样走。这是手册反复强调的：地址、私钥、授权三件事分别该怕什么，不要混为一谈。</p>
+
+<h3>1.1 冷钱包会不会坏</h3>
+<p>会。硬件会坏，公司也可能倒闭。但这不影响你的资产，<strong>只要你保管好助记词</strong>。冷钱包只是一个存私钥的容器；助记词才是私钥本身的人类可读版本。硬件坏了 → 买一个新的（任意品牌，只要支持同一套 BIP39 标准）→ 恢复助记词 → 钱全在。</p>
+<p>所以真正的单点风险不是硬件，是<strong>那张助记词纸</strong>。</p>
+
+<h3>1.2 助记词纸也会坏——金属备份的意义</h3>
+<p>视频里提到一个容易被忽视的点：单靠纸本抄写助记词，<strong>火、水、搬家、家人误丢</strong>都可能让你把「理论上永存的 12 / 24 个词」弄没。如果你真的打算用冷钱包长期囤大额资产，配一套<strong>金属助记词板</strong>（OneKey KeyTag、Trezor Keep Metal、CryptoSteel Capsule 等不锈钢 / 钛合金刻字备份）非常值得。几十美金，解决一个真实概率不低的事故。</p>
+
+<h2>二、市面上的主流冷钱包</h2>
+
+<p>视频只重点讨论了三个主流品牌，其他小众品牌一律归为「等等」。我们沿用这个分类——不是因为其他品牌不好，而是<strong>冷钱包是你要押身家的设备，选存活时间够长、透明度够高的团队最省心</strong>。</p>
+
+<table>
+  <thead><tr><th>品牌</th><th>成立</th><th>总部</th><th>典型产品</th><th>特点</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Ledger</strong></td><td>2014</td><td>巴黎（法国）</td><td>Nano S Plus / Nano X / Stax</td><td>全球装机量最大；Secure Element 芯片；固件闭源；Ledger Live 生态完整</td></tr>
+    <tr><td><strong>Trezor</strong></td><td>2013</td><td>布拉格（捷克）</td><td>Model One / Safe 3 / Safe 5</td><td>业内最老牌；固件完全开源；Safe 系列加入 Secure Element</td></tr>
+    <tr><td><strong>OneKey</strong></td><td>2018</td><td>新加坡（生产在中国）</td><td>Classic 1s / Pro / Touch</td><td>固件开源；EVM / TRON / BTC 多链一体；国内可直发</td></tr>
+    <tr><td><strong>imKey</strong></td><td>2018</td><td>上海（中国）</td><td>Pro / Pro+</td><td>imToken 团队出品；Secure Element；与 imToken App 深度集成；国内可直发；管理端与部分组件开源</td></tr>
+  </tbody>
+</table>
+
+<p>四家都是以硬件钱包为业的团队，都对中国用户提供服务——差异更多在「你现在最常用哪个生态」：如果你已经在 imToken 里管 TRC20 USDT，imKey 最省事；如果你需要 EVM / BTC / Solana 多链全能，OneKey 覆盖最广；如果你偏好开源历史最久的团队，Trezor；如果你看重全球装机量和配件生态，Ledger。其他品牌（SafePal、Keystone、CoolWallet、Tangem、Ellipal 等）不是不能用，但新手默认从上面四家里挑一家基本不会有大错。</p>
+
+<h2>三、评价冷钱包的 4 个维度</h2>
+<p>下面是原视频作者的个人主观标准。它不是技术论文里的完整分析，但作为<strong>新手做购买决定</strong>的骨架是清楚的。这 4 个标准合起来筛，剩下的选项不多。</p>
+
+<ol class="steps">
+  <li><strong>代码是否开源</strong> — Ledger 固件<strong>闭源</strong>（Ledger Recover 引发过争议）；Trezor、OneKey 固件<strong>开源</strong>；imKey 的 Android/iOS 管理端与部分固件模块<strong>开源</strong>（GitHub 有 imkey-android / imkey-tool / imkey-core 等仓库），Secure Element 固件本身受芯片许可协议限制，不完全开源。</li>
+  <li><strong>是否经历过压力测试</strong> — Ledger / Trezor 都发生过信息泄露或前端攻击事故，但<strong>私钥从未从硬件里被网络端拿走</strong>。OneKey、imKey 截至本文写作无公开的用户资产被盗事故。这反过来印证了冷钱包的核心假设：厂商本身不保存、也无法访问你的私钥。</li>
+  <li><strong>冷钱包是否是主营业务</strong> — 公司会不会把注意力持续放在这条产品线上。Ledger、Trezor、OneKey 都是硬件钱包为主业。imKey 是 imToken 团队出品的硬件分支，与 imToken App 生态深度绑定——不是独立主营，但有成熟的钱包团队支撑。综合品牌里「顺手做一个硬件钱包」的，长期维护 / 固件更新 / 事故响应优先级都低得多。</li>
+  <li><strong>是否对中国大陆用户提供服务</strong> — 冷钱包在中国是<strong>合法合规的硬件</strong>，和买手机、Kindle 没区别。有些品牌明确不对大陆用户提供服务——出问题你都找不到人。Ledger、Trezor、OneKey、imKey 四家目前都服务中国用户，其中 OneKey 和 imKey 可从国内仓直发。</li>
+</ol>
+
+<h3>3.1 历史事故一览</h3>
+<table>
+  <thead><tr><th>品牌</th><th>事故</th><th>资产是否被盗</th></tr></thead>
+  <tbody>
+    <tr><td>Ledger</td><td>2020 客户信息泄露（约 27 万用户地址邮箱手机号外流），引发针对性钓鱼</td><td>信息泄露 → <strong>社工攻击</strong>间接损失存在；私钥本身未从设备外流</td></tr>
+    <tr><td>Ledger Connect Kit</td><td>2023-12 前端库被注入恶意代码，部分 dApp 用户中 Drainer，报道损失 ~$600k</td><td>发生在 <strong>dApp 前端</strong>层，不是硬件本身</td></tr>
+    <tr><td>Trezor</td><td>2022 邮件服务商 MailChimp 被入侵，用户邮箱泄露</td><td>无直接资产损失</td></tr>
+    <tr><td>OneKey</td><td>截至本文写作无公开的用户资产被盗事故</td><td>——</td></tr>
+    <tr><td>imKey</td><td>截至本文写作无公开的用户资产被盗事故</td><td>——</td></tr>
+  </tbody>
+</table>
+
+<p>几个值得注意的点：① 三家老牌硬件钱包公司都曾发生客户信息 / 周边服务泄露，但<strong>私钥本身都没被网络端偷走</strong>——冷钱包的核心假设成立。② 越靠近 dApp 前端、越多「便利性扩展」（比如 Ledger Recover、Ledger Live 里嵌入的 Swap / NFT），<strong>攻击面就越大</strong>。选哪家之后，尽量只用硬件本身做签名，不要过度依赖配套软件的附加功能。</p>
+
+<h2>四、谁该买冷钱包</h2>
+
+<h3>4.1 按资产规模</h3>
+<table>
+  <thead><tr><th>加密资产总额（USDT 等值）</th><th>建议</th></tr></thead>
+  <tbody>
+    <tr><td>&lt; $10,000</td><td>热钱包 + 交易所分散存放即可，现阶段重点是学会<strong>安全操作习惯</strong>（参见 <a href="./how-to-choose-a-wallet.html">怎么选钱包</a> / <a href="./how-to-send-usdt.html">怎么发送 USDT</a>）</td></tr>
+    <tr><td>$10,000 – $30,000</td><td><strong>建议配一个基础款冷钱包</strong>，开始把长期囤的部分搬到冷钱包</td></tr>
+    <tr><td>&gt; $30,000</td><td><strong>强烈建议</strong>。~$80–100 的硬件钱包 / 总资产的 0.3%，换来断网存储 + 物理签名二次确认</td></tr>
+  </tbody>
+</table>
+<p>算一下最简账：$80 / $30,000 ≈ 0.27%。用本金 0.27% 给剩下 99.7% 上一道物理锁。</p>
+
+<h3>4.2 按使用场景</h3>
+<p>下面任何一个场景对得上，就值得配冷钱包：</p>
+<ul>
+  <li><strong>分散存储</strong>：不想把大额资产都放在一家交易所 / 一个热钱包里</li>
+  <li><strong>链上理财 / 质押</strong>：放 Aave、Compound、TRON 上的 JustLend、或节点质押——授权都要硬件按一下，Drainer 很难骗你全盘授权</li>
+  <li><strong>断网囤币</strong>：BTC / ETH / USDT 长期持有，平时不操作</li>
+  <li><strong>节点质押 / 验证人</strong>：一个长期只做一件事的地址，放冷钱包最合适</li>
+  <li><strong>链上交易 + 打新 + "冲土狗"</strong>：把玩耍资金放单独一个冷钱包地址，亏了也炸不到囤币地址</li>
+</ul>
+
+<p>手册里 <a href="./how-to-choose-a-wallet.html">怎么选钱包</a> 那篇讲的是<strong>热钱包之间怎么选</strong>；这篇接在它后面：当你确认自己进入了「要给大额资产加保险柜」的阶段，才需要冷钱包。</p>
+
+<h2>五、具体购买建议</h2>
+
+<h3>5.1 中国大陆：优先国内仓直发的品牌</h3>
+<p><strong>理由不是品牌偏好，而是物流和供应链</strong>：</p>
+<ul>
+  <li><strong>OneKey（新加坡 / 生产地中国）</strong> 和 <strong>imKey（上海）</strong> 均可从<strong>国内仓直发</strong>，不过海关</li>
+  <li><strong>Ledger（法国）/ Trezor（捷克）</strong> 从欧洲邮寄到中国需要<strong>走国际物流 + 海关</strong></li>
+  <li>冷钱包最怕的供应链攻击就是<strong>「运输途中被拆包、植入恶意固件或预设助记词」</strong>。海外直邮在中转仓、海关环节有被开箱检查的可能，<strong>不确定性本身就是风险</strong></li>
+</ul>
+
+<p>中国海关对加密相关硬件并无明文禁运，但对冷钱包这种「一旦被动过手脚你可能永远不知道」的设备，能走<strong>官网 → 国内仓 → 直发</strong>的路径就尽量走。</p>
+
+<p>常见入门型号（价格以官网为准）：</p>
+<ul>
+  <li><strong>OneKey Classic 1s</strong>：约 $99，EVM / TRON / BTC / Solana 全覆盖</li>
+  <li><strong>imKey Pro</strong>：约 RMB 399，与 imToken App 深度集成，对已经在用 imToken 的用户零学习成本</li>
+</ul>
+
+<h3>5.2 海外：四家都是合理选择</h3>
+<p>如果你人在海外，官网直邮更可控，四家都可以按你的偏好选：</p>
+<ul>
+  <li><strong>Ledger Nano S Plus / Nano X</strong>：全球装机量最大，配件 / 第三方集成最丰富</li>
+  <li><strong>Trezor Safe 3 / Safe 5</strong>：业内最老牌，固件全开源，事故响应透明</li>
+  <li><strong>OneKey Pro / Touch</strong>：多链一体（EVM / TRON / BTC / Solana / Aptos 等），触屏界面</li>
+  <li><strong>imKey Pro / Pro+</strong>：如果你已经在 imToken 生态里管 TRC20 USDT，连接硬件几乎无学习成本</li>
+</ul>
+<p>有人会同时用两个不同品牌的冷钱包做「品牌级分散」——不是担心厂商跑路（只要你自己保管好助记词，厂商跑路你资产也不丢），更多是<strong>心理上的二次分散</strong>。对绝大多数人来说，<strong>选一家就够</strong>。</p>
+
+<h3>5.3 按生态选，不按品牌选</h3>
+<p>比起「哪家最好」，更实用的决策方式是<strong>先问自己平时用哪个生态</strong>：</p>
+<ul>
+  <li>已经在 imToken 里管 TRC20 USDT → <strong>imKey</strong> 最顺手</li>
+  <li>主要用 MetaMask / Rabby 做 EVM DeFi → <strong>Ledger / Trezor / OneKey</strong> 四家都能直接 WalletConnect / USB 连上，挑界面和价格喜欢的</li>
+  <li>囤 BTC 为主、想要最老牌最保守的开源方案 → <strong>Trezor</strong></li>
+  <li>多链全能 + 国内直发 → <strong>OneKey</strong></li>
+  <li>想要最大生态 / 配件最多 → <strong>Ledger</strong></li>
+</ul>
+
+<h3>5.4 购买渠道的硬规矩</h3>
+<div class="risk"><strong>不管买哪家，只从官网下单。</strong><br><br>
+✅ 官网：<a href="https://www.ledger.com/" target="_blank" rel="noopener noreferrer">ledger.com</a> / <a href="https://trezor.io/" target="_blank" rel="noopener noreferrer">trezor.io</a> / <a href="https://onekey.so/" target="_blank" rel="noopener noreferrer">onekey.so</a> / <a href="https://imkey.im/" target="_blank" rel="noopener noreferrer">imkey.im</a><br>
+❌ 淘宝 / 闲鱼 / 亚马逊第三方卖家 / 任何「二手」「代购」「拆封测试」的硬件钱包<br><br>
+已经出过的真实事故：二手 Ledger Nano 被卖家预设助记词、买家充值后币瞬间被转走。冷钱包是你<strong>下一代</strong>都可能用的设备，在采购环节省的那几十美金完全不值得。
+</div>
+
+<h2>六、收到硬件之后要做的几件事</h2>
+<p>不管你最终选哪家，收到包装那一刻要检查的是：</p>
+
+<ol class="steps">
+  <li><strong>包装完好</strong> — 没有拆封痕迹，安全封条没断。任何疑似被打开过的硬件，<strong>立即联系官网客服更换</strong>，不要开机使用。</li>
+  <li><strong>不使用厂家预置 PIN / 助记词</strong> — 一定要在你自己手里走一遍「新建钱包」流程，<strong>亲眼看着设备生成助记词</strong>。如果开机就显示一组「出厂助记词」——立即拒收。</li>
+  <li><strong>测试恢复流程</strong> — 在一条链上放极小金额（比如 $10 USDT），完整走一遍「擦除设备 → 用助记词恢复 → 地址一致」的流程，确认助记词抄写无误。</li>
+  <li><strong>金属备份</strong> — 正式搬大额资产之前，把助记词刻到金属板上（OneKey KeyTag、Trezor Keep Metal、CryptoSteel Capsule 都可以）。防火、防水、防时间。</li>
+  <li><strong>助记词和硬件分地存放</strong> — 硬件在家 / 助记词在银行保险箱；或者反过来。一个地方的事故（盗窃、火灾）不能同时带走两者。</li>
+  <li><strong>绝不数字化助记词</strong> — <strong>绝不</strong>拍照、上传网盘、发微信 / Telegram 给自己、存在密码管理器里。一旦进入任何联网设备，冷钱包全部意义就失效了。</li>
+</ol>
+
+<h2>七、硬件钱包不解决的事</h2>
+<p>最后一节专门讲<strong>冷钱包不是万能的</strong>——这是很多新手买了之后掉以轻心的来源。</p>
+<ul>
+  <li><strong>Drainer 钓鱼网站</strong>：你连上钱包，页面让你「签名验证」，你按硬件上的「确认」——资产被授权转走。硬件不认语义，只认你按了确认。</li>
+  <li><strong>假客服</strong>：「我是 OneKey 客服，您的钱包有异常，请把助记词发给我们验证」——<strong>任何</strong>索要助记词的客服都是骗子</li>
+  <li><strong>朋友借用</strong>：把解锁后的硬件给别人插上电脑、或者别人在你面前转账时记下你的 PIN——冷钱包防的是网络，不是现场</li>
+  <li><strong>授权合约没撤销</strong>：之前授权过的 DeFi 合约，即使你换到硬件钱包地址，如果授权还在，对方合约仍可转走相应代币。定期用 <a href="https://revoke.cash/" target="_blank" rel="noopener noreferrer">revoke.cash</a> 清理</li>
+</ul>
+
+<div class="note"><strong>一句话总结</strong><br>
+冷钱包把攻击面从「网络全世界」缩到了「你自己 + 你身边的人 + 你授权过的合约」。剩下的那部分，还是要靠<strong>手册里反复讲的操作习惯</strong>。</div>
+
+<h2>八、和手册其他章节的关系</h2>
+<p>这篇是<strong>冷钱包决策层</strong>。热钱包选择 / 日常转账 / 中国环境下的买卖流程分别在：</p>
+<ul>
+  <li><a href="./how-to-choose-a-wallet.html">怎么选钱包</a>——热钱包之间怎么选（imToken / TokenPocket / MetaMask）</li>
+  <li><a href="./how-to-send-usdt.html">怎么发送 USDT</a>——地址、授权、手续费那一套</li>
+  <li><a href="./china-buy-crypto-notes.html">人在中国怎么买 USDT / BTC</a>——先把币买到手的路径</li>
+  <li><a href="./binance-p2p-usdt.html">币安 P2P 买卖 USDT 实操</a>——入金出金怎么降低冻卡概率</li>
+  <li><a href="./china-first-time-donts.html">第一次别碰的事</a>——新手清单</li>
+</ul>
+
+<div class="risk"><strong>风险与合规提醒</strong><br>
+① 本文列出的品牌 / 型号仅为分析讨论，不构成购买推荐或投资建议。你自己必须做最终判断。<br>
+② 硬件钱包<strong>只从官方渠道</strong>购买。任何第三方（淘宝、闲鱼、亚马逊非官方店铺、个人代购）都存在被预置助记词的可能。<br>
+③ 任何索要助记词 / 私钥 / Keystore 的人或页面，一律视为诈骗——<strong>包括声称来自官方客服的</strong>。<br>
+④ 冷钱包不免除你对授权签名内容的审阅责任。Drainer 钓鱼对硬件钱包一样有效。
+</div>
+
+<h2>参考资料</h2>
+<div class="source-grid">
+  <a class="source-card" href="https://www.youtube.com/watch?v=8mr4V2mOfdI" target="_blank" rel="noopener noreferrer">
+    <span class="card-kicker">YouTube</span>
+    <span class="card-title">原视频教程</span>
+    <span class="card-copy">本文基于这支中文视频整理；品牌对比、4 个评价维度、中国用户购买建议都出自视频作者。原视频内的邀请码与返佣未搬运。</span>
+  </a>
+  <a class="source-card" href="https://www.ledger.com/" target="_blank" rel="noopener noreferrer">
+    <span class="card-kicker">官网</span>
+    <span class="card-title">Ledger</span>
+    <span class="card-copy">法国公司，2014 年成立。Nano S Plus / Nano X / Stax。固件闭源。</span>
+  </a>
+  <a class="source-card" href="https://trezor.io/" target="_blank" rel="noopener noreferrer">
+    <span class="card-kicker">官网</span>
+    <span class="card-title">Trezor</span>
+    <span class="card-copy">捷克公司，2013 年成立，业内最老牌之一。Model One / Safe 3 / Safe 5。全开源。</span>
+  </a>
+  <a class="source-card" href="https://onekey.so/" target="_blank" rel="noopener noreferrer">
+    <span class="card-kicker">官网</span>
+    <span class="card-title">OneKey</span>
+    <span class="card-copy">新加坡公司，生产地中国。Classic 1s / Pro / Touch。全开源，国内直发不过海关。</span>
+  </a>
+  <a class="source-card" href="https://revoke.cash/" target="_blank" rel="noopener noreferrer">
+    <span class="card-kicker">工具</span>
+    <span class="card-title">revoke.cash</span>
+    <span class="card-copy">查看并撤销历史 DeFi / 合约授权。硬件钱包不会替你撤销之前批过的授权。</span>
+  </a>
+  <a class="source-card" href="./how-to-choose-a-wallet.html">
+    <span class="card-kicker">手册</span>
+    <span class="card-title">怎么选钱包</span>
+    <span class="card-copy">热钱包之间怎么选（imToken / TokenPocket / MetaMask）。这篇是它的后一步。</span>
+  </a>
+</div>
+
+<footer>相关：<a href="./how-to-choose-a-wallet.html">怎么选钱包</a> · <a href="./how-to-send-usdt.html">怎么发送 USDT</a> · <a href="./china-buy-crypto-notes.html">人在中国怎么买币</a> · 返回：<a href="./index.html">USDT 新手手册</a></footer>
+
+    </div>
+  </main>
+</body>
+</html>

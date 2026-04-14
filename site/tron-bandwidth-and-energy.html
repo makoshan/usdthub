@@ -1,14 +1,71 @@
 ---
 layout: default
 title: "TRON 带宽和能量是什么"
-description: "写给新手的 TRON 资源入门：带宽和能量到底分别在说什么。"
+description: "TRON 上的两种资源：带宽（每天免费 600 字节）和能量（调合约要烧）。一页讲清楚分别是什么、怎么来、不够时怎么补，附 2026 年价格。"
 permalink: /tron-bandwidth-and-energy.html
 ---
 
 <h1>TRON 带宽和能量是什么</h1>
-  <div class="meta">TRON Note · Last updated: 2026-04-14</div>
-  <p>你可以把 TRON 资源先分成两类：</p><ul><li><strong>带宽</strong>：更像基础链上流量。</li><li><strong>能量</strong>：更像执行合约动作要消耗的资源。</li></ul>
-<div class="note"><strong>TL;DR</strong><br>如果你在 TRON 上只是偶尔操作，先知道“资源不足会影响成本或执行结果”就够了。等你开始高频使用，再细研究模型也不迟。</div>
-<h2>为什么新手总会碰到它</h2><p>因为 TRC20 USDT 转账本身就很容易把你带到这个问题上。你以为自己只是在“发个 U”，链上其实在做更复杂的事。</p>
-<h2>更实用的理解方式</h2><p>先把它当成“转账成功率和成本的背景条件”，而不是考试名词。这个理解对新手更有用。</p>
-  <footer>继续读：<a href="./how-to-get-tron-energy.html">TRON 能量怎么获得</a></footer>
+<div class="meta">TRON Note · Last updated: 2026-04-14</div>
+
+<p>TRON 上只有两种资源：<strong>带宽</strong>（Bandwidth）和 <strong>能量</strong>（Energy）。你如果只学一次，就记住下面这张表。</p>
+
+<div class="note"><strong>TL;DR</strong><br>带宽 = 发交易的字节数配额，每个账户每天免费 600 字节，USDT 转账只吃 ~345 字节，所以带宽一般不用操心。能量 = 调智能合约时烧的燃料，USDT 是合约资产，每笔转账吃约 65,000 能量（给新地址翻倍）。不够时系统自动烧 TRX 补上。</div>
+
+<h2>一张对照表</h2>
+<table>
+  <thead>
+    <tr><th></th><th>带宽 Bandwidth</th><th>能量 Energy</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>用途</td>
+      <td>发任何交易都要占的基础流量</td>
+      <td>调用智能合约（USDT 转账、DEX、质押等）</td>
+    </tr>
+    <tr>
+      <td>一笔 USDT 转账消耗</td>
+      <td>约 345 字节</td>
+      <td>约 65,000（老地址） / 130,000（新地址）</td>
+    </tr>
+    <tr>
+      <td>免费额度</td>
+      <td>每个账户每天 600 字节</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>怎么获得</td>
+      <td>默认每日刷新；也可质押 TRX 换更多</td>
+      <td>质押 TRX 或租能量</td>
+    </tr>
+    <tr>
+      <td>不够时怎么办</td>
+      <td>自动按 1,000 sun/字节 烧 TRX</td>
+      <td>自动按 100 sun/能量 烧 TRX（2025-08 Proposal #104 减半后价）</td>
+    </tr>
+    <tr>
+      <td>2026-04 单次 USDT 转账成本</td>
+      <td>345 × 1,000 sun ≈ 0.345 TRX ≈ $0.11（极少用到，日常用免费额度）</td>
+      <td>65,000 × 100 sun ≈ 6.5 TRX 合约基础 + 对方创建存储（如需）—— 实扣 13 TRX / 27 TRX</td>
+    </tr>
+  </tbody>
+</table>
+<p class="meta">TRX ≈ $0.32（2026-04）。能量单价数据：<a href="https://tronscan.org/#/data/charts2/energyConsumption" target="_blank" rel="noopener noreferrer">TronScan Energy Consumption</a>。</p>
+
+<h2>为什么新手 99% 时间只需要管能量</h2>
+<p>因为带宽每天免费 600，足够发两笔 USDT 转账（2 × 345 = 690，略超时会自动从 TRX 补 ~0.1 TRX，基本没感觉）。真正让你卡住的一定是能量：USDT 作为合约，每笔都必须烧几万到十几万能量，直接把 TRX 余额打空是常态。</p>
+
+<h2>怎么在钱包里看自己的资源</h2>
+<ol>
+  <li><strong>TronLink</strong>：主界面右上角「资源」。</li>
+  <li><strong>imToken</strong>：TRX 详情页 → 「资源管理」。</li>
+  <li><strong>OKX Wallet</strong>：TRON 主页 → 「Energy &amp; Bandwidth」。</li>
+  <li><strong>最通用</strong>：<a href="https://tronscan.org/" target="_blank" rel="noopener noreferrer">tronscan.org</a> 搜你的 T 开头地址，首页会直接显示剩余。</li>
+</ol>
+
+<h2>一个常见误解</h2>
+<p>很多新手以为「带宽」「能量」是某种 token 可以买卖 —— 不是。它们是<strong>账户级配额</strong>，只能用质押产生或通过第三方平台临时「借」。你看到有人说「买能量」，实际是指向第三方平台付 TRX，平台代付能量配额给你的地址。</p>
+
+<div class="risk"><strong>安全提醒</strong><br>正规租能量服务只要你的收款地址。任何要你填助记词、私钥、Keystore 文件的「能量服务」都是钓鱼。参见 <a href="./tron-energy-guide.html">TRON 能量指南</a>对租能量平台的清单。</div>
+
+<footer>继续读：<a href="./tron-energy-guide.html">TRON 能量指南</a>（租 / 质押 / 烧三种策略） · <a href="./why-you-need-trx-to-send-usdt.html">为什么转 TRC20 USDT 要准备 TRX</a> · 返回：<a href="./index.html">USDT 新手手册</a></footer>

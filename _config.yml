@@ -1,4 +1,22 @@
 title: "USDT 新手手册"
 description: "A beginner-friendly guide to buying, storing, sending, and using USDT"
+lang: zh-CN
+url: "https://makoshan.github.io"
+baseurl: "/usdthub"
 markdown: kramdown
 theme: null
+source: .
+destination: docs
+exclude:
+  - __pycache__
+  - .git
+  - .gitignore
+  - .bundle
+  - docs
+  - Gemfile
+  - Gemfile.lock
+  - markdown
+  - README.md
+  - scripts
+  - vendor
+plugins: []

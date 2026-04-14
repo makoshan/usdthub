@@ -1,114 +1,131 @@
 # USDT 新手手册
 
-一个面向新手的公开手册仓库。
+一个给新手看的公开手册。尽量把买、存、转、用这几件事讲清楚，少一点黑话，少一点过度营销，多一点能真正照着做的内容。
 
-目标不是做“返佣导航站”，而是做成一个能顺着读完并真正完成买、存、转、用的公开笔记库。
+如果你是第一次接触 USDT，建议从这里开始：
+- [Start Here（GitHub 阅读）](./markdown/start-here.md)
+- [Start Here（Pages 预览）](./start-here.html)
 
-一句话定位：
-- 中文：USDT 新手手册：教你买、存、转、用
-- English: A beginner-friendly guide to buying, storing, sending, and using USDT
+在线阅读（GitHub Pages）
+- https://makoshan.github.io/usdt-handbook/
 
-## 两种阅读方式
+## 阅读方式
 
-### 1. GitHub Pages / HTML 版本
-适合：像网站一样连续阅读。
+每篇内容都给两种入口：
+- GitHub 阅读：Markdown
+- Pages 预览：HTML
 
-主要入口：
-- `index.html`
-- `start-here.html`
-- `how-to-buy-usdt.html`
-- `china-buy-crypto-notes.html`
+如果你只是想在仓库里直接看内容，点 Markdown 就行。
+如果你想像网站一样连续阅读，点 HTML / Pages 就行。
 
-如果启用 GitHub Pages，默认首页就是：
-- `index.html`
+## 从哪里开始
 
-### 2. GitHub 仓库 / Markdown 版本
-适合：直接在 GitHub 里看内容，像看 handbook / notes 仓库。
+1. USDT 是什么
+- [Markdown](./markdown/what-is-usdt.md)
+- [HTML](./what-is-usdt.html)
 
-Markdown 镜像目录：
-- `markdown/README.md`
-- `markdown/index.md`
-- `markdown/how-to-buy-usdt.md`
-- `markdown/china-buy-crypto-notes.md`
+2. 如何购买 Tether USDt（USDT）
+- [Markdown](./markdown/how-to-buy-usdt.md)
+- [HTML](./how-to-buy-usdt.html)
 
-说明：
-- HTML 版本用于 Pages / 本地预览
-- Markdown 版本用于 GitHub 仓库内直接阅读
-- Markdown 镜像由脚本自动从 HTML 导出，避免手工维护两套正文
+3. 人在中国怎么买 USDT / BTC
+- [Markdown](./markdown/china-buy-crypto-notes.md)
+- [HTML](./china-buy-crypto-notes.html)
 
-## 主要页面
+4. 怎么选钱包
+- [Markdown](./markdown/how-to-choose-a-wallet.md)
+- [HTML](./how-to-choose-a-wallet.html)
 
-### 首页与入口
-- `index.html` — 手册首页
-- `start-here.html` — 从哪里开始
-- `changelog.html` — 更新记录
+5. 怎么发送 USDT
+- [Markdown](./markdown/how-to-send-usdt.md)
+- [HTML](./how-to-send-usdt.html)
 
-### 基础章节
-- `what-is-usdt.html` — USDT 是什么
-- `how-to-buy-usdt.html` — 如何购买 Tether USDt（USDT）
-- `how-to-choose-a-wallet.html` — 怎么选钱包
-- `how-to-send-usdt.html` — 怎么发送 USDT
-- `usdt-networks-explained.html` — TRC20、ERC20、BEP20 有什么区别
+6. TRC20、ERC20、BEP20 有什么区别
+- [Markdown](./markdown/usdt-networks-explained.md)
+- [HTML](./usdt-networks-explained.html)
 
-### 中国用户专题
-- `china-buy-crypto-notes.html` — 人在中国怎么买 USDT / BTC
-- `china-7-common-mistakes.html` — 在中国买币最容易踩的 7 个坑
-- `china-c2c-otc-risks.html` — C2C / OTC 到底在怕什么
-- `china-first-time-donts.html` — 第一次别碰的事
+## 中国用户专题
 
-### TRON / TRC20
-- `tron-energy-guide.html` — TRON 能量指南
-- `why-you-need-trx-to-send-usdt.html` — 为什么转 TRC20 USDT 要准备 TRX
-- `tron-bandwidth-and-energy.html` — TRON 带宽和能量是什么
-- `how-to-get-tron-energy.html` — TRON 能量怎么获得
-- `how-to-reduce-trc20-usdt-fees.html` — TRC20 USDT 手续费怎么省
+1. 人在中国怎么买 USDT / BTC
+- [Markdown](./markdown/china-buy-crypto-notes.md)
+- [HTML](./china-buy-crypto-notes.html)
 
-### Use Cases
-- `what-can-you-do-with-usdt.html` — USDT 可以拿来做什么
-- `use-usdt-for-ai.html` — 如何用 USDT 订阅 AI
-- `use-usdt-for-esim-and-vpn.html` — 如何用 USDT 买 eSIM 和 VPN
-- `use-usdt-for-travel.html` — 出国旅游时，USDT 有哪些实际用途
-- `use-usdt-for-cross-border-payments.html` — 用 USDT 做跨境小额结算前要先确认什么
+2. 在中国买币最容易踩的 7 个坑
+- [Markdown](./markdown/china-7-common-mistakes.md)
+- [HTML](./china-7-common-mistakes.html)
 
-### Trust
-- `how-we-review-wallets-and-apps.html` — 钱包与应用评测原则
-- `editorial-policy.html` — 编辑原则与披露
+3. C2C / OTC 到底在怕什么
+- [Markdown](./markdown/china-c2c-otc-risks.md)
+- [HTML](./china-c2c-otc-risks.html)
 
-## GitHub Pages 相关文件
-- `_config.yml` — GitHub Pages 基础配置
-- `.nojekyll` — 禁用 Jekyll 处理，避免静态文件路径被误处理
-- `robots.txt` — 搜索引擎抓取规则
-- `sitemap.xml` — 页面站点地图
-- `404.html` — Pages 404 页面
-- `index.html` — Pages 首页
+4. 第一次别碰的事
+- [Markdown](./markdown/china-first-time-donts.md)
+- [HTML](./china-first-time-donts.html)
 
-## Markdown 镜像与导出
-- `markdown/` — 仓库阅读用 Markdown 镜像
-- `scripts/export_markdown_mirrors.py` — 从 HTML 导出 Markdown 镜像
+## TRON / TRC20
 
-导出命令：
-- `python3 scripts/export_markdown_mirrors.py`
+1. TRON 能量指南
+- [Markdown](./markdown/tron-energy-guide.md)
+- [HTML](./tron-energy-guide.html)
 
-## 本地预览
-- `python3 -m http.server 8008`
-- 然后访问 `http://127.0.0.1:8008/index.html`
+2. 为什么转 TRC20 USDT 要准备 TRX
+- [Markdown](./markdown/why-you-need-trx-to-send-usdt.md)
+- [HTML](./why-you-need-trx-to-send-usdt.html)
 
-## 基础校验
-- 站点检查文档：`QA-CHECKLIST.md`
-- 链接检查脚本：`scripts/check_site.py`
+3. TRON 带宽和能量是什么
+- [Markdown](./markdown/tron-bandwidth-and-energy.md)
+- [HTML](./tron-bandwidth-and-energy.html)
 
-## 内容原则
-- 先解释问题，再推荐工具
-- 第一人称，但不过度表演“亲历感”
-- 先风险提醒，再给默认路径
-- 具体平台名要有，但不能写成硬广
-- 中国用户语境下，重点写支付风控、问题资金、错误网络、错误路径
-- 推荐工具用：`beginner-friendly option` / `editor’s pick`
-- 避免：“最强”“闭眼冲”“稳赚”
+4. TRON 能量怎么获得
+- [Markdown](./markdown/how-to-get-tron-energy.md)
+- [HTML](./how-to-get-tron-energy.html)
 
-## 当前状态
-- HTML 版本：已可本地预览
-- Markdown 镜像：已生成，可直接在 GitHub 中阅读
-- GitHub Pages 上线所需静态文件：已补齐（_config.yml / .nojekyll / robots.txt / sitemap.xml / 404.html）
-- 本地内部链接：已做检查，无缺失本地链接
-- 第一版：已经可作为完整公开草案使用
+5. TRC20 USDT 手续费怎么省
+- [Markdown](./markdown/how-to-reduce-trc20-usdt-fees.md)
+- [HTML](./how-to-reduce-trc20-usdt-fees.html)
+
+## Use Cases
+
+1. USDT 可以拿来做什么
+- [Markdown](./markdown/what-can-you-do-with-usdt.md)
+- [HTML](./what-can-you-do-with-usdt.html)
+
+2. 如何用 USDT 订阅 AI
+- [Markdown](./markdown/use-usdt-for-ai.md)
+- [HTML](./use-usdt-for-ai.html)
+
+3. 如何用 USDT 买 eSIM 和 VPN
+- [Markdown](./markdown/use-usdt-for-esim-and-vpn.md)
+- [HTML](./use-usdt-for-esim-and-vpn.html)
+
+4. 出国旅游时，USDT 有哪些实际用途
+- [Markdown](./markdown/use-usdt-for-travel.md)
+- [HTML](./use-usdt-for-travel.html)
+
+5. 用 USDT 做跨境小额结算前要先确认什么
+- [Markdown](./markdown/use-usdt-for-cross-border-payments.md)
+- [HTML](./use-usdt-for-cross-border-payments.html)
+
+## Trust
+
+1. How We Review Wallets and Apps
+- [Markdown](./markdown/how-we-review-wallets-and-apps.md)
+- [HTML](./how-we-review-wallets-and-apps.html)
+
+2. Editorial Policy / Disclosure
+- [Markdown](./markdown/editorial-policy.md)
+- [HTML](./editorial-policy.html)
+
+## 更新记录
+- [Markdown](./markdown/changelog.md)
+- [HTML](./changelog.html)
+
+## Markdown 全部目录
+- [markdown/README.md](./markdown/README.md)
+
+## 说明
+
+- 这不是交易平台，也不是投资建议。
+- 这里优先解释问题，再推荐工具。
+- imToken 在手册里的角色是 beginner-friendly option，不是站点品牌本身。
+- 中国用户相关内容，重点会写支付风控、问题资金、错误网络、错误路径，而不是只讲理论。

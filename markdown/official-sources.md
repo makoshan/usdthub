@@ -7,9 +7,9 @@ source_html: "official-sources.html"
 
 > References Hub · Last updated: 2026-04-14
 
-这一页不讲概念，直接放我觉得最值得存书签的官方入口。目的只有一个：**当你准备真转账、真买币、真选钱包时，别只看二手转述。**
+这一页不讲概念，直接放我觉得最值得存书签的官方入口。真转账、真买币、真选钱包之前，别只看二手转述。
 
-> 怎么用这页：如果你在看「怎么买 USDT」，重点看交易平台、Tether 和钱包下载入口；如果你在看「TRON 能量 / 转账」，重点看 imToken TRX 帮助中心、TRON Developer Docs 和 TronScan；如果你在看「怎么选钱包」，重点看各钱包官方下载安装页和硬件钱包兼容说明。
+> 怎么用这页：看「怎么买 USDT」就去翻交易平台、Tether 和钱包下载入口；看「TRON 能量 / 转账」就去翻 imToken TRX 帮助中心、TRON Developer Docs 和 TronScan；看「怎么选钱包」就去翻各钱包官方下载安装页和硬件钱包兼容说明。
 
 ## 1. TRON / TRC20 / 转账资源
 

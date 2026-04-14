@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USDT 新手手册</title>
+  <meta name="description" content="A beginner-friendly guide to buying, storing, sending, and using USDT" />
+  <link rel="stylesheet" href="/usdthub/assets/css/style.css" />
+  
+</head>
+<body>
+  <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 
@@ -7,339 +18,172 @@
   
   <url>
     <loc>http://localhost:4000/usdthub/changelog.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/china-7-common-mistakes.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/china-buy-crypto-notes.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/china-c2c-otc-risks.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/china-first-time-donts.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/editorial-policy.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/how-to-buy-usdt.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/how-to-choose-a-wallet.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/how-to-get-tron-energy.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/how-to-reduce-trc20-usdt-fees.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/how-to-send-usdt.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/how-we-review-wallets-and-apps.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/index.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/changelog.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/china-7-common-mistakes.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/china-buy-crypto-notes.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/china-c2c-otc-risks.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/china-first-time-donts.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/editorial-policy.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/how-to-buy-usdt.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/how-to-choose-a-wallet.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/how-to-get-tron-energy.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/how-to-reduce-trc20-usdt-fees.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/how-to-send-usdt.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/how-we-review-wallets-and-apps.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/start-here.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/tron-bandwidth-and-energy.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/tron-energy-guide.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/usdt-networks-explained.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/use-usdt-for-ai.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/use-usdt-for-cross-border-payments.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/use-usdt-for-esim-and-vpn.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/use-usdt-for-travel.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/what-can-you-do-with-usdt.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/what-is-usdt.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
-  </url>
-  
-
-  
-  <url>
-    <loc>http://localhost:4000/usdthub/markdown/why-you-need-trx-to-send-usdt.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/start-here.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/tron-bandwidth-and-energy.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/tron-energy-guide.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/usdt-networks-explained.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/use-usdt-for-ai.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/use-usdt-for-cross-border-payments.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/use-usdt-for-esim-and-vpn.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/use-usdt-for-travel.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/what-can-you-do-with-usdt.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/what-is-usdt.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
   
   <url>
     <loc>http://localhost:4000/usdthub/why-you-need-trx-to-send-usdt.html</loc>
-    <lastmod>2026-04-14T18:17:55+08:00</lastmod>
+    <lastmod>2026-04-14T18:38:36+08:00</lastmod>
   </url>
   
 
 </urlset>
+
+</body>
+</html>

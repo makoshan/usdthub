@@ -72,13 +72,19 @@
 <p>下面这些钱包在转账流程里直接集成了租能量，体验更省事：</p>
 
 <h4>imToken（2.15.6 起，一键租能量）</h4>
-<p><a href="https://token.im/trx-wallet" target="_blank" rel="noopener noreferrer"><img src="./assets/css/imtoken-logo.png" alt="imToken" style="height:28px;vertical-align:middle;margin-right:6px;" />imToken</a> 官方文档《<a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">如何获得带宽与能量</a>》给出的官方操作：</p>
+<p><a href="https://token.im/trx-wallet" target="_blank" rel="noopener noreferrer"><img src="./assets/css/imtoken-logo.png" alt="imToken" style="height:28px;vertical-align:middle;margin-right:6px;" />imToken</a> 官方帮助中心《<a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">如何获得带宽与能量</a>》给出了完整的三条路径。我只摘关键动作（见下图）：</p>
+
+<figure class="doc-shot">
+  <img src="./assets/css/imtoken-energy-card.svg" alt="imToken 帮助中心：如何获得带宽与能量 参考卡片" />
+  <figcaption>来源：<a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">imToken 帮助中心 · 如何获得带宽与能量</a>。官方推荐顺序是：① 用 TRX 租赁（最推荐）→ ② 直接燃烧 TRX（钱包里备 50–100 TRX）→ ③ 冻结 TRX（建议 13,100–13,500 TRX，Stake 2.0 解冻要 14 天）。</figcaption>
+</figure>
+
 <ol>
-  <li>在 USDT 转账页面点「支付 TRX 租能量」。</li>
-  <li>发送这笔租能量交易（会先扣一小笔 TRX）。</li>
+  <li>在 USDT 转账页面选「支付 TRX 租赁能量」。</li>
+  <li>发送这笔能量租赁交易（会先扣一小笔 TRX）。</li>
   <li>能量到账后，钱包自动继续发送你的 USDT 转账。</li>
 </ol>
-<p>也可以在 TRON 钱包首页点「Rent / 租能量」，跳转到 <a href="https://feee.io/" target="_blank" rel="noopener noreferrer">Feee.io</a> 按数量和时长租。</p>
+<p>也可以在 TRON 钱包首页点「能量租赁」入口进 <a href="https://feee.io/" target="_blank" rel="noopener noreferrer">Feee.io</a>，按数量和时长租。</p>
 
 <h4>TokenPocket（EnergyPay）</h4>
 <p><a href="https://help.tokenpocket.pro/en/wallet-faq-en/tron-wallet/energy" target="_blank" rel="noopener noreferrer">TokenPocket 能量租赁服务</a>官方说明里，可以直接在转账页面把「Pay With」切成 TRX 或 USDT/USDD，开启 Energy Rental 后一笔完成。两种计价：按笔 EnergyPay 或按时长 Fast Trading。</p>
@@ -90,21 +96,22 @@
 </ul>
 
 <h2>路径 C：质押 TRX 换永久每日能量</h2>
-<p>逻辑：把 TRX「冻」在账户里（质押 / Freeze），换取每日自动刷新的能量配额。解冻要 3 天。</p>
+<p>逻辑：把 TRX「冻」在账户里（质押 / Freeze），换取每日自动刷新的能量配额。Stake 2.0 下解冻操作需等 <strong>14 天</strong>（这是 TRON 协议层的硬性等待期）。</p>
 <table>
-  <thead><tr><th>质押量</th><th>每日能量</th><th>折算</th><th>适合</th></tr></thead>
+  <thead><tr><th>质押量</th><th>每日能量</th><th>折算</th><th>出处</th></tr></thead>
   <tbody>
-    <tr><td>约 2,500 TRX（$800）</td><td>~65,000</td><td>每天 1 笔 USDT 转账免费</td><td>每天 1–2 笔</td></tr>
-    <tr><td>约 5,000 TRX（$1,600）</td><td>~130,000</td><td>每天 2 笔免费，或 1 笔给新地址</td><td>每天 2–3 笔</td></tr>
+    <tr><td>约 2,500 TRX（$800）</td><td>~65,000</td><td>每天 1 笔 USDT 转账免费</td><td>理论下限</td></tr>
+    <tr><td><strong>13,100–13,500 TRX（≈ $4,200）</strong></td><td>~330,000+</td><td>每天 5 笔免费、留足安全余量</td><td>imToken 官方建议</td></tr>
     <tr><td>10,000 TRX（$3,200）</td><td>~260,000</td><td>每天 4 笔免费</td><td>商家 / 代付</td></tr>
   </tbody>
 </table>
+<p class="meta">imToken 官方建议的 13,100–13,500 比「每天恰好 1 笔」的理论值高，原因是：高频用户经常有「一次多笔」「新地址（×2 能量）」「DApp 调用」等波动，多冻一点是为了留余量，而不是保守。</p>
 
 <h3>怎么质押</h3>
 <ol>
   <li>在 TronLink 主页 → Resources → Stake，或直接打开 <a href="https://tronscan.org/#/wallet/resource" target="_blank" rel="noopener noreferrer">tronscan.org/#/wallet/resource</a>。</li>
   <li>选 Energy 或 Bandwidth（USDT 用户选 Energy）。</li>
-  <li>选 Stake 2.0（新版，资源可以随时解冻）。</li>
+  <li>选 Stake 2.0（新版；发起解冻后要等 14 天才能取回本金，这是 TRON 协议层硬等待，不是钱包限制）。</li>
   <li>输入要质押的 TRX 数量 → 确认。</li>
   <li>能量配额即时到账，每天自动刷新。</li>
 </ol>

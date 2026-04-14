@@ -8,16 +8,29 @@ permalink: /use-usdt-for-ai.html
 <h1>如何用 USDT 订阅 ChatGPT</h1>
 <div class="meta">Chapter 4 · Use Cases · Last updated: 2026-04-14</div>
 
+<nav class="toc" aria-label="目录">
+  <div class="toc-title">本文目录</div>
+  <ol>
+    <li><a href="#s1">为什么这是一条真实问题</a></li>
+    <li><a href="#s2">完整流程：5 步</a></li>
+    <li><a href="#s3">选 U 卡要看这 6 件事</a></li>
+    <li><a href="#s4">为什么说这是「一劳永逸」</a></li>
+    <li><a href="#s5">真正容易翻车的地方</a></li>
+    <li><a href="#s6">其他还活着的兜底方案</a></li>
+    <li><a href="#s7">一张卡的生命周期：从开卡到长期维护</a></li>
+    <li><a href="#s8">参考资料</a></li>
+  </ol>
+</nav>
+
 <p>先说我对这件事的定调：如果你在中国大陆、长期使用 ChatGPT，又不想每个月都为「怎么续费」操心 —— <strong>U 卡（USDT 虚拟信用卡）+ USDT 链上充值</strong> 就是目前最接近「一劳永逸」的做法。不是因为它最花哨，而是因为它把支付这件事收拢到你自己控制的两件工具里：你的钱包 和 你自己名下的卡。中间没有代充、没有合租、没有每月担心封号。</p>
 
 <div class="note"><strong>TL;DR</strong><br>开一张支持 USDT 充值的虚拟美元卡（U 卡），把 USDT 从自托管钱包转进去，再去 <a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">chat.openai.com</a> 绑定这张卡订阅 ChatGPT Plus（$20/月）或 Pro（$200/月）。一次绑定，之后每月自动续费 —— 你只要保证卡里余额够下一笔扣款。<strong>关键点</strong>：① 选的 U 卡要能过 Stripe 风控；② 卡上至少留两个月订阅费当缓冲；③ 用独立、非主钱包的地址去充 U 卡。</div>
 
-<h2>为什么这是一条真实问题</h2>
+<h2 id="s1">为什么这是一条真实问题</h2>
 <p>OpenAI 不接中国大陆发行的信用卡。根据多家账号平台 2026 Q1 的数据，中国大陆 Visa / 万事达直接绑 ChatGPT Plus 的拒付率在 89% 以上 —— 即使偶尔刷过去，Stripe 的风控也会在第二个月把账号标成高风险。直接拿境外实卡订阅当然可行，但绝大多数用户没有境外实卡。</p>
 <p>过去两年，国内用户主要靠 <strong>WildCard 野卡</strong> 这类虚拟卡解决这个问题。但 WildCard 已于 <strong>2025 年 7 月 12 日</strong>宣布停止全部业务；随后一大批国内虚拟卡平台也陆续跟着出问题。现在能稳定用的虚拟卡，基本都是<strong>境外主体发行、支持 USDT 充值、走 KYC 的 U 卡</strong>。门槛比以前高一点，但也正因为如此，活下来的几家明显更抗风控。</p>
 
-<h2>完整流程：5 步</h2>
-
+<h2 id="s2">完整流程：5 步</h2>
 <ol class="steps">
   <li><strong>准备 USDT（推荐 TRC20）</strong> — 从交易所或自托管钱包里备一笔 TRC20 USDT。金额建议 <strong>至少 $50–$100</strong>，够两三个月订阅费用加上开卡费。走 TRC20 是因为链上手续费最便宜，见 <a href="./tron-energy-guide.html">TRON 能量指南</a>。</li>
   <li><strong>申请 U 卡并完成 KYC</strong> — 在你选的 U 卡平台上传身份证 / 护照正反面 + 人脸识别，同时支付开卡费（通常 $10–$20 USDT）。KYC 一般当天出结果。拿到的通常是一张 Visa / 万事达虚拟卡，有卡号、CVV、过期日。</li>
@@ -26,7 +39,7 @@ permalink: /use-usdt-for-ai.html
   <li><strong>设一个「自动补仓」阈值</strong> — 给 U 卡里留至少 <strong>两个月订阅费</strong>（Plus $40 / Pro $400）的缓冲。每月扣款前看一眼，余额不足就从钱包里再充一笔。这是「一劳永逸」的关键 —— 你只维护一个阈值，不维护一堆账号。</li>
 </ol>
 
-<h2>选 U 卡要看这 6 件事</h2>
+<h2 id="s3">选 U 卡要看这 6 件事</h2>
 <table>
   <thead><tr><th>维度</th><th>合格线</th><th>为什么</th></tr></thead>
   <tbody>
@@ -64,7 +77,7 @@ permalink: /use-usdt-for-ai.html
 </table>
 <p class="meta">本站不给具体 U 卡品牌打榜 —— 这个赛道平台生死频率高，半年前的「推荐清单」现在可能已经全部跑路。自己用上面 6 条过滤，比看任何榜单都靠谱。</p>
 
-<h2>为什么说这是「一劳永逸」</h2>
+<h2 id="s4">为什么说这是「一劳永逸」</h2>
 <p>对比其他常见方案：</p>
 <table>
   <thead><tr><th>方案</th><th>单次成本</th><th>长期痛点</th></tr></thead>
@@ -78,7 +91,7 @@ permalink: /use-usdt-for-ai.html
 </table>
 <p>U 卡路径的核心优势是：<strong>支付关系是你自己和 OpenAI 的，不经过任何代充、代购、合租中间商</strong>。账号归你，聊天记录归你，GPTs / Projects / 自定义指令都归你。下一个月要不要续，你自己说了算。</p>
 
-<h2>真正容易翻车的地方</h2>
+<h2 id="s5">真正容易翻车的地方</h2>
 <ul>
   <li><strong>余额只够一个月的订阅费</strong>：Stripe 续费时汇率波动或隐性手续费可能让实际扣款 $20.30。余额 $20 → 扣款失败 → 降级 → 回来再升得重新过一次风控。<strong>永远多留一个月缓冲。</strong></li>
   <li><strong>科学上网的出口 IP 换来换去</strong>：同一个账号今天美国、明天日本、后天香港，OpenAI 几乎一定把你标成高风险。绑卡和日常使用最好走同一个节点。</li>
@@ -88,7 +101,7 @@ permalink: /use-usdt-for-ai.html
   <li><strong>KYC 文件被二次使用</strong>：正规平台不会要你做视频面签或给「客服」发身份证照片。官方 KYC 只在开卡那一次，之后任何索要身份照片 / 人脸 / 助记词的「客服」都是钓鱼。</li>
 </ul>
 
-<h2>其他还活着的兜底方案</h2>
+<h2 id="s6">其他还活着的兜底方案</h2>
 <p>U 卡是主推，但为了完整性，下面两个是目前还能跑通的备胎：</p>
 <ul>
   <li><strong>Apple Gift Card（仅 iOS）</strong>：去 <a href="https://www.apple.com/shop/buy-giftcard/giftcard" target="_blank" rel="noopener noreferrer">美区 Apple 礼品卡</a>（或日区 / 韩区 / 台区 / 土区）买 $25 礼品卡，充进外区 Apple ID，然后在 ChatGPT iOS App 里 in-app 订阅。缺点：桌面版用不到这个订阅，API 也用不到。</li>
@@ -96,7 +109,7 @@ permalink: /use-usdt-for-ai.html
 </ul>
 <p>这两条只解决移动端订阅，不解决「我要在 Mac 上用 ChatGPT Plus 的 GPT-5 / Canvas / Projects / Voice」。所以长期来看，U 卡仍然是更「全平台」的选择。</p>
 
-<h2>一张卡的生命周期：从开卡到长期维护</h2>
+<h2 id="s7">一张卡的生命周期：从开卡到长期维护</h2>
 <ol>
   <li><strong>第 1 天</strong>：开卡 + KYC（$15 一次性费用）+ 充首笔 $60（3 个月订阅缓冲）+ 绑 ChatGPT Plus。</li>
   <li><strong>第 30 天</strong>：收到自动续费扣款 $20，卡里剩 $40。</li>
@@ -110,7 +123,7 @@ permalink: /use-usdt-for-ai.html
 
 <div class="risk"><strong>风险与合规提醒</strong><br>① 中国大陆法律对个人使用加密资产跨境支付的定性仍在收紧（PBoC 2026-02-06 联合公告），本站不构成法律意见，操作前自行评估；② U 卡平台本身可能跑路、被制裁、被发卡方关闭，永远不要把全部长期资产放在某一张卡里；③ 任何索要助记词、私钥、Keystore 或钱包签名授权的「客服」「平台」，无论话术多像官方，都视为钓鱼；④ ChatGPT 的订阅和可用性受 OpenAI 政策、当地法规、网络可达性三方影响，随时可能变化。</div>
 
-<h2>参考资料</h2>
+<h2 id="s8">参考资料</h2>
 <div class="source-grid">
   <a class="source-card" href="https://help.openai.com/en/articles/6643005-how-do-i-subscribe-to-chatgpt-plus" target="_blank" rel="noopener noreferrer">
     <span class="card-kicker">OpenAI</span>

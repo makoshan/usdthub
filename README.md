@@ -76,6 +76,10 @@ Markdown 镜像目录：
 
 ## GitHub Pages 相关文件
 - `_config.yml` — GitHub Pages 基础配置
+- `.nojekyll` — 禁用 Jekyll 处理，避免静态文件路径被误处理
+- `robots.txt` — 搜索引擎抓取规则
+- `sitemap.xml` — 页面站点地图
+- `404.html` — Pages 404 页面
 - `index.html` — Pages 首页
 
 ## Markdown 镜像与导出
@@ -105,5 +109,6 @@ Markdown 镜像目录：
 ## 当前状态
 - HTML 版本：已可本地预览
 - Markdown 镜像：已生成，可直接在 GitHub 中阅读
+- GitHub Pages 上线所需静态文件：已补齐（_config.yml / .nojekyll / robots.txt / sitemap.xml / 404.html）
 - 本地内部链接：已做检查，无缺失本地链接
 - 第一版：已经可作为完整公开草案使用

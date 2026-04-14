@@ -35,6 +35,7 @@ Checks performed
 - Markdown mirrors generated for all 24 HTML pages
 - Markdown mirror index exists at markdown/README.md
 - Export script exists at scripts/export_markdown_mirrors.py
+- GitHub Pages deployment files exist: _config.yml, .nojekyll, robots.txt, sitemap.xml, 404.html
 
 Current structure status
 - Handbook home: complete
@@ -46,6 +47,7 @@ Current structure status
 - Trust pages: complete
 - Changelog: complete
 - GitHub Pages config: complete
+- GitHub Pages deployment files: complete
 - Markdown mirrors: complete
 - QA doc: complete
 

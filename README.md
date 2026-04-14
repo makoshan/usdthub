@@ -84,3 +84,31 @@
 - [Changelog](./markdown/changelog.md)
 
 </details>
+
+---
+
+## 本地开发与发布
+
+站点是 Jekyll 项目，源文件在 `site/`，构建产物在 `docs/`，GitHub Pages 直接把 `docs/` 当静态文件发布。
+
+**首次安装依赖**
+
+```bash
+bundle install
+```
+
+**本地预览**
+
+```bash
+bundle exec jekyll serve --port 4000 --host 127.0.0.1
+# 打开 http://127.0.0.1:4000/usdthub/（baseurl 是 /usdthub，不能漏）
+```
+
+**发布到线上**
+
+```bash
+./scripts/deploy.sh                       # 默认 commit message: "Rebuild site"
+./scripts/deploy.sh "update wallet guide" # 自定义 message
+```
+
+`deploy.sh` 会做完整流程：拒绝在 `jekyll serve` 还在跑时部署（避免 localhost URL 污染）→ 用 `JEKYLL_ENV=production` 重新 build → 跑 `scripts/check_site.py` 校验链接和 meta → 检查每个页面都引用了线上 CSS、没有 localhost 泄漏 → 提交 `docs/` 并 push → 轮询 https://makoshan.github.io/usdthub/ 直到新版本上线。任何一步失败都会中止并报错。

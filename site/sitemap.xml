@@ -9,7 +9,6 @@ permalink: /sitemap.xml
   {% unless p.url contains '/404.html' %}
   <url>
     <loc>{{ p.url | absolute_url }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   </url>
   {% endunless %}
 {% endfor %}

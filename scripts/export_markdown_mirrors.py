@@ -3,6 +3,7 @@ import re
 from html.parser import HTMLParser
 
 base = Path(__file__).resolve().parent.parent
+html_dir = base / 'docs'
 out_dir = base / 'markdown'
 out_dir.mkdir(exist_ok=True)
 
@@ -150,7 +151,7 @@ def convert(path: Path) -> str:
     return frontmatter + content
 
 
-html_files = sorted(base.glob('*.html'))
+html_files = sorted(html_dir.glob('*.html'))
 for html_path in html_files:
     md_path = out_dir / f'{html_path.stem}.md'
     md_path.write_text(convert(html_path), encoding='utf-8')

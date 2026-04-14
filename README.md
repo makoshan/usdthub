@@ -7,6 +7,7 @@
 
 在线阅读（GitHub Pages）：
 - https://makoshan.github.io/usdthub/
+- 仓库中的 HTML 站点文件统一放在 `docs/`，可直接作为 GitHub Pages 源目录。
 
 ## 从哪里开始
 
@@ -51,11 +52,11 @@
 
 ## HTML / Pages 版本
 
-如果你更习惯像网站一样连续阅读，可以直接访问：
-- [首页](./index.html)
-- [Start Here](./start-here.html)
-- [怎么买 USDT](./how-to-buy-usdt.html)
-- [人在中国怎么买 USDT / BTC](./china-buy-crypto-notes.html)
+如果你在 GitHub 仓库里想直接点开 HTML 文件，可以访问：
+- [首页](./docs/index.html)
+- [Start Here](./docs/start-here.html)
+- [怎么买 USDT](./docs/how-to-buy-usdt.html)
+- [人在中国怎么买 USDT / BTC](./docs/china-buy-crypto-notes.html)
 
 ## 说明
 

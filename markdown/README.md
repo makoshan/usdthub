@@ -7,6 +7,7 @@
 
 主要章节：
 
+- [404](./404.md)
 - [changelog](./changelog.md)
 - [china-7-common-mistakes](./china-7-common-mistakes.md)
 - [china-buy-crypto-notes](./china-buy-crypto-notes.md)

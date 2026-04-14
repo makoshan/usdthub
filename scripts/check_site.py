@@ -5,6 +5,7 @@ import sys
 from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+HTML_ROOT = os.path.join(ROOT, 'docs')
 
 class LinkParser(HTMLParser):
     def __init__(self):
@@ -24,7 +25,7 @@ class LinkParser(HTMLParser):
 
 
 def main():
-    html_files = sorted([f for f in os.listdir(ROOT) if f.endswith('.html')])
+    html_files = sorted([f for f in os.listdir(HTML_ROOT) if f.endswith('.html')])
     if not html_files:
         print('No HTML files found.')
         return 1
@@ -33,7 +34,7 @@ def main():
     missing_meta = []
 
     for filename in html_files:
-        path = os.path.join(ROOT, filename)
+        path = os.path.join(HTML_ROOT, filename)
         with open(path, 'r', encoding='utf-8') as f:
             content = f.read()
 
@@ -55,7 +56,7 @@ def main():
                 target = target.split('#', 1)[0]
             if not target:
                 continue
-            target_path = os.path.join(ROOT, target)
+            target_path = os.path.join(HTML_ROOT, target)
             if not os.path.exists(target_path):
                 missing_links.append({'file': filename, 'missing': target})
 

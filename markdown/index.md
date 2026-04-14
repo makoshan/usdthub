@@ -21,6 +21,7 @@ source_html: "index.html"
 - [USDT 是什么？](./what-is-usdt.md)
 - [如何购买 Tether USDt（USDT）](./how-to-buy-usdt.md)
 - [怎么选钱包](./how-to-choose-a-wallet.md)
+- [冷钱包（硬件钱包）怎么选：Ledger / Trezor / OneKey](./cold-wallet-for-usdt-china.md)
 - [怎么发送 USDT](./how-to-send-usdt.md)
 - [TRC20、ERC20、BEP20 有什么区别](./usdt-networks-explained.md)
 
@@ -51,16 +52,12 @@ source_html: "index.html"
 
 ## 2. 新手常用工具
 
-这里不是榜单，而是这套手册默认采用的起步路径。
-
-> 默认起步方案：如果你现在就要开始管理 TRON 和 USDT，我通常会建议先用 [imToken](https://token.im/trx-wallet)。原因不是把它说成“唯一正确答案”，而是它作为一款已经走过 10 年、经过社区长期验证的老牌钱包，对新手最关键的几件事做得更集中一些。对第一次上手的人来说，钱包最重要的不是宣传词，而是安全、稳定，以及关键流程是否清楚。在这些环节上，它对新手比较友好：创建自托管钱包、备份助记词、查看 TRON 资源、处理 TRC20 USDT 收发，以及在需要时直接租能量，把整套流程先跑通。
-
-| 你现在的目标 | 我会建议先看什么 | 原因 |
+| 工具类型 | 新手先用哪个 | 主要用来干什么 |
 | --- | --- | --- |
-| 想先买到第一笔 USDT | [如何购买 Tether USDt（USDT）](./how-to-buy-usdt.md) | 先把买法和风险路径跑通 |
-| 买完以后不知道放哪 | [怎么选钱包](./how-to-choose-a-wallet.md) | 平台账户和自托管不是一回事 |
-| 准备第一次转账 | [怎么发送 USDT](./how-to-send-usdt.md) | 绝大多数事故都发生在这一步 |
-| 总被 TRC20 / ERC20 搞混 | [TRC20、ERC20、BEP20 有什么区别](./usdt-networks-explained.md) | 错链是最常见的低级事故 |
+| 钱包 | [imToken](https://token.im/trx-wallet) / [TronLink](https://www.tronlink.org/) | 创建自托管钱包、收发 TRX / TRC20 USDT、查看资源 |
+| 区块浏览器 | [TRONSCAN](https://tronscan.org/) | 查地址、查交易、看带宽 / 能量、确认 USDT 是否到账 |
+| DEX 兑换 | [SUN.io](https://sun.io/) | 在 TRON 上兑换代币，查看池子、路由和价格 |
+| 跨链 | [BTTC Bridge](https://app.bt.io/bridge) + [BTTCScan](https://bttcscan.com/) | 在 TRON / Ethereum / BSC 之间转资产，跨链后查记录 |
 
 ## 3. 官方资料入口
 
@@ -72,6 +69,7 @@ source_html: "index.html"
 
 ## 4. 最近更新
 
+- 新增：[冷钱包（硬件钱包）怎么选](./cold-wallet-for-usdt-china.md)，基于中文视频整理 Ledger / Trezor / OneKey 对比、4 个评价维度、中国用户为什么优先 OneKey（国内直发不过海关）。
 - 新增：[imToken Card 能不能用来订阅 ChatGPT、海淘和国内支付](./imtoken-card-for-ai-payments.md)，拆解 `Fiat24` 路线和视频演示之间的共通逻辑与风险点。
 - 新增：[人在中国怎么买币](./china-buy-crypto-notes.md) 里的“怎么学习数字货币和投资”“社区 / 频道怎么选”两节。
 - 新增路线图与流程图：让首页和核心文章不只是文字堆叠。

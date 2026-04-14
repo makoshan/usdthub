@@ -6,7 +6,7 @@
 - [Start Here](./markdown/start-here.md)
 
 在线阅读（GitHub Pages）：
-- https://makoshan.github.io/usdt-handbook/
+- https://makoshan.github.io/usdthub/
 
 ## 从哪里开始
 

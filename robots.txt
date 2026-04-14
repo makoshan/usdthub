@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://makoshan.github.io/usdt-handbook/sitemap.xml
+Sitemap: https://makoshan.github.io/usdthub/sitemap.xml

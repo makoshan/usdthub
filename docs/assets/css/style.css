@@ -26,13 +26,3 @@ table { width:100%; border-collapse:collapse; margin:16px 0; }
 th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
 th { background:var(--soft); }
 img { max-width:100%; height:auto; }
-.card-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin:16px 0; }
-.card { border:1px solid var(--line); border-radius:10px; padding:14px 16px; background:#fff; }
-.card h3 { margin-top:0; font-size:18px; }
-.logo-strip { display:flex; flex-wrap:wrap; gap:18px; align-items:center; margin:16px 0; }
-.logo-strip img { height:28px; width:auto; opacity:0.95; }
-.kicker { font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px; }
-.reference-list li { margin:10px 0; }
-.split-2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin:16px 0; }
-.image-frame { border:1px solid var(--line); border-radius:10px; overflow:hidden; background:#fff; }
-.image-frame figcaption { padding:10px 12px; font-size:14px; color:var(--muted); border-top:1px solid var(--line); }

@@ -49,11 +49,11 @@
 
 <h2>地址激活：新地址的隐藏成本</h2>
 <p>这是很多新手到真正转账失败才发现的规则：<strong>TRON 上一个全新地址，必须先被「激活」才能正常收币</strong>。激活很简单 —— 向这个地址转入一笔 TRX（<a href="https://help.tokenpocket.pro/en/wallet-faq-en/tron-wallet/activation" target="_blank" rel="noopener noreferrer">TokenPocket 官方文档</a>指出通常 <strong>0.1 TRX</strong> 就够）。但激活这个动作本身，会从<strong>发送方</strong>再扣一次资源。</p>
-<p>imToken 官方帮助中心给出了权威数字（见下方截图）：向未激活地址转账会<strong>额外消耗 1.1 TRX</strong>，所以全额转 TRX 时钱包里要至少预留 1.1 TRX 以上。</p>
+<p>imToken 帮助中心给出了权威数字（见下方截图）：向未激活地址转账会<strong>额外消耗 1.1 TRX</strong>，所以全额转 TRX 时钱包里要至少预留 1.1 TRX 以上。</p>
 
 <figure class="doc-shot">
-  <img src="./assets/css/imtoken-activation-card.svg" alt="imToken 帮助中心：转账时提示「对方地址未激活」参考卡片" />
-  <figcaption>来源：<a href="https://support.token.im/hc/zh-cn/articles/4513324315929-%E8%BD%AC%E8%B4%A6%E6%97%B6%E6%8F%90%E7%A4%BA-%E5%AF%B9%E6%96%B9%E5%9C%B0%E5%9D%80%E6%9C%AA%E6%BF%80%E6%B4%BB" target="_blank" rel="noopener noreferrer">imToken 帮助中心 · 转账时提示「对方地址未激活」</a>。官方原文明确：向未激活的地址转账会额外消耗 1.1 个 TRX。</figcaption>
+  <img src="./assets/css/imtoken-activation-shot.png" alt="imToken 帮助中心：转账时提示「对方地址未激活」文章截图" />
+  <figcaption>来源：<a href="https://support.token.im/hc/zh-cn/articles/4513324315929-%E8%BD%AC%E8%B4%A6%E6%97%B6%E6%8F%90%E7%A4%BA-%E5%AF%B9%E6%96%B9%E5%9C%B0%E5%9D%80%E6%9C%AA%E6%BF%80%E6%B4%BB" target="_blank" rel="noopener noreferrer">imToken 帮助中心 · 转账时提示「对方地址未激活」</a>。截图仅作参考，请以官方页面为准。</figcaption>
 </figure>
 
 <p>所以第一次给全新 TRON 地址转 USDT 时，你实际要准备的资源 = 合约调用能量（约 130,000，新地址翻倍）+ 激活费 1.1 TRX + 带宽。这个数字和钱包 UI 上看到的「为什么扣得比预期多」完全对得上。</p>
@@ -87,26 +87,16 @@
   <li><strong>以为 TRX 不够时可以用 USDT 自动补</strong> —— 不能。链本身无法拿 USDT 当 gas。</li>
 </ul>
 
-<div class="risk"><strong>新手建议</strong><br>第一次用 TRC20，钱包里至少留 20 TRX。如果可能给新地址转账，多准备 5 TRX（激活费 1.1 TRX + 富余）。别等真正要转 10,000 USDT 时才发现自己少那几个 TRX。</div>
+<div class="risk"><strong>新手建议</strong><br>第一次用 TRC20，钱包里至少留 20 TRX（imToken 官方甚至建议 <strong>50 TRX 以上</strong>，尤其是收款方可能是新地址时）。这是最便宜的保险。别等真正要转 10,000 USDT 时才发现自己少那 20 TRX。</div>
 
 <h2>参考资料</h2>
-<div class="source-grid">
-  <a class="source-card" href="https://support.token.im/hc/zh-cn/articles/4513324315929-%E8%BD%AC%E8%B4%A6%E6%97%B6%E6%8F%90%E7%A4%BA-%E5%AF%B9%E6%96%B9%E5%9C%B0%E5%9D%80%E6%9C%AA%E6%BF%80%E6%B4%BB" target="_blank" rel="noopener noreferrer">
-    <span class="card-kicker">imToken</span>
-    <span class="card-title">地址未激活</span>
-    <span class="card-copy">官方权威数字：额外消耗 1.1 TRX，全额转 TRX 时记得预留。</span>
-  </a>
-  <a class="source-card" href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">
-    <span class="card-kicker">imToken</span>
-    <span class="card-title">如何获得带宽与能量</span>
-    <span class="card-copy">一键租能量、直接燃烧、冻结 TRX 三种路径，官方建议冻结 13,100–13,500 TRX。</span>
-  </a>
-  <a class="source-card" href="https://help.tokenpocket.pro/en/wallet-faq-en/tron-wallet/activation" target="_blank" rel="noopener noreferrer">
-    <span class="card-kicker">TokenPocket</span>
-    <span class="card-title">TRON Address Activation</span>
-    <span class="card-copy">英文版确认 0.1 TRX 激活，列出四种激活路径。</span>
-  </a>
-</div>
+<p>下面是我觉得值得直接去看的官方文档，比任何中文二手解读都更准确：</p>
+<ul>
+  <li><a href="https://support.token.im/hc/zh-cn/articles/4513324315929-%E8%BD%AC%E8%B4%A6%E6%97%B6%E6%8F%90%E7%A4%BA-%E5%AF%B9%E6%96%B9%E5%9C%B0%E5%9D%80%E6%9C%AA%E6%BF%80%E6%B4%BB" target="_blank" rel="noopener noreferrer">imToken：转账时提示「对方地址未激活」</a> — 官方对这个最高频错误的完整解释。</li>
+  <li><a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">imToken：如何获得带宽与能量</a> — 免费额度、一键租能量、质押三种路径的官方说明。</li>
+  <li><a href="https://help.tokenpocket.pro/en/wallet-faq-en/tron-wallet/activation" target="_blank" rel="noopener noreferrer">TokenPocket：About TRON Address Activation</a> — 0.1 TRX 激活、四种激活方式。</li>
+  <li><a href="https://github.tokenpocket.pro/BlockchainGuide-TRON-EN/" target="_blank" rel="noopener noreferrer">TokenPocket《The Past, Present and Future of TRON Wallet》</a> — 完整 TRON 钱包机制说明（英文）。</li>
+</ul>
 
 <footer>继续读：<a href="./tron-energy-guide.html">TRON 能量指南</a>（完整机制 + 租能量路径）· <a href="./tron-bandwidth-and-energy.html">带宽和能量到底分别指什么</a> · 返回：<a href="./index.html">USDT 新手手册</a></footer>
 

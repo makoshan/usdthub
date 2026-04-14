@@ -4,6 +4,8 @@
 >
 > 在线阅读（GitHub Pages）：https://makoshan.github.io/usdthub/
 
+![USDT 新手默认路线图](./site/assets/css/reading-path.svg)
+
 如果你现在脑子里同时有这些问题：
 
 - USDT 到底是什么？
@@ -32,6 +34,16 @@
 7. [TRON 能量指南](./markdown/tron-energy-guide.md)
 8. [如何用 USDT 订阅 AI](./markdown/use-usdt-for-ai.md)
 
+## 我给新手的默认判断
+
+| 你现在卡住的地方 | 我会建议你先读什么 | 为什么 |
+| --- | --- | --- |
+| 还没搞清楚 USDT 到底是什么 | [USDT 是什么](./markdown/what-is-usdt.md) | 先把 USDT 的角色想明白，后面不容易乱 |
+| 只想先买到第一笔 | [如何购买 Tether USDt（USDT）](./markdown/how-to-buy-usdt.md) | 先把买法跑通，但别急着大额 |
+| 买完以后不知道放哪 | [怎么选钱包](./markdown/how-to-choose-a-wallet.md) | 平台账户和自托管不是一回事 |
+| 一到转账就紧张 | [怎么发送 USDT](./markdown/how-to-send-usdt.md) | 绝大多数事故都出在这一步 |
+| 总被 TRC20 / ERC20 搞混 | [TRC20、ERC20、BEP20 有什么区别](./markdown/usdt-networks-explained.md) | 错链是最常见低级事故 |
+
 ## 这份手册不做什么
 
 - 不代客买币
@@ -39,13 +51,17 @@
 - 不承诺哪个钱包适合所有人
 - 不把 affiliate 排名伪装成客观结论
 
-## 如果你只打算先读一篇
+## 我已经看到过的 3 类新手事故
 
-那就先读这篇：
+1. **还没搞懂网络，就先去大额转账**
+2. **买到 USDT 以后，才发现自己没有钱包、不会提币、不会确认链**
+3. **为了省一点手续费，最后在错链、错误地址、问题资金上交大额学费**
 
-- [USDT 是什么](./markdown/what-is-usdt.md)
+所以这份手册的核心不是“资讯很多”，而是：
 
-它会先把最基础、但也最容易被误解的那层东西讲明白。很多新手不是输在不会操作，而是输在还没搞清楚 USDT 在整个流程里到底扮演什么角色。
+- 先给你默认路径
+- 再告诉你哪一步最容易翻车
+- 最后再给你场景和工具
 
 ## 下一篇
 
@@ -84,31 +100,3 @@
 - [Changelog](./markdown/changelog.md)
 
 </details>
-
----
-
-## 本地开发与发布
-
-站点是 Jekyll 项目，源文件在 `site/`，构建产物在 `docs/`，GitHub Pages 直接把 `docs/` 当静态文件发布。
-
-**首次安装依赖**
-
-```bash
-bundle install
-```
-
-**本地预览**
-
-```bash
-bundle exec jekyll serve --port 4000 --host 127.0.0.1
-# 打开 http://127.0.0.1:4000/usdthub/（baseurl 是 /usdthub，不能漏）
-```
-
-**发布到线上**
-
-```bash
-./scripts/deploy.sh                       # 默认 commit message: "Rebuild site"
-./scripts/deploy.sh "update wallet guide" # 自定义 message
-```
-
-`deploy.sh` 会做完整流程：拒绝在 `jekyll serve` 还在跑时部署（避免 localhost URL 污染）→ 用 `JEKYLL_ENV=production` 重新 build → 跑 `scripts/check_site.py` 校验链接和 meta → 检查每个页面都引用了线上 CSS、没有 localhost 泄漏 → 提交 `docs/` 并 push → 轮询 https://makoshan.github.io/usdthub/ 直到新版本上线。任何一步失败都会中止并报错。

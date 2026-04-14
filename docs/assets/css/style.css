@@ -26,3 +26,9 @@ table { width:100%; border-collapse:collapse; margin:16px 0; }
 th, td { border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
 th { background:var(--soft); }
 img { max-width:100%; height:auto; }
+.source-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(240px, 1fr)); gap:12px; margin:16px 0; }
+.source-card { display:flex; flex-direction:column; gap:4px; padding:14px 16px; background:var(--soft); border:1px solid var(--line); border-radius:8px; color:var(--text); text-decoration:none; }
+.source-card:hover { border-color:var(--link); text-decoration:none; }
+.card-kicker { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em; }
+.card-title { font-size:16px; font-weight:600; color:var(--text); }
+.card-copy { font-size:14px; color:var(--muted); line-height:1.55; }

@@ -28,7 +28,6 @@ source_html: "index.html"
 ### 中国用户现实问题
 
 - [人在中国怎么买 USDT / BTC](./china-buy-crypto-notes.md)
-- 这篇也补了：如果想认真学数字货币和投资，应该从哪里开始；以及社区 / 频道怎么筛选更不容易被喊单带偏。
 - [在中国买币最容易踩的 7 个坑](./china-7-common-mistakes.md)
 - [C2C / OTC 到底在怕什么](./china-c2c-otc-risks.md)
 - [第一次别碰的事](./china-first-time-donts.md)

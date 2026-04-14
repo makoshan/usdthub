@@ -12,88 +12,74 @@ source_html: "index.html"
 - USDT 怎么买、怎么存、怎么转、怎么避坑。
 - USDT 除了放着，还能拿来做什么，比如 AI、旅游、eSIM、VPN 和跨境支付。
 
-> 这不是交易平台，也不是投资建议。 我更关心的是：如果你第一次实际使用 USDT，应该先理解什么，先准备什么，哪里最容易翻车。很多站喜欢把你往开户链接和工具页推，我更想先把路讲明白。因为在这个领域里，真正贵的不是手续费，而是你第一次就走错。 目录 1. 从哪里开始 2. 章节 3. 我的写法 4. 新手常用工具 5. 最近更新 6. 下一步读什么
+> 这不是交易平台，也不是投资建议。我更关心的是：如果你第一次实际使用 USDT，应该先理解什么，先准备什么，哪里最容易翻车。很多站喜欢把你往开户链接和工具页推，我更想先把路讲明白。因为在这个领域里，真正贵的不是手续费，而是你第一次就走错。
 
-## 1. 从哪里开始
+## 1. 章节
 
-如果你是第一次接触 USDT，我建议按这个顺序读：
+### 新手入门
 
-- Start Here：先理解这套手册在讲什么
-- USDT 是什么？先把稳定币和用途讲明白
-- 怎么买 USDT
-- 人在中国怎么买 USDT / BTC
-- 怎么选钱包
-- 怎么发送 USDT
-- TRC20、ERC20、BEP20 有什么区别
-- 为什么 TRC20 USDT 经常会提到 TRX 和能量
-- USDT 可以拿来做什么
-- USDT 在 AI 支付里怎么用
+- [USDT 是什么？](./what-is-usdt.md)
+- [如何购买 Tether USDt（USDT）](./how-to-buy-usdt.md)
+- [怎么选钱包](./how-to-choose-a-wallet.md)
+- [怎么发送 USDT](./how-to-send-usdt.md)
+- [TRC20、ERC20、BEP20 有什么区别](./usdt-networks-explained.md)
 
-## 2. 章节
+### 中国用户现实问题
 
-### Basics
-
-- Start Here
-- USDT 是什么？
-- 怎么买 USDT
-- 人在中国怎么买 USDT / BTC
-- 怎么选钱包
-- 怎么发送 USDT
-- TRC20、ERC20、BEP20 有什么区别
+- [人在中国怎么买 USDT / BTC](./china-buy-crypto-notes.md)
+- [在中国买币最容易踩的 7 个坑](./china-7-common-mistakes.md)
+- [C2C / OTC 到底在怕什么](./china-c2c-otc-risks.md)
+- [第一次别碰的事](./china-first-time-donts.md)
 
 ### TRON / TRC20
 
-- TRON 能量指南
-- 为什么转 TRC20 USDT 要准备 TRX
-- TRON 带宽和能量是什么
-- TRON 能量怎么获得
-- TRC20 USDT 手续费怎么省
+- [TRON 能量指南](./tron-energy-guide.md)
+- [为什么转 TRC20 USDT 要准备 TRX](./tron-basics.md)
+- [TRON 带宽和能量是什么](./tron-bandwidth-and-energy.md)
+- [TRON 能量怎么获得](./how-to-get-tron-energy.md)
+- [TRC20 USDT 手续费怎么省](./how-to-reduce-trc20-usdt-fees.md)
 
-### Use Cases
+### 实际使用场景
 
-- USDT 可以拿来做什么
-- 如何用 USDT 订阅 AI
-- 如何用 USDT 买 eSIM 和 VPN
-- 出国旅游时，USDT 有哪些实际用途
-- 用 USDT 做跨境小额结算前要先确认什么
+- [USDT 可以拿来做什么](./what-can-you-do-with-usdt.md)
+- [如何用 USDT 订阅 AI](./use-usdt-for-ai.md)
+- [如何用 USDT 买 eSIM 和 VPN](./use-usdt-for-esim-and-vpn.md)
+- [出国旅游时，USDT 有哪些实际用途](./use-usdt-for-travel.md)
+- [用 USDT 做跨境小额结算前要先确认什么](./use-usdt-for-cross-border-payments.md)
 
-### Trust
+## 2. 新手常用工具
 
-- How We Review Wallets and Apps
-- Editorial Policy / Disclosure
+这里不是榜单，而是这套手册默认采用的起步路径。
 
-## 3. 我的写法
+> 默认起步方案：如果你现在就要开始管理 TRON 和 USDT，我的默认建议是先用 [imToken](https://token.im/trx-wallet)。原因不是要把它包装成“唯一正确答案”，而是它对新手最关键的几件事更友好：创建自托管钱包、备份助记词、查看 TRON 资源、处理 TRC20 USDT 收发，以及在需要时直接租能量把流程跑通。
 
-这里不做“最强”“必装”“秒懂变专家”那种东西。
+| 你现在的目标 | 我会建议先看什么 | 原因 |
+| --- | --- | --- |
+| 想先买到第一笔 USDT | [如何购买 Tether USDt（USDT）](./how-to-buy-usdt.md) | 先把买法和风险路径跑通 |
+| 买完以后不知道放哪 | [怎么选钱包](./how-to-choose-a-wallet.md) | 平台账户和自托管不是一回事 |
+| 准备第一次转账 | [怎么发送 USDT](./how-to-send-usdt.md) | 绝大多数事故都发生在这一步 |
+| 总被 TRC20 / ERC20 搞混 | [TRC20、ERC20、BEP20 有什么区别](./usdt-networks-explained.md) | 错链是最常见的低级事故 |
 
-- 教程优先。先把问题解释清楚，再谈工具。
-- 推荐会写，但尽量写成 beginner-friendly option，而不是硬广。
-- 所有买币、转账、租能量、支付场景，都会附风险提醒。
-- 如果某个工具更适合新手，我会直说；如果它也有局限，我也会写。
+## 3. 官方资料入口
 
-## 4. 新手常用工具
+如果你准备真动手，不想只看二手总结，建议把这页也一起开着：
 
-这里不是榜单，只是当前我觉得对大多数新手更省事的路径。
+- [官方资料入口](./official-sources.md)：集中收录 imToken、TRON、TronScan、TokenPocket、MetaMask、Ledger、Tether、Binance、OKX、Bybit、OSL。
+- TRON / 转账问题优先看：[TRON 能量指南](./tron-energy-guide.md)、[怎么发送 USDT](./how-to-send-usdt.md)、[官方资料入口](./official-sources.md)。
+- 买币问题优先看：[怎么买 USDT](./how-to-buy-usdt.md)、[人在中国怎么买币](./china-buy-crypto-notes.md)、[官方资料入口](./official-sources.md)。
 
-> Beginner-friendly option 如果你想找一个更容易上手的自托管钱包来处理 TRON 和 USDT，imToken 是我目前愿意放进手册里的一个选项。原因不是“最强”，只是对第一次真正管理链上资产的人更友好一些。
+## 4. 最近更新
 
-## 5. 最近更新
+- 新增路线图与流程图：让首页和核心文章不只是文字堆叠。
+- 重写核心链路：[Start Here](./README.md)、[USDT 是什么](./what-is-usdt.md)、[如何购买 Tether USDt（USDT）](./how-to-buy-usdt.md)、[怎么发送 USDT](./how-to-send-usdt.md)、[TRC20、ERC20、BEP20 有什么区别](./usdt-networks-explained.md)。
+- 已整理：[中国用户现实说明](./china-buy-crypto-notes.md)、[TRON 能量指南](./tron-energy-guide.md)、[AI 支付](./use-usdt-for-ai.md)、[官方资料入口](./official-sources.md)。
 
-- 新增：USDT 是什么？、TRC20、ERC20、BEP20 有什么区别
-- 新增：为什么转 TRC20 USDT 要准备 TRX、TRON 带宽和能量是什么、TRON 能量怎么获得、TRC20 USDT 手续费怎么省
-- 新增：出国旅游时，USDT 有哪些实际用途、用 USDT 做跨境小额结算前要先确认什么
-- 已整理：人在中国怎么买 USDT / BTC、怎么发送 USDT、USDT 可以拿来做什么
-- 已整理：怎么买 USDT、怎么选钱包、TRON 能量指南、如何用 USDT 订阅 AI
+## 5. 下一步读什么
 
-## 6. 下一步读什么
-
-- 先读：Start Here
-- 如果你还没搞懂 USDT 到底是什么：先读这篇
-- 如果你现在就要开始：怎么买 USDT
-- 如果你人在中国大陆：先看这页现实说明
-- 如果你还没选好工具：怎么选钱包
-- 如果你准备第一次转账：怎么发送 USDT
-- 如果你总被 TRC20 / ERC20 搞混：先看网络解释
-- 如果你已经在用 TRC20：TRON 能量指南
-- 如果你关心旅行和数字准备：先看旅游场景
-- 如果你准备做跨境小额结算：先看这页检查表
+- 先读：[Start Here](./README.md)
+- 如果你还没搞懂 USDT：先读 [USDT 是什么](./what-is-usdt.md)
+- 如果你现在就要开始：读 [怎么买 USDT](./how-to-buy-usdt.md)
+- 如果你人在中国大陆：先看 [现实说明](./china-buy-crypto-notes.md)
+- 如果你还没选好工具：读 [怎么选钱包](./how-to-choose-a-wallet.md)
+- 如果你准备第一次转账：读 [怎么发送 USDT](./how-to-send-usdt.md)
+- 如果你已经在用 TRC20：读 [TRON 能量指南](./tron-energy-guide.md)

@@ -77,20 +77,20 @@
 
 <div class="risk"><strong>诈骗高发场景</strong><br>「凭助记词免费领能量」「包月能量会员」「私钥同步能量」全都是骗局。正规租能量只要收款地址，单价公开，按笔或按包计费。详见 <a href="./how-to-get-tron-energy.html">TRON 能量怎么获得</a>。</div>
 
-<h2>外部数据交叉验证</h2>
-<p>我上面的数字和主流钱包给出的估算是一致的。<a href="https://help.tokenpocket.pro/en/wallet-faq-en/tron-wallet/save-gas" target="_blank" rel="noopener noreferrer">TokenPocket 的官方省费指南</a>里直接给出了自己平台实测的数字：</p>
+<h2>这些数字是怎么估出来的</h2>
+<p>上面的估算不是拍脑袋，而是把三类公开信息拼起来得到的：</p>
 <ul>
-  <li>直烧 TRX 单笔：<strong>约 13.74 TRX（老地址）</strong> 或 <strong>约 27.6 TRX（新地址）</strong>。</li>
-  <li>通过 TokenPocket EnergyPay 租：<strong>一笔约 3.76 TRX</strong>。</li>
-  <li>官方对省费幅度的说法是「最多省约 75%」。</li>
-  <li>走质押路径：最少冻结 1,980 TRX 换 32,890 能量，Stake 2.0 解冻期 14 天。</li>
+  <li>TRON 协议层的资源模型：一笔 TRC20 USDT 转账大致需要多少能量、资源不足时怎么烧 TRX。</li>
+  <li>TronScan 上的链上资源数据：最近一段时间能量消耗和价格大概落在哪个区间。</li>
+  <li>imToken 的钱包侧建议：对偶发转账、高频转账、质押覆盖分别怎么处理更稳。</li>
 </ul>
-<p>imToken 的官方文档《<a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">如何获得带宽与能量</a>》则给出更激进的冻结建议：如果你想靠质押完全覆盖自己的日常 USDT 转账，冻结 <strong>13,500 TRX 以上</strong> 更稳。这个数字比我上面给的 2,500 TRX 大，差别在于：imToken 是按「连续多笔、能量冗余」来算的；2,500 TRX 是按「每天恰好 1 笔 65k」的理论下限。你要图稳就按 13,500，要图先试就按 2,500。</p>
+<p>其中 <a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">imToken《如何获得带宽与能量》</a>给出的冻结建议更偏稳健：如果你想靠质押覆盖连续多笔日常 USDT 转账，冻结 <strong>13,500 TRX 以上</strong> 会更从容。这个数字比我上面给的 2,500 TRX 大，差别在于：13,500 TRX 是按「多笔 + 冗余」来算，2,500 TRX 是按「每天恰好 1 笔 65k」的理论起步值。你要图稳就按 13,500，要图先试就按 2,500。</p>
 
 <h2>参考资料</h2>
 <ul>
-  <li><a href="https://help.tokenpocket.pro/en/wallet-faq-en/tron-wallet/save-gas" target="_blank" rel="noopener noreferrer">TokenPocket：How to Save on TRON Transaction Fees</a> — 直烧 vs 租 vs 质押的实测数字。</li>
   <li><a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">imToken：如何获得带宽与能量</a> — 冻结建议、一键租能量操作。</li>
+  <li><a href="https://developers.tron.network/docs/resource-model" target="_blank" rel="noopener noreferrer">TRON Developer Docs: Resource Model</a> — 资源模型和燃烧规则。</li>
+  <li><a href="https://tronscan.org/#/data/charts2/energyConsumption" target="_blank" rel="noopener noreferrer">TronScan Energy Consumption</a> — 看链上资源成本是否在变化。</li>
   <li><a href="https://developers.tron.network/docs/tron-proposals" target="_blank" rel="noopener noreferrer">TRON Proposals</a> — Proposal #104 把能量单价减半的原文。</li>
 </ul>
 

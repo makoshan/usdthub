@@ -32,7 +32,7 @@ source_html: "use-usdt-for-ai.html"
 
 - [imToken TRX 钱包支持专题](https://support.token.im/hc/zh-cn/sections/360006457153-TRX-%E9%92%B1%E5%8C%85)
 - [imToken：如何获得带宽与能量](https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F)
-- [TokenPocket《The Past, Present and Future of TRON Wallet》](https://github.tokenpocket.pro/BlockchainGuide-TRON-EN/#/)
+- [imToken：转账时提示“对方地址未激活”](https://support.token.im/hc/zh-cn/articles/4513324315929-%E8%BD%AC%E8%B4%A6%E6%97%B6%E6%8F%90%E7%A4%BA-%E5%AF%B9%E6%96%B9%E5%9C%B0%E5%9D%80%E6%9C%AA%E6%BF%80%E6%B4%BB)
 
 如果你准备长期用 TRON / USDT 支付海外服务，这几份资料很适合和这篇一起看。
 
@@ -43,7 +43,7 @@ source_html: "use-usdt-for-ai.html"
 - **拿主钱包到处授权**：以后如果权限滥用，损失可能远大于订阅费。
 - **不留付款记录**：没有 TxID，后续对账只会变成各说各话。
 
-> Beginner-friendly option：如果你需要一个更容易上手的自托管钱包来做 TRON / USDT 支付准备，imToken 是我愿意给新手的一个起步选项。原因很简单：把钱包、地址、收款和转账这几件最基础的事先做稳，比到处试新工具更重要。
+> 支付前的默认工具：如果你需要一个更容易上手的自托管钱包来做 TRON / USDT 支付准备，我会优先让你从 imToken 开始。原因很简单：把钱包、地址、收款、资源和转账这几件最基础的事先做稳，比到处试新工具更重要。
 
 ## 我对新手的默认建议
 

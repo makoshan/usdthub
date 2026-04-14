@@ -27,7 +27,7 @@ source_html: "tron-basics.html"
 - SR 轮流出块，每 3 秒 1 个，一天约 28,800 块。
 - 投票更新时间：UTC 0:00 / 6:00 / 12:00 / 18:00。
 
-来源：TokenPocket《The Past, Present and Future of TRON Wallet》。来源：TokenPocket / github.tokenpocket.pro/BlockchainGuide-TRON-EN，按原作者授权非营利引用。
+这一节的数字和节奏，可以继续对照 TRON 官方资源模型与 TronScan 的链上数据理解，不必再额外记一套钱包品牌叙事。
 
 ## 跟你发 USDT 的关系
 

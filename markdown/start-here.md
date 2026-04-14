@@ -35,6 +35,8 @@ source_html: "start-here.html"
 7. [TRON 能量指南](./tron-energy-guide.md)
 8. [如何用 USDT 订阅 AI](./use-usdt-for-ai.md)
 
+如果你现在更在意的不是“怎么买”，而是“该先学什么”“有没有靠谱社区或频道可以补充”，也建议顺手看 [人在中国怎么买 USDT / BTC](./china-buy-crypto-notes.md) 里新增的学习路径和社区筛选建议。
+
 ## 我对新手默认最不建议做的 4 件事
 
 - 一上来就大额买入

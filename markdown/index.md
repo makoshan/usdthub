@@ -27,6 +27,7 @@ source_html: "index.html"
 ### 中国用户现实问题
 
 - [人在中国怎么买 USDT / BTC](./china-buy-crypto-notes.md)
+- 这篇也补了：如果想认真学数字货币和投资，应该从哪里开始；以及社区 / 频道怎么筛选更不容易被喊单带偏。
 - [在中国买币最容易踩的 7 个坑](./china-7-common-mistakes.md)
 - [C2C / OTC 到底在怕什么](./china-c2c-otc-risks.md)
 - [第一次别碰的事](./china-first-time-donts.md)
@@ -70,6 +71,7 @@ source_html: "index.html"
 
 ## 4. 最近更新
 
+- 新增：[人在中国怎么买币](./china-buy-crypto-notes.md) 里的“怎么学习数字货币和投资”“社区 / 频道怎么选”两节。
 - 新增路线图与流程图：让首页和核心文章不只是文字堆叠。
 - 重写核心链路：[Start Here](./README.md)、[USDT 是什么](./what-is-usdt.md)、[如何购买 Tether USDt（USDT）](./how-to-buy-usdt.md)、[怎么发送 USDT](./how-to-send-usdt.md)、[TRC20、ERC20、BEP20 有什么区别](./usdt-networks-explained.md)。
 - 已整理：[中国用户现实说明](./china-buy-crypto-notes.md)、[TRON 能量指南](./tron-energy-guide.md)、[AI 支付](./use-usdt-for-ai.md)、[官方资料入口](./official-sources.md)。

@@ -7,6 +7,22 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_DIR = ROOT / 'docs'
+HOME_FILE = SITE_DIR / 'index.html'
+
+REQUIRED_HOME_SNIPPETS = [
+    '1. 章节',
+    '2. 新手常用工具',
+    '3. 官方资料入口',
+    '4. 最近更新',
+]
+
+FORBIDDEN_HOME_SNIPPETS = [
+    'reading-path.svg',
+    '<strong>目录</strong>',
+    '1. 从哪里开始',
+    '2. 我为什么这样写',
+    '6. 下一步读什么',
+]
 
 class Parser(HTMLParser):
     def __init__(self):
@@ -37,6 +53,7 @@ def main():
 
     missing_links = []
     missing_meta = []
+    homepage_issues = []
 
     for file_path in html_files:
         parser = Parser()
@@ -70,7 +87,18 @@ def main():
     extra_files = ['robots.txt', 'sitemap.xml']
     missing_extra = [name for name in extra_files if not (SITE_DIR / name).exists()]
 
-    if missing_links or missing_meta or missing_extra:
+    if HOME_FILE.exists():
+        home_html = HOME_FILE.read_text(encoding='utf-8')
+        for snippet in REQUIRED_HOME_SNIPPETS:
+            if snippet not in home_html:
+                homepage_issues.append(f'missing required homepage snippet: {snippet}')
+        for snippet in FORBIDDEN_HOME_SNIPPETS:
+            if snippet in home_html:
+                homepage_issues.append(f'found forbidden homepage snippet: {snippet}')
+    else:
+        homepage_issues.append(f'missing homepage file: {HOME_FILE.name}')
+
+    if missing_links or missing_meta or missing_extra or homepage_issues:
         if missing_links:
             print('Missing internal links:')
             for item in missing_links:
@@ -83,9 +111,13 @@ def main():
             print('Missing support files:')
             for name in missing_extra:
                 print(f'- {name}')
+        if homepage_issues:
+            print('Homepage content checks failed:')
+            for issue in homepage_issues:
+                print(f'- {issue}')
         return 1
 
-    print(f'OK: checked {len(html_files)} HTML files in docs/, no missing internal links, all files have title and meta description, robots.txt and sitemap.xml exist.')
+    print(f'OK: checked {len(html_files)} HTML files in docs/, no missing internal links, all files have title and meta description, robots.txt and sitemap.xml exist, homepage structure matches expectations.')
     return 0
 
 if __name__ == '__main__':

@@ -32,63 +32,74 @@
   <main>
     <div class="wrap">
       <h1>TRON 能量指南</h1>
-      <div class="meta">Chapter 3 · TRON / TRC20 · Last updated: 2026-04-14</div>
-      <p>这篇解决一个高频问题：<strong>为什么你明明有 TRC20 USDT，转账时却还是可能失败，或者被扣到你怀疑人生。</strong> 我先说结论，这不是你一个人的问题，而是几乎每个第一次认真碰 TRON 的人都会撞上的坑。</p>
-      <div class="note"><strong>TL;DR</strong><br>在 TRON 上发送 USDT，很多时候不只是“有币就行”，还要考虑网络资源。我自己的理解一直很粗暴但很好用：链上执行动作需要消耗资源，资源不足时，成本会更高，或者动作直接失败。你先把这件事记住，后面很多提示就没那么像天书了。</div>
+<div class="meta">Chapter 3 · TRON / TRC20 · Last updated: 2026-04-14</div>
 
-      <h2>先把概念讲人话</h2>
-      <p>TRON 上常见两个词：<code>Bandwidth</code> 和 <code>Energy</code>。我自己的记法一直很土，但很好用：</p>
-      <ul>
-        <li><strong>Bandwidth</strong>：更像基础流量。</li>
-        <li><strong>Energy</strong>：更像执行合约动作要消耗的资源。</li>
-      </ul>
-      <p>TRC20 USDT 转账经常会涉及合约调用，所以很多人第一次用 TRON 时，实际碰到的问题不是“不会转”，而是“为什么我有 USDT 还转不出去”。你如果先把它理解成“资源不足”，整件事会比死记定义轻松得多。</p>
+<p><img src="./assets/css/tron-energy-decision.svg" alt="我怎么判断要不要认真研究 TRON 能量" /></p>
 
-      <h2>为什么会提到 TRX</h2>
-      <p>因为在 TRON 上，资源不足时，链上动作的成本通常会和 TRX 有关系。对新手来说，不需要一开始就把整套资源模型背下来，只需要先记住：</p>
-      <ol>
-        <li>TRC20 USDT 转账不是完全零成本。</li>
-        <li>TRON 资源不足时，可能要额外付出成本。</li>
-        <li>所以很多人会在钱包里额外准备一点 TRX，避免“币在那，但动作做不了”。</li>
-      </ol>
+<p>这篇解决一个高频问题：<strong>为什么你明明有 TRC20 USDT，转账时却还是可能失败，或者被扣到你怀疑人生。</strong>我先说结论，这不是你一个人的问题，而是几乎每个第一次认真碰 TRON 的人都会撞上的坑。</p>
 
-      <h2>什么时候你真的需要关心能量</h2>
-      <ul>
-        <li>你已经开始频繁发送 TRC20 USDT。</li>
-        <li>你发现自己的转账成本不稳定。</li>
-        <li>你在帮别人代付、结算，转账频率高。</li>
-        <li>你已经从“先跑通流程”进入“想优化成本”的阶段。</li>
-      </ul>
-      <p>如果你只是第一次转账，重点还是先完成一笔小额测试，而不是先钻进资源优化兔子洞。</p>
+<div class="note"><strong>TL;DR</strong><br>在 TRON 上发送 USDT，很多时候不只是“有币就行”，还要考虑网络资源。我自己的理解一直很粗暴但很好用：链上执行动作需要消耗资源，资源不足时，成本会更高，或者动作直接失败。你先把这件事记住，后面很多提示就没那么像天书了。</div>
 
-      <h2>租能量这件事，怎么理解最省脑子</h2>
-      <p>你可以把它理解成：<strong>按需买一段时间的链上资源使用权</strong>。它适合高频用户，不一定适合第一次上手的人。我自己的态度一直很明确：先把流程跑通，再研究优化；别一开始就为了省几块钱，把自己送进一套更复杂的系统里。</p>
-      <p>对普通用户，我的建议很简单：</p>
-      <ol>
-        <li>偶尔转：先接受单次成本，把流程跑通。</li>
-        <li>开始频繁转：再比较总成本，考虑是否值得优化。</li>
-        <li>非常高频：这时再认真研究能量、带宽、租用方案。</li>
-      </ol>
+<h2>先把概念讲人话</h2>
+<p>TRON 上常见两个词：<code>Bandwidth</code> 和 <code>Energy</code>。我自己的记法一直很土，但很好用：</p>
+<ul>
+  <li><strong>Bandwidth</strong>：更像基础流量。</li>
+  <li><strong>Energy</strong>：更像执行合约动作要消耗的资源。</li>
+</ul>
+<p>TRC20 USDT 转账经常会涉及合约调用，所以很多人第一次用 TRON 时，实际碰到的问题不是“不会转”，而是“为什么我有 USDT 还转不出去”。你如果先把它理解成“资源不足”，整件事会比死记定义轻松得多。</p>
 
-      <h2>最容易踩的坑</h2>
-      <ul>
-        <li><strong>以为有 USDT 就一定能转</strong>：不一定。资源不足时，你可能卡在最后一步。</li>
-        <li><strong>把能量当成另一种币</strong>：它更接近资源，不是拿来炒的资产。</li>
-        <li><strong>第一次就研究极限省费</strong>：流程都没跑通，先别追求优化到小数点后。</li>
-        <li><strong>为了租能量暴露私钥或助记词</strong>：这不是优化，是送钱。</li>
-      </ul>
+<h2>一个我觉得很有用的外部事实</h2>
+<p>TokenPocket 与 TRON 官方合作的《The Past, Present and Future of TRON Wallet》里提到过两个对新手很有帮助的点：</p>
+<ol>
+  <li><strong>新账户需要先激活才能正常使用</strong>，做法通常是先向新地址转入任意数量的 TRX。</li>
+  <li><strong>每 24 小时 TRON 会给账户 5000 免费 Bandwidth Points</strong>；如果不够，链上会通过消耗 TRX 来完成交易。</li>
+</ol>
+<p>这两条很实用，因为它们直接解释了两件新手最容易困惑的事：为什么“地址未激活”会导致你发不过去；为什么有时候你明明只是转一笔，还是会看到 TRX 被消耗。</p>
 
-      <div class="risk"><strong>风险提醒</strong><br>任何需要你提供助记词、私钥、Keystore 文件的“能量服务”，都应视为高风险。正常的资源方案不应该要求你交出钱包控制权。</div>
+<h2>为什么会提到 TRX</h2>
+<p>因为在 TRON 上，资源不足时，链上动作的成本通常会和 TRX 有关系。对新手来说，不需要一开始就把整套资源模型背下来，只需要先记住：</p>
+<ul>
+  <li>TRC20 USDT 转账不是完全零成本。</li>
+  <li>TRON 资源不足时，可能要额外付出成本。</li>
+  <li>所以很多人会在钱包里额外准备一点 TRX，避免“币在那，但动作做不了”。</li>
+</ul>
 
-      <h2>我给新手的默认建议</h2>
-      <ol>
-        <li>先准备好支持 TRON 的钱包。</li>
-        <li>先完成一次小额 TRC20 USDT 转账。</li>
-        <li>如果已经开始高频使用，再认真看成本优化。</li>
-      </ol>
-      <div class="note"><strong>Beginner-friendly option</strong><br>如果你想找一个对新手更友好的自托管钱包来管理 TRON 和 USDT，<a href="https://token.im/trx-wallet" target="_blank" rel="noopener noreferrer">imToken</a> 仍然是我会放在手册里的一个选项。原因不是因为它“最强”，而是它对第一次实际管理 TRON 资产的人更省事。</div>
+<h2>我认为最值得你看的官方参考</h2>
+<ul>
+  <li><a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">imToken：如何获得带宽与能量</a></li>
+  <li><a href="https://support.token.im/hc/zh-cn/articles/4513324315929-%E8%BD%AC%E8%B4%A6%E6%97%B6%E6%8F%90%E7%A4%BA-%E5%AF%B9%E6%96%B9%E5%9C%B0%E5%9D%80%E6%9C%AA%E6%BF%80%E6%B4%BB" target="_blank" rel="noopener noreferrer">imToken：转账时提示“对方地址未激活”</a></li>
+  <li><a href="https://github.tokenpocket.pro/BlockchainGuide-TRON-EN/#/" target="_blank" rel="noopener noreferrer">TokenPocket《The Past, Present and Future of TRON Wallet》</a></li>
+</ul>
+<p>如果你准备认真用 TRON，这三份资料都值得你补一遍。</p>
 
-      <footer>上一章：<a href="./how-to-buy-usdt.html">怎么买 USDT</a> · 下一章：<a href="./use-usdt-for-ai.html">如何用 USDT 订阅 AI</a> · 返回：<a href="./index.html">USDT 新手手册</a></footer>
+<h2>什么时候你真的需要关心能量</h2>
+<ul>
+  <li>你已经开始频繁发送 TRC20 USDT。</li>
+  <li>你发现自己的转账成本不稳定。</li>
+  <li>你在帮别人代付、结算，转账频率高。</li>
+  <li>你已经从“先跑通流程”进入“想优化成本”的阶段。</li>
+</ul>
+<p>如果你只是第一次转账，重点还是先完成一笔小额测试，而不是先钻进资源优化兔子洞。</p>
+
+<h2>租能量这件事，怎么理解最省脑子</h2>
+<p>你可以把它理解成：<strong>按需买一段时间的链上资源使用权</strong>。它适合高频用户，不一定适合第一次上手的人。我自己的态度一直很明确：先把流程跑通，再研究优化；别一开始就为了省几块钱，把自己送进一套更复杂的系统里。</p>
+<ul>
+  <li>偶尔转：先接受单次成本，把流程跑通。</li>
+  <li>开始频繁转：再比较总成本，考虑是否值得优化。</li>
+  <li>非常高频：这时再认真研究能量、带宽、租用方案。</li>
+</ul>
+
+<h2>最容易踩的坑</h2>
+<ul>
+  <li><strong>以为有 USDT 就一定能转</strong>：不一定。资源不足时，你可能卡在最后一步。</li>
+  <li><strong>把能量当成另一种币</strong>：它更接近资源，不是拿来炒的资产。</li>
+  <li><strong>第一次就研究极限省费</strong>：流程都没跑通，先别追求优化到小数点后。</li>
+  <li><strong>为了租能量暴露私钥或助记词</strong>：这不是优化，是送钱。</li>
+</ul>
+
+<div class="risk"><strong>风险提醒</strong><br>任何需要你提供助记词、私钥、Keystore 文件的“能量服务”，都应视为高风险。正常的资源方案不应该要求你交出钱包控制权。</div>
+
+<footer>上一篇：<a href="./usdt-networks-explained.html">TRC20、ERC20、BEP20 有什么区别</a> · 下一篇：<a href="./use-usdt-for-ai.html">如何用 USDT 订阅 AI</a></footer>
 
     </div>
   </main>

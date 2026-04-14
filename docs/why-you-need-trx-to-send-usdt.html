@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>为什么转 TRC20 USDT 要准备 TRX | USDT 新手手册</title>
-  <meta name="description" content="写给新手的 TRON 转账补充说明：为什么你有 TRC20 USDT 还可能需要准备一点 TRX。" />
+  <meta name="description" content="一句话答案：因为 TRC20 USDT 是合约，不是原生币。每笔转账要烧 65k 能量，能量不够时用 TRX 补上。附 2026-04 实时成本数字。" />
   <link rel="stylesheet" href="/usdthub/assets/css/style.css" />
   
 </head>
@@ -32,12 +32,53 @@
   <main>
     <div class="wrap">
       <h1>为什么转 TRC20 USDT 要准备 TRX</h1>
-  <div class="meta">TRON Note · Last updated: 2026-04-14</div>
-  <p>一句话：因为在 TRON 上执行转账动作，很多时候不只是“你有 USDT 就够了”。链上动作本身会消耗资源，资源不足时，成本通常会和 TRX 有关系。</p>
-<div class="note"><strong>TL;DR</strong><br>TRC20 USDT 转账经常会涉及资源消耗。对新手来说，最实用的理解不是背模型，而是知道：钱包里只有 USDT，不一定代表这笔转账一定能顺利发出去。</div>
-<h2>为什么会这样</h2><p>因为 TRC20 USDT 转账通常不是单纯余额移动，而是合约调用的一部分。合约调用要吃资源，这就是为什么很多人会在 TRON 路线里提到 TRX、带宽和能量。</p>
-<h2>新手该怎么处理</h2><ol><li>先知道这是正常现象，不是钱包坏了。</li><li>第一次转账前，别只看 USDT 余额。</li><li>如果你主要用 TRC20，顺手理解一下 TRON 能量会省很多事。</li></ol>
-  <footer>主章节：<a href="./tron-energy-guide.html">TRON 能量指南</a></footer>
+<div class="meta">TRON Note · Last updated: 2026-04-14</div>
+
+<p>这是新手最常问的问题之一：<strong>我钱包里明明有 USDT，为什么还要准备 TRX 才能转出去？</strong></p>
+
+<div class="note"><strong>TL;DR</strong><br>因为 TRC20 USDT 不是 TRON 原生币，它是跑在 TRON 上的一个<strong>智能合约</strong>（合约地址 <code>TR7NHqj…jLj6t</code>）。每次转账都在调用这个合约，合约执行要烧 <strong>能量</strong>；能量不够时，TRON 自动按 100 sun/能量烧 TRX 补上。所以「只有 USDT 不够，还得有 TRX」这件事，不是钱包 bug，是链的设计。</p>
+
+<h2>一笔标准 TRC20 USDT 转账到底在烧什么</h2>
+<ul>
+  <li><strong>能量</strong>：约 65,000（老地址）或 130,000（新地址）。</li>
+  <li><strong>带宽</strong>：约 345 字节。每个 TRON 账户每天免费 600 字节，所以带宽基本不用管。</li>
+</ul>
+
+<h2>为什么具体要 TRX，不是 USDT</h2>
+<p>TRON 上所有「矿工费」都以 TRX 结算。USDT 只是跑在 TRON 上的一个资产，它自己不能支付手续费 —— 就像你把一瓶水装进快递箱寄出去，水不能当运费，要另付邮费。TRX 就是这个邮费。</p>
+
+<h2>要准备多少 TRX</h2>
+<table>
+  <thead><tr><th>场景</th><th>建议准备</th><th>2026-04 估算</th></tr></thead>
+  <tbody>
+    <tr><td>偶尔转一次老地址</td><td>15 TRX</td><td>约 $4.80</td></tr>
+    <tr><td>偶尔转一次新地址</td><td>30 TRX</td><td>约 $9.60</td></tr>
+    <tr><td>一周转几次</td><td>改用租能量平台，TRX 留少量当缓冲</td><td>单笔 $1.20–$2.40</td></tr>
+    <tr><td>每天转多次</td><td>质押 ~2,500 TRX（$800）换永久每日能量</td><td>前 1 笔免费，超出再租或烧</td></tr>
+  </tbody>
+</table>
+<p class="meta">TRX 现价 ≈ $0.32（2026-04）。能量单价自 <a href="https://developers.tron.network/docs/tron-proposals" target="_blank" rel="noopener noreferrer">TRON Proposal #104</a>（2025-08-29 生效）减半。</p>
+
+<h2>怎么判断自己能量够不够</h2>
+<p>在 <a href="https://tronscan.org/" target="_blank" rel="noopener noreferrer">tronscan.org</a> 搜你的地址，页面会直接显示「可用能量 / 总能量」和「可用带宽 / 总带宽」。主流钱包的「资源」或「Resources」菜单也会显示同样信息。</p>
+
+<h2>如果我什么都没准备，会发生什么</h2>
+<ul>
+  <li><strong>完全没 TRX：</strong> 交易直接无法广播，钱包会拦下来告诉你「余额不足 / 资源不足」。</li>
+  <li><strong>有少量 TRX 但不够：</strong> 交易上链但执行失败（<code>OUT OF ENERGY</code>），TRX 照样被扣一部分，USDT 没动。在 tronscan 上这类记录会显示红色 FAILED。</li>
+  <li><strong>TRX 够：</strong> 交易成功，TRX 按实际消耗扣除。</li>
+</ul>
+
+<h2>常见误区</h2>
+<ul>
+  <li><strong>以为从交易所提 USDT 到 TRON 钱包会顺手给一点 TRX</strong> —— 不会。交易所只发你提的资产。</li>
+  <li><strong>以为「转一点点」就不用 TRX</strong> —— 一笔 0.01 USDT 的转账吃的能量和 10,000 USDT 一样多。</li>
+  <li><strong>以为 TRX 不够时可以用 USDT 自动补</strong> —— 不能。链本身无法拿 USDT 当 gas。</li>
+</ul>
+
+<div class="risk"><strong>新手建议</strong><br>第一次用 TRC20，钱包里至少留 20 TRX。这是最便宜的保险。别等真正要转 10,000 USDT 时才发现自己少那 20 TRX。</div>
+
+<footer>继续读：<a href="./tron-energy-guide.html">TRON 能量指南</a>（完整机制 + 租能量路径）· <a href="./tron-bandwidth-and-energy.html">带宽和能量到底分别指什么</a> · 返回：<a href="./index.html">USDT 新手手册</a></footer>
 
     </div>
   </main>

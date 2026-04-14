@@ -3,11 +3,11 @@
   <rect x="48" y="48" width="1104" height="664" rx="20" fill="white" stroke="#E5E7EB"/>
   <text x="84" y="118" fill="#111827" font-size="34" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-weight="700">imToken 官方帮助中心</text>
   <text x="84" y="170" fill="#2563EB" font-size="28" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">如何获得带宽与能量</text>
-  <text x="84" y="238" fill="#374151" font-size="24" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">新手最该记住的 3 条：</text>
+  <text x="84" y="238" fill="#374151" font-size="24" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">文章里最值得新手记住的三条：</text>
   <text x="104" y="292" fill="#111827" font-size="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">• 方法一：用 TRX 租赁（推荐）—— 一键租能量 / 按需租能量</text>
   <text x="104" y="338" fill="#111827" font-size="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">• 方法二：直接燃烧 TRX —— 钱包里常备 50–100 TRX 兜底</text>
   <text x="104" y="384" fill="#111827" font-size="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">• 方法三：冻结 TRX —— Stake 2.0 解冻要等 14 天</text>
-  <text x="84" y="470" fill="#6B7280" font-size="20" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">这是一张基于官方原文提炼的站内参考卡，用来降低新手在 TRON 资源问题上的理解门槛。</text>
+  <text x="84" y="470" fill="#6B7280" font-size="20" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">这是一张基于官方原文提炼的参考卡片，用于站内说明，不是假装原站截图。</text>
   <rect x="84" y="540" width="520" height="72" rx="14" fill="#EFF6FF" stroke="#BFDBFE"/>
   <text x="108" y="584" fill="#1D4ED8" font-size="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">support.token.im/hc/zh-cn/articles/360037636294</text>
 </svg>

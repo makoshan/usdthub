@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none">
-  <rect width="1200" height="720" rx="24" fill="#F8FAFC"/>
-  <rect x="48" y="48" width="1104" height="624" rx="20" fill="white" stroke="#E5E7EB"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" fill="none">
+  <rect width="1200" height="760" rx="24" fill="#F8FAFC"/>
+  <rect x="48" y="48" width="1104" height="664" rx="20" fill="white" stroke="#E5E7EB"/>
   <text x="84" y="118" fill="#111827" font-size="34" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-weight="700">imToken 官方帮助中心</text>
   <text x="84" y="170" fill="#2563EB" font-size="28" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">转账时提示「对方地址未激活」</text>
-  <text x="84" y="238" fill="#374151" font-size="24" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">文章核心意思：</text>
-  <text x="104" y="290" fill="#111827" font-size="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">• TRON 新地址在首次使用前需要先激活</text>
-  <text x="104" y="336" fill="#111827" font-size="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">• 常见做法是先向目标地址转入少量 TRX 完成激活</text>
-  <text x="104" y="382" fill="#111827" font-size="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">• 向未激活地址转账时，发送方还会额外消耗 1.1 TRX</text>
-  <text x="84" y="470" fill="#6B7280" font-size="20" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">这是一张基于官方原文提炼的参考卡片，用于站内说明，不是假装原站截图。</text>
-  <rect x="84" y="528" width="520" height="72" rx="14" fill="#EFF6FF" stroke="#BFDBFE"/>
-  <text x="108" y="572" fill="#1D4ED8" font-size="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">support.token.im/hc/zh-cn/articles/4513324315929</text>
+  <text x="84" y="238" fill="#374151" font-size="24" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">你需要知道的 3 件事：</text>
+  <text x="104" y="292" fill="#111827" font-size="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">• TRON 新地址在首次使用前需要先激活</text>
+  <text x="104" y="338" fill="#111827" font-size="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">• 常见做法是先向目标地址转入少量 TRX 完成激活</text>
+  <text x="104" y="384" fill="#111827" font-size="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">• 向未激活地址转账时，发送方会额外消耗 1.1 TRX</text>
+  <text x="84" y="470" fill="#6B7280" font-size="20" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">这是基于官方原文提炼的站内参考卡，不是假装原站截图。</text>
+  <rect x="84" y="540" width="520" height="72" rx="14" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="108" y="584" fill="#1D4ED8" font-size="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial">support.token.im/hc/zh-cn/articles/4513324315929</text>
 </svg>

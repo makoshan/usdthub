@@ -5,7 +5,7 @@ url: "https://makoshan.github.io"
 baseurl: "/usdthub"
 markdown: kramdown
 theme: null
-source: .
+source: site
 destination: docs
 exclude:
   - __pycache__

@@ -90,6 +90,7 @@
 ### Use Cases
 - [USDT 可以拿来做什么](./markdown/what-can-you-do-with-usdt.md)
 - [如何用 USDT 订阅 AI](./markdown/use-usdt-for-ai.md)
+- [imToken Card 能不能用来订阅 ChatGPT、海淘和国内支付](./markdown/imtoken-card-for-ai-payments.md)
 - [如何用 USDT 买 eSIM 和 VPN](./markdown/use-usdt-for-esim-and-vpn.md)
 - [出国旅游时，USDT 有哪些实际用途](./markdown/use-usdt-for-travel.md)
 - [用 USDT 做跨境小额结算前要先确认什么](./markdown/use-usdt-for-cross-border-payments.md)

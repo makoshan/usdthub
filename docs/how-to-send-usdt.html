@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>怎么发送 USDT | USDT 新手手册</title>
+  <meta name="description" content="写给新手的 USDT 转账章节：发送前要检查什么、为什么网络比币名更重要、第一次转账为什么一定先小额测试。" />
+  <link rel="stylesheet" href="/usdthub/assets/css/style.css" />
+  
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+<a href="./index.html"><strong>USDT 新手手册</strong></a>
+        <a href="./start-here.html">Start Here</a>
+        <a href="./what-is-usdt.html">USDT 是什么</a>
+        <a href="./how-to-buy-usdt.html">怎么买 USDT</a>
+        <a href="./china-buy-crypto-notes.html">人在中国怎么买币</a>
+        <a href="./how-to-choose-a-wallet.html">怎么选钱包</a>
+        <a href="./how-to-send-usdt.html">怎么发送 USDT</a>
+        <a href="./usdt-networks-explained.html">USDT 网络</a>
+        <a href="./tron-energy-guide.html">TRON 能量</a>
+        <a href="./what-can-you-do-with-usdt.html">USDT 能做什么</a>
+        <a href="./use-usdt-for-ai.html">AI 支付</a>
+        <a href="./changelog.html">Changelog</a>
+        <a href="./editorial-policy.html">Editorial Policy</a>
+</nav>
+
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <h1>怎么发送 USDT</h1>
+<div class="meta">Chapter 2.5 · Transfers · Last updated: 2026-04-14</div>
+
+<p><img src="./assets/css/send-checklist.svg" alt="发送 USDT 前，我会按这张清单过一遍" /></p>
+
+<p>USDT 转账看起来像一件很简单的事：复制地址，填金额，确认。但我先说结论，真正把人送进坑里的，通常不是按钮多难找，而是 <strong>网络、地址、资源、第一次没测试</strong> 这几件小事一起出问题。很多人就是在“这有什么难的”这一秒，开始交学费。</p>
+
+<div class="note"><strong>TL;DR</strong><br>如果你问我发 USDT 前最该检查什么，我的答案一直很稳定：收款方支持的网络、目标地址、钱包资源够不够、这是不是第一次给这个地址打款。只要是第一次，我都建议先测一笔小额。慢一点，通常比补救便宜得多。</div>
+
+<h2>为什么“网络”比“币名”更重要</h2>
+<p>我见过最常见的一类事故，就是对方只说一句“发 U 给我”，然后转账的人默认理解成“随便哪条链都行”。实际完全不是。USDT 可以存在于不同网络，比如 TRC20、ERC20 等。币名一样，不代表路线一样。</p>
+<p>所以发送前先问自己一句：<strong>对方收的是哪条链上的 USDT？</strong> 你把这句话问明白，已经能避开一大半低级事故。</p>
+
+<h2>发送前建议检查 5 件事</h2>
+<ul>
+  <li>收款方支持的网络：这是第一优先级。</li>
+  <li>地址是不是完整、准确：不要手输，尽量复制后再核对首尾字符。</li>
+  <li>金额是不是正确：尤其是服务商付款，金额和币种通常都有固定要求。</li>
+  <li>钱包资源够不够：如果你走 TRON 路线，可能还要考虑 TRX / 资源问题。</li>
+  <li>是不是第一次给这个地址转账：如果是，先小额。</li>
+</ul>
+
+<h2>我自己的默认检查顺序</h2>
+<ol>
+  <li>先看对方支持的链</li>
+  <li>再看地址</li>
+  <li>再看金额和规则</li>
+  <li>最后看自己钱包资源够不够</li>
+</ol>
+<p>这个顺序不是唯一正确答案，但它能最大化降低“我只差最后一步时才发现自己少看了一行”的概率。</p>
+
+<h2>常见发送流程</h2>
+<h3>1. 确认收款规则</h3>
+<p>我自己的做法一直是先看规则，再点发送。不是所有收款页面都只写一个地址。很多还会写：最低金额、支持链、备注规则、到账时效。先看完，再动手。</p>
+<h3>2. 在钱包里选择正确资产与网络</h3>
+<p>如果你持有的是 TRC20 USDT，就用对应路径发送。不要指望系统自动帮你跨链理解。系统有时候比你还乐观，链上可不会。</p>
+<h3>3. 复制地址后，至少核对两遍</h3>
+<p>最简单的方法：看前几位、后几位，以及它是不是你预期的链格式。我知道这一步很像废话，但大多数事故都不发生在高深环节，而发生在“我觉得不用看了”。</p>
+<h3>4. 第一次先小额测试</h3>
+<p>这一步听起来保守，但它比事后补救便宜太多。我自己的原则很简单：只要是新地址、新商家、新链路，先测一笔再说。</p>
+
+<h2>地址污染（address poisoning）：2025 年最贵的事故类型</h2>
+<p>这是你必须专门了解的一种骗局，因为它已经从「理论风险」变成了真实大额案件：</p>
+<ul>
+  <li><strong>2025-12</strong>：单一受害者在复制交易历史里的「相似地址」后损失 <strong>$50,000,000 USDT</strong>。</li>
+  <li><strong>2025-05</strong>：另一位在 3 小时内被同一手法骗了 $2,600,000 × 2 次（第一次后没改习惯）。</li>
+</ul>
+<p>攻击原理：骗子先用脚本生成一个<strong>首尾几位和你真实收款地址完全一样</strong>的地址（中间随机），然后往你的地址打 0 USDT（TRC20 允许 0 金额转账）。这笔 0 USDT 会出现在你钱包的「交易历史」里。下次你想给老朋友转账时，如果你习惯从历史里复制地址，就可能复制到骗子的假地址 —— 前几位后几位都对得上，中间随便哪几位肉眼都难发现。</p>
+<div class="risk"><strong>怎么防</strong><ul style="margin-top:8px;">
+  <li><strong>永远不要从交易历史里复制地址</strong>。从对方给你的原始来源（微信、邮件、二维码）重新拿。</li>
+  <li><strong>核对至少前 6 位 + 后 6 位 + 中间抽样 2 位</strong>，不要只看前 4 后 4。</li>
+  <li>给常用地址<strong>加备注</strong>，在钱包地址簿里管理，别每次靠记忆。</li>
+  <li>大额前先发 1 USDT 测试，<strong>等对方确认收到</strong>再发剩下。</li>
+</ul></div>
+
+<h2>最容易踩的坑</h2>
+<ul>
+  <li>只看见 USDT，不看网络</li>
+  <li>复制了旧地址或错误地址（参考上一节「地址污染」）</li>
+  <li>第一次直接大额</li>
+  <li>忽略 TRON 资源问题（钱包只有 USDT 没有 TRX）</li>
+  <li>对方要求备注（memo / tag），你没看见 —— 这类常见于交易所入金，漏备注钱会进不去你的账户</li>
+</ul>
+
+<div class="note"><strong>Beginner-friendly option</strong><br>如果你需要一个更容易上手的钱包来完成 TRON / USDT 的实际收发，imToken 依然是我会给新手的一个选项。原因不是它能替你避免所有错误，而是它更适合作为你第一次建立正确收发流程的工具。</div>
+
+<div class="risk"><strong>风险提醒</strong><br>区块链转账通常不可撤回。尤其在你给交易所、服务商、陌生商家、支付中间层转账时，务必同时确认链、地址、金额和规则。如果你不确定，暂停，不要赌。</div>
+
+<h2>参考资料</h2>
+<p>几个值得直接去看的官方文档，比任何中文二手解读都准确：</p>
+<ul>
+  <li><a href="https://support.token.im/hc/zh-cn/articles/4513324315929-%E8%BD%AC%E8%B4%A6%E6%97%B6%E6%8F%90%E7%A4%BA-%E5%AF%B9%E6%96%B9%E5%9C%B0%E5%9D%80%E6%9C%AA%E6%BF%80%E6%B4%BB" target="_blank" rel="noopener noreferrer">imToken：转账时提示「对方地址未激活」</a> — TRON 新手遇到的头号报错，官方把原因和 0.1 TRX 激活的来龙去脉讲清楚了。</li>
+  <li><a href="https://help.tokenpocket.pro/en/wallet-faq-en/tron-wallet/activation" target="_blank" rel="noopener noreferrer">TokenPocket: About TRON Address Activation</a> — 四种激活方式的英文版对照。</li>
+  <li><a href="https://www.ledger.com/academy/topics/security/what-are-address-poisoning-attacks-in-crypto-and-how-to-avoid-them" target="_blank" rel="noopener noreferrer">Ledger Academy: Address Poisoning Attacks</a> — 对上一节地址污染案例的原理完整讲解。</li>
+  <li><a href="https://tronscan.org/" target="_blank" rel="noopener noreferrer">TronScan</a> — 任何 TRON 交易最权威的查询入口，发送完一定去看一眼 TxID。</li>
+</ul>
+
+<footer>上一篇：<a href="./how-to-choose-a-wallet.html">怎么选钱包</a> · 下一篇：<a href="./usdt-networks-explained.html">TRC20、ERC20、BEP20 有什么区别</a></footer>
+
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<svg width="1200" height="680" viewBox="0 0 1200 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="680" rx="24" fill="#F8FAFC"/>
+  <text x="70" y="88" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="40" font-weight="700" fill="#0F172A">USDT 新手默认路线图</text>
+  <text x="70" y="128" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="22" fill="#475569">我建议新手按这个顺序走：先理解，再小额买，再转到钱包，再学网络和转账，最后再去碰支付场景。</text>
+
+  <defs>
+    <filter id="shadow" x="0" y="0" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#CBD5E1" flood-opacity="0.45"/>
+    </filter>
+    <marker id="arrow" markerWidth="16" markerHeight="16" refX="8" refY="8" orient="auto">
+      <path d="M2 2L14 8L2 14V2Z" fill="#94A3B8"/>
+    </marker>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="190" width="190" height="160" rx="22" fill="#DBEAFE"/>
+    <text x="95" y="238" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="28" font-weight="700" fill="#1D4ED8">1. 先理解</text>
+    <text x="95" y="280" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- USDT 是什么</text>
+    <text x="95" y="312" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- 它为什么分网络</text>
+    <text x="95" y="344" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- 买到不等于会用</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="290" y="190" width="190" height="160" rx="22" fill="#DCFCE7"/>
+    <text x="315" y="238" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="28" font-weight="700" fill="#15803D">2. 小额买入</text>
+    <text x="315" y="280" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- 先选路径</text>
+    <text x="315" y="312" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- 不先追最低价</text>
+    <text x="315" y="344" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- 跑通完整流程</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="510" y="190" width="190" height="160" rx="22" fill="#FCE7F3"/>
+    <text x="535" y="238" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="28" font-weight="700" fill="#BE185D">3. 建钱包</text>
+    <text x="535" y="280" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- 先备份助记词</text>
+    <text x="535" y="312" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- 先放测试金额</text>
+    <text x="535" y="344" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- 分清平台 vs 自托管</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="730" y="190" width="190" height="160" rx="22" fill="#FEF3C7"/>
+    <text x="755" y="238" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="28" font-weight="700" fill="#B45309">4. 学网络</text>
+    <text x="755" y="280" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- TRC20 / ERC20 / BEP20</text>
+    <text x="755" y="312" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- 错链是头号事故</text>
+    <text x="755" y="344" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- 先问对方支持什么</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="950" y="190" width="180" height="160" rx="22" fill="#EDE9FE"/>
+    <text x="975" y="238" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="28" font-weight="700" fill="#6D28D9">5. 去使用</text>
+    <text x="975" y="280" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- 转账</text>
+    <text x="975" y="312" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- AI 支付</text>
+    <text x="975" y="344" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="20" fill="#1E293B">- eSIM / 旅行 / 结算</text>
+  </g>
+
+  <line x1="260" y1="270" x2="290" y2="270" stroke="#94A3B8" stroke-width="8" marker-end="url(#arrow)"/>
+  <line x1="480" y1="270" x2="510" y2="270" stroke="#94A3B8" stroke-width="8" marker-end="url(#arrow)"/>
+  <line x1="700" y1="270" x2="730" y2="270" stroke="#94A3B8" stroke-width="8" marker-end="url(#arrow)"/>
+  <line x1="920" y1="270" x2="950" y2="270" stroke="#94A3B8" stroke-width="8" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="430" width="1020" height="160" rx="22" fill="#FFFFFF"/>
+    <text x="120" y="482" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="28" font-weight="700" fill="#0F172A">我给新手的 4 条硬规则</text>
+    <text x="120" y="525" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="22" fill="#334155">1. 第一次只跑小额，不跑情绪。</text>
+    <text x="120" y="558" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="22" fill="#334155">2. 永远先确认网络，再确认金额。</text>
+    <text x="520" y="525" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="22" fill="#334155">3. 钱包先备份，再充值。</text>
+    <text x="520" y="558" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Arial" font-size="22" fill="#334155">4. 别把“能买到”误会成“会使用”。</text>
+  </g>
+</svg>

@@ -1,0 +1,97 @@
+---
+layout: default
+title: "怎么选钱包"
+description: "USDT 钱包实测对比：imToken、OKX Wallet、TronLink、MetaMask、Trust Wallet、SafePal、Ledger、Trezor 的 TRC20 支持、硬件配对、租能量、开源度。附按场景给的推荐，和明确的陷阱清单。"
+permalink: /how-to-choose-a-wallet.html
+---
+
+<h1>怎么选钱包</h1>
+<div class="meta">Chapter 2 · Wallets · Last updated: 2026-04-14</div>
+
+<p>如果你是第一次碰 USDT，钱包不是「随便下一个就行」的工具。它决定的是：<strong>私钥归谁、支持哪条链、转账流程有没有坑</strong>。下面直接上实测对比表，再告诉你怎么挑。</p>
+
+<div class="note"><strong>TL;DR</strong><br>日常 TRC20 为主：<strong>imToken 或 OKX Wallet</strong>（都内置一键租能量）。EVM 为主（ETH / BSC / Arbitrum）：<strong>MetaMask 或 Rabby</strong>（注意 Rabby 不支持 TRON）。长期大额：<strong>Ledger</strong>（原生支持 TRC20）。<strong>Trezor 不支持原生 TRC20</strong>，别踩坑。</div>
+
+<h2>主流钱包实测对比（2026-04）</h2>
+<table>
+  <thead>
+    <tr><th>钱包</th><th>托管模式</th><th>TRC20</th><th>ERC20</th><th>硬件配对</th><th>一键租能量</th><th>开源</th><th>形态</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>imToken</strong></td><td>自托管</td><td>原生</td><td>原生</td><td>imKey</td><td>✅</td><td>部分</td><td>手机 + 浏览器插件</td></tr>
+    <tr><td><strong>OKX Wallet</strong></td><td>自托管</td><td>原生</td><td>原生</td><td>Ledger / Keystone</td><td>✅</td><td>部分</td><td>手机 + 插件</td></tr>
+    <tr><td><strong>TronLink</strong></td><td>自托管</td><td>原生（首发）</td><td>❌</td><td>Ledger</td><td>✅</td><td>部分</td><td>手机 + 插件</td></tr>
+    <tr><td><strong>Trust Wallet</strong></td><td>自托管</td><td>原生</td><td>原生</td><td>Ledger</td><td>❌</td><td>部分</td><td>手机 + 插件</td></tr>
+    <tr><td><strong>MetaMask</strong></td><td>自托管</td><td>2025 原生支持</td><td>原生</td><td>Ledger / Trezor</td><td>❌</td><td>✅</td><td>手机 + 插件</td></tr>
+    <tr><td><strong>SafePal</strong></td><td>自托管 + 硬件</td><td>原生</td><td>原生</td><td>SafePal S1/X1</td><td>❌</td><td>部分</td><td>手机 + 插件 + 硬件</td></tr>
+    <tr><td><strong>Rabby</strong></td><td>自托管</td><td>❌ <span style="color:#b91c1c">只支持 EVM</span></td><td>原生（100+ EVM 链）</td><td>Ledger / Trezor / Keystone</td><td>N/A</td><td>✅</td><td>插件 + 桌面</td></tr>
+    <tr><td><strong>Binance Wallet (Web3)</strong></td><td>MPC</td><td>原生</td><td>原生</td><td>❌</td><td>❌</td><td>❌</td><td>App 内</td></tr>
+    <tr><td><strong>Ledger</strong> (硬件)</td><td>自托管硬件</td><td>原生（配 TronLink / Ledger Live）</td><td>原生</td><td>—</td><td>❌</td><td>部分</td><td>Nano S Plus / X / Stax</td></tr>
+    <tr><td><strong>Trezor</strong> (硬件)</td><td>自托管硬件</td><td><span style="color:#b91c1c">❌ 无原生 TRC20</span>（仅 Exodus 第三方）</td><td>原生</td><td>—</td><td>❌</td><td>✅</td><td>Model One / Safe 3 / 5</td></tr>
+  </tbody>
+</table>
+<p class="meta">「一键租能量」= 发 TRC20 时钱包 UI 直接弹出租能量选项，不用跳去第三方平台。数据来源：各官方文档 + 2026-04 实测。</p>
+
+<h2>三种托管模式的差异</h2>
+
+<h3>1. 平台账户（Binance / OKX 主账户）</h3>
+<p>严格说不是「钱包」。你的 USDT 在平台数据库里，链上地址是平台的。优点是买卖方便、忘密码能找回；缺点是控制权不在你手里，平台冻你账号你就提不出来。<strong>适合拿来交易，不适合长期放</strong>。</p>
+
+<h3>2. 自托管钱包（imToken、MetaMask 等）</h3>
+<p>助记词由你自己保管。你和链直接打交道，没有中间方能冻你的钱，但也没人能帮你找回。<strong>适合日常收发和长期持有</strong>。</p>
+
+<h3>3. 硬件钱包（Ledger / Trezor / SafePal X1）</h3>
+<p>私钥永不离开硬件设备，每笔交易都要硬件按键确认。<strong>适合长期、大额、冷存储场景</strong>。缺点：买硬件 $50–$300，首次配置 1–2 小时，每次转账慢一点。</p>
+
+<h2>新手第一次选钱包，按场景给建议</h2>
+
+<h3>场景 A：我主要做 TRC20 USDT 收发（C2C / 支付 / 跨境）</h3>
+<p>推荐：<strong>imToken</strong> 或 <strong>OKX Wallet</strong>。两者都：</p>
+<ul>
+  <li>原生支持 TRC20</li>
+  <li>内置一键租能量（直接在转账 UI 里选「租」，不用跑去第三方）</li>
+  <li>中文界面和中文客服</li>
+  <li>手机 App 体验顺</li>
+</ul>
+
+<h3>场景 B：我以 ETH / BSC / Arbitrum 为主，偶尔收 TRC20</h3>
+<p>推荐：<strong>MetaMask</strong>（2025 起原生支持 TRON 了）或 <strong>Rabby + 独立 TRON 钱包</strong>（因为 Rabby 不支持 TRON）。Rabby 的优势是对 EVM 链的风险提示做得比 MetaMask 更细致（合约调用会展示预期资产变化）。</p>
+
+<h3>场景 C：我要长期持有 &gt; $10,000</h3>
+<p>推荐：<strong>Ledger Nano S Plus（$79）或 Nano X（$149）</strong>。<strong>不要买 Trezor</strong> —— Trezor 至今不支持原生 TRC20，你如果要 TRC20 USDT，就只能通过 Exodus 等第三方应用接入，体验差且增加攻击面。</p>
+
+<h3>场景 D：我想硬件 + 手机一体的体验</h3>
+<p>推荐：<strong>SafePal S1</strong>（$60，带屏幕）或 <strong>Keystone 3 Pro</strong>。它们通过 QR 码签名，不联网，比 Ledger 的 USB 方案更防恶意 USB。</p>
+
+<h2>选钱包必看 5 件事</h2>
+<ol>
+  <li><strong>是不是自托管</strong>：控制权是不是在你手里。</li>
+  <li><strong>支不支持你需要的链</strong>：TRC20 的话先确认钱包原生支持（不要靠第三方插件）。</li>
+  <li><strong>备份流程清不清楚</strong>：助记词是 12 / 24 词，不是 6 位密码。</li>
+  <li><strong>开发者和版本</strong>：下载前在官网或 <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a> 确认 publisher，<strong>不要从搜索引擎第一条下载</strong>（2025 年 Google Ads 上钓鱼 MetaMask 曾多次导致数百万损失）。</li>
+  <li><strong>转账路径顺不顺</strong>：地址、链、手续费提示是不是清晰。下载后先用 1 USDT 跑一笔测试。</li>
+</ol>
+
+<h2>不该怎么选</h2>
+<ul>
+  <li><strong>不要只看「支持多少条链」</strong>。新手更需要清楚，不是更杂。</li>
+  <li><strong>不要只看榜单或 YouTube 博主测评</strong>。很多有返佣，标题写「最好钱包」实际是第一条买 ad 的。</li>
+  <li><strong>不要把交易所账户当长期钱包</strong>。Mt. Gox、FTX 都曾是「看起来最稳」的。</li>
+  <li><strong>不要在没备份好助记词前就往里放钱</strong>。备份 = 纸质 + 异地，不是手机截图。</li>
+  <li><strong>不要装来路不明的钱包扩展</strong>。装之前看下载量、评分、发布者签名。</li>
+</ul>
+
+<div class="risk"><strong>助记词和私钥必须离线、独立、完整保存。</strong><br>不要截图，不要发给任何人（包括「客服」），不要云端乱存。App 丢了还能重装，助记词丢了通常只剩复盘会。推荐：纸质 2 份异地 + 可选金属片备份（Billfodl、Cryptosteel）。</div>
+
+<h2>默认建议</h2>
+<p>如果你现在只是想安全地开始：</p>
+<ol>
+  <li>手机上装 <strong>imToken</strong>（TRC20 优先）或 <strong>MetaMask</strong>（EVM 优先）。<strong>从官网下载</strong>。</li>
+  <li>创建新钱包 → 用纸笔抄下 12 词助记词，放在两个不同的物理位置（家里保险箱 + 信任的亲戚家，别云端）。</li>
+  <li>先放 <strong>$10–50</strong> 测试，完成一次收、一次发，确认流程通畅。</li>
+  <li>等你持有 $1,000 以上再考虑买硬件钱包做冷存储。</li>
+</ol>
+
+<div class="note"><strong>Beginner-friendly option</strong><br>如果你主要想管理 TRON / USDT，且第一次希望路径尽量简单，<a href="https://token.im/trx-wallet" target="_blank" rel="noopener noreferrer">imToken</a> 是我愿意放进这份手册的一个起步选项。原因不是它适合所有人，而是它对第一次真正处理自托管钱包的人更容易理解，且内置租能量省掉不少手续费。</div>
+
+<footer>上一章：<a href="./how-to-buy-usdt.html">怎么买 USDT</a> · 下一章：<a href="./how-to-send-usdt.html">怎么发送 USDT</a> · 返回：<a href="./index.html">USDT 新手手册</a></footer>

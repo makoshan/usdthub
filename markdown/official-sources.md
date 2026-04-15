@@ -5,7 +5,7 @@ source_html: "official-sources.html"
 
 # 官方资料入口
 
-> References Hub · Last updated: 2026-04-14
+> References Hub
 
 这一页不讲概念，直接放我觉得最值得存书签的官方入口。真转账、真买币、真选钱包之前，别只看二手转述。
 

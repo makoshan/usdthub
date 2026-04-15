@@ -1,12 +1,180 @@
+{%- comment -%}
+  Default layout. Wraps every article with a full SEO head:
+  canonical, OG, Twitter cards, JSON-LD (Article | AboutPage | WebSite +
+  BreadcrumbList + Organization), and machine-readable date stamps.
+
+  Per-page frontmatter the layout consumes:
+    title, description, permalink (required by Jekyll)
+    lang              -> html lang (default site.lang)
+    og_image          -> absolute or site-relative image path
+    og_type           -> override default (article | website | profile)
+    chapter           -> optional breadcrumb label, not structured
+    breadcrumb        -> [ {name, url}, ... ] for BreadcrumbList schema
+    noindex           -> truthy to emit robots noindex
+
+  Dates are injected by _plugins/git_dates.rb:
+    page.date_published, page.date_modified (DateTime | nil)
+{%- endcomment -%}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'zh-CN' }}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% if page.title and page.title != site.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}" />
+  {%- assign page_title = page.title | default: site.title -%}
+  {%- if page.title and page.title != site.title -%}
+    {%- assign full_title = page.title | append: ' | ' | append: site.title -%}
+  {%- else -%}
+    {%- assign full_title = site.title -%}
+  {%- endif -%}
+  <title>{{ full_title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | strip_newlines }}" />
+  {%- assign meta = site.data.site_meta -%}
+  {%- assign author_name = meta.author.name | default: 'Mako Shan' -%}
+  <meta name="author" content="{{ author_name }}" />
+  {%- if page.noindex -%}
+  <meta name="robots" content="noindex, nofollow" />
+  {%- else -%}
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  {%- endif -%}
+
+  {%- comment -%} Canonical: always self-referencing via permalink. {%- endcomment -%}
+  {%- assign canonical_url = page.url | absolute_url -%}
+  {%- if page.canonical -%}{%- assign canonical_url = page.canonical -%}{%- endif -%}
+  <link rel="canonical" href="{{ canonical_url }}" />
+
+  {%- comment -%} Dates: strict ISO-8601 with offset for schema, date-only for humans. {%- endcomment -%}
+  {%- if page.date_published -%}
+    {%- assign iso_published = page.date_published | date_to_xmlschema -%}
+  {%- endif -%}
+  {%- if page.date_modified -%}
+    {%- assign iso_modified = page.date_modified | date_to_xmlschema -%}
+    {%- assign human_modified = page.date_modified | date: '%Y-%m-%d' -%}
+  {%- endif -%}
+
+  {%- comment -%} Open Graph. {%- endcomment -%}
+  {%- assign og_type = page.og_type | default: 'article' -%}
+  {%- if page.permalink == '/index.html' or page.permalink == '/' -%}{%- assign og_type = 'website' -%}{%- endif -%}
+  {%- assign og_image = page.og_image | default: meta.social.og_default_image -%}
+  {%- assign og_image_abs = og_image | absolute_url -%}
+  <meta property="og:type" content="{{ og_type }}" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:title" content="{{ page.title | default: site.title }}" />
+  <meta property="og:description" content="{{ page.description | default: site.description | strip_newlines }}" />
+  <meta property="og:url" content="{{ canonical_url }}" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:image" content="{{ og_image_abs }}" />
+  <meta property="og:image:width" content="{{ meta.social.og_image_width | default: 1200 }}" />
+  <meta property="og:image:height" content="{{ meta.social.og_image_height | default: 630 }}" />
+  {%- if og_type == 'article' -%}
+  {%- if iso_published %}<meta property="article:published_time" content="{{ iso_published }}" />{%- endif -%}
+  {%- if iso_modified %}<meta property="article:modified_time" content="{{ iso_modified }}" />{%- endif -%}
+  <meta property="article:author" content="{{ author_name }}" />
+  <meta property="article:section" content="{{ page.chapter | default: 'USDT 新手手册' }}" />
+  {%- endif -%}
+
+  {%- comment -%} Twitter card. {%- endcomment -%}
+  <meta name="twitter:card" content="summary_large_image" />
+  {%- if meta.social.twitter %}<meta name="twitter:site" content="{{ meta.social.twitter }}" />{%- endif -%}
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}" />
+  <meta name="twitter:description" content="{{ page.description | default: site.description | strip_newlines }}" />
+  <meta name="twitter:image" content="{{ og_image_abs }}" />
+
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
-  {% if page.canonical %}<link rel="canonical" href="{{ page.canonical }}" />{% endif %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}" />
+  <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | absolute_url }}" />
+
+  {%- comment -%} JSON-LD. @graph combines multiple entities so the page ships one script. {%- endcomment -%}
+  {%- assign site_abs = '/' | absolute_url -%}
+  {%- assign org_id = site_abs | append: '#organization' -%}
+  {%- assign website_id = site_abs | append: '#website' -%}
+  {%- assign author_id = meta.author.url | default: '/about.html' | absolute_url | append: '#person' -%}
+  {%- assign logo_abs = meta.organization.logo | default: '/assets/og/logo.png' | absolute_url -%}
+  {%- assign page_types = meta.page_types -%}
+  {%- assign page_type = page.og_type -%}
+  {%- if page_types[page.permalink] -%}{%- assign page_type = page_types[page.permalink] -%}{%- endif -%}
+  {%- unless page_type -%}{%- assign page_type = 'Article' -%}{%- endunless -%}
+  {%- if og_type == 'website' and page_type == nil -%}{%- assign page_type = 'WebSite' -%}{%- endif -%}
+  {%- if page_type == 'website' or page_type == 'WebSite' -%}{%- assign page_type = 'WebSite' -%}{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ org_id }}",
+      "name": {{ meta.organization.name | default: site.title | jsonify }},
+      "url": "{{ site_abs }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ logo_abs }}"
+      }{% if meta.organization.same_as %},
+      "sameAs": {{ meta.organization.same_as | jsonify }}{% endif %}
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ website_id }}",
+      "url": "{{ site_abs }}",
+      "name": {{ site.title | jsonify }},
+      "inLanguage": "zh-CN",
+      "publisher": { "@id": "{{ org_id }}" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "{{ site_abs }}?q={% raw %}{search_term_string}{% endraw %}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ author_id }}",
+      "name": {{ author_name | jsonify }},
+      "url": "{{ meta.author.url | default: '/about.html' | absolute_url }}"{% if meta.author.same_as %},
+      "sameAs": {{ meta.author.same_as | jsonify }}{% endif %}
+    }{% if page_type == 'Article' %},
+    {
+      "@type": "Article",
+      "@id": "{{ canonical_url }}#article",
+      "isPartOf": { "@id": "{{ website_id }}" },
+      "mainEntityOfPage": "{{ canonical_url }}",
+      "headline": {{ page.title | default: site.title | jsonify }},
+      "description": {{ page.description | default: site.description | strip_newlines | jsonify }},
+      "inLanguage": "zh-CN",
+      "url": "{{ canonical_url }}",
+      "image": "{{ og_image_abs }}"{% if iso_published %},
+      "datePublished": "{{ iso_published }}"{% endif %}{% if iso_modified %},
+      "dateModified": "{{ iso_modified }}"{% endif %},
+      "author": { "@id": "{{ author_id }}" },
+      "publisher": { "@id": "{{ org_id }}" }{% if page.chapter %},
+      "articleSection": {{ page.chapter | jsonify }}{% endif %}
+    }{% elsif page_type == 'AboutPage' %},
+    {
+      "@type": "AboutPage",
+      "@id": "{{ canonical_url }}#about",
+      "isPartOf": { "@id": "{{ website_id }}" },
+      "mainEntityOfPage": "{{ canonical_url }}",
+      "name": {{ page.title | default: site.title | jsonify }},
+      "description": {{ page.description | default: site.description | strip_newlines | jsonify }},
+      "inLanguage": "zh-CN",
+      "url": "{{ canonical_url }}"{% if iso_modified %},
+      "dateModified": "{{ iso_modified }}"{% endif %}
+    }{% endif %}{% if page.breadcrumb %},
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ canonical_url }}#breadcrumb",
+      "itemListElement": [
+        {% for crumb in page.breadcrumb %}{
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "name": {{ crumb.name | jsonify }},
+          "item": "{{ crumb.url | absolute_url }}"
+        }{% unless forloop.last %},{% endunless %}{% endfor %}
+      ]
+    }{% endif %}
+  ]
+}
+</script>
 </head>
 <body>
   <header>
@@ -17,6 +185,13 @@
   <main>
     <div class="wrap">
       {{ content }}
+      {%- if human_modified -%}
+      <div class="page-footer-meta" role="contentinfo">
+        最近更新 <time datetime="{{ iso_modified }}">{{ human_modified }}</time> ·
+        <a href="{{ '/about.html' | relative_url }}">作者</a> ·
+        <a href="{{ '/editorial-policy.html' | relative_url }}">Editorial Policy</a>
+      </div>
+      {%- endif -%}
     </div>
   </main>
 </body>

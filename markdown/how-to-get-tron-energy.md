@@ -5,7 +5,7 @@ source_html: "how-to-get-tron-energy.html"
 
 # TRON 能量怎么获得
 
-> TRON Note · Last updated: 2026-04-14
+> TRON Note
 
 新手先别把能量当成“要提前囤的东西”。等你开始频繁用 TRON，再回头看它。
 
@@ -18,6 +18,9 @@ source_html: "how-to-get-tron-energy.html"
 - 只有高频用户，才真的有必要比不同方案。
 
 ## 先别做的事
+
+
+**租能量最危险的错误**是：在陌生群里点链接租能量、用助记词或私钥换「免费能量」、一上来就质押几万 TRX——这些要么是钓鱼要么是把自己锁死。
 
 - 为了省几毛钱把自己绕晕，不值。
 - 别人一句“租能量很便宜”就上头，也不值。

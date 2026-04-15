@@ -5,7 +5,7 @@ source_html: "tron-basics.html"
 
 # TRON 是什么：TRX、超级代表、3 秒出块
 
-> TRON Note · Last updated: 2026-04-14
+> TRON Note
 
 这篇只回答一个问题：你拿着 TRC20 USDT，为什么 TRON 链能让你 3 秒内确认、几乎零手续费转出去？
 

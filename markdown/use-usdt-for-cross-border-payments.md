@@ -5,7 +5,7 @@ source_html: "use-usdt-for-cross-border-payments.html"
 
 # 用 USDT 做跨境小额结算前要先确认什么
 
-> Use Case · Cross-border Payments · Last updated: 2026-04-14
+> Use Case · Cross-border Payments
 
 USDT 适合做跨境小额结算，不是因为它神奇，而是在某些场景里它的路径更直接。但“能不能结算”远不止链上这一步。
 

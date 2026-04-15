@@ -5,7 +5,7 @@ source_html: "how-to-reduce-trc20-usdt-fees.html"
 
 # TRC20 USDT 手续费怎么省
 
-> TRON Note · Last updated: 2026-04-14
+> TRON Note
 
 新手别想着“极限省”，先别出错再说。要省成本，前提是你已经会买、会发、会确认网络。
 

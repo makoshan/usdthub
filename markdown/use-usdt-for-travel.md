@@ -5,7 +5,7 @@ source_html: "use-usdt-for-travel.html"
 
 # 出国旅游时，USDT 有哪些实际用途
 
-> Use Case · Travel · Last updated: 2026-04-14
+> Use Case · Travel
 
 旅游场景里，USDT 不是拿来扫街消费的。真正用到它的地方，多半是出发前的数字准备和少量跨境小额支付。
 
@@ -18,6 +18,9 @@ source_html: "use-usdt-for-travel.html"
 - 某些在线数字服务或预付类项目。
 
 ## 别期待的事
+
+
+**USDT 在旅游场景里做不到的几件事**：在绝大多数国家街上店铺直接扫码付 USDT、落地 ATM 以合理费率直接取当地法币、用 USDT 在出票前 30 分钟买到机票。这几件事目前都不是现实选项。
 
 不要把它想成“落地后到处都能直接花”的替代方案。不同国家、商家和服务的支持差异很大。
 

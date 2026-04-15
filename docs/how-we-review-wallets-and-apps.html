@@ -2,29 +2,112 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How We Review Wallets and Apps | USDT 新手手册</title>
-  <meta name="description" content="说明 USDT 新手手册如何评测钱包与应用：看重新手友好度、自托管支持、TRON / USDT 相关路径清晰度，以及风险提示是否充分。" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>How We Review Wallets and Apps | USDT 新手手册</title>
+  <meta name="description" content="USDT 新手手册的钱包和应用评测方法：5 个评分维度、权重分配、测试流程、利益冲突处理、更新节奏。由 Mako Shan 具名维护，所有评测都有 GitHub commit 历史。" /><meta name="author" content="Mako Shan" /><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /><link rel="canonical" href="http://localhost:4000/usdthub/how-we-review-wallets-and-apps.html" /><meta property="og:type" content="article" />
+  <meta property="og:site_name" content="USDT 新手手册" />
+  <meta property="og:title" content="How We Review Wallets and Apps" />
+  <meta property="og:description" content="USDT 新手手册的钱包和应用评测方法：5 个评分维度、权重分配、测试流程、利益冲突处理、更新节奏。由 Mako Shan 具名维护，所有评测都有 GitHub commit 历史。" />
+  <meta property="og:url" content="http://localhost:4000/usdthub/how-we-review-wallets-and-apps.html" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:image" content="http://localhost:4000/usdthub/assets/og/default.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" /><meta property="article:published_time" content="2026-04-14T16:58:10+08:00" /><meta property="article:modified_time" content="2026-04-14T21:56:14+08:00" /><meta property="article:author" content="Mako Shan" />
+  <meta property="article:section" content="Trust · 评测方法" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@makoshan" /><meta name="twitter:title" content="How We Review Wallets and Apps" />
+  <meta name="twitter:description" content="USDT 新手手册的钱包和应用评测方法：5 个评分维度、权重分配、测试流程、利益冲突处理、更新节奏。由 Mako Shan 具名维护，所有评测都有 GitHub commit 历史。" />
+  <meta name="twitter:image" content="http://localhost:4000/usdthub/assets/og/default.png" />
+
   <link rel="stylesheet" href="/usdthub/assets/css/style.css" />
-  
+  <link rel="alternate" type="application/rss+xml" title="USDT 新手手册" href="http://localhost:4000/usdthub/feed.xml" />
+  <link rel="sitemap" type="application/xml" href="http://localhost:4000/usdthub/sitemap.xml" /><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "http://localhost:4000/usdthub/#organization",
+      "name": "USDT 新手手册",
+      "url": "http://localhost:4000/usdthub/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://localhost:4000/usdthub/assets/og/logo.png"
+      },
+      "sameAs": ["https://github.com/makoshan/usdthub"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "http://localhost:4000/usdthub/#website",
+      "url": "http://localhost:4000/usdthub/",
+      "name": "USDT 新手手册",
+      "inLanguage": "zh-CN",
+      "publisher": { "@id": "http://localhost:4000/usdthub/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "http://localhost:4000/usdthub/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "http://localhost:4000/usdthub/about.html#person",
+      "name": "Mako Shan",
+      "url": "http://localhost:4000/usdthub/about.html",
+      "sameAs": ["https://github.com/makoshan"]
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "http://localhost:4000/usdthub/how-we-review-wallets-and-apps.html#about",
+      "isPartOf": { "@id": "http://localhost:4000/usdthub/#website" },
+      "mainEntityOfPage": "http://localhost:4000/usdthub/how-we-review-wallets-and-apps.html",
+      "name": "How We Review Wallets and Apps",
+      "description": "USDT 新手手册的钱包和应用评测方法：5 个评分维度、权重分配、测试流程、利益冲突处理、更新节奏。由 Mako Shan 具名维护，所有评测都有 GitHub commit 历史。",
+      "inLanguage": "zh-CN",
+      "url": "http://localhost:4000/usdthub/how-we-review-wallets-and-apps.html",
+      "dateModified": "2026-04-14T21:56:14+08:00"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "http://localhost:4000/usdthub/how-we-review-wallets-and-apps.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "USDT 新手手册",
+          "item": "http://localhost:4000/usdthub/"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How We Review",
+          "item": "http://localhost:4000/usdthub/how-we-review-wallets-and-apps.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
   <header>
     <div class="wrap">
       <nav>
-<a href="./index.html"><strong>USDT 新手手册</strong></a>
-        <a href="./start-here.html">Start Here</a>
-        <a href="./what-is-usdt.html">USDT 是什么</a>
-        <a href="./how-to-buy-usdt.html">怎么买 USDT</a>
-        <a href="./china-buy-crypto-notes.html">人在中国怎么买币</a>
-        <a href="./how-to-choose-a-wallet.html">怎么选钱包</a>
-        <a href="./how-to-send-usdt.html">怎么发送 USDT</a>
-        <a href="./usdt-networks-explained.html">USDT 网络</a>
-        <a href="./tron-energy-guide.html">TRON 能量</a>
-        <a href="./what-can-you-do-with-usdt.html">USDT 能做什么</a>
-        <a href="./use-usdt-for-ai.html">AI 支付</a>
-        <a href="./changelog.html">Changelog</a>
-        <a href="./editorial-policy.html">Editorial Policy</a>
+<a href="/usdthub/index.html"><strong>USDT 新手手册</strong></a>
+        <a href="/usdthub/start-here.html">Start Here</a>
+        <a href="/usdthub/what-is-usdt.html">USDT 是什么</a>
+        <a href="/usdthub/how-to-buy-usdt.html">怎么买 USDT</a>
+        <a href="/usdthub/china-buy-crypto-notes.html">人在中国怎么买币</a>
+        <a href="/usdthub/how-to-choose-a-wallet.html">怎么选钱包</a>
+        <a href="/usdthub/how-to-send-usdt.html">怎么发送 USDT</a>
+        <a href="/usdthub/usdt-networks-explained.html">USDT 网络</a>
+        <a href="/usdthub/usdt-gas-fee-comparison.html">手续费对比</a>
+        <a href="/usdthub/tron-energy-calculator.html">能量计算器</a>
+        <a href="/usdthub/tron-energy-guide.html">TRON 能量</a>
+        <a href="/usdthub/what-can-you-do-with-usdt.html">USDT 能做什么</a>
+        <a href="/usdthub/use-usdt-for-ai.html">AI 支付</a>
+        <a href="/usdthub/about.html">About</a>
+        <a href="/usdthub/changelog.html">Changelog</a>
+        <a href="/usdthub/editorial-policy.html">Editorial Policy</a>
 </nav>
 
     </div>
@@ -32,39 +115,107 @@
   <main>
     <div class="wrap">
       <h1>How We Review Wallets and Apps</h1>
-    <div class="meta">Trust page · Last updated: 2026-04-14</div>
-    <p>这个手册是第三方教程站，不是交易平台，也不是“谁给得多就写谁”的榜单页。我们评测钱包和应用时，优先看的是：<strong>新手能不能理解、能不能安全完成任务、以及它是否真的适合 USDT 的实际使用路径。</strong></p>
+<div class="meta">Trust page · 评测方法与评分体系</div>
 
-    <div class="note"><strong>短版结论</strong><br>我们不按 payout 大小排推荐顺序。我们按是否更容易理解、是否更适合新手、是否更适合当前任务来排序。</div>
+<p>这个手册是第三方教程站，不是交易平台，也不是"谁给得多就写谁"的榜单页。我们评测钱包和应用时，优先看的是：<strong>新手能不能理解、能不能安全完成任务、以及它是否真的适合 USDT 的实际使用路径。</strong></p>
 
-    <h2>我们看什么</h2>
-    <ul>
-      <li><strong>新手友好度</strong>：安装、创建、备份、收发流程是否清楚。</li>
-      <li><strong>自托管支持</strong>：是否真的把控制权交给用户，以及恢复流程是否明确。</li>
-      <li><strong>常见网络支持</strong>：尤其是 TRON / TRC20 / USDT 相关路径是否清晰。</li>
-      <li><strong>转账与费用提示</strong>：错误网络、手续费、资源不足等提示是否足够直白。</li>
-      <li><strong>产品成熟度</strong>：口碑、更新频率、是否长期维护。</li>
-    </ul>
+<div class="note"><strong>短版结论</strong><br>我们不按 payout 大小排推荐顺序。我们按<strong>是否更容易理解、是否更适合新手、是否更适合当前任务</strong>来排序。目前站内<strong>没有任何返佣链接、没有邀请码、没有赞助内容</strong>——详情见 <a href="./editorial-policy.html#disclosure">商业披露表</a>。</div>
 
-    <h2>推荐会以什么方式出现</h2>
-    <ul>
-      <li>editor’s pick</li>
-      <li>beginner-friendly option</li>
-      <li>easiest path for a specific task</li>
-    </ul>
-    <p>也就是说，推荐会放在具体上下文里，而不是上来就把某个钱包写成“全站唯一主角”。</p>
+<h2 id="scoring">评分体系：5 个维度 + 权重</h2>
 
-    <h2>我们不做什么</h2>
-    <ul>
-      <li>不作为交易平台</li>
-      <li>不提供投资建议</li>
-      <li>不代用户买 USDT 或代管资产</li>
-      <li>不承诺某一个钱包适合所有人</li>
-    </ul>
+<p>每个钱包 / App 按 5 个维度打分（0–10 分），加权汇总成<strong>"新手适配度"</strong>。维度和权重如下：</p>
 
-    <footer>返回：<a href="./index.html">USDT 新手手册首页</a></footer>
+<table>
+  <thead>
+    <tr><th>维度</th><th>权重</th><th>这一项看的是</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>新手友好度</strong></td>
+      <td>25%</td>
+      <td>第一次安装到完成"收 / 发一笔 USDT"全流程是否清楚。图标有没有歧义、文案有没有绕、错误提示有没有写清楚发生了什么。</td>
+    </tr>
+    <tr>
+      <td><strong>自托管清晰度</strong></td>
+      <td>25%</td>
+      <td>是否真的把控制权交给用户、助记词生成流程是否透明、备份提示是否足够刺眼、恢复流程是否真的可走通（我们会拿副本设备验证恢复一次）。</td>
+    </tr>
+    <tr>
+      <td><strong>TRON / USDT 路径</strong></td>
+      <td>20%</td>
+      <td>TRC20 USDT 收发是否有"选错网络"保护、能量 / 带宽不足时是否有提示、USDT 的 Memo / Tag 机制是否解释清楚。</td>
+    </tr>
+    <tr>
+      <td><strong>风险提示充分度</strong></td>
+      <td>15%</td>
+      <td>签名授权时是否解释了你在签什么、大额转账是否有二次确认、钓鱼 dApp / Drainer 场景下是否有警报。</td>
+    </tr>
+    <tr>
+      <td><strong>产品成熟度</strong></td>
+      <td>15%</td>
+      <td>活跃开发（最近 3 个月是否有更新）、公开口碑（社区投诉集中在什么问题）、事故响应（过去是否发生过安全事件、处理方式是否公开）。</td>
+    </tr>
+  </tbody>
+</table>
 
-    </div>
+<p>单一维度得分低于 4 分会被标记为<strong>"新手不推荐"</strong>，即使其他维度都很高。这个设计是为了把新手最容易掉进去的坑优先排除。</p>
+
+<h2 id="testing">测试流程</h2>
+
+<p>每个上榜的钱包 / App 都经过以下流程，由作者本人实际操作：</p>
+
+<ol>
+  <li><strong>干净设备 + 新身份</strong>：在一台全新或重置的手机 / 浏览器 profile 上完成整个测试，模拟"第一次用"的真实场景。</li>
+  <li><strong>实际操作四件事</strong>：a) 生成钱包 + 抄写助记词；b) 收一笔小额 TRC20 USDT；c) 发一笔小额 TRC20 USDT（含能量不足场景）；d) 在副本设备上用助记词恢复验证。</li>
+  <li><strong>记录每个卡点</strong>：哪里看不懂、哪里让我不安全地 approve、哪里没有明确提示。这些成为评分的依据。</li>
+  <li><strong>看一圈公开投诉</strong>：GitHub Issue、Reddit、Twitter / X、以及中文社区（知乎、V2EX、Telegram）过去 12 个月的高热度投诉集中在什么问题。</li>
+  <li><strong>第二轮确认</strong>：间隔 2–4 周后，再跑一次关键路径，确认不是首次印象偏差。</li>
+</ol>
+
+<h2 id="update-cadence">更新节奏</h2>
+
+<ul>
+  <li><strong>每季度至少复审一次</strong>站内已上榜的钱包 / App，确认版本号、关键功能、风控提示没有大幅回退。</li>
+  <li>遇到以下情况<strong>立即重写评测</strong>：a) 发生公开的安全事件；b) 产品大改版影响了新手流程；c) 公司 / 开发方发生重大变动（被收购、核心团队离场等）。</li>
+  <li>每次版本更新会在 <a href="./changelog.html">Changelog</a> 里记录，并更新文章底部的<code>dateModified</code>。</li>
+</ul>
+
+<h2 id="how-recommendations-appear">推荐会以什么方式出现</h2>
+
+<ul>
+  <li><strong>editor's pick</strong>——按上面 5 个维度综合最高分；</li>
+  <li><strong>beginner-friendly option</strong>——新手友好度 + 自托管清晰度特别突出；</li>
+  <li><strong>easiest path for a specific task</strong>——针对某个具体任务（例如"只需要收一笔 USDT 然后转到交易所"）最顺手的一款。</li>
+</ul>
+
+<p>也就是说，推荐会放在<strong>具体上下文</strong>里，而不是上来就把某个钱包写成"全站唯一主角"。</p>
+
+<h2 id="coi">利益冲突处理</h2>
+
+<ul>
+  <li>作者目前<strong>未从任何钱包厂商 / 交易所收取</strong>返佣、评测费、赠品、股权或顾问收入——详见 <a href="./editorial-policy.html#disclosure">商业披露表</a>。</li>
+  <li>如果作者本人长期使用某款钱包（例如 imToken / Ledger 作为日常工具），文章内部会明确披露"我自己用 X 作为主钱包"，并不因为日常使用就自动把它推成"最好"。</li>
+  <li>钱包厂商 / 交易所<strong>不能</strong>通过付费来加快评测、影响评分、或删除不利描述。收到此类请求会直接拒绝并在 GitHub Issue 里公开记录（如请求方同意公开）。</li>
+</ul>
+
+<h2 id="not-doing">我们不做什么</h2>
+
+<ul>
+  <li>不作为交易平台；</li>
+  <li>不提供投资建议；</li>
+  <li>不代用户买 USDT 或代管资产；</li>
+  <li>不承诺某一个钱包适合所有人；</li>
+  <li>不对读者自己操作中的签名授权 / 钓鱼 / 社工损失负责——<strong>评测不能替代读者本人的风险判断</strong>。</li>
+</ul>
+
+<div class="risk"><strong>重要提醒</strong><br>硬件钱包 / 软件钱包的"评分高"不等于"你用它就一定安全"。公开的链上案例里，绝大多数钱包资产丢失并不是钱包本身被攻破，而是<strong>助记词泄露</strong>（截屏上传 / 云盘备份 / 钓鱼网站骗输入）和<strong>签名授权被骗</strong>（假 dApp / Drainer 合约）。无论用哪一款钱包，都请遵守：助记词线下备份、不在联网设备截屏 / 上传、对所有"代签 / 代恢复 / 领空投" 的私信保持警惕。</div>
+
+<footer>返回：<a href="./index.html">USDT 新手手册首页</a> · <a href="./about.html">作者</a> · <a href="./editorial-policy.html">Editorial Policy</a></footer>
+<div class="page-footer-meta" role="contentinfo">
+        最近更新 <time datetime="2026-04-14T21:56:14+08:00">2026-04-14</time> ·
+        <a href="/usdthub/about.html">作者</a> ·
+        <a href="/usdthub/editorial-policy.html">Editorial Policy</a>
+      </div></div>
   </main>
 </body>
 </html>

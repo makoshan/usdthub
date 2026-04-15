@@ -1,15 +1,32 @@
 ---
 layout: bare
 permalink: /sitemap.xml
+sitemap: false
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{% assign pages = site.html_pages | sort: 'url' %}
-{% for p in pages %}
-  {% unless p.url contains '/404.html' %}
+{%- assign exclude_list = site.data.site_meta.sitemap_exclude -%}
+{%- assign pages = site.html_pages | sort: 'url' -%}
+{%- for p in pages -%}
+  {%- if p.sitemap == false -%}{%- continue -%}{%- endif -%}
+  {%- if p.noindex -%}{%- continue -%}{%- endif -%}
+  {%- assign skip = false -%}
+  {%- for ex in exclude_list -%}
+    {%- if p.url == ex -%}{%- assign skip = true -%}{%- endif -%}
+  {%- endfor -%}
+  {%- if skip -%}{%- continue -%}{%- endif -%}
   <url>
     <loc>{{ p.url | absolute_url }}</loc>
+    {%- if p.date_modified %}
+    <lastmod>{{ p.date_modified | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+    {%- if p.url == '/index.html' or p.url == '/' %}
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    {%- else %}
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    {%- endif %}
   </url>
-  {% endunless %}
-{% endfor %}
+{%- endfor %}
 </urlset>

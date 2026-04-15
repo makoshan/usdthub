@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>USDT 的 Memo、Tag、Label、Address Alias 是什么 | USDT 新手手册</title>
+  <meta name="description" content="写给新手的术语说明：Memo、Tag、Label、Recipient Label、Address Alias 分别在说什么，哪些是链上必要字段，哪些只是平台备注。" /><meta name="author" content="Mako Shan" /><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" /><link rel="canonical" href="http://localhost:4000/usdthub/usdt-memo-tag-label-address-alias.html" /><meta property="og:type" content="article" />
+  <meta property="og:site_name" content="USDT 新手手册" />
+  <meta property="og:title" content="USDT 的 Memo、Tag、Label、Address Alias 是什么" />
+  <meta property="og:description" content="写给新手的术语说明：Memo、Tag、Label、Recipient Label、Address Alias 分别在说什么，哪些是链上必要字段，哪些只是平台备注。" />
+  <meta property="og:url" content="http://localhost:4000/usdthub/usdt-memo-tag-label-address-alias.html" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:image" content="http://localhost:4000/usdthub/assets/og/default.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" /><meta property="article:published_time" content="2026-04-15T14:45:28+08:00" /><meta property="article:modified_time" content="2026-04-15T14:45:28+08:00" /><meta property="article:author" content="Mako Shan" />
+  <meta property="article:section" content="USDT 新手手册" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@makoshan" /><meta name="twitter:title" content="USDT 的 Memo、Tag、Label、Address Alias 是什么" />
+  <meta name="twitter:description" content="写给新手的术语说明：Memo、Tag、Label、Recipient Label、Address Alias 分别在说什么，哪些是链上必要字段，哪些只是平台备注。" />
+  <meta name="twitter:image" content="http://localhost:4000/usdthub/assets/og/default.png" />
+
+  <link rel="stylesheet" href="/usdthub/assets/css/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="USDT 新手手册" href="http://localhost:4000/usdthub/feed.xml" />
+  <link rel="sitemap" type="application/xml" href="http://localhost:4000/usdthub/sitemap.xml" /><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "http://localhost:4000/usdthub/#organization",
+      "name": "USDT 新手手册",
+      "url": "http://localhost:4000/usdthub/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://localhost:4000/usdthub/assets/og/logo.png"
+      },
+      "sameAs": ["https://github.com/makoshan/usdthub"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "http://localhost:4000/usdthub/#website",
+      "url": "http://localhost:4000/usdthub/",
+      "name": "USDT 新手手册",
+      "inLanguage": "zh-CN",
+      "publisher": { "@id": "http://localhost:4000/usdthub/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "http://localhost:4000/usdthub/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "http://localhost:4000/usdthub/about.html#person",
+      "name": "Mako Shan",
+      "url": "http://localhost:4000/usdthub/about.html",
+      "sameAs": ["https://github.com/makoshan"]
+    },
+    {
+      "@type": "Article",
+      "@id": "http://localhost:4000/usdthub/usdt-memo-tag-label-address-alias.html#article",
+      "isPartOf": { "@id": "http://localhost:4000/usdthub/#website" },
+      "mainEntityOfPage": "http://localhost:4000/usdthub/usdt-memo-tag-label-address-alias.html",
+      "headline": "USDT 的 Memo、Tag、Label、Address Alias 是什么",
+      "description": "写给新手的术语说明：Memo、Tag、Label、Recipient Label、Address Alias 分别在说什么，哪些是链上必要字段，哪些只是平台备注。",
+      "inLanguage": "zh-CN",
+      "url": "http://localhost:4000/usdthub/usdt-memo-tag-label-address-alias.html",
+      "image": "http://localhost:4000/usdthub/assets/og/default.png",
+      "datePublished": "2026-04-15T14:45:28+08:00",
+      "dateModified": "2026-04-15T14:45:28+08:00",
+      "author": { "@id": "http://localhost:4000/usdthub/about.html#person" },
+      "publisher": { "@id": "http://localhost:4000/usdthub/#organization" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+<a href="/usdthub/index.html"><strong>USDT 新手手册</strong></a>
+        <a href="/usdthub/start-here.html">Start Here</a>
+        <a href="/usdthub/what-is-usdt.html">USDT 是什么</a>
+        <a href="/usdthub/how-to-buy-usdt.html">怎么买 USDT</a>
+        <a href="/usdthub/china-buy-crypto-notes.html">人在中国怎么买币</a>
+        <a href="/usdthub/how-to-choose-a-wallet.html">怎么选钱包</a>
+        <a href="/usdthub/how-to-send-usdt.html">怎么发送 USDT</a>
+        <a href="/usdthub/usdt-networks-explained.html">USDT 网络</a>
+        <a href="/usdthub/usdt-gas-fee-comparison.html">手续费对比</a>
+        <a href="/usdthub/tron-energy-calculator.html">能量计算器</a>
+        <a href="/usdthub/tron-energy-guide.html">TRON 能量</a>
+        <a href="/usdthub/what-can-you-do-with-usdt.html">USDT 能做什么</a>
+        <a href="/usdthub/use-usdt-for-ai.html">AI 支付</a>
+        <a href="/usdthub/about.html">About</a>
+        <a href="/usdthub/changelog.html">Changelog</a>
+        <a href="/usdthub/editorial-policy.html">Editorial Policy</a>
+</nav>
+
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <h1>USDT 的 Memo、Tag、Label、Address Alias 是什么</h1>
+<div class="meta">Chapter 2.6 · Transfers</div>
+
+<p>新手被交易所和钱包里的英文词搞糊涂，往往不是因为链太复杂，而是因为界面上同时出现了 <code>memo</code>、<code>tag</code>、<code>label</code>、<code>address alias</code> 这类词。它们看起来像一回事，实际不完全一样。</p>
+
+<div class="note"><strong>TL;DR</strong><br>先记最关键的一句。<strong>这些词里，只有一部分是链上真实需要填写的“附加收款信息”，另一部分只是平台自己给地址起的备注名。</strong> 不懂时先停，不要乱填。</div>
+
+<h2 id="s1">一、Memo / Tag 通常在说什么</h2>
+<p><strong>Memo / Tag</strong> 在交易所语境里通常是同一类东西：它是给平台识别"这笔充值归到哪个账户"的附加信息，常见于共享充值地址或某些特定网络。平台明确要求时，地址和 Memo / Tag 必须一起对。</p>
+<p>在很多交易所语境里，<code>memo</code> 或 <code>tag</code> 的意思很接近：</p>
+<ul>
+  <li>它是给平台识别“这笔钱该记到谁名下”的附加信息。</li>
+  <li>常见于共享充值地址或某些特定网络。</li>
+  <li>如果平台明确要求你填，漏掉可能会导致到账但不能自动入账。</li>
+</ul>
+<p>对新手最重要的不是背定义，而是：<strong>如果充值页面明确给了地址 + Memo / Tag，两者通常都要一起对。</strong></p>
+
+<h2 id="s2">二、Label / Recipient Label 常常只是备注名</h2>
+<p><strong>Label / Recipient Label</strong> 在大多数钱包和交易所里，只是给你自己看的备注名——用来给地址起个好记的名字、方便在地址簿或白名单里认出来，通常不是链上字段，而是平台界面的管理字段。</p>
+<p><code>label</code> 在很多钱包或交易所里，更多是给你自己看的：</p>
+<ul>
+  <li>给这个地址起个名字，方便下次认出来。</li>
+  <li>可能出现在地址簿、白名单地址、常用收款人列表里。</li>
+  <li>它常常不是链上字段，而是平台界面的管理字段。</li>
+</ul>
+<p>所以看到 <code>recipient label</code> 时，第一反应不要是“链上多了一个必须填的参数”，而要先判断它是不是平台让你自己写备注。</p>
+
+<h2 id="s3">三、Address Alias 又是什么</h2>
+<p><strong>Address Alias</strong> 字面上容易被误会成"另一个链上地址"，但大多数时候它只是平台给地址起的别名，比如地址簿昵称、收款模板自定义名称。它到底是不是链上必要字段，要看具体平台和网络设计，不能光看词猜。</p>
+<p><code>address alias</code> 更容易让人误解成“另一个链上地址”。很多时候它其实只是：</p>
+<ul>
+  <li>平台给地址起的别名</li>
+  <li>地址簿里的昵称</li>
+  <li>某个收款模板的自定义名称</li>
+</ul>
+<p>它是否真是链上的必要字段，完全看平台和网络设计，不能光看词猜。</p>
+
+<h2 id="s4">四、TRC20 USDT 一般该怎么理解这个问题</h2>
+<p><strong>TRC20 USDT 的日常转账</strong>里，大多数普通用户真正要关心的是网络、地址、金额和 TRX 资源够不够，而不是 memo / tag 本身——这类附加字段在 TRC20 USDT 常规场景里并不常出现。</p>
+<p>对大多数普通用户来说，TRC20 USDT 最常见的场景还是：</p>
+<ul>
+  <li>确认网络是 TRON / TRC20</li>
+  <li>复制正确地址</li>
+  <li>确认金额</li>
+  <li>看自己有没有足够 TRX 或资源</li>
+</ul>
+<p>也就是说，<strong>你在 TRC20 USDT 的日常转账里，通常更常担心的是地址和网络，而不是 memo/tag 本身。</strong></p>
+
+<h2 id="s5">五、我自己的默认处理规则</h2>
+<p><strong>默认处理规则</strong>就一句话：平台没要求的字段不要自作聪明乱填，平台明确要求 memo/tag 的就当整体核对，看到 label/alias 先判断它是不是仅供自己备注，不确定时先去查官方帮助页。</p>
+<ol>
+  <li>如果平台只给地址，没有要求额外字段，就不要自作聪明乱填。</li>
+  <li>如果平台明确给了地址 + memo/tag，就把它当成一个整体来核对。</li>
+  <li>如果你看到的是 label / alias，先判断它是不是仅供你自己备注。</li>
+  <li>不确定时先查官方帮助页，不要赌。</li>
+</ol>
+
+<div class="risk"><strong>风险提醒</strong><br>很多新手不是输错了一个高深参数，而是把“平台备注”误会成“链上必填”，或者把“链上必填”当成“可以不管”。这两种错法都会让钱卡住。</div>
+
+<h2 id="s6">六、和手册其他章节的关系</h2>
+<ul>
+  <li><a href="./how-to-send-usdt.html">怎么发送 USDT</a>：这篇是具体发币时的总流程。</li>
+  <li><a href="./usdt-networks-explained.html">TRC20、ERC20、BEP20 有什么区别</a>：先把链搞清楚，再看界面术语。</li>
+  <li><a href="./binance-receive-view-transfer-usdt.html">Binance 里怎么接收、查看、划转 USDT</a>：把这些术语放进具体平台界面里看，会更容易理解。</li>
+</ul>
+
+<h2>参考资料</h2>
+<div class="source-grid">
+  <a class="source-card" href="https://academy.binance.com/ky-KG/learn-and-earn/course/how-to-deposit-on-binance-BN845864617085833217" target="_blank" rel="noopener noreferrer">
+    <span class="card-kicker">Binance Academy</span>
+    <span class="card-title">How to Deposit on Binance</span>
+    <span class="card-copy">官方示例会明确提示你：如果某种资产需要 MEMO / Tag / Payment ID，漏掉可能导致无法自动到账。</span>
+  </a>
+  <a class="source-card" href="./how-to-send-usdt.html">
+    <span class="card-kicker">手册</span>
+    <span class="card-title">怎么发送 USDT</span>
+    <span class="card-copy">术语看懂之后，真正执行转账时要回到这篇总流程里检查链、地址和测试打款。</span>
+  </a>
+  <a class="source-card" href="./binance-receive-view-transfer-usdt.html">
+    <span class="card-kicker">手册</span>
+    <span class="card-title">Binance 里怎么接收、查看、划转 USDT</span>
+    <span class="card-copy">把 memo / label / alias 放到具体平台界面里看，更不容易混。</span>
+  </a>
+</div>
+
+<footer>相关：<a href="./how-to-send-usdt.html">怎么发送 USDT</a> · <a href="./usdt-networks-explained.html">网络解释</a> · <a href="./binance-receive-view-transfer-usdt.html">Binance 基础操作</a> · 返回：<a href="./index.html">USDT 新手手册</a></footer>
+
+<div class="page-footer-meta" role="contentinfo">
+        最近更新 <time datetime="2026-04-15T14:45:28+08:00">2026-04-15</time> ·
+        <a href="/usdthub/about.html">作者</a> ·
+        <a href="/usdthub/editorial-policy.html">Editorial Policy</a>
+      </div></div>
+  </main>
+</body>
+</html>

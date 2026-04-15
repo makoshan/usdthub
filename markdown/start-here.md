@@ -5,7 +5,7 @@ source_html: "start-here.html"
 
 # Start Here
 
-> 写给第一次接触 USDT 的人。Last updated: 2026-04-14
+> 写给第一次接触 USDT 的人。
 
 ![USDT 新手默认路线图](../site/assets/css/reading-path.svg)
 

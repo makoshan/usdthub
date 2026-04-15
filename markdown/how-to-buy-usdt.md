@@ -5,7 +5,7 @@ source_html: "how-to-buy-usdt.html"
 
 # 如何购买 Tether USDt（USDT）
 
-> Chapter 1 · Buy USDT · Last updated: 2026-04-14
+> Chapter 1 · Buy USDT
 
 ![第一次买 USDT，我建议你这样走](../site/assets/css/buy-flow.svg)
 
@@ -34,6 +34,9 @@ Binance、OKX、Bybit、OSL 这类平台都要注册账户，KYC 力度不一样
 
 ## 具体平台，分别像什么
 
+
+**主流买币平台的差异**大致是：Binance / OKX / Bybit 是综合型交易所同时带 C2C 入口，OSL 偏持牌合规，MetaMask 是钱包内置的买币聚合器。
+
 | 平台 / 工具 | 更像什么 | 适合谁 | 我会提醒的新手注意点 |
 | --- | --- | --- | --- |
 | Binance | 综合型交易平台 + C2C 入口 | 想同时接触买币、交易、后续转账的人 | 中国大陆用户要重点关注支付风控、账户路径和规则变化 |
@@ -41,6 +44,8 @@ Binance、OKX、Bybit、OSL 这类平台都要注册账户，KYC 力度不一样
 | Bybit | 综合型平台，买币路径相对清晰 | 想快速完成第一笔基础购买的人 | 仍然要自己判断支付方式、地区规则与后续用途 |
 | OSL | 更偏持牌 / 合规入口 | 更看重合规身份和持牌平台路径的人 | 通常更依赖地区身份、支付与账户条件 |
 | MetaMask | 钱包内买币聚合器 | 已经在用钱包、想直接在钱包里完成买法的人 | 更像补充入口，不是我最建议新手拿来当第一站的地方 |
+
+> 延伸：如果你已经拿着的是另一种稳定币，准备直接换成 USDT，读 [USDC 怎么换成 USDT](./how-to-swap-usdc-to-usdt.md)。如果你是在 Binance 里卡住，不知道充值地址、余额和划转在哪，读 [Binance 里怎么接收、查看、划转 USDT](./binance-receive-view-transfer-usdt.md)。
 
 ## 怎么买：C2C vs 平台直购
 
@@ -56,6 +61,9 @@ Binance、OKX、Bybit、OSL 这类平台都要注册账户，KYC 力度不一样
 
 ## C2C 实战：一个完整的安全购买流程
 
+
+**C2C 安全购买的操作步骤**简化来说：选 USDT、进 C2C 区、挑完成率高的商家、下单锁价、按规则付款、点「我已付款」、等商家放币后确认到账数量。
+
 1. 在平台买币入口选 USDT。
 2. 进 C2C 区。
 3. 筛商家：先看完成率、历史成交量、认证信息，别只盯最低价。
@@ -68,6 +76,9 @@ Binance、OKX、Bybit、OSL 这类平台都要注册账户，KYC 力度不一样
 
 ## 买完之后，下一步通常是什么
 
+
+**买完 USDT 之后的下一步**通常要回答三个问题：要不要提到自己的钱包、走 TRC20 还是 ERC20、为什么转 TRC20 还得准备 TRX。
+
 - 要不要提到自己的钱包？
 - TRC20 和 ERC20 怎么选？
 - 为什么转 TRC20 还要提 TRX？
@@ -75,6 +86,9 @@ Binance、OKX、Bybit、OSL 这类平台都要注册账户，KYC 力度不一样
 > 买完之后的默认下一步：如果你准备自己管理 TRON / USDT，不打算一直放在平台，我通常会先把你引到 [imToken](https://token.im/trx-wallet)。不是说它是唯一答案，它走过 10 年、社区验证过，作为“买完之后真正开始用”的起点合适：先建自托管钱包、备份助记词、收到第一笔 USDT、跑通第一次转账。
 
 ## 最常见的错误和骗局
+
+
+**买 USDT 最常踩的坑**集中在几处：被低价诱导私下交易、只看价格不看商家信誉、只看 USDT 不看链、第一次就上大额、以及买完完全不会提币和确认网络。
 
 - 私下交易诱导：有人会用更低价把你从平台托管里拉走。
 - 只看最低价：忽略商家历史和支付风险。
@@ -98,3 +112,5 @@ Binance、OKX、Bybit、OSL 这类平台都要注册账户，KYC 力度不一样
 - 上一篇：[USDT 是什么](./what-is-usdt.md)
 - 下一篇：[人在中国怎么买 USDT / BTC](./china-buy-crypto-notes.md)
 - 延伸：[官方资料入口](./official-sources.md)
+- 补充：[USDC 怎么换成 USDT](./how-to-swap-usdc-to-usdt.md)
+- 平台：[Binance 里怎么接收、查看、划转 USDT](./binance-receive-view-transfer-usdt.md)

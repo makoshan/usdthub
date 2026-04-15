@@ -6,13 +6,16 @@ permalink: /tron-bandwidth-and-energy.html
 ---
 
 <h1>TRON 带宽和能量是什么</h1>
-<div class="meta">TRON Note · Last updated: 2026-04-14</div>
+<div class="meta">TRON Note</div>
 
 <p>TRON 上只有两种资源：<strong>带宽</strong>（Bandwidth）和 <strong>能量</strong>（Energy）。你如果只学一次，就记住下面这张表。</p>
 
 <div class="note"><strong>TL;DR</strong><br>带宽 = 发交易的字节数配额，每个账户每天免费 600 字节，USDT 转账只吃 ~345 字节，所以带宽一般不用操心。能量 = 调智能合约时烧的燃料，USDT 是合约资产，每笔转账吃约 65,000 能量（给新地址翻倍）。不够时系统自动烧 TRX 补上。</div>
 
-<h2>一张对照表</h2>
+<h2 id="def">带宽 vs 能量 · 一句话定义</h2>
+<p><strong>带宽（Bandwidth）</strong>是 TRON 上每笔交易占用的字节数配额，每个账户每天免费 600 字节，日常 USDT 转账用不到付费带宽。<strong>能量（Energy）</strong>是执行智能合约消耗的燃料，USDT 作为 TRC20 合约每笔转账需要约 65,000 能量——没有免费额度，必须通过质押 TRX 或向第三方租来准备。</p>
+
+<h2 id="table">一张对照表</h2>
 <table>
   <thead>
     <tr><th></th><th>带宽 Bandwidth</th><th>能量 Energy</th></tr>
@@ -52,10 +55,11 @@ permalink: /tron-bandwidth-and-energy.html
 </table>
 <p class="meta">TRX ≈ $0.32（2026-04）。能量单价数据：<a href="https://tronscan.org/#/data/charts2/energyConsumption" target="_blank" rel="noopener noreferrer">TronScan Energy Consumption</a>。</p>
 
-<h2>为什么新手 99% 时间只需要管能量</h2>
-<p>因为带宽每天免费 600，足够发两笔 USDT 转账（2 × 345 = 690，略超时会自动从 TRX 补 ~0.1 TRX，基本没感觉）。真正让你卡住的一定是能量：USDT 作为合约，每笔都必须烧几万到十几万能量，直接把 TRX 余额打空是常态。</p>
+<h2 id="why-energy">为什么新手 99% 时间只需要管能量</h2>
+<p><strong>新手只需要管能量，不用管带宽</strong>，原因是：带宽有每日免费额度 600 字节，足够发两笔 TRC20 USDT；而能量没有免费额度，每一笔 USDT 转账都要消耗 ~65,000 能量，没有提前准备就会自动烧掉你账户里的 TRX，几乎所有"TRX 余额莫名变少"的问题都源于此。</p>
+<p>带宽每天免费 600，足够发两笔 USDT 转账（2 × 345 = 690，略超时会自动从 TRX 补 ~0.1 TRX，基本没感觉）。真正让你卡住的一定是能量：USDT 作为合约，每笔都必须烧几万到十几万能量，直接把 TRX 余额打空是常态。</p>
 
-<h2>怎么在钱包里看自己的资源</h2>
+<h2 id="check-resources">怎么在钱包里看自己的资源</h2>
 <ol>
   <li><strong>TronLink</strong>：主界面右上角「资源」。</li>
   <li><strong>imToken</strong>：TRX 详情页 → 「资源管理」。</li>
@@ -65,7 +69,8 @@ permalink: /tron-bandwidth-and-energy.html
 <p><img src="./assets/css/tronscan-bandwidth-example.png" alt="在 TronScan 查看某个 TRON 地址的 Bandwidth 和 Energy 余额" /></p>
 <p class="meta">上图：在 TronScan 上打开一个 TRON 地址，页面左边「Resources」一栏直接显示当前可用的带宽和能量。</p>
 
-<h2>一个常见误解</h2>
+<h2 id="misconception">一个常见误解</h2>
+<p><strong>"买能量"不是买代币</strong>——带宽和能量不是 token、不能转账、不能上交易所。它们是 TRON 账户的内部配额，只能通过质押 TRX 产生或通过第三方平台"代付"。"买能量"实际上是你付 TRX 给一个平台，平台用自己质押得到的能量配额临时授权给你的地址。</p>
 <p>很多新手以为「带宽」「能量」是某种 token 可以买卖 —— 不是。它们是<strong>账户级配额</strong>，只能用质押产生或通过第三方平台临时「借」。你看到有人说「买能量」，实际是指向第三方平台付 TRX，平台代付能量配额给你的地址。</p>
 
 <div class="risk"><strong>安全提醒</strong><br>正规租能量服务只要你的收款地址。任何要你填助记词、私钥、Keystore 文件的「能量服务」都是钓鱼。参见 <a href="./tron-energy-guide.html">TRON 能量指南</a>对租能量平台的清单。</div>

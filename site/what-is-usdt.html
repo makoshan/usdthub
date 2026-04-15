@@ -6,7 +6,7 @@ permalink: /what-is-usdt.html
 ---
 
 <h1>USDT 是什么？</h1>
-<div class="meta">Chapter 0 · Basics · Last updated: 2026-04-14</div>
+<div class="meta">Chapter 0 · Basics</div>
 
 <nav class="toc" aria-label="目录">
   <div class="toc-title">本文目录</div>
@@ -21,15 +21,18 @@ permalink: /what-is-usdt.html
   </ol>
 </nav>
 
-<p>USDT 本质上是稳定币。我自己更喜欢先把它讲成一句人话：<strong>价格目标接近美元的链上记账单位</strong>。它不是拿来像 BTC 那样拼波动的，而是拿来把买币、转账、支付和链上操作这些事先跑顺。</p>
+<p><strong>USDT（Tether USDt）是一种美元稳定币</strong>，由 Tether Limited 发行，目标是保持 1 USDT ≈ 1 USD。它通过把等值的美元资产（主要是美国国债）锁在发行方的储备里，来支撑链上流通的每一枚代币。它不是拿来像 BTC 那样拼波动的，而是拿来把买币、转账、支付和链上操作这些事先跑顺。我自己更喜欢把它讲成一句人话：<strong>价格目标接近美元的链上记账单位</strong>。</p>
 
 <div class="note"><strong>TL;DR</strong><br>很多新手第一步接触加密资产，不是直接买 BTC，而是先拿到 USDT。原因很现实：在大量交易、支付和链上场景里，USDT 更像“基础结算层”。你可以不喜欢这个名字，但你大概率绕不开它。</div>
+<div class="note"><strong>延伸</strong><br>如果你现在卡在“USDT 和 USDC 到底差在哪”，直接读：<a href="./usdt-vs-usdc.html">USDT 和 USDC 有什么区别</a>。</div>
 
-<h2 id="s1">我为什么总把 USDT 说成“中间层”</h2>
-<p>因为我自己看新手路径时，USDT 最像的是一条通道，而不是终点。你真正遇到的通常是这几类问题：想买 BTC / ETH，但第一步先经过 USDT；想把钱从平台提到钱包；想做一笔链上转账；想给 AI、eSIM、VPN、海外服务付款。</p>
+<h2 id="s1">我为什么总把 USDT 说成"中间层"</h2>
+<p><strong>把 USDT 说成"中间层"</strong>的意思是：对新手而言，USDT 更像一条通向其他资产或链上操作的通道，而不是最终要持有的目标。买 BTC、做跨链、付海外订阅，很多路径第一步都要先过 USDT。</p>
+<p>你真正遇到的通常是这几类问题：想买 BTC / ETH，但第一步先经过 USDT；想把钱从平台提到钱包；想做一笔链上转账；想给 AI、eSIM、VPN、海外服务付款。</p>
 <p>在这些动作里，USDT 不是“最酷的资产”，但往往是<strong>最先被用到的工具</strong>。</p>
 
 <h2 id="s2">USDT 和 BTC / ETH 到底差在哪</h2>
+<p><strong>USDT 和 BTC / ETH 的核心差别</strong>在于角色：BTC 更像资产本体（定位"数字黄金"、靠供给稀缺维持价值），ETH 更像智能合约生态的燃料（支付链上计算费用），USDT 更像结算中间层（价格稳定，拿来交易、转账、支付）。</p>
 <table>
   <thead><tr><th>资产</th><th>我自己的理解</th><th>新手最常在哪一步碰到</th></tr></thead>
   <tbody>
@@ -40,6 +43,7 @@ permalink: /what-is-usdt.html
 </table>
 
 <h2 id="s3">USDT 背后到底是什么（几个你该知道的数字）</h2>
+<p><strong>USDT 背后的资产</strong>不是凭空数字——2025 年底 Tether 披露储备约 $193B，其中 $141B 是美国国债及相关资产，季度由 BDO Italia 出 attestation。它不是一家"没人查"的公司，但确实是一家由 CEO 可以冻结任意地址的中心化公司。</p>
 <p>如果你要拿真金白银换这东西，应该知道它不是凭空的数字：</p>
 <ul>
   <li><strong>流通总量</strong>：约 $186.9 billion（2025-12-31 数据，<a href="https://tether.to/en/transparency/" target="_blank" rel="noopener noreferrer">Tether 透明度页面</a>）。比 2024 年末增长约 $35B。</li>
@@ -51,6 +55,7 @@ permalink: /what-is-usdt.html
 <p>也就是说，它不是「某个公司凭空发的筹码」。但也别过度乐观：Tether 是<strong>中心化</strong>实体，总部在萨尔瓦多，CEO 可以在几秒内冻结任何地址的 USDT（Tether + T3 项目 2024 年以来已冻结数亿美元）。你拿到的 USDT，理论上永远可以被它冻。</p>
 
 <h2 id="s4">什么是「冻 USDT」？新手要知道</h2>
+<p><strong>"冻 USDT"</strong>指的是：Tether 作为发行方，在合约层面有权把任意地址加入黑名单，被拉黑的地址里的 USDT 永远无法转出——链上余额还在，但合约拒绝执行 transfer。Tether + T3 项目 2024 年至今已冻结总计数亿美元的涉案 USDT。</p>
 <p>任何地址都可能被 Tether 拉黑。一旦拉黑：</p>
 <ul>
   <li>这个地址里的 USDT 永远无法转出（在链上余额还在，但合约拒绝 transfer）。</li>
@@ -59,7 +64,8 @@ permalink: /what-is-usdt.html
 <p>所以 C2C 要找大商家、看订单量、低频 + 小额多批，别为了 0.1% 价差赌自己收到的是干净的。</p>
 
 <h2 id="s5">为什么很多人第一步先碰到 USDT</h2>
-<p>不是因为 USDT 比 BTC 更“高级”，而是因为它在实际工作流里更常被拿来当中间层。很多人嘴上说想买 BTC，真正开始操作时，第一步碰到的却是 USDT。</p>
+<p><strong>新手第一步常常是 USDT 而不是 BTC</strong>：不是因为 USDT "更高级"，而是大多数币种的交易对以 USDT 计价、转账和支付用稳定币比波动资产更容易理解、新手也倾向先用一个价格稳定的单位把流程跑顺。</p>
+<p>不是因为 USDT 比 BTC 更"高级"，而是因为它在实际工作流里更常被拿来当中间层。很多人嘴上说想买 BTC，真正开始操作时，第一步碰到的却是 USDT。</p>
 <ul>
   <li>因为很多币种都直接和 USDT 交易。</li>
   <li>因为转账、收款、支付时，稳定币更容易理解。</li>
@@ -79,4 +85,4 @@ permalink: /what-is-usdt.html
 
 <div class="risk"><strong>风险提醒</strong><br>稳定币的“稳定”主要说的是价格目标，不代表操作绝对安全。网络选错、地址填错、平台规则没看懂，照样会出问题。</div>
 
-<footer>上一篇：<a href="./start-here.html">Start Here</a> · 下一篇：<a href="./how-to-buy-usdt.html">如何购买 Tether USDt（USDT）</a></footer>
+<footer>上一篇：<a href="./start-here.html">Start Here</a> · 下一篇：<a href="./how-to-buy-usdt.html">如何购买 Tether USDt（USDT）</a> · 延伸：<a href="./usdt-vs-usdc.html">USDT 和 USDC 有什么区别</a></footer>

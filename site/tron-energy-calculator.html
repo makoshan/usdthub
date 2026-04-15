@@ -1,0 +1,139 @@
+---
+layout: default
+title: "TRON 能量计算器：质押多少 TRX，够转几笔 USDT"
+description: "按当前 TRON 网络快照直接计算：质押多少 TRX 大概能拿到多少能量、够不够转 1 笔 / N 笔 TRC20 USDT、不够还差多少。"
+permalink: /tron-energy-calculator.html
+chapter: "Tools · TRON Energy Calculator"
+breadcrumb:
+  - name: "USDT 新手手册"
+    url: /
+  - name: "TRON 能量计算器：质押多少 TRX，够转几笔 USDT"
+    url: /tron-energy-calculator.html
+---
+{%- assign fee_tool = site.data.usdt_fee_tool -%}
+{%- assign tron = fee_tool.tronEnergy -%}
+
+<h1>TRON 能量计算器：质押多少 TRX，够转几笔 USDT</h1>
+<div class="meta">Chapter 3.5 · Tool · 最后整理于 {{ tron.lastUpdated }}</div>
+
+<nav class="toc" aria-label="目录">
+  <div class="toc-title">本文目录</div>
+  <ol>
+    <li><a href="#tool">直接计算：质押多少 TRX，够不够转 1 笔 / N 笔</a></li>
+    <li><a href="#assumptions">我用的估算口径</a></li>
+    <li><a href="#read-output">怎么看结果</a></li>
+    <li><a href="#examples">三个最常见场景</a></li>
+    <li><a href="#method">当前快照、公式与 TRXDeFi 下单字段</a></li>
+    <li><a href="#related">相关页面</a></li>
+  </ol>
+</nav>
+
+<p>这页专门解决四件事：<strong>质押多少 TRX、大概能拿到多少能量、够不够转 1 笔 / N 笔 TRC20 USDT、如果不够还差多少</strong>。它单独存在，是因为这套问题本质上属于 TRON 资源模型，不该和“多链手续费总表”混成一锅。</p>
+
+<div class="note"><strong>先说结论</strong><br>如果你只是偶尔转一笔，先租能量或直接烧 TRX 往往更省脑子；如果你已经开始每天转、反复转、固定给交易所 / 客户 / 商家地址打款，那才值得认真看“质押多少 TRX 才够”。这页就是给后一类人准备的。</div>
+
+<h2 id="tool">直接计算：质押多少 TRX，够不够转 1 笔 / N 笔</h2>
+<p><strong>这个计算器</strong>专门解决三件事：如果你今天质押 <code>N</code> 个 TRX，大概能分到多少能量；按这个能量预算，够不够覆盖 <code>N</code> 笔 TRC20 USDT 转账；如果还不够，按当前网络快照大概要再加多少 TRX。这里用的单笔口径是本手册一直沿用的两档经验值：<strong>已持有过 USDT 的地址约 65,000 Energy / 笔</strong>，<strong>新地址 / 首次收 USDT 的地址约 130,000 Energy / 笔</strong>。</p>
+
+<div class="risk"><strong>“质押后转账免费”这句话只在覆盖范围内成立</strong><br>更准确的说法是：你先把 TRX 质押成每天刷新的 Energy 配额；如果当天可用能量足够覆盖这笔 TRC20 USDT 转账，链上不会再额外烧 TRX；如果质押不够、当天笔数超了，或者打到新地址导致能量翻倍，超出的那部分仍然要靠租能量或直烧 TRX 去补。</div>
+
+<div class="fee-tool" data-energy-tool>
+  <div class="fee-tool-controls">
+    <label>
+      <span>已质押 TRX</span>
+      <input type="number" min="0" step="100" value="10000" data-staked-trx />
+    </label>
+    <label>
+      <span>计划转账笔数</span>
+      <input type="number" min="1" step="1" value="1" data-transfer-count />
+    </label>
+    <label>
+      <span>收款地址类型</span>
+      <select data-address-type>
+        <option value="old" selected>已持有过 USDT 的地址（约 65,000 / 笔）</option>
+        <option value="new">新地址 / 首次收到 USDT（约 130,000 / 笔）</option>
+      </select>
+    </label>
+    <label>
+      <span>估算模式</span>
+      <select data-energy-mode>
+        {% for mode_hash in tron.modes %}
+        {% assign mode_id = mode_hash[0] %}
+        {% assign mode = mode_hash[1] %}
+        <option value="{{ mode_id }}"{% if mode_id == 'current' %} selected{% endif %}>{{ mode.label }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  </div>
+
+  <div class="fee-tool-quick-buttons" aria-label="快速质押金额">
+    <button type="button" data-stake-preset="5000">5000 TRX</button>
+    <button type="button" data-stake-preset="8000">8000 TRX</button>
+    <button type="button" data-stake-preset="10000">10000 TRX</button>
+    <button type="button" data-stake-preset="13500">13500 TRX</button>
+    <button type="button" data-stake-preset="20000">20000 TRX</button>
+  </div>
+
+  <div class="note fee-tool-note" data-energy-note></div>
+  <div class="fee-tool-summary" data-energy-summary></div>
+
+  <div class="fee-table-wrap">
+    <table class="fee-table">
+      <tbody data-energy-table></tbody>
+    </table>
+  </div>
+</div>
+
+<h2 id="assumptions">我用的估算口径</h2>
+<p><strong>这页的估算口径</strong>不是拍脑袋来的，而是把三层东西拆开看：协议层资源模型、当前网络快照、以及 TRC20 USDT 转账在现实里最常见的两档能量消耗。再加上 <strong>动态能量模型</strong> 会让实际消耗上下浮动，所以你可以把它理解成“比纯理论更接近现在，比裸算公式更接近日常决策”。</p>
+<ul>
+  <li><strong>老地址</strong>：按 {{ tron.transferEnergy.oldAddress }} Energy / 笔估。</li>
+  <li><strong>新地址</strong>：按 {{ tron.transferEnergy.newAddress }} Energy / 笔估。</li>
+  <li><strong>当前网络快照</strong>：1 TRX ≈ {{ tron.networkSnapshot.energyPerTrx }} Energy / 天。</li>
+  <li><strong>保守估算</strong>：在当前快照基础上预留约 10% 安全边际。</li>
+  <li><strong>如果你去 TRXDeFi 租能量</strong>：接口字段 <code>payNums</code> 填的是 Energy 数量，不是“几笔转账”。</li>
+</ul>
+
+<h2 id="read-output">怎么看结果</h2>
+<p><strong>结果区</strong>会给你三层信息：你大概能拿到多少能量、按当前地址类型大概能覆盖几笔、以及这次计划的 N 笔到底够不够。如果不够，它会直接告诉你还差多少能量，以及按当前模式还要多质押多少 TRX。</p>
+<p>这比你自己拿表格心算更省脑子，因为 TRON 最容易出错的地方就是：<strong>你明明觉得“几千 TRX 好像差不多”，但一换成新地址或两笔转账，结果马上翻车。</strong></p>
+
+<h2 id="examples">三个最常见场景</h2>
+<p><strong>下面这三个场景</strong>基本覆盖了大多数人第一次认真算 TRON 能量时的需求：偶尔转老地址、第一次打新地址、以及已经开始高频转账。</p>
+<table>
+  <thead>
+    <tr><th>场景</th><th>怎么估</th><th>一句话结论</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>老地址，1 笔</td><td>约 {{ tron.transferEnergy.oldAddress }} 能量</td><td>当前快照下通常要比“2,500 TRX 理论值”高不少</td></tr>
+    <tr><td>新地址，1 笔</td><td>约 {{ tron.transferEnergy.newAddress }} 能量</td><td>老地址预算直接翻倍，别偷这个懒</td></tr>
+    <tr><td>老地址，5 笔</td><td>约 {{ tron.transferEnergy.oldAddress | times: 5 }} 能量</td><td>这才是质押值不值得认真算的分水岭</td></tr>
+  </tbody>
+</table>
+
+<h2 id="method">当前快照、公式与 TRXDeFi 下单字段</h2>
+<p><strong>当前快照口径</strong>：{{ tron.networkSnapshot.capturedAt }} 通过 <code>{{ tron.networkSnapshot.source }}</code> 获取 <code>TotalEnergyLimit = {{ tron.networkSnapshot.totalEnergyLimit }}</code> 与 <code>TotalEnergyWeight = {{ tron.networkSnapshot.totalEnergyWeight }}</code>，再反推 <code>1 TRX ≈ {{ tron.networkSnapshot.energyPerTrx }} Energy / 天</code>。这比旧的粗估值更贴近“目前”的网络状态。</p>
+
+<div class="note"><strong>TRON 计算公式</strong><br><code>预计可得能量 = 已质押 TRX × 当前模式下的 Energy / TRX</code><br><code>本次所需能量 = 计划转账笔数 × 单笔 Energy</code><br><code>建议补质押 TRX = max(0, 所需能量 - 当前可得能量) ÷ 当前模式下的 Energy / TRX</code></div>
+
+<p><strong>如果你最后决定不质押、而是去 TRXDeFi 租能量</strong>，它的订单字段不是“几笔转账”，而是你要租的 <strong>Energy 数量</strong>。字段名是 <code>{{ tron.trxdefiRental.energyQuantityField }}</code>。所以你应该先在这页把总需求算出来，再去下单，不要在 TRXDeFi 页面上拍脑袋。</p>
+
+<ul class="chapter-list">
+  {% for source in tron.sources %}
+  <li><a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">{{ source.label }}</a></li>
+  {% endfor %}
+</ul>
+
+<h2 id="related">相关页面</h2>
+<ul>
+  <li><a href="./usdt-gas-fee-comparison.html">USDT 不同链转账手续费对比</a></li>
+  <li><a href="./tron-energy-guide.html">TRON 能量指南</a></li>
+  <li><a href="./how-to-get-tron-energy.html">TRON 能量怎么获得</a></li>
+  <li><a href="./how-to-reduce-trc20-usdt-fees.html">TRC20 USDT 手续费怎么省</a></li>
+  <li><a href="./how-to-send-usdt.html">怎么发送 USDT</a></li>
+</ul>
+
+<footer>上一篇：<a href="./usdt-gas-fee-comparison.html">USDT 多链手续费对比</a> · 下一篇：<a href="./tron-energy-guide.html">TRON 能量指南</a> · 返回：<a href="./index.html">USDT 新手手册</a></footer>
+
+<script id="usdt-fee-tool-data" type="application/json">{{ fee_tool | jsonify }}</script>
+<script src="{{ '/assets/js/usdt-fee-tool.js' | relative_url }}"></script>

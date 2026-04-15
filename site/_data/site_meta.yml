@@ -1,0 +1,43 @@
+# Centralized site metadata consumed by layouts and JSON-LD.
+# Edit here, not in _layouts/default.html.
+
+author:
+  name: "Mako Shan"
+  slug: "mako-shan"
+  url: "/about.html"
+  email: "imakoshan@gmail.com"
+  same_as:
+    - "https://github.com/makoshan"
+
+organization:
+  name: "USDT 新手手册"
+  legal_name: "USDT 新手手册 (usdthub)"
+  logo: "/assets/og/logo.png"
+  same_as:
+    - "https://github.com/makoshan/usdthub"
+
+social:
+  twitter: "@makoshan"
+  og_default_image: "/assets/og/default.png"
+  og_image_width: 1200
+  og_image_height: 630
+
+# Pages excluded from sitemap.xml (still indexable if linked, just not listed).
+sitemap_exclude:
+  - "/404.html"
+
+# Page-type hints. Keys must match page.permalink (leading slash, with .html).
+# Values drive JSON-LD @type (Article by default; other values: WebSite, AboutPage).
+page_types:
+  "/index.html": "WebSite"
+  "/about.html": "AboutPage"
+  "/editorial-policy.html": "AboutPage"
+  "/how-we-review-wallets-and-apps.html": "AboutPage"
+  "/changelog.html": "AboutPage"
+  "/official-sources.html": "AboutPage"
+
+# Published dates (override git log where the git history predates site launch
+# or where the manuscript was drafted elsewhere).
+# Format: YYYY-MM-DD. Omit to let git log decide.
+date_published_overrides:
+  "/index.html": "2026-03-01"

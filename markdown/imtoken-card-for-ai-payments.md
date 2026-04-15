@@ -5,7 +5,7 @@ source_html: "imtoken-card-for-ai-payments.html"
 
 # imToken Card 能不能用来订阅 ChatGPT、海淘和国内支付
 
-> imToken Card guide · Last updated: 2026-04-14
+> imToken Card guide
 
 如果你最近一直在找“国内卡付不了 ChatGPT，能不能换一条更稳的路”，那你大概率已经刷到过 `imToken Card` 这类 U 卡 / 加密银行卡内容。它看起来很诱人：一头是链上资产，一头是海外订阅、海淘，甚至国内微信、支付宝消费。
 

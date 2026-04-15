@@ -37,7 +37,15 @@ JEKYLL_ENV=production bundle exec jekyll build
 blue "==> scripts/check_site.py"
 python3 scripts/check_site.py
 
-# 5. Defense in depth: every built HTML page must reference the production CSS.
+# 5. Verify the fee comparison tool contract.
+blue "==> scripts/test_fee_tool.py"
+python3 scripts/test_fee_tool.py
+
+# 6. Verify the tool hub + dedicated TRON calculator regression checks.
+blue "==> scripts/test_usdt_tools.py"
+python3 scripts/test_usdt_tools.py
+
+# 7. Defense in depth: every built HTML page must reference the production CSS.
 blue "==> verifying every built page links the production stylesheet"
 missing=()
 for f in docs/*.html; do
@@ -51,14 +59,14 @@ if [ "${#missing[@]}" -gt 0 ]; then
   exit 1
 fi
 
-# 6. Defense in depth: no localhost leakage in any built file.
+# 8. Defense in depth: no localhost leakage in any built file.
 if grep -rIl "localhost:4000" docs/ >/dev/null 2>&1; then
   red "==> localhost:4000 leaked into docs/ — re-run after killing jekyll serve"
   grep -rIl "localhost:4000" docs/
   exit 1
 fi
 
-# 7. Commit only if docs/ actually changed.
+# 9. Commit only if docs/ actually changed.
 if git diff --quiet --exit-code docs/ && [ -z "$(git ls-files --others --exclude-standard docs/)" ]; then
   green "==> docs/ unchanged, nothing to deploy"
   exit 0
@@ -72,7 +80,7 @@ blue "==> pushing to origin"
 branch="$(git rev-parse --abbrev-ref HEAD)"
 git push origin "$branch"
 
-# 8. Live smoke test: poll the production URL until the new CSS link appears.
+# 10. Live smoke test: poll the production URL until the new CSS link appears.
 blue "==> smoke-testing $LIVE_URL"
 for i in $(seq 1 12); do
   if curl -sf "$LIVE_URL" | grep -q "$EXPECTED_CSS"; then

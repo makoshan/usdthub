@@ -194,3 +194,203 @@ th, td {
 th { background: var(--soft); font-weight: 600; }
 
 img { max-width: 100%; height: auto; }
+
+.fee-tool {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  margin: 18px 0 24px;
+}
+
+.fee-tool-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.fee-tool-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.fee-tool-controls input,
+.fee-tool-controls select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--text);
+  background: #fff;
+}
+
+.fee-tool-quick-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 16px;
+}
+
+.fee-tool-quick-buttons button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  padding: 8px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.fee-tool-quick-buttons button:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+.fee-tool-note {
+  margin-top: 0;
+}
+
+.fee-tool-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 16px 0 18px;
+}
+
+.fee-summary-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  padding: 14px;
+}
+
+.fee-summary-card strong {
+  display: block;
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.fee-summary-card strong span {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 500;
+  margin-top: 3px;
+}
+
+.fee-summary-card p {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.fee-summary-card p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.fee-table-wrap {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.fee-table {
+  min-width: 920px;
+}
+
+.fee-table-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.fee-tool {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--soft);
+  padding: 16px;
+  margin: 18px 0 22px;
+}
+
+.fee-tool-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.fee-tool-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.fee-tool input,
+.fee-tool select,
+.fee-tool button {
+  font: inherit;
+}
+
+.fee-tool input,
+.fee-tool select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--text);
+}
+
+.fee-tool-quick-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.fee-tool-quick-buttons button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.fee-tool-quick-buttons button:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+.fee-tool-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 12px 0 16px;
+}
+
+.fee-summary-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 12px 14px;
+}
+
+.fee-summary-card strong,
+.fee-summary-card span {
+  display: block;
+}
+
+.fee-summary-card strong {
+  margin-bottom: 4px;
+}
+
+.fee-table-wrap {
+  overflow-x: auto;
+}

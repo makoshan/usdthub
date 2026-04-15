@@ -5,7 +5,7 @@ source_html: "index.html"
 
 # USDT 新手手册
 
-> 一个持续更新的公开笔记。写给第一次接触 USDT、TRON、钱包和链上支付的人。Last updated: 2026-04-14
+> 一个持续更新的公开笔记。写给第一次接触 USDT、TRON、钱包和链上支付的人。
 
 我做这个手册，只想解决两类问题：
 
@@ -19,11 +19,19 @@ source_html: "index.html"
 ### 新手入门
 
 - [USDT 是什么？](./what-is-usdt.md)
+- [USDT 和 USDC 有什么区别](./usdt-vs-usdc.md)
 - [如何购买 Tether USDt（USDT）](./how-to-buy-usdt.md)
 - [怎么选钱包](./how-to-choose-a-wallet.md)
 - [冷钱包（硬件钱包）怎么选：Ledger / Trezor / OneKey](./cold-wallet-for-usdt-china.md)
 - [怎么发送 USDT](./how-to-send-usdt.md)
 - [TRC20、ERC20、BEP20 有什么区别](./usdt-networks-explained.md)
+
+### 常见补充问题
+
+- [USDC 怎么换成 USDT](./how-to-swap-usdc-to-usdt.md)
+- [USDT 的 Memo、Tag、Label、Address Alias 是什么](./usdt-memo-tag-label-address-alias.md)
+- [Binance 里怎么接收、查看、划转 USDT](./binance-receive-view-transfer-usdt.md)
+- [什么是 Flash USDT，为什么它基本都和骗局有关](./what-is-flash-usdt-scam.md)
 
 ### 中国用户现实问题
 
@@ -35,6 +43,7 @@ source_html: "index.html"
 
 - [TRON 能量指南](./tron-energy-guide.md)
 - [为什么转 TRC20 USDT 要准备 TRX](./tron-basics.md)
+- [如何使用 USDT 购买 TRX](./how-to-buy-trx-with-usdt.md)
 - [TRON 带宽和能量是什么](./tron-bandwidth-and-energy.md)
 - [TRON 能量怎么获得](./how-to-get-tron-energy.md)
 - [TRC20 USDT 手续费怎么省](./how-to-reduce-trc20-usdt-fees.md)
@@ -43,6 +52,7 @@ source_html: "index.html"
 
 - [USDT 可以拿来做什么](./what-can-you-do-with-usdt.md)
 - [如何用 USDT 订阅 AI](./use-usdt-for-ai.md)
+- [没有外币信用卡，怎么用 U 币买苹果礼品卡](./buy-apple-gift-card-with-usdt.md)
 - [imToken Card 能不能用来订阅 ChatGPT、海淘和国内支付](./imtoken-card-for-ai-payments.md)
 - [如何用 USDT 买 eSIM 和 VPN](./use-usdt-for-esim-and-vpn.md)
 - [出国旅游时，USDT 有哪些实际用途](./use-usdt-for-travel.md)
@@ -67,7 +77,12 @@ source_html: "index.html"
 
 ## 4. 最近更新
 
+- 新增：[USDT 和 USDC 有什么区别](./usdt-vs-usdc.md)，把“先学 USDT 还是 USDC”“两者分别适合什么场景”单独讲清楚。
+- 新增：[USDC 怎么换成 USDT](./how-to-swap-usdc-to-usdt.md)、[USDT 的 Memo、Tag、Label、Address Alias 是什么](./usdt-memo-tag-label-address-alias.md)、[Binance 里怎么接收、查看、划转 USDT](./binance-receive-view-transfer-usdt.md)，补上稳定币互换、术语和平台内基础操作。
+- 新增：[什么是 Flash USDT，为什么它基本都和骗局有关](./what-is-flash-usdt-scam.md)，单独做成反诈页，避免把灰产词混进正常教程里。
+- 新增：[如何使用 USDT 购买 TRX](./how-to-buy-trx-with-usdt.md)，补上“地址未激活 / TRX 不够付资源费时，怎么直接用 USDT 应急补 TRX”的实际操作路径。
 - 新增：[冷钱包（硬件钱包）怎么选](./cold-wallet-for-usdt-china.md)，基于中文视频整理 Ledger / Trezor / OneKey 对比、4 个评价维度、中国用户为什么优先 OneKey（国内直发不过海关）。
+- 新增：[没有外币信用卡，怎么用 U 币买苹果礼品卡](./buy-apple-gift-card-with-usdt.md)，把 `Bitrefill + USDT + Apple Gift Card` 这条更现实的替代路线单独讲清楚。
 - 新增：[imToken Card 能不能用来订阅 ChatGPT、海淘和国内支付](./imtoken-card-for-ai-payments.md)，拆解 `Fiat24` 路线和视频演示之间的共通逻辑与风险点。
 - 新增：[人在中国怎么买币](./china-buy-crypto-notes.md) 里的“怎么学习数字货币和投资”“社区 / 频道怎么选”两节。
 - 新增路线图与流程图：让首页和核心文章不只是文字堆叠。

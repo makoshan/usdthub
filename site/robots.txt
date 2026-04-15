@@ -1,4 +1,62 @@
+---
+layout: bare
+permalink: /robots.txt
+sitemap: false
+---
+# Default policy: allow everything.
 User-agent: *
+Allow: /
+
+# AI crawlers — explicit allow. This handbook WANTS to be cited by
+# Google AI Overviews, ChatGPT, Claude, Perplexity, and CCBot-derived models.
+# If you flip any of these to Disallow, the site effectively opts out of that
+# system's index.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
 Allow: /
 
 Sitemap: {{ '/sitemap.xml' | absolute_url }}

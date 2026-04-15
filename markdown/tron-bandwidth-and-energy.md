@@ -5,7 +5,7 @@ source_html: "tron-bandwidth-and-energy.html"
 
 # TRON 带宽和能量是什么
 
-> TRON Note · Last updated: 2026-04-14
+> TRON Note
 
 TRON 资源分两类：
 

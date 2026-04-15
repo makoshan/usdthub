@@ -6,7 +6,7 @@ permalink: /usdt-networks-explained.html
 ---
 
 <h1>TRC20、ERC20、BEP20 有什么区别</h1>
-<div class="meta">Chapter 1.5 · Networks · Last updated: 2026-04-14</div>
+<div class="meta">Chapter 1.5 · Networks</div>
 
 <nav class="toc" aria-label="目录">
   <div class="toc-title">本文目录</div>
@@ -25,6 +25,7 @@ permalink: /usdt-networks-explained.html
 <div class="note"><strong>TL;DR</strong><br>收款方支持哪条链，你就用哪条链。2026 年的默认选择：<strong>TRC20 用于 C2C / 日常转账</strong>（Tether 85% 在 TRON 上）、<strong>ERC20 用于 DeFi / 接入以太坊生态</strong>（当前 gas 低到每笔 $0.2）、<strong>BEP20 用于币安生态内流转 / 极低手续费场景</strong>（$0.01–$0.5）。</div>
 
 <h2 id="s1">一张表看清差异</h2>
+<p><strong>TRC20、ERC20、BEP20 的核心差别</strong>是底层链不同：TRC20 跑在 TRON、ERC20 跑在 Ethereum、BEP20 跑在 BNB Chain。三条链上的 USDT 互不兼容，发错链币会丢。</p>
 <table>
   <thead>
     <tr><th>网络</th><th>地址格式</th><th>典型手续费</th><th>到账速度</th><th>USDT 供应量</th><th>适合场景</th></tr>
@@ -73,8 +74,10 @@ permalink: /usdt-networks-explained.html
   </tbody>
 </table>
 <p class="meta">数据来源：<a href="https://tether.to/en/transparency/" target="_blank" rel="noopener noreferrer">Tether Transparency</a>（Q4 2025 attestation）、<a href="https://etherscan.io/gastracker" target="_blank" rel="noopener noreferrer">Etherscan Gas Tracker</a>、<a href="https://tronscan.org/" target="_blank" rel="noopener noreferrer">TronScan</a>。ERC20 成本在 2026-04 历史低位；Ethereum 上的 USDT 此刻是「便宜网络」，和 2021–2024 年普遍印象相反。</p>
+<div class="note"><strong>如果你只是想先看一眼哪条链现在更省</strong><br>直接去 <a href="./usdt-gas-fee-comparison.html">USDT 不同链转账手续费对比</a>。如果你关心的是多链总表，它更快；如果你关心的是 TRON 质押多少才够发，再看 <a href="./tron-energy-calculator.html">TRON 能量计算器</a>。</div>
 
 <h2 id="s2">BEP20 和 ERC20 地址一模一样，怎么避免发错</h2>
+<p><strong>BEP20 和 ERC20 地址格式完全一致</strong>——都是 0x 开头、42 位十六进制。这意味着你光看地址字符串无法判断对方要的是哪条链，必须以钱包或交易所界面里选中的「网络」字段为准。一旦链选错，USDT 通常不可恢复。</p>
 <p>这是高频事故来源。解决办法只有一个：<strong>看钱包里选的「网络」</strong>，不要只看地址。</p>
 <ul>
   <li>MetaMask：顶部 chain 选择器必须显示「Ethereum Mainnet」或「BNB Smart Chain」。</li>
@@ -83,6 +86,7 @@ permalink: /usdt-networks-explained.html
 </ul>
 
 <h2 id="s3">怎么决定用哪条链</h2>
+<p><strong>选链的第一原则</strong>是看收款方支持什么，而不是看自己觉得哪条便宜。下面按四种典型场景分别给默认建议：C2C / 日常转账、DeFi / 合约交互、币安生态内流转、Telegram 或 Solana 应用。</p>
 <h3>收 / 发普通转账（对个人或 C2C）</h3>
 <p><strong>默认 TRC20</strong>。全球流动性最大，几乎所有主流交易所都默认支持，C2C 商家一般也用这条。速度快、成本可控。</p>
 
@@ -96,6 +100,7 @@ permalink: /usdt-networks-explained.html
 <p>分别选 TON 或 Solana。这两条链的 USDT 流动性在 2025–2026 快速增长，但地址格式完全不同，不要和 TRC20 / ERC20 混用。</p>
 
 <h2 id="s4">新手实际应该怎么选</h2>
+<p><strong>新手选链的顺序</strong>：先问收款方支持什么，再看自己的钱包支持什么，还不确定就别发，第一次给新地址先用 1 USDT 测试。这四步没有一步可以跳过，问清楚比发错再找回便宜一千倍。</p>
 <ul>
   <li><strong>先看收款方支持什么</strong>，不要先看自己觉得哪条便宜。</li>
   <li><strong>再看你自己的钱包支持什么</strong>。TRC20 需要 TRON 原生钱包（TronLink、imToken、OKX Wallet）；MetaMask 2025 年原生支持了但要手动加 Tron 账户。</li>
@@ -104,6 +109,7 @@ permalink: /usdt-networks-explained.html
 </ul>
 
 <h2 id="s5">最常见事故</h2>
+<p><strong>跨链发错</strong>是新手最常见也最贵的事故类型：TRC20 发到 ERC20 地址、以为交易所会自动跨链、听到「发 U 过来」没追问是哪条链、复制了错链的 0x 地址。这四种情况里，前三种基本不可恢复。</p>
 <ul>
   <li><strong>把 TRC20 USDT 发到 ERC20 地址（或反过来）</strong>：链上看不到，通常不可恢复。</li>
   <li><strong>以为交易所会自动帮你跨链</strong>：99% 的交易所不会。</li>
@@ -112,6 +118,7 @@ permalink: /usdt-networks-explained.html
 </ul>
 
 <h2 id="s6">一个你该知道的事实</h2>
+<p><strong>TRON 已经是 USDT 流通量最大的链</strong>——2025 年 TRON 上的 USDT 总量首次超过以太坊，这直接影响新手的默认选择：如果对方没特别说明，TRC20 通常是当前最不容易出错的选项，但仍然要确认，不要猜。</p>
 <p>2025 年 TRON 上的 USDT 总量正式超过以太坊（$85.3B vs $80B，2026-03 数据）。这意味着：<strong>如果对方不特别说明，默认 TRC20 是当前最不容易出错的选择</strong>。但要确认，不要猜。</p>
 
 <div class="risk"><strong>风险提醒</strong><br>跨链发错的 USDT 通常不可恢复，即使你付钱给交易所客服申请找回也几乎做不到（需要私钥控制对应链上的那个地址）。<strong>发送前最值得花的 10 秒，就是多看一眼网络那栏</strong>。</div>

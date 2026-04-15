@@ -5,7 +5,7 @@ source_html: "use-usdt-for-ai.html"
 
 # 如何用 USDT 订阅 AI
 
-> Chapter 4 · Use Cases · Last updated: 2026-04-14
+> Chapter 4 · Use Cases
 
 ![用 USDT 订阅 AI，我会先过这 4 关](../site/assets/css/ai-payment-checklist.svg)
 
@@ -20,6 +20,8 @@ source_html: "use-usdt-for-ai.html"
 
 ### 路径 B：USDT → 中间支付 / 虚拟卡 → AI 订阅
 现实里更常见。兼容性高，但步骤多。好处是能覆盖那些暂不直接支持加密支付的产品；坏处是环节多了，出错点也跟着多。
+
+如果你手里已经有 `USDT`，但没有稳定可用的外币信用卡，也可以先看：[没有外币信用卡，怎么用 U 币买苹果礼品卡](./buy-apple-gift-card-with-usdt.md)。
 
 ## 开始前建议先准备这 4 件事
 

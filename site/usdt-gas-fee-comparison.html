@@ -1,0 +1,139 @@
+---
+layout: default
+title: "USDT 不同链转账手续费对比"
+description: "对比 USDT 在 TRC20、ERC20、BEP20、Polygon、Solana、TON 等常见网络上的典型单笔链上转账成本，帮你快速判断哪条链更省。"
+permalink: /usdt-gas-fee-comparison.html
+chapter: "Tools · Fee Comparison"
+breadcrumb:
+  - name: "USDT 新手手册"
+    url: /
+  - name: "USDT 不同链转账手续费对比"
+    url: /usdt-gas-fee-comparison.html
+---
+{%- assign fee_tool = site.data.usdt_fee_tool -%}
+
+<h1>USDT 不同链转账手续费对比</h1>
+<div class="meta">Chapter 1.6 · Tool · 最后整理于 {{ fee_tool.lastUpdated }}</div>
+
+<nav class="toc" aria-label="目录">
+  <div class="toc-title">本文目录</div>
+  <ol>
+    <li><a href="#multi-chain">输入金额看哪条链更省</a></li>
+    <li><a href="#snapshot">一张表先看价格带</a></li>
+    <li><a href="#tron-note">为什么 TRON 要单独看</a></li>
+    <li><a href="#meaning">这些数字该怎么理解</a></li>
+    <li><a href="#related">相关页面</a></li>
+  </ol>
+</nav>
+
+<p>这页只做一件事：<strong>比较不同链上的单笔转账成本</strong>。它回答的是“如果收款方支持多条链，现在走哪条链更省”；它不替你决定平台，不替你承担错链风险，也不把 TRON 的资源模型混进总表里搅浑水。</p>
+
+<div class="note"><strong>先说结论</strong><br>如果你只是比较链上这一步，<strong>Polygon、Solana、TON、BEP20</strong> 这几条链通常更轻；而 <strong>TRC20 是否划算，关键看你有没有提前准备能量</strong>。TRON 那部分我已经拆成单独的 <a href="./tron-energy-calculator.html">能量计算器</a>，不和总表硬塞在一起。</div>
+
+<h2 id="multi-chain">输入金额看哪条链更省</h2>
+<p><strong>这个比较器</strong>做的事情很简单：把常见 USDT 网络的典型单笔链上手续费放在一起，按低到高排序，再算出“这笔手续费占你转账金额的百分比”。它不替你选平台，也不替你赌拥堵时段，只解决一个更基础的问题：<strong>哪条链在你这笔金额下最不肉疼</strong>。</p>
+
+<div class="fee-tool" data-fee-tool>
+  <div class="fee-tool-controls">
+    <label>
+      <span>转账金额（USDT）</span>
+      <input type="number" min="1" step="1" value="1000" data-amount-input />
+    </label>
+    <label>
+      <span>费用档位</span>
+      <select data-profile-select>
+        {% for profile in fee_tool.profiles %}
+        <option value="{{ profile.id }}"{% if profile.id == 'typical' %} selected{% endif %}>{{ profile.label }}</option>
+        {% endfor %}
+      </select>
+    </label>
+  </div>
+
+  <div class="fee-tool-quick-buttons" aria-label="快速金额">
+    <button type="button" data-amount-preset="20">20U</button>
+    <button type="button" data-amount-preset="50">50U</button>
+    <button type="button" data-amount-preset="100">100U</button>
+    <button type="button" data-amount-preset="500">500U</button>
+    <button type="button" data-amount-preset="1000">1000U</button>
+    <button type="button" data-amount-preset="5000">5000U</button>
+  </div>
+
+  <div class="fee-table-wrap">
+    <table class="fee-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>网络</th>
+          <th>典型手续费</th>
+          <th>占本次金额</th>
+          <th>到账速度</th>
+          <th>需要准备</th>
+          <th>更适合什么</th>
+          <th>最该注意</th>
+        </tr>
+      </thead>
+      <tbody data-fee-table-body></tbody>
+    </table>
+  </div>
+</div>
+
+<p class="meta">说明：这里比较的是<strong>链上转账成本的参考值</strong>，不是交易所最终提现费。很多平台会在链上 gas 之外再加一层固定收费，所以你在提现页看到的数字可能更高。</p>
+
+<h2 id="snapshot">一张表先看价格带</h2>
+<p><strong>下面这张静态表</strong>给的是我会拿来做默认判断的价格带。它不是逐分钟行情，而是为了让你先建立“谁是零点几美分级、谁是一美元级、谁会在资源不足时突然变贵”的感觉。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>网络</th>
+      <th>低费时段</th>
+      <th>常见时段</th>
+      <th>高位估算</th>
+      <th>到账速度</th>
+      <th>原生币</th>
+      <th>地址格式</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for network in fee_tool.networks %}
+    <tr>
+      <td><strong>{{ network.name }}</strong>（{{ network.family }}）</td>
+      <td>${{ network.feeUsd.low }}</td>
+      <td>${{ network.feeUsd.typical }}</td>
+      <td>${{ network.feeUsd.high }}</td>
+      <td>{{ network.speed }}</td>
+      <td>{{ network.gasToken }}</td>
+      <td>{{ network.addressHint }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2 id="tron-note">为什么 TRON 要单独看</h2>
+<p><strong>TRON 的特殊性</strong>不是链名，而是资源模型。它的真实成本高度依赖你有没有准备 Energy：准备对了，一笔 TRC20 USDT 可以接近“无额外链上成本”；没准备，费用会直接跳到租能量或直烧 TRX 那一档。所以我把这部分单独拆成了 <a href="./tron-energy-calculator.html">TRON 能量计算器：质押多少 TRX，够转几笔 USDT</a>。</p>
+<p>如果你现在关心的是“要质押多少 TRX、大概多少能量、够转几笔、不够差多少”，不要在这页脑补，直接去那一页算。</p>
+
+<h2 id="meaning">这些数字该怎么理解</h2>
+<p><strong>这些数字</strong>不是固定报价，而是一个时间窗口内的典型值。Ethereum、Arbitrum、Polygon 这种链，gas 会跟拥堵一起波动；TRON 则会被你的资源准备情况放大。所以这页给你的不是神谕，而是一张<strong>足够做路径决策的总表</strong>。</p>
+<ul>
+  <li><strong>最便宜不等于最适合</strong>：先确认收款方支持哪条链，再看成本。</li>
+  <li><strong>EVM 链最容易出“0x 幻觉”</strong>：BEP20、ERC20、Polygon 都是 0x 地址，别只看前缀。</li>
+  <li><strong>TRON 别混着看</strong>：总表适合看“租能量 / 直烧”的价格带；真要算质押覆盖能力，去能量计算器。</li>
+  <li><strong>小额更怕高手续费</strong>：转 20U 时，1U 和 0.01U 是两个世界。</li>
+</ul>
+
+<div class="risk"><strong>风险提醒</strong><br>别把“最低手续费”误解成“最佳路线”。如果对方钱包、交易所或服务商根本不支持那条链，最低价没有意义。<strong>能到账，永远比省两毛更重要。</strong></div>
+
+<h2 id="related">相关页面</h2>
+<ul>
+  <li><a href="./tron-energy-calculator.html">TRON 能量计算器：质押多少 TRX，够转几笔 USDT</a></li>
+  <li><a href="./usdt-networks-explained.html">TRC20、ERC20、BEP20 有什么区别</a></li>
+  <li><a href="./tron-energy-guide.html">TRON 能量指南</a></li>
+  <li><a href="./how-to-reduce-trc20-usdt-fees.html">TRC20 USDT 手续费怎么省</a></li>
+  <li><a href="./how-to-send-usdt.html">怎么发送 USDT</a></li>
+</ul>
+
+<footer>上一篇：<a href="./usdt-networks-explained.html">USDT 网络</a> · 下一篇：<a href="./tron-energy-calculator.html">TRON 能量计算器</a> · 返回：<a href="./index.html">USDT 新手手册</a></footer>
+
+<script id="usdt-fee-tool-data" type="application/json">{{ fee_tool | jsonify }}</script>
+<script src="{{ '/assets/js/usdt-fee-tool.js' | relative_url }}"></script>

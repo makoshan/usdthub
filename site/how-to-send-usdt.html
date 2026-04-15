@@ -6,7 +6,7 @@ permalink: /how-to-send-usdt.html
 ---
 
 <h1>怎么发送 USDT</h1>
-<div class="meta">Chapter 2.5 · Transfers · Last updated: 2026-04-14</div>
+<div class="meta">Chapter 2.5 · Transfers</div>
 
 <nav class="toc" aria-label="目录">
   <div class="toc-title">本文目录</div>
@@ -24,12 +24,15 @@ permalink: /how-to-send-usdt.html
 <p>USDT 转账看起来像一件很简单的事：复制地址，填金额，确认。但我先说结论，真正把人送进坑里的，通常不是按钮多难找，而是 <strong>网络、地址、资源、第一次没测试</strong> 这几件小事一起出问题。很多人就是在“这有什么难的”这一秒，开始交学费。</p>
 
 <div class="note"><strong>TL;DR</strong><br>如果你问我发 USDT 前最该检查什么，我的答案一直很稳定：收款方支持的网络、目标地址、钱包资源够不够、这是不是第一次给这个地址打款。只要是第一次，我都建议先测一笔小额。慢一点，通常比补救便宜得多。</div>
+<div class="note"><strong>延伸</strong><br>如果你是被 <code>memo / tag / label / address alias</code> 这些词搞混，读：<a href="./usdt-memo-tag-label-address-alias.html">USDT 的 Memo、Tag、Label、Address Alias 是什么</a>；如果你是被 <code>flash usdt</code> 这种词吓到，读：<a href="./what-is-flash-usdt-scam.html">什么是 Flash USDT，为什么它基本都和骗局有关</a>。</div>
 
 <h2 id="s1">为什么“网络”比“币名”更重要</h2>
+<p><strong>「网络比币名重要」指的是</strong>：USDT 同时存在于 TRC20、ERC20 等多条链，币名相同不代表路线兼容，选错链会让资金到不了对方账户。</p>
 <p>我见过最常见的一类事故，就是对方只说一句“发 U 给我”，然后转账的人默认理解成“随便哪条链都行”。实际完全不是。USDT 可以存在于不同网络，比如 TRC20、ERC20 等。币名一样，不代表路线一样。</p>
 <p>所以发送前先问自己一句：<strong>对方收的是哪条链上的 USDT？</strong> 你把这句话问明白，已经能避开一大半低级事故。</p>
 
 <h2 id="s2">发送前建议检查 5 件事</h2>
+<p><strong>发送前要检查的 5 件事</strong>是：对方支持的网络、地址是否完整准确、金额是否正确、钱包资源够不够、是不是第一次给这个地址转账。</p>
 <ul>
   <li>收款方支持的网络：这是第一优先级。</li>
   <li>地址是不是完整、准确：不要手输，尽量复制后再核对首尾字符。</li>
@@ -39,6 +42,7 @@ permalink: /how-to-send-usdt.html
 </ul>
 
 <h2 id="s3">我自己的默认检查顺序</h2>
+<p><strong>我的默认检查顺序</strong>是：先看链，再看地址，再看金额和规则，最后看钱包资源够不够——按这个顺序过一遍能避开绝大多数「差最后一步才发现漏看」的事故。</p>
 <ol>
   <li>先看对方支持的链</li>
   <li>再看地址</li>
@@ -48,6 +52,7 @@ permalink: /how-to-send-usdt.html
 <p>这个顺序不是唯一正确答案，但它能最大化降低“我只差最后一步时才发现自己少看了一行”的概率。</p>
 
 <h2 id="s4">常见发送流程</h2>
+<p><strong>常见发送流程</strong>分四步：先看对方的收款规则（链、备注、金额、时限），在钱包里选对资产和网络，复制地址后至少核对两遍，第一次先小额测试。</p>
 <h3>1. 确认收款规则</h3>
 <p>我自己的做法一直是先看规则，再点发送。不是所有收款页面都只写一个地址。很多还会写：最低金额、支持链、备注规则、到账时效。先看完，再动手。</p>
 <h3>2. 在钱包里选择正确资产与网络</h3>
@@ -58,6 +63,7 @@ permalink: /how-to-send-usdt.html
 <p>这一步听起来保守，但它比事后补救便宜太多。我自己的原则很简单：只要是新地址、新商家、新链路，先测一笔再说。</p>
 
 <h2 id="s5">地址污染（address poisoning）：2025 年最贵的事故类型</h2>
+<p><strong>地址污染</strong>指的是：骗子生成一个首尾字符和你真实收款地址一样的假地址，往你钱包打 0 USDT 留痕，诱你下次从交易历史里复制时误选假地址。</p>
 <p>这是你必须专门了解的一种骗局，因为它已经从「理论风险」变成了真实大额案件：</p>
 <ul>
   <li><strong>2025-12</strong>：单一受害者在复制交易历史里的「相似地址」后损失 <strong>$50,000,000 USDT</strong>。</li>
@@ -72,6 +78,7 @@ permalink: /how-to-send-usdt.html
 </ul></div>
 
 <h2 id="s6">最容易踩的坑</h2>
+<p><strong>发送环节最容易踩的坑</strong>集中在几处：只看 USDT 不看网络、复制了错误或旧地址、第一次直接大额、忽略 TRON 资源、漏看对方要求的 memo / tag。</p>
 <ul>
   <li>只看见 USDT，不看网络</li>
   <li>复制了旧地址或错误地址（参考上一节「地址污染」）</li>
@@ -93,4 +100,4 @@ permalink: /how-to-send-usdt.html
   <li><a href="https://tronscan.org/" target="_blank" rel="noopener noreferrer">TronScan</a> — 任何 TRON 交易最权威的查询入口，发送完一定去看一眼 TxID。</li>
 </ul>
 
-<footer>上一篇：<a href="./how-to-choose-a-wallet.html">怎么选钱包</a> · 下一篇：<a href="./usdt-networks-explained.html">TRC20、ERC20、BEP20 有什么区别</a> · 延伸：<a href="./official-sources.html">官方资料入口</a></footer>
+<footer>上一篇：<a href="./how-to-choose-a-wallet.html">怎么选钱包</a> · 下一篇：<a href="./usdt-networks-explained.html">TRC20、ERC20、BEP20 有什么区别</a> · 延伸：<a href="./official-sources.html">官方资料入口</a> · 补充：<a href="./usdt-memo-tag-label-address-alias.html">Memo / Tag / Label</a> · 安全：<a href="./what-is-flash-usdt-scam.html">Flash USDT</a></footer>

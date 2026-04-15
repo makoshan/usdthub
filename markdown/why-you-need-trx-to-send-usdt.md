@@ -5,7 +5,7 @@ source_html: "why-you-need-trx-to-send-usdt.html"
 
 # 为什么转 TRC20 USDT 要准备 TRX
 
-> TRON Note · Last updated: 2026-04-14
+> TRON Note
 
 一句话：在 TRON 上做转账，很多时候不是“你有 USDT 就够了”。链上动作本身要消耗资源，资源不够时，成本就和 TRX 有关系。
 

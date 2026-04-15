@@ -6,13 +6,14 @@ permalink: /how-to-get-tron-energy.html
 ---
 
 <h1>TRON 能量怎么获得</h1>
-<div class="meta">TRON Note · Last updated: 2026-04-14</div>
+<div class="meta">TRON Note</div>
 
 <p>获得能量只有 <strong>三条路径</strong>，多的都是包装。下面按「多省心 → 多省钱」排序。</p>
 
 <div class="note"><strong>TL;DR</strong><br>偶尔转：钱包多留 20 TRX，链上自动烧（最省脑子，$4 左右一笔）。一周转几次：用 <a href="https://tronenergy.market/" target="_blank" rel="noopener noreferrer">tronenergy.market</a> 或 feee.io 这类租能量平台（$1.2–$2.4 一笔）。一天转多次：质押 ~2,500 TRX（$800）换每日 65k 能量（第一笔免费）。</div>
 
-<h2>路径 A：什么都不做，链上自动烧 TRX</h2>
+<h2 id="burn">路径 A：什么都不做，链上自动烧 TRX</h2>
+<p><strong>自动烧 TRX</strong>指的是：你不做任何资源准备，钱包里留够 TRX，发 USDT 转账时链会自动按 100 sun/能量 的价格把 TRX 折算成能量补足差额。</p>
 <p>钱包里留够 TRX 就行，链会在你发 USDT 转账时自动按 100 sun/能量 烧 TRX 补足。</p>
 <ul>
   <li>操作门槛：0。最适合第一次用 TRON 的人。</li>
@@ -21,7 +22,8 @@ permalink: /how-to-get-tron-energy.html
   <li>建议：钱包里常备 15–30 TRX。</li>
 </ul>
 
-<h2>路径 B：用租能量平台（日常最推荐）</h2>
+<h2 id="rent">路径 B：用租能量平台（日常最推荐）</h2>
+<p><strong>租能量平台</strong>指的是：你用少量 TRX 付费，平台用它质押的 TRX 把能量配额「代付」到你的地址，几秒到账、几分钟内有效，整个过程你的私钥不离开设备。</p>
 <p>逻辑：你用 TRX 付一点钱给平台，平台把能量配额「代付」到你的地址，几秒内到账，然后你用自己的钱包发 USDT 转账。<strong>整个过程你的私钥不离开设备。</strong></p>
 
 <h3>主流平台</h3>
@@ -60,7 +62,8 @@ permalink: /how-to-get-tron-energy.html
   <li><strong>OKX Wallet</strong>：TRON 页 → Energy &amp; Bandwidth → Rent。</li>
 </ul>
 
-<h2>路径 C：质押 TRX 换永久每日能量</h2>
+<h2 id="stake">路径 C：质押 TRX 换永久每日能量</h2>
+<p><strong>质押 TRX</strong>指的是：把一笔 TRX「冻」在账户里换每天自动刷新的能量配额，本金不动，Stake 2.0 下发起解冻后要等 14 天才能取回。</p>
 <p>逻辑：把 TRX「冻」在账户里（质押 / Freeze），换取每日自动刷新的能量配额。Stake 2.0 下，发起解冻后需等 <strong>14 天</strong>才能取回本金（TRON 协议层硬等待）。</p>
 <table>
   <thead><tr><th>质押量</th><th>每日能量</th><th>折算</th><th>出处</th></tr></thead>
@@ -71,6 +74,7 @@ permalink: /how-to-get-tron-energy.html
   </tbody>
 </table>
 <p class="meta">imToken 官方 13,100–13,500 比「每天 1 笔」的理论值高，因为要覆盖「一天多笔 / 新地址翻倍 / DApp 调用」这几类波动。要图稳按 13,500，要图先试按 2,500。</p>
+<div class="note"><strong>不想自己心算</strong><br>直接打开 <a href="./tron-energy-calculator.html">TRON 能量计算器：质押多少 TRX，够转几笔 USDT</a>。我已经把老地址 / 新地址、1 笔 / N 笔、还差多少都做成了可直接输入的工具页。</div>
 
 <figure class="doc-shot">
   <img src="./assets/css/imtoken-energy-shot.png" alt="imToken 帮助中心：如何获得带宽与能量 文章截图" />
@@ -86,7 +90,8 @@ permalink: /how-to-get-tron-energy.html
   <li>能量配额即时到账，每天自动刷新。</li>
 </ol>
 
-<h2>先别做的事</h2>
+<h2 id="avoid">先别做的事</h2>
+<p><strong>租能量最危险的错误</strong>是：在陌生群里点链接租能量、用助记词或私钥换「免费能量」、一上来就质押几万 TRX——这些要么是钓鱼要么是把自己锁死。</p>
 <ul>
   <li><strong>不要</strong>为省几毛钱在陌生群里点链接租能量 —— 钓鱼网站的 UI 和真的一模一样。</li>
   <li><strong>不要</strong>交出助记词 / 私钥 / Keystore 换「免费能量」—— 这不是优化，是送钱。</li>

@@ -30,7 +30,6 @@
 | `--soft` | `#f9fafb` | `.note`、`.toc`、表头背景 |
 | `--warn-bg` | `#fff7ed` | `.risk` 卡片背景 |
 | `--warn-line` | `#fed7aa` | `.risk` 边框 |
-| `--pill-bg` | `rgba(0,0,0,0.04)` | `.primary-link` pill 背景 |
 
 **永远不要引入**：紫色 / 洋红 / 渐变色 / 霓虹色。出现装饰色是系统失败信号。
 
@@ -76,15 +75,14 @@ font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
 - `.chapter-list` — 首页和 Start Here 的章节导航。
 - 每条一行 `display: block`。
 
-### Pill / CTA
-- `.primary-link` — OpenAI 同款 pill 样式。`padding: 9px 16px; border-radius: 40px; background: rgba(0,0,0,0.04)`。
-- **全站只用于「一个入口动作」**，首页目前只有 `Start Here →`。
-- 不要滥用：文章正文里的行动链接一律用普通蓝色链接 + `→` 箭头。Pill 多了就变 SaaS。
+### 按钮 / CTA
+- **不做。** 这个手册的所有行动都是「跳到另一篇文章」，靠蓝色 inline 链接就够。
+- 曾经尝试过 OpenAI 同款的 `.primary-link` pill 做「Start Here →」入口，最终撤掉了——手册不需要 hero CTA，nav 里已经有 Start Here 入口。加任何 pill / 按钮都会往 SaaS 感滑。
 
 ### 链接
 - 默认：蓝色 `#2563eb` + 浅蓝下划线（`text-decoration-color: #bfdbfe`）+ 3px offset。
 - Hover：下划线变实蓝色。
-- **永远不要 `text-decoration: none`**（除了 `.primary-link` 这种 pill）。链接必须可扫到。
+- **永远不要 `text-decoration: none`**。链接必须可扫到。
 
 ### 表格
 - 全边框，左对齐，表头灰底。用来装「品牌对比 / 场景对照 / 历史事故 / 按金额分档」。

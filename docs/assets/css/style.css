@@ -10,8 +10,6 @@
   --soft: #f9fafb;
   --warn-bg: #fff7ed;
   --warn-line: #fed7aa;
-  --pill-bg: rgba(0, 0, 0, 0.04);
-  --pill-bg-hover: rgba(0, 0, 0, 0.08);
   --max: 760px;
 }
 
@@ -78,24 +76,6 @@ a:hover { text-decoration-color: var(--link); }
   letter-spacing: 0.06em;
   font-weight: 500;
   margin-bottom: 8px;
-}
-
-.primary-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 9px 16px;
-  border-radius: 40px;
-  background: var(--pill-bg);
-  color: var(--text);
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  margin: 4px 0 28px;
-}
-.primary-link:hover {
-  background: var(--pill-bg-hover);
-  text-decoration: none;
 }
 
 .note {

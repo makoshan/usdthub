@@ -4,8 +4,10 @@ title: "USDT 不同链转账手续费对比"
 description: "对比 USDT 在 TRC20、ERC20、BEP20、Polygon、Solana、TON 等常见网络上的典型单笔链上转账成本，帮你快速判断哪条链更省。"
 permalink: /usdt-gas-fee-comparison.html
 chapter: "Tools · Fee Comparison"
+tool: true
+tool_category: "FinanceApplication"
 breadcrumb:
-  - name: "USDT 新手手册"
+  - name: "USDT HUB"
     url: /
   - name: "USDT 不同链转账手续费对比"
     url: /usdt-gas-fee-comparison.html
@@ -72,12 +74,45 @@ breadcrumb:
           <th>最该注意</th>
         </tr>
       </thead>
-      <tbody data-fee-table-body></tbody>
+      <tbody data-fee-table-body>
+        {%- comment -%}
+          Static fallback: pre-render the typical-profile sorted table for
+          no-JS clients (GPTBot, CCBot, Perplexity crawler, accessibility
+          users with JS off). JS overwrites this on :DOMContentLoaded with
+          the live amount/profile-driven sort.
+        {%- endcomment -%}
+        {%- assign default_amount = 1000 -%}
+        {%- assign default_networks = fee_tool.networks | sort: 'feeUsd.typical' -%}
+        {%- for network in default_networks -%}
+        <tr>
+          <td>#{{ forloop.index }}</td>
+          <td><strong>{{ network.name }}</strong><div class="fee-table-sub">{{ network.family }}</div></td>
+          <td>${{ network.feeUsd.typical }}</td>
+          <td>典型费占 {{ default_amount }} USDT 的 {{ network.feeUsd.typical | times: 100 | divided_by: default_amount }}%</td>
+          <td>{{ network.speed }}</td>
+          <td>{{ network.gasToken }}</td>
+          <td>{{ network.bestFor }}</td>
+          <td>{{ network.watchFor }}</td>
+        </tr>
+        {%- endfor -%}
+      </tbody>
     </table>
   </div>
+  <noscript>
+    <div class="note"><strong>不含 JavaScript 的只读快照</strong><br>上表是按 <strong>典型费用档位、转账金额 1,000 USDT</strong> 预先排好的快照（数据快照日期：{{ fee_tool.lastUpdated }}）。如果你想按自己的金额或档位即时排序，请启用 JavaScript；或者用 <a href="{{ '/tron-energy-calculator.html' | relative_url }}">TRON 能量计算器</a> 单独看 TRC20 这条链。</div>
+  </noscript>
 </div>
 
 <p class="meta">说明：这里比较的是<strong>链上转账成本的参考值</strong>，不是交易所最终提现费。很多平台会在链上 gas 之外再加一层固定收费，所以你在提现页看到的数字可能更高。</p>
+
+<aside class="fee-tool-sources">
+  <strong>数据来源 / 快照日期：</strong>{{ fee_tool.lastUpdated }} 综合以下一手数据源
+  <ul>
+    {% for source in fee_tool.sources %}
+    <li><a href="{{ source.url }}" target="_blank" rel="noopener noreferrer">{{ source.label }}</a></li>
+    {% endfor %}
+  </ul>
+  数字会随网络拥堵和 TRX 价格波动——想要当前值，点上面任一来源按链查看。</aside>
 
 <h2 id="snapshot">一张表先看价格带</h2>
 <p><strong>下面这张静态表</strong>给的是我会拿来做默认判断的价格带。它不是逐分钟行情，而是为了让你先建立“谁是零点几美分级、谁是一美元级、谁会在资源不足时突然变贵”的感觉。</p>
@@ -133,7 +168,7 @@ breadcrumb:
   <li><a href="./how-to-send-usdt.html">怎么发送 USDT</a></li>
 </ul>
 
-<footer>上一篇：<a href="./usdt-networks-explained.html">USDT 网络</a> · 下一篇：<a href="./tron-energy-calculator.html">TRON 能量计算器</a> · 返回：<a href="./index.html">USDT 新手手册</a></footer>
+<footer>上一篇：<a href="./usdt-networks-explained.html">USDT 网络</a> · 下一篇：<a href="./tron-energy-calculator.html">TRON 能量计算器</a> · 返回：<a href="./index.html">USDT HUB</a></footer>
 
 <script id="usdt-fee-tool-data" type="application/json">{{ fee_tool | jsonify }}</script>
 <script src="{{ '/assets/js/usdt-fee-tool.js' | relative_url }}"></script>

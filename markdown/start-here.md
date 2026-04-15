@@ -1,5 +1,5 @@
 ---
-title: "Start Here | USDT 新手手册"
+title: "Start Here | USDT HUB"
 source_html: "start-here.html"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "如何用 USDT 订阅 AI | USDT 新手手册"
+title: "如何用 USDT 订阅 AI | USDT HUB"
 source_html: "use-usdt-for-ai.html"
 ---
 

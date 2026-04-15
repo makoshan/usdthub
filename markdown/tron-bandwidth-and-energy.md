@@ -1,5 +1,5 @@
 ---
-title: "TRON 带宽和能量是什么 | USDT 新手手册"
+title: "TRON 带宽和能量是什么 | USDT HUB"
 source_html: "tron-bandwidth-and-energy.html"
 ---
 

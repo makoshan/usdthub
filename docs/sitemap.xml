@@ -1,197 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-    <loc>http://localhost:4000/usdthub/about.html</loc>
-    <lastmod>2026-04-15T14:15:45+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/about.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/binance-p2p-buy-usdt.html</loc>
-    <lastmod>2026-04-14T23:47:37+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/binance-p2p-buy-usdt.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/binance-p2p-sell-usdt-freeze-risk.html</loc>
-    <lastmod>2026-04-14T23:47:37+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/binance-p2p-sell-usdt-freeze-risk.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/binance-p2p-usdt.html</loc>
-    <lastmod>2026-04-15T10:24:11+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/binance-p2p-usdt.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/binance-receive-view-transfer-usdt.html</loc>
-    <lastmod>2026-04-15T14:48:05+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/binance-receive-view-transfer-usdt.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/buy-apple-gift-card-with-usdt.html</loc>
-    <lastmod>2026-04-15T14:46:34+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/blog.html</loc>
+    <lastmod>2026-04-15T16:46:50+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/changelog.html</loc>
-    <lastmod>2026-04-15T10:24:11+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/buy-apple-gift-card-with-usdt.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/china-7-common-mistakes.html</loc>
-    <lastmod>2026-04-15T10:24:11+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/changelog.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/china-buy-crypto-notes.html</loc>
-    <lastmod>2026-04-14T23:47:37+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/china-7-common-mistakes.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/china-c2c-otc-risks.html</loc>
-    <lastmod>2026-04-15T10:24:11+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/china-buy-crypto-notes.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/cold-wallet-for-usdt-china.html</loc>
-    <lastmod>2026-04-15T10:24:11+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/china-c2c-otc-risks.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/editorial-policy.html</loc>
-    <lastmod>2026-04-14T21:56:14+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/cold-wallet-for-usdt-china.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/how-to-buy-trx-with-usdt.html</loc>
-    <lastmod>2026-04-15T14:45:00+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/earn.html</loc>
+    <lastmod>2026-04-15T16:46:50+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/how-to-buy-usdt.html</loc>
-    <lastmod>2026-04-14T23:47:37+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/editorial-policy.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/how-to-choose-a-wallet.html</loc>
-    <lastmod>2026-04-14T23:47:37+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/get.html</loc>
+    <lastmod>2026-04-15T16:46:50+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/how-to-get-tron-energy.html</loc>
-    <lastmod>2026-04-14T22:19:57+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/how-to-buy-trx-with-usdt.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/how-to-reduce-trc20-usdt-fees.html</loc>
-    <lastmod>2026-04-14T23:47:37+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/how-to-buy-usdt.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/how-to-send-usdt.html</loc>
-    <lastmod>2026-04-14T23:47:37+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/how-to-choose-a-wallet.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/how-to-swap-usdc-to-usdt.html</loc>
-    <lastmod>2026-04-15T14:44:34+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/how-to-get-tron-energy.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/how-we-review-wallets-and-apps.html</loc>
-    <lastmod>2026-04-14T21:56:14+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/how-to-reduce-trc20-usdt-fees.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/imtoken-card-usdt-topup.html</loc>
-    <lastmod>2026-04-14T23:47:37+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/how-to-send-usdt.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/index.html</loc>
-    <lastmod>2026-04-15T10:24:11+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/how-to-swap-usdc-to-usdt.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url><url>
+    <loc>https://makoshan.github.io/usdthub/how-we-review-wallets-and-apps.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url><url>
+    <loc>https://makoshan.github.io/usdthub/imtoken-card-usdt-topup.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url><url>
+    <loc>https://makoshan.github.io/usdthub/index.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/official-sources.html</loc>
-    <lastmod>2026-04-14T22:19:57+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/official-sources.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/start-here.html</loc>
-    <lastmod>2026-04-14T23:01:12+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/spend.html</loc>
+    <lastmod>2026-04-15T16:46:50+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/tron-bandwidth-and-energy.html</loc>
-    <lastmod>2026-04-14T22:19:57+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/start-here.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/tron-energy-calculator.html</loc>
-    <lastmod>2026-04-15T16:09:56+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/tools.html</loc>
+    <lastmod>2026-04-15T16:46:50+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/tron-energy-guide.html</loc>
-    <lastmod>2026-04-14T23:47:37+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/tron-bandwidth-and-energy.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/usdt-gas-fee-comparison.html</loc>
-    <lastmod>2026-04-15T16:17:48+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/tron-energy-calculator.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/usdt-memo-tag-label-address-alias.html</loc>
-    <lastmod>2026-04-15T14:45:28+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/tron-energy-guide.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/usdt-networks-explained.html</loc>
-    <lastmod>2026-04-14T23:47:37+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/usdt-gas-fee-comparison.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/usdt-vs-usdc.html</loc>
-    <lastmod>2026-04-15T14:45:39+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/usdt-memo-tag-label-address-alias.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/use-usdt-for-ai.html</loc>
-    <lastmod>2026-04-14T23:47:37+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/usdt-networks-explained.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/use-usdt-for-cross-border-payments.html</loc>
-    <lastmod>2026-04-14T21:56:14+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/usdt-vs-usdc.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/use-usdt-for-esim-and-vpn.html</loc>
-    <lastmod>2026-04-14T22:45:34+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/use-usdt-for-ai.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/use-usdt-for-travel.html</loc>
-    <lastmod>2026-04-14T21:56:14+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/use-usdt-for-cross-border-payments.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/what-can-you-do-with-usdt.html</loc>
-    <lastmod>2026-04-14T22:05:36+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/use-usdt-for-esim-and-vpn.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/what-is-flash-usdt-scam.html</loc>
-    <lastmod>2026-04-15T14:45:55+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/use-usdt-for-travel.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/what-is-usdt.html</loc>
-    <lastmod>2026-04-14T23:47:37+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/what-can-you-do-with-usdt.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url><url>
-    <loc>http://localhost:4000/usdthub/why-you-need-trx-to-send-usdt.html</loc>
-    <lastmod>2026-04-14T23:47:37+08:00</lastmod>
+    <loc>https://makoshan.github.io/usdthub/what-is-flash-usdt-scam.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url><url>
+    <loc>https://makoshan.github.io/usdthub/what-is-usdt.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url><url>
+    <loc>https://makoshan.github.io/usdthub/why-you-need-trx-to-send-usdt.html</loc>
+    <lastmod>2026-04-15T16:20:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

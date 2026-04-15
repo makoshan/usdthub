@@ -1,5 +1,5 @@
 ---
-title: "TRON 能量指南 | USDT 新手手册"
+title: "TRON 能量指南 | USDT HUB"
 source_html: "tron-energy-guide.html"
 ---
 

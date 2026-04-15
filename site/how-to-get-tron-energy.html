@@ -10,7 +10,7 @@ permalink: /how-to-get-tron-energy.html
 
 <p>获得能量只有 <strong>三条路径</strong>，多的都是包装。下面按「多省心 → 多省钱」排序。</p>
 
-<div class="note"><strong>TL;DR</strong><br>偶尔转：钱包多留 20 TRX，链上自动烧（最省脑子，$4 左右一笔）。一周转几次：用 <a href="https://tronenergy.market/" target="_blank" rel="noopener noreferrer">tronenergy.market</a> 或 feee.io 这类租能量平台（$1.2–$2.4 一笔）。一天转多次：质押 ~2,500 TRX（$800）换每日 65k 能量（第一笔免费）。</div>
+<div class="note"><strong>TL;DR</strong><br>偶尔转：钱包多留 20 TRX，链上自动烧（最省脑子，$4 左右一笔）。一周转几次：用 <a href="https://tronenergy.market/" target="_blank" rel="noopener noreferrer">tronenergy.market</a> 或 feee.io 这类租能量平台（$1.2–$2.4 一笔）。一天转多次：按 <strong>2026-04 当前网络快照（1 TRX ≈ 9.2 Energy/天）</strong> 质押约 <strong>7,000 TRX（≈ $2,240）</strong> 才换得每日 65k 能量覆盖 1 笔老地址转账；具体差多少直接用 <a href="./tron-energy-calculator.html">TRON 能量计算器</a>。</div>
 
 <h2 id="burn">路径 A：什么都不做，链上自动烧 TRX</h2>
 <p><strong>自动烧 TRX</strong>指的是：你不做任何资源准备，钱包里留够 TRX，发 USDT 转账时链会自动按 100 sun/能量 的价格把 TRX 折算成能量补足差额。</p>
@@ -48,7 +48,7 @@ permalink: /how-to-get-tron-energy.html
 <p>下面这些钱包在转账流程里直接集成了租能量，体验更省事：</p>
 
 <h4>imToken（2.15.6 起，一键租能量）</h4>
-<p><a href="https://token.im/trx-wallet" target="_blank" rel="noopener noreferrer"><img src="./assets/css/imtoken-logo.png" alt="imToken" style="height:28px;vertical-align:middle;margin-right:6px;" />imToken</a> 官方文档《<a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">如何获得带宽与能量</a>》给出的官方操作：</p>
+<p><a href="https://token.im/trx-wallet" target="_blank" rel="noopener noreferrer"><img src="./assets/css/imtoken-logo.png" alt="imToken" width="50" height="50" style="width:28px;height:28px;vertical-align:middle;margin-right:6px;" />imToken</a> 官方文档《<a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">如何获得带宽与能量</a>》给出的官方操作：</p>
 <ol>
   <li>在 USDT 转账页面点「支付 TRX 租能量」。</li>
   <li>发送这笔租能量交易（会先扣一小笔 TRX）。</li>
@@ -66,18 +66,19 @@ permalink: /how-to-get-tron-energy.html
 <p><strong>质押 TRX</strong>指的是：把一笔 TRX「冻」在账户里换每天自动刷新的能量配额，本金不动，Stake 2.0 下发起解冻后要等 14 天才能取回。</p>
 <p>逻辑：把 TRX「冻」在账户里（质押 / Freeze），换取每日自动刷新的能量配额。Stake 2.0 下，发起解冻后需等 <strong>14 天</strong>才能取回本金（TRON 协议层硬等待）。</p>
 <table>
-  <thead><tr><th>质押量</th><th>每日能量</th><th>折算</th><th>出处</th></tr></thead>
+  <thead><tr><th>质押量</th><th>当前快照每日能量 *</th><th>折算</th><th>历史口径 (~26 E/TRX)</th></tr></thead>
   <tbody>
-    <tr><td>约 2,500 TRX（$800）</td><td>~65,000</td><td>每天 1 笔 USDT 转账免费</td><td>理论下限</td></tr>
-    <tr><td><strong>13,100–13,500 TRX（≈ $4,200）</strong></td><td>~330,000+</td><td>每天 5 笔免费、留足安全余量</td><td>imToken 官方建议</td></tr>
-    <tr><td>10,000 TRX（$3,200）</td><td>~260,000</td><td>每天 4 笔免费</td><td>商家 / 代付</td></tr>
+    <tr><td>2,500 TRX（≈ $800）</td><td>~23,000</td><td>0 笔老地址（不够）</td><td>曾被称为"每天 1 笔理论下限"，按 9.2 E/TRX 后已不够</td></tr>
+    <tr><td><strong>7,060 TRX（≈ $2,260）</strong></td><td><strong>~65,000</strong></td><td><strong>每天 1 笔老地址免费</strong></td><td>当前快照下的真实理论下限</td></tr>
+    <tr><td>10,000 TRX（$3,200）</td><td>~92,000</td><td>每天 1 笔新地址或 1 笔老地址 + 少量余量</td><td>曾对应"每天 4 笔"</td></tr>
+    <tr><td>13,100–13,500 TRX（≈ $4,300）</td><td>~124,000</td><td>每天 1 笔新地址 + 余量，不是"5 笔"</td><td>imToken 官方建议，基于更旧的网络快照</td></tr>
   </tbody>
 </table>
-<p class="meta">imToken 官方 13,100–13,500 比「每天 1 笔」的理论值高，因为要覆盖「一天多笔 / 新地址翻倍 / DApp 调用」这几类波动。要图稳按 13,500，要图先试按 2,500。</p>
+<p class="meta">* 基于 2026-04-15 <a href="https://api.trongrid.io/wallet/getaccountresource" target="_blank" rel="noopener noreferrer">TRON getaccountresource</a> 实测：<code>1 TRX ≈ 9.206 Energy/天</code>。Stake 2.0 + 网络利用率上升后，每 TRX 换的能量已经明显低于 2023 年前后 <code>~26 E/TRX</code> 的历史口径。想要精确数字，用 <a href="./tron-energy-calculator.html">TRON 能量计算器</a>（带实时快照）。imToken 13,500 TRX 的官方建议保留是因为它覆盖了「多笔 + 新地址 + DApp 调用」的安全余量，但在当前快照下对应的能量比旧口径少约 60%。</p>
 <div class="note"><strong>不想自己心算</strong><br>直接打开 <a href="./tron-energy-calculator.html">TRON 能量计算器：质押多少 TRX，够转几笔 USDT</a>。我已经把老地址 / 新地址、1 笔 / N 笔、还差多少都做成了可直接输入的工具页。</div>
 
 <figure class="doc-shot">
-  <img src="./assets/css/imtoken-energy-shot.png" alt="imToken 帮助中心：如何获得带宽与能量 文章截图" />
+  <img src="./assets/css/imtoken-energy-shot.png" alt="imToken 帮助中心：如何获得带宽与能量 文章截图" width="2940" height="1392" loading="lazy" />
   <figcaption>来源：<a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">imToken 帮助中心 · 如何获得带宽与能量</a>。官方把「用 TRX 租赁、直接燃烧、冻结 TRX」三条路径讲得最全，截图仅作参考。</figcaption>
 </figure>
 
@@ -108,4 +109,4 @@ permalink: /how-to-get-tron-energy.html
   <li><a href="https://support.token.im/hc/zh-cn/sections/360006457153-TRX-%E9%92%B1%E5%8C%85" target="_blank" rel="noopener noreferrer">imToken TRX 钱包 · 帮助中心合集</a> — 创建、备份、激活、资源、转账各一篇官方文档。</li>
 </ul>
 
-<footer>主章节：<a href="./tron-energy-guide.html">TRON 能量指南</a> · 相关：<a href="./how-to-reduce-trc20-usdt-fees.html">TRC20 手续费怎么省</a> · <a href="./tron-bandwidth-and-energy.html">带宽和能量是什么</a> · 返回：<a href="./index.html">USDT 新手手册</a></footer>
+<footer>主章节：<a href="./tron-energy-guide.html">TRON 能量指南</a> · 相关：<a href="./how-to-reduce-trc20-usdt-fees.html">TRC20 手续费怎么省</a> · <a href="./tron-bandwidth-and-energy.html">带宽和能量是什么</a> · 返回：<a href="./index.html">USDT HUB</a></footer>

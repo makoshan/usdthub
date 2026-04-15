@@ -1,5 +1,5 @@
 ---
-title: "冷钱包（硬件钱包）给 USDT 长期持有人的选择指南：Ledger / Trezor / OneKey | USDT 新手手册"
+title: "冷钱包（硬件钱包）给 USDT 长期持有人的选择指南：Ledger / Trezor / OneKey | USDT HUB"
 source_html: "cold-wallet-for-usdt-china.html"
 ---
 

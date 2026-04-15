@@ -1,0 +1,13 @@
+<div class="portal-grid{% if include.variant %} portal-grid--{{ include.variant }}{% endif %}">
+  {% for item in include.items %}
+  <a class="portal-card" href="{{ item.href | relative_url }}">
+    {% if item.kicker %}
+    <span class="card-kicker">{{ item.kicker }}</span>
+    {% endif %}
+    <strong class="card-title">{{ item.title | default: item.label }}</strong>
+    {% if item.summary %}
+    <span class="card-copy">{{ item.summary }}</span>
+    {% endif %}
+  </a>
+  {% endfor %}
+</div>

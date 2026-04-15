@@ -1,3 +1,10 @@
+# Production site identity. Keep canonical/OG generation pinned here so local
+# Jekyll overrides never leak localhost URLs into built output.
+site:
+  name: "USDT HUB"
+  url: "https://makoshan.github.io"
+  baseurl: "/usdthub"
+
 # Centralized site metadata consumed by layouts and JSON-LD.
 # Edit here, not in _layouts/default.html.
 
@@ -10,8 +17,8 @@ author:
     - "https://github.com/makoshan"
 
 organization:
-  name: "USDT 新手手册"
-  legal_name: "USDT 新手手册 (usdthub)"
+  name: "USDT HUB"
+  legal_name: "USDT HUB (usdthub)"
   logo: "/assets/og/logo.png"
   same_as:
     - "https://github.com/makoshan/usdthub"

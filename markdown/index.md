@@ -1,9 +1,9 @@
 ---
-title: "USDT 新手手册"
+title: "USDT HUB"
 source_html: "index.html"
 ---
 
-# USDT 新手手册
+# USDT HUB
 
 > 一个持续更新的公开笔记。写给第一次接触 USDT、TRON、钱包和链上支付的人。
 

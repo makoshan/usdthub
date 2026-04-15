@@ -1,5 +1,5 @@
 ---
-title: "官方资料入口 | USDT 新手手册"
+title: "官方资料入口 | USDT HUB"
 source_html: "official-sources.html"
 ---
 

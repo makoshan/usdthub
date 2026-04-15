@@ -20,15 +20,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  {%- assign page_title = page.title | default: site.title -%}
-  {%- if page.title and page.title != site.title -%}
-    {%- assign full_title = page.title | append: ' | ' | append: site.title -%}
+  {%- assign meta = site.data.site_meta -%}
+  {%- assign site_name = meta.site.name | default: site.title -%}
+  {%- assign production_url = meta.site.url | default: site.url | default: 'https://makoshan.github.io' -%}
+  {%- assign production_baseurl = meta.site.baseurl | default: site.baseurl | default: '' -%}
+  {%- assign site_root = production_url | append: production_baseurl -%}
+  {%- assign page_title = page.title | default: site_name -%}
+  {%- if page.title and page.title != site_name -%}
+    {%- assign full_title = page.title | append: ' | ' | append: site_name -%}
   {%- else -%}
-    {%- assign full_title = site.title -%}
+    {%- assign full_title = site_name -%}
   {%- endif -%}
   <title>{{ full_title }}</title>
   <meta name="description" content="{{ page.description | default: site.description | strip_newlines }}" />
-  {%- assign meta = site.data.site_meta -%}
   {%- assign author_name = meta.author.name | default: 'Mako Shan' -%}
   <meta name="author" content="{{ author_name }}" />
   {%- if page.noindex -%}
@@ -38,7 +42,7 @@
   {%- endif -%}
 
   {%- comment -%} Canonical: always self-referencing via permalink. {%- endcomment -%}
-  {%- assign canonical_url = page.url | absolute_url -%}
+  {%- assign canonical_url = site_root | append: page.url -%}
   {%- if page.canonical -%}{%- assign canonical_url = page.canonical -%}{%- endif -%}
   <link rel="canonical" href="{{ canonical_url }}" />
 
@@ -55,10 +59,14 @@
   {%- assign og_type = page.og_type | default: 'article' -%}
   {%- if page.permalink == '/index.html' or page.permalink == '/' -%}{%- assign og_type = 'website' -%}{%- endif -%}
   {%- assign og_image = page.og_image | default: meta.social.og_default_image -%}
-  {%- assign og_image_abs = og_image | absolute_url -%}
+  {%- if og_image contains '://' -%}
+    {%- assign og_image_abs = og_image -%}
+  {%- else -%}
+    {%- assign og_image_abs = site_root | append: og_image -%}
+  {%- endif -%}
   <meta property="og:type" content="{{ og_type }}" />
-  <meta property="og:site_name" content="{{ site.title }}" />
-  <meta property="og:title" content="{{ page.title | default: site.title }}" />
+  <meta property="og:site_name" content="{{ site_name }}" />
+  <meta property="og:title" content="{{ page.title | default: site_name }}" />
   <meta property="og:description" content="{{ page.description | default: site.description | strip_newlines }}" />
   <meta property="og:url" content="{{ canonical_url }}" />
   <meta property="og:locale" content="zh_CN" />
@@ -69,26 +77,29 @@
   {%- if iso_published %}<meta property="article:published_time" content="{{ iso_published }}" />{%- endif -%}
   {%- if iso_modified %}<meta property="article:modified_time" content="{{ iso_modified }}" />{%- endif -%}
   <meta property="article:author" content="{{ author_name }}" />
-  <meta property="article:section" content="{{ page.chapter | default: 'USDT 新手手册' }}" />
+  <meta property="article:section" content="{{ page.chapter | default: 'USDT HUB' }}" />
   {%- endif -%}
 
   {%- comment -%} Twitter card. {%- endcomment -%}
   <meta name="twitter:card" content="summary_large_image" />
   {%- if meta.social.twitter %}<meta name="twitter:site" content="{{ meta.social.twitter }}" />{%- endif -%}
-  <meta name="twitter:title" content="{{ page.title | default: site.title }}" />
+  <meta name="twitter:title" content="{{ page.title | default: site_name }}" />
   <meta name="twitter:description" content="{{ page.description | default: site.description | strip_newlines }}" />
   <meta name="twitter:image" content="{{ og_image_abs }}" />
 
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}" />
-  <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | absolute_url }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site_name }}" href="{{ site_root }}/feed.xml" />
+  <link rel="sitemap" type="application/xml" href="{{ site_root }}/sitemap.xml" />
 
   {%- comment -%} JSON-LD. @graph combines multiple entities so the page ships one script. {%- endcomment -%}
-  {%- assign site_abs = '/' | absolute_url -%}
+  {%- assign site_abs = site_root | append: '/' -%}
   {%- assign org_id = site_abs | append: '#organization' -%}
   {%- assign website_id = site_abs | append: '#website' -%}
-  {%- assign author_id = meta.author.url | default: '/about.html' | absolute_url | append: '#person' -%}
-  {%- assign logo_abs = meta.organization.logo | default: '/assets/og/logo.png' | absolute_url -%}
+  {%- assign author_path = meta.author.url | default: '/about.html' -%}
+  {%- assign author_abs = site_root | append: author_path -%}
+  {%- assign author_id = author_abs | append: '#person' -%}
+  {%- assign logo_path = meta.organization.logo | default: '/assets/og/logo.png' -%}
+  {%- assign logo_abs = site_root | append: logo_path -%}
   {%- assign page_types = meta.page_types -%}
   {%- assign page_type = page.og_type -%}
   {%- if page_types[page.permalink] -%}{%- assign page_type = page_types[page.permalink] -%}{%- endif -%}
@@ -114,14 +125,14 @@
       "@type": "WebSite",
       "@id": "{{ website_id }}",
       "url": "{{ site_abs }}",
-      "name": {{ site.title | jsonify }},
+      "name": {{ site_name | jsonify }},
       "inLanguage": "zh-CN",
       "publisher": { "@id": "{{ org_id }}" },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "{{ site_abs }}?q={% raw %}{search_term_string}{% endraw %}"
+          "urlTemplate": "{{ site_root }}/?q={% raw %}{search_term_string}{% endraw %}"
         },
         "query-input": "required name=search_term_string"
       }
@@ -130,7 +141,7 @@
       "@type": "Person",
       "@id": "{{ author_id }}",
       "name": {{ author_name | jsonify }},
-      "url": "{{ meta.author.url | default: '/about.html' | absolute_url }}"{% if meta.author.same_as %},
+      "url": "{{ author_abs }}"{% if meta.author.same_as %},
       "sameAs": {{ meta.author.same_as | jsonify }}{% endif %}
     }{% if page_type == 'Article' %},
     {
@@ -159,7 +170,11 @@
       "inLanguage": "zh-CN",
       "url": "{{ canonical_url }}"{% if iso_modified %},
       "dateModified": "{{ iso_modified }}"{% endif %}
-    }{% endif %}{% if page.breadcrumb %},
+    }{% endif %}{% comment %}
+      BreadcrumbList: emit explicit `page.breadcrumb` if present; otherwise
+      emit a 2-level default (home -> this page) on every non-home page so
+      Google can render breadcrumb chips in SERP.
+    {% endcomment %}{% if page.breadcrumb %},
     {
       "@type": "BreadcrumbList",
       "@id": "{{ canonical_url }}#breadcrumb",
@@ -171,21 +186,59 @@
           "item": "{{ crumb.url | absolute_url }}"
         }{% unless forloop.last %},{% endunless %}{% endfor %}
       ]
+    }{% elsif page_type != 'WebSite' and page.permalink != '/index.html' and page.permalink != '/' and page.permalink != '/404.html' %},
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ canonical_url }}#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": {{ site.title | jsonify }},
+          "item": "{{ site_abs }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page.title | default: site.title | jsonify }},
+          "item": "{{ canonical_url }}"
+        }
+      ]
+    }{% endif %}{% if page.tool %},
+    {
+      "@type": "WebApplication",
+      "@id": "{{ canonical_url }}#app",
+      "name": {{ page.title | default: site.title | jsonify }},
+      "description": {{ page.description | default: site.description | strip_newlines | jsonify }},
+      "url": "{{ canonical_url }}",
+      "applicationCategory": "{{ page.tool_category | default: 'FinanceApplication' }}",
+      "operatingSystem": "Any (browser)",
+      "inLanguage": "zh-CN",
+      "isPartOf": { "@id": "{{ website_id }}" },
+      "author": { "@id": "{{ author_id }}" },
+      "publisher": { "@id": "{{ org_id }}" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }{% if iso_modified %},
+      "dateModified": "{{ iso_modified }}"{% endif %}
     }{% endif %}
   ]
 }
 </script>
 </head>
-<body>
+<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
   <header>
     <div class="wrap">
       {% include nav.html %}
     </div>
   </header>
-  <main>
+  <main class="site-main">
     <div class="wrap">
       {{ content }}
-      {%- if human_modified -%}
+      {%- if human_modified and page.hide_footer_meta != true -%}
       <div class="page-footer-meta" role="contentinfo">
         最近更新 <time datetime="{{ iso_modified }}">{{ human_modified }}</time> ·
         <a href="{{ '/about.html' | relative_url }}">作者</a> ·

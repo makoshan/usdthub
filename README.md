@@ -1,14 +1,17 @@
-# USDT 新手手册
+# USDT HUB
 
-> 一个持续更新的公开笔记。写给第一次接触 USDT、TRON、钱包和链上支付的人。
+> 一个持续更新的中文 USDT 使用门户。围绕 `Get / Earn / Spend / Tools / Blog` 五个一级入口组织内容，写给第一次接触 USDT、TRON、钱包和链上支付的人。
 >
 > 在线阅读（GitHub Pages）：https://makoshan.github.io/usdthub/
 > 作者：Mako Shan · [About](./markdown/about.md) · [Editorial Policy](./markdown/editorial-policy.md) · [LLM discovery](https://makoshan.github.io/usdthub/llms.txt)
 
-我做这个手册，只想解决两类问题：
+我做这个站，现在想解决五类问题：
 
-- USDT 怎么买、怎么存、怎么转、怎么避坑。
-- USDT 除了放着，还能拿来做什么，比如 AI、旅游、eSIM、VPN 和跨境支付。
+- `Get`：USDT 怎么买、怎么存、怎么转、怎么避坑。
+- `Earn`：USDT 持有后有哪些增值路径，哪些只是看起来像“收益”。
+- `Spend`：USDT 除了放着，还能拿来做什么，比如 AI、旅游、eSIM、VPN 和跨境支付。
+- `Tools`：哪些问题应该直接算、直接比，而不是靠印象判断。
+- `Blog`：最近哪些页面值得优先看。
 
 > 这不是交易平台，也不是投资建议。  
 > 我更关心的是：如果你第一次实际使用 USDT，应该先理解什么，先准备什么，哪里最容易翻车。很多站喜欢把你往开户链接和工具页推，我更想先把路讲明白。因为在这个领域里，真正贵的不是手续费，而是你第一次就走错。
@@ -184,6 +187,10 @@ python3 scripts/sync_md_leads.py --write
 - 所有内链指向的文件实际存在；
 - 构建产物中没有未渲染的 `{{ ... }}` / `{% ... %}` Liquid 残留；
 - **"H2 定义优先"不变量**：每一个内容 H2（非链接目录 / FAQ / 结尾建议）必须立即后跟一个带 `<strong>` 的 `<p>`，或者一个结构性区块（table / ul / ol / note / risk）。防止新增 H2 时静默回退成散文起头。
+- **BreadcrumbList sitewide**：除首页和 404 外，每个页面 JSON-LD 必须包含 BreadcrumbList 节点（layout 自动 emit 2 级默认；`page.breadcrumb` frontmatter 可覆盖）。Google SERP breadcrumb chips 依赖此节点。
+- **WebApplication on tool pages**：frontmatter 标记 `tool: true` 的页面（手续费对比、能量计算器）必须 emit `WebApplication` JSON-LD 节点，并必须有 `<noscript>` 静态回退（AI 爬虫和 JS-disabled 用户的可见性保证）。
+- **`<img>` 必须有 width + height**：CLS 防护。每个图片必须显式声明像素尺寸，rendered size 用 CSS 控制。
+- **TRX → Energy 比率一致性**：扫描所有页面里的 "2,500 TRX ≈ 65k Energy/天" 旧口径——此口径来自 2023 年 pre-Stake-2.0 时代，按当前 trongrid 实测 `1 TRX ≈ 9.206 Energy/天` 已不成立。如果某页面提到旧数字，必须紧跟历史标记（"历史口径 / 旧口径 / pre-Stake / 已不够" 等），否则构建失败。这是 reader-safety 不变量。
 
 ### 日期处理
 

@@ -32,10 +32,10 @@ permalink: /how-to-reduce-trc20-usdt-fees.html
   <tbody>
     <tr><td>直烧 TRX</td><td>≈ $4.16 老地址<br>≈ $8.64 新地址</td><td>$0</td><td>&lt; 5 笔/月</td><td>0</td></tr>
     <tr><td>租能量平台</td><td>≈ $1.28 老地址<br>≈ $2.56 新地址</td><td>$0</td><td>5–50 笔/月</td><td>5 分钟理解 + 收藏链接</td></tr>
-    <tr><td>质押 TRX</td><td>第 1 笔 $0，超出按租/烧</td><td>≈ $800（2,500 TRX）起；imToken 官方建议 13,100–13,500 TRX（≈ $4,200）留余量</td><td>每天都转</td><td>10 分钟 + 14 天解冻期（Stake 2.0）</td></tr>
+    <tr><td>质押 TRX</td><td>第 1 笔 $0，超出按租/烧</td><td>按 2026-04 当前快照（9.2 E/TRX）：覆盖 1 笔老地址需约 <strong>7,060 TRX（≈ $2,260）</strong>；imToken 官方建议的 13,100–13,500 TRX 现在对应每日 ~124k 能量，不再是 5 笔</td><td>每天都转</td><td>10 分钟 + 14 天解冻期（Stake 2.0）</td></tr>
   </tbody>
 </table>
-<p class="meta">数据：TRX $0.32（2026-04），Proposal #104 生效后能量单价 100 sun。详见 <a href="./tron-energy-guide.html">TRON 能量指南</a>。如果你要直接算质押多少 TRX 才覆盖得住，去看 <a href="./tron-energy-calculator.html">TRON 能量计算器</a>。</p>
+<p class="meta">数据：TRX $0.32（2026-04），Proposal #104 生效后能量单价 100 sun，1 TRX ≈ 9.206 Energy/天（<a href="https://api.trongrid.io/wallet/getaccountresource" target="_blank" rel="noopener noreferrer">TRON getaccountresource 2026-04-15 实测</a>）。详见 <a href="./tron-energy-guide.html">TRON 能量指南</a>。如果你要直接算质押多少 TRX 才覆盖得住，去看带当前快照的 <a href="./tron-energy-calculator.html">TRON 能量计算器</a>。</p>
 
 <h2 id="s2">单笔省钱技巧（不用改架构）</h2>
 <p><strong>单笔省钱的几个小动作</strong>：避开给新地址的第一笔、把同日同地址的多笔合并、用钱包内置的一键租能量、别在 TRX 暴涨那天转——不改架构也能少付三成。</p>
@@ -77,7 +77,8 @@ permalink: /how-to-reduce-trc20-usdt-fees.html
   <li>TronScan 上的链上资源数据：最近一段时间能量消耗和价格大概落在哪个区间。</li>
   <li>imToken 的钱包侧建议：对偶发转账、高频转账、质押覆盖分别怎么处理更稳。</li>
 </ul>
-<p>其中 <a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">imToken《如何获得带宽与能量》</a>给出的冻结建议更偏稳健：如果你想靠质押覆盖连续多笔日常 USDT 转账，冻结 <strong>13,500 TRX 以上</strong> 会更从容。这个数字比我上面给的 2,500 TRX 大，差别在于：13,500 TRX 是按「多笔 + 冗余」来算，2,500 TRX 是按「每天恰好 1 笔 65k」的理论起步值。你要图稳就按 13,500，要图先试就按 2,500。</p>
+<p>其中 <a href="https://support.token.im/hc/zh-cn/articles/360037636294-%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%AE%BD%E4%B8%8E%E8%83%BD%E9%87%8F" target="_blank" rel="noopener noreferrer">imToken《如何获得带宽与能量》</a>给出的冻结建议是 <strong>13,100–13,500 TRX</strong>，出自 2023 年前后网络利用率较低（~26 E/TRX/天）的时代，对应每日 ~330k 能量 / 约 5 笔。Stake 2.0 生效 + 链上活动上升后，同样 13,500 TRX 现在只换到约 124k 能量（1 笔新地址 + 少量余量），不是 5 笔。旧文里常见的"质押 2,500 TRX 换每天 1 笔"也已经站不住——按当前 9.206 E/TRX 快照，要 ~7,060 TRX。</p>
+<p><strong>结论：</strong>质押数额别再用固定数字，而是按当前快照动态算。去 <a href="./tron-energy-calculator.html">TRON 能量计算器</a> 把自己的笔数和地址类型输进去，页面会给出"按今天网络情况，你要质押多少"的即时答案。</p>
 
 <h2 id="s7">参考资料</h2>
 <ul>
@@ -87,4 +88,4 @@ permalink: /how-to-reduce-trc20-usdt-fees.html
   <li><a href="https://developers.tron.network/docs/tron-proposals" target="_blank" rel="noopener noreferrer">TRON Proposals</a> — Proposal #104 把能量单价减半的原文。</li>
 </ul>
 
-<footer>主章节：<a href="./tron-energy-guide.html">TRON 能量指南</a> · 相关：<a href="./how-to-get-tron-energy.html">能量怎么获得</a> · <a href="./why-you-need-trx-to-send-usdt.html">为什么要准备 TRX</a> · 返回：<a href="./index.html">USDT 新手手册</a></footer>
+<footer>主章节：<a href="./tron-energy-guide.html">TRON 能量指南</a> · 相关：<a href="./how-to-get-tron-energy.html">能量怎么获得</a> · <a href="./why-you-need-trx-to-send-usdt.html">为什么要准备 TRX</a> · 返回：<a href="./index.html">USDT HUB</a></footer>

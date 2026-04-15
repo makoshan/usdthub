@@ -1,5 +1,5 @@
 ---
-title: "TRC20 USDT 手续费怎么省 | USDT 新手手册"
+title: "TRC20 USDT 手续费怎么省 | USDT HUB"
 source_html: "how-to-reduce-trc20-usdt-fees.html"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "为什么转 TRC20 USDT 要准备 TRX | USDT 新手手册"
+title: "为什么转 TRC20 USDT 要准备 TRX | USDT HUB"
 source_html: "why-you-need-trx-to-send-usdt.html"
 ---
 

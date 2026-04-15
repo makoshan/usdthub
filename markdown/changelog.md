@@ -1,5 +1,5 @@
 ---
-title: "Changelog | USDT 新手手册"
+title: "Changelog | USDT HUB"
 source_html: "changelog.html"
 ---
 
@@ -8,6 +8,20 @@ source_html: "changelog.html"
 > 按日期列出的版本更新记录。细粒度 diff 请看 [GitHub commit 历史](https://github.com/makoshan/usdthub/commits/main)。
 
 读法：`added` = 新增章节 / 页面；`rewrite` = 整页重写；`fix` = 事实或表述勘误；`infra` = 构建 / SEO / 模板层变化，不影响内容。
+
+## 2026-04-16 · 第三轮审计后的 P0/P1 修复
+
+- `fix` **P0 reader-safety**：纠正 3 个页面（[how-to-get-tron-energy](./how-to-get-tron-energy.md)、[how-to-reduce-trc20-usdt-fees](./how-to-reduce-trc20-usdt-fees.md)、[why-you-need-trx-to-send-usdt](./why-you-need-trx-to-send-usdt.md)）残留的 "2,500 TRX ≈ 65,000 Energy/天" 旧口径。基于 2026-04-15 trongrid 实测 `1 TRX ≈ 9.206 Energy/天`，覆盖每天 1 笔老地址实际需要约 **7,060 TRX**，比旧口径多 ~3 倍。imToken 13,500 TRX 历史建议保留并标注它出自 2023 年前后旧网络快照。
+- `infra` `scripts/check_site.py` 新增"能量比率一致性"不变量：扫描所有页面里的旧 "2,500 TRX ≈ 65k Energy/天" 文本，必须紧跟历史标记（"历史口径 / 旧的 / pre-Stake / 已不够"），否则构建失败。防止旧数字悄悄回退。
+- `infra` 模板加入**全站默认 BreadcrumbList**：每个非首页都自动 emit 2 级面包屑（首页 → 当前页），叠加在已有的 `page.breadcrumb` frontmatter 上。
+- `added` 工具页 `tool: true` frontmatter 触发 `WebApplication` JSON-LD 节点，与 Article 并存。`applicationCategory: FinanceApplication`，`offers` 标记免费。
+- `fix` `tron-energy-calculator.html` 加 `<noscript>` 静态回退；`usdt-gas-fee-comparison.html` 把整张排序表用 Liquid 预渲染到 `<tbody>`。AI 爬虫和 JS-disabled 用户看到的是数字而非空 div。
+- `fix` 5 张图全部加 `width` / `height` + `loading="lazy"`（CLS 风险消除）。
+- `added` 工具页加可见的"数据来源 / 快照日期" `<aside>` 区块——把原本只在 embedded JSON 里的 7 个一手数据源 surface 到读者可见处。
+- `added` 生成 IndexNow key file `/dfd6c344392944d2a88ca85f8bdb9042.txt`。
+- `fix` `start-here.html` meta description 从 48 字扩到 ~110 字。
+- `infra` `usdt-fee-tool.js` 加 80ms 输入防抖。
+- `infra` `scripts/check_site.py` 同时新增：tool 页必须有 `<noscript>`、tool 页必须有 `WebApplication` JSON-LD、所有非首页必须有 BreadcrumbList、所有 `<img>` 必须有 width/height。
 
 ## 2026-04-15 · GEO 全量铺开
 

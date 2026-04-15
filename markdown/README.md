@@ -1,4 +1,4 @@
-# USDT 新手手册（Markdown 镜像）
+# USDT HUB（Markdown 镜像）
 
 这个目录是 GitHub 直接阅读用的 Markdown 镜像。
 

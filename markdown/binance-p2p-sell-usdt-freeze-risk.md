@@ -1,5 +1,5 @@
 ---
-title: "卖 USDT 怎么尽量降低冻卡风险 | USDT 新手手册"
+title: "卖 USDT 怎么尽量降低冻卡风险 | USDT HUB"
 source_html: "binance-p2p-sell-usdt-freeze-risk.html"
 ---
 

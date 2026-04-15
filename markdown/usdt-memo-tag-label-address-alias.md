@@ -1,5 +1,5 @@
 ---
-title: "USDT 的 Memo、Tag、Label、Address Alias 是什么 | USDT 新手手册"
+title: "USDT 的 Memo、Tag、Label、Address Alias 是什么 | USDT HUB"
 source_html: "usdt-memo-tag-label-address-alias.html"
 ---
 

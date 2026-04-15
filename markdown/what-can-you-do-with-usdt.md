@@ -1,5 +1,5 @@
 ---
-title: "USDT 可以拿来做什么 | USDT 新手手册"
+title: "USDT 可以拿来做什么 | USDT HUB"
 source_html: "what-can-you-do-with-usdt.html"
 ---
 

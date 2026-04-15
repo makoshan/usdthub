@@ -32,18 +32,19 @@ HOME_FILE = SITE_DIR / "index.html"
 SEO_EXEMPT = {"404.html"}
 
 REQUIRED_HOME_SNIPPETS = [
-    "1. 章节",
-    "2. 新手常用工具",
-    "3. 官方资料入口",
-    "4. 最近更新",
+    "USDT HUB",
+    "Featured paths",
+    "Featured tools",
+    "Latest from Blog",
 ]
 
 FORBIDDEN_HOME_SNIPPETS = [
     "reading-path.svg",
     "<strong>目录</strong>",
-    "1. 从哪里开始",
-    "2. 我为什么这样写",
-    "6. 下一步读什么",
+    "1. 章节",
+    "2. 新手常用工具",
+    "3. 官方资料入口",
+    "4. 最近更新",
 ]
 
 # H2 headings whose sections are link directories / FAQ / navigation lists /
@@ -224,6 +225,41 @@ def check_html_file(path: Path, issues: list):
     if LIQUID_RESIDUE_RE.search(raw):
         issues.append(f"{name}: contains unrendered Liquid residue")
 
+    # BreadcrumbList on every non-home Article/AboutPage (layout default catches
+    # these; this invariant catches regressions if someone removes the default
+    # branch or changes page_type routing).
+    if name not in {"index.html", "404.html"}:
+        if '"BreadcrumbList"' not in "\n".join(jsonld_blocks or []):
+            issues.append(
+                f"{name}: JSON-LD missing BreadcrumbList (Google SERP chip loss)"
+            )
+
+    # WebApplication schema on interactive tool pages.
+    # Detected by filename convention (pages with `tool: true` frontmatter are
+    # the ones named *-calculator.html / *-comparison.html AND have a
+    # data-*-tool div). Keep the list explicit so typos are caught.
+    TOOL_PAGES = {"usdt-gas-fee-comparison.html", "tron-energy-calculator.html"}
+    if name in TOOL_PAGES:
+        if '"WebApplication"' not in "\n".join(jsonld_blocks or []):
+            issues.append(
+                f"{name}: tool page missing WebApplication JSON-LD node"
+            )
+        if "<noscript" not in raw.lower():
+            issues.append(
+                f"{name}: tool page missing <noscript> fallback "
+                "(AI crawlers + JS-disabled users see empty widgets)"
+            )
+
+    # <img> tags must carry width + height to prevent CLS.
+    for m in re.finditer(r"<img\b([^>]*)>", raw, re.IGNORECASE):
+        attrs_str = m.group(1).lower()
+        if " width=" not in attrs_str or " height=" not in attrs_str:
+            # Find a readable snippet for the error
+            snippet = m.group(0)[:90].replace("\n", " ")
+            issues.append(
+                f"{name}: <img> missing width/height attrs (CLS risk): {snippet}..."
+            )
+
     # H2 definition-first leads (only on content articles).
     # Skip trust / index / meta pages that use H2s structurally, not as article
     # sections requiring snippet-extractable leads.
@@ -300,6 +336,42 @@ def check_robots(issues: list):
         )
 
 
+def check_energy_ratio_consistency(issues: list):
+    """TRX -> Energy conversion rate must not drift between pages.
+
+    History: a prior audit caught one page using the pre-Stake-2.0 "1 TRX ~= 26
+    Energy/day" folklore (implying "2,500 TRX ~= 65,000 Energy/day") while the
+    tool pages had moved to the current trongrid snapshot "1 TRX ~= 9.206
+    Energy/day". Readers following the old number would under-stake by ~3x —
+    real money miscalculation. This check scans for the legacy pattern and
+    requires any mention to be clearly flagged as historical, not current.
+    """
+    legacy_pattern = re.compile(
+        r"2[,，]?500\s*TRX[^\n<]{0,40}(?:65[,，]?000|6\.5\s*万|65k)\s*(?:Energy|能量)[^\n<]{0,20}(?:/\s*天|每?天)",
+        re.IGNORECASE,
+    )
+    historical_marker = re.compile(
+        r"(?:历史口径|旧口径|旧(?:的)?(?:粗)?估值|旧网络快照|"
+        r"pre[- ]?Stake|Stake\s*1\.0|已不够|不再是|historical|"
+        r"已经站不住|站不住|2023 年前后|"
+        r"必须紧跟|必须紧随|required to be flagged)",
+        re.IGNORECASE,
+    )
+    for path in sorted(SITE_DIR.glob("*.html")):
+        raw = path.read_text(encoding="utf-8")
+        for m in legacy_pattern.finditer(raw):
+            # Window: 400 chars around the match (needs to mention it's historical)
+            lo = max(0, m.start() - 200)
+            hi = min(len(raw), m.end() + 200)
+            window = raw[lo:hi]
+            if not historical_marker.search(window):
+                issues.append(
+                    f"{path.name}: legacy '2,500 TRX ≈ 65k Energy/day' ratio "
+                    "appears without 'historical / 旧口径' context — "
+                    "current snapshot is 9.206 E/TRX, legacy was ~26 E/TRX"
+                )
+
+
 def check_llms_txt(issues: list):
     path = SITE_DIR / "llms.txt"
     if not path.exists():
@@ -357,6 +429,7 @@ def main() -> int:
     check_robots(issues)
     check_llms_txt(issues)
     check_homepage(issues)
+    check_energy_ratio_consistency(issues)
 
     if missing_links:
         print("Missing internal links:")

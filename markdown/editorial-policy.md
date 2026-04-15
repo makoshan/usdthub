@@ -1,5 +1,5 @@
 ---
-title: "Editorial Policy / Disclosure | USDT 新手手册"
+title: "Editorial Policy / Disclosure | USDT HUB"
 source_html: "editorial-policy.html"
 ---
 

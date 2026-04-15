@@ -1,5 +1,5 @@
 ---
-title: "什么是 Flash USDT，为什么它基本都和骗局有关 | USDT 新手手册"
+title: "什么是 Flash USDT，为什么它基本都和骗局有关 | USDT HUB"
 source_html: "what-is-flash-usdt-scam.html"
 ---
 

@@ -1,18 +1,11 @@
-<nav>
-<a href="{{ '/index.html' | relative_url }}"><strong>USDT 新手手册</strong></a>
-        <a href="{{ '/start-here.html' | relative_url }}">Start Here</a>
-        <a href="{{ '/what-is-usdt.html' | relative_url }}">USDT 是什么</a>
-        <a href="{{ '/how-to-buy-usdt.html' | relative_url }}">怎么买 USDT</a>
-        <a href="{{ '/china-buy-crypto-notes.html' | relative_url }}">人在中国怎么买币</a>
-        <a href="{{ '/how-to-choose-a-wallet.html' | relative_url }}">怎么选钱包</a>
-        <a href="{{ '/how-to-send-usdt.html' | relative_url }}">怎么发送 USDT</a>
-        <a href="{{ '/usdt-networks-explained.html' | relative_url }}">USDT 网络</a>
-        <a href="{{ '/usdt-gas-fee-comparison.html' | relative_url }}">手续费对比</a>
-        <a href="{{ '/tron-energy-calculator.html' | relative_url }}">能量计算器</a>
-        <a href="{{ '/tron-energy-guide.html' | relative_url }}">TRON 能量</a>
-        <a href="{{ '/what-can-you-do-with-usdt.html' | relative_url }}">USDT 能做什么</a>
-        <a href="{{ '/use-usdt-for-ai.html' | relative_url }}">AI 支付</a>
-        <a href="{{ '/about.html' | relative_url }}">About</a>
-        <a href="{{ '/changelog.html' | relative_url }}">Changelog</a>
-        <a href="{{ '/editorial-policy.html' | relative_url }}">Editorial Policy</a>
-</nav>
+{% assign hub = site.data.hub_sections %}
+<div class="site-header-shell">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="brand" href="{{ '/index.html' | relative_url }}">{{ hub.brand.name }}</a>
+    <div class="site-nav-links">
+      {% for section in hub.sections %}
+      <a href="{{ section.permalink | relative_url }}">{{ section.label }}</a>
+      {% endfor %}
+    </div>
+  </nav>
+</div>

@@ -1,5 +1,5 @@
 ---
-title: "用 USDT 做跨境小额结算前要先确认什么 | USDT 新手手册"
+title: "用 USDT 做跨境小额结算前要先确认什么 | USDT HUB"
 source_html: "use-usdt-for-cross-border-payments.html"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "imToken Card 能不能用来订阅 ChatGPT、海淘和国内支付 | USDT 新手手册"
+title: "imToken Card 能不能用来订阅 ChatGPT、海淘和国内支付 | USDT HUB"
 source_html: "imtoken-card-for-ai-payments.html"
 ---
 

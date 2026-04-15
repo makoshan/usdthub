@@ -1,5 +1,5 @@
 ---
-title: "没有外币信用卡，怎么用 U 币买苹果礼品卡 | USDT 新手手册"
+title: "没有外币信用卡，怎么用 U 币买苹果礼品卡 | USDT HUB"
 source_html: "buy-apple-gift-card-with-usdt.html"
 ---
 
@@ -72,4 +72,4 @@ source_html: "buy-apple-gift-card-with-usdt.html"
 
 - 相关章节：[如何用 USDT 订阅 ChatGPT](./use-usdt-for-ai.md)
 - 延伸阅读：[USDT 可以拿来做什么](./what-can-you-do-with-usdt.md)
-- 返回：[USDT 新手手册](./index.md)
+- 返回：[USDT HUB](./index.md)

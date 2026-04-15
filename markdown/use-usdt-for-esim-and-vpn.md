@@ -1,5 +1,5 @@
 ---
-title: "如何用 USDT 买 eSIM 和 VPN | USDT 新手手册"
+title: "如何用 USDT 买 eSIM 和 VPN | USDT HUB"
 source_html: "use-usdt-for-esim-and-vpn.html"
 ---
 

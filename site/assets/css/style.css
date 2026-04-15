@@ -1,4 +1,4 @@
-/* USDT 新手手册 — design system. See /DESIGN.md for rationale. */
+/* USDT HUB — design system. See /DESIGN.md for rationale. */
 
 :root {
   --bg: #fff;
@@ -28,8 +28,7 @@ body {
 
 .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
 
-header { padding: 28px 0 18px; border-bottom: 1px solid var(--line); }
-nav { display: flex; flex-wrap: wrap; gap: 14px; font-size: 14px; color: var(--muted); }
+header { padding: 24px 0 18px; border-bottom: 1px solid var(--line); background: linear-gradient(180deg, #fff, #f8fbff); }
 
 main { padding: 32px 0 64px; }
 
@@ -393,4 +392,124 @@ img { max-width: 100%; height: auto; }
 
 .fee-table-wrap {
   overflow-x: auto;
+}
+
+.site-header-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.site-nav,
+.site-nav-links,
+.site-utility-nav,
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.site-nav {
+  justify-content: space-between;
+}
+
+.site-nav-links,
+.site-utility-nav {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.site-utility-nav {
+  gap: 10px 14px;
+}
+
+.brand {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.site-nav a,
+.site-utility-nav a,
+.button-link,
+.portal-card {
+  text-decoration: none;
+}
+
+.hero {
+  padding: 10px 0 8px;
+}
+
+.hero-copy {
+  font-size: 19px;
+  line-height: 1.7;
+  max-width: 58rem;
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 16px;
+  color: var(--text);
+  background: #fff;
+}
+
+.button-link:hover,
+.portal-card:hover {
+  border-color: var(--link);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 16px 0 24px;
+}
+
+.portal-grid--sections {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.portal-card {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  padding: 16px;
+  color: var(--text);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.portal-card:hover {
+  transform: translateY(-1px);
+}
+
+.portal-card--section .card-title {
+  color: var(--text);
+}
+
+.portal-inline-links {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+  .site-nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero-copy {
+    font-size: 17px;
+  }
 }

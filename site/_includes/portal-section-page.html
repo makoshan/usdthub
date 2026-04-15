@@ -1,0 +1,17 @@
+{% assign section = site.data.hub_sections.sections | where: "id", page.section_id | first %}
+<h1>{{ section.label }}</h1>
+<div class="meta">{{ section.description }}</div>
+
+<p><strong>{{ section.intro_lead }}</strong>：{{ section.intro_copy }}</p>
+
+<h2 id="subsections">Subsections</h2>
+<p><strong>{{ section.subsection_lead }}</strong>：{{ section.subsection_copy }}</p>
+{% include hub-card-grid.html items=section.subsections %}
+
+<h2 id="featured">Featured</h2>
+<p><strong>{{ section.featured_lead }}</strong>：{{ section.featured_copy }}</p>
+{% include hub-card-grid.html items=section.featured %}
+
+<h2 id="latest">Latest</h2>
+<p><strong>{{ section.latest_lead }}</strong>：{{ section.latest_copy }}</p>
+{% include hub-card-grid.html items=section.latest %}

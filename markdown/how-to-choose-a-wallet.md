@@ -1,5 +1,5 @@
 ---
-title: "怎么选钱包 | USDT 新手手册"
+title: "怎么选钱包 | USDT HUB"
 source_html: "how-to-choose-a-wallet.html"
 ---
 

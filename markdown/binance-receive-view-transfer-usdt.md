@@ -1,5 +1,5 @@
 ---
-title: "Binance 里怎么接收、查看、划转 USDT | USDT 新手手册"
+title: "Binance 里怎么接收、查看、划转 USDT | USDT HUB"
 source_html: "binance-receive-view-transfer-usdt.html"
 ---
 

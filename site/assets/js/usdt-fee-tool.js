@@ -58,6 +58,26 @@
     return value;
   }
 
+  // Debounce: coalesce rapid-fire input events (holding a digit key, paste,
+  // synthetic events from assistive tech) into a single recompute. 80ms keeps
+  // the UI responsive while cutting layout thrash + focus-loss risk.
+  function debounce(fn, wait) {
+    let timer = null;
+    const debounced = function () {
+      const args = arguments;
+      const ctx = this;
+      clearTimeout(timer);
+      timer = setTimeout(function () { fn.apply(ctx, args); }, wait);
+    };
+    debounced.flush = function () {
+      const args = arguments;
+      const ctx = this;
+      clearTimeout(timer);
+      fn.apply(ctx, args);
+    };
+    return debounced;
+  }
+
   function renderFeeTool() {
     const tool = document.querySelector("[data-fee-tool]");
     if (!tool) return;
@@ -109,8 +129,9 @@
       renderTable(rows, amount);
     }
 
-    amountInput.addEventListener("input", render);
-    profileSelect.addEventListener("change", render);
+    const debouncedRender = debounce(render, 80);
+    amountInput.addEventListener("input", debouncedRender);
+    profileSelect.addEventListener("change", render);  // selects -- no debounce
     presetButtons.forEach((button) => {
       button.addEventListener("click", function () {
         amountInput.value = button.getAttribute("data-amount-preset");
@@ -204,8 +225,9 @@
       `;
     }
 
+    const debouncedRender = debounce(render, 80);
     [stakedInput, countInput].forEach((input) => {
-      input.addEventListener("input", render);
+      input.addEventListener("input", debouncedRender);
     });
     [addressTypeSelect, modeSelect].forEach((select) => {
       select.addEventListener("change", render);

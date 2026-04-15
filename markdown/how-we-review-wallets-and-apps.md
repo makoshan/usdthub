@@ -1,5 +1,5 @@
 ---
-title: "How We Review Wallets and Apps | USDT 新手手册"
+title: "How We Review Wallets and Apps | USDT HUB"
 source_html: "how-we-review-wallets-and-apps.html"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "人在中国怎么买 USDT / BTC | USDT 新手手册"
+title: "人在中国怎么买 USDT / BTC | USDT HUB"
 source_html: "china-buy-crypto-notes.html"
 description: "写给中国大陆用户的实用说明：现在常见的买币路径是什么、普通人怎么稳妥搞点币、空投和挖矿为什么越来越难，以及大家为什么更担心 C2C 冻卡和黑钱风险。"
 ---

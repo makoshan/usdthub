@@ -1,5 +1,5 @@
 ---
-title: "在中国买币最容易踩的 7 个坑 | USDT 新手手册"
+title: "在中国买币最容易踩的 7 个坑 | USDT HUB"
 source_html: "china-7-common-mistakes.html"
 ---
 

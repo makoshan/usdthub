@@ -1,5 +1,5 @@
 ---
-title: "币安 P2P 买卖 USDT 实操：神盾商家 + 防冻卡全流程 | USDT 新手手册"
+title: "币安 P2P 买卖 USDT 实操：神盾商家 + 防冻卡全流程 | USDT HUB"
 source_html: "binance-p2p-usdt.html"
 ---
 

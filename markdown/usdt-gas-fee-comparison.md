@@ -1,5 +1,5 @@
 ---
-title: "USDT 不同链转账手续费对比 | USDT 新手手册"
+title: "USDT 不同链转账手续费对比 | USDT HUB"
 source_html: "usdt-gas-fee-comparison.html"
 ---
 

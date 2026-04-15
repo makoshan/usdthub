@@ -1,5 +1,5 @@
 ---
-title: "币安 P2P 怎么买 USDT | USDT 新手手册"
+title: "币安 P2P 怎么买 USDT | USDT HUB"
 source_html: "binance-p2p-buy-usdt.html"
 ---
 

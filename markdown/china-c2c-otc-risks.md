@@ -1,5 +1,5 @@
 ---
-title: "C2C / OTC 到底在怕什么 | USDT 新手手册"
+title: "C2C / OTC 到底在怕什么 | USDT HUB"
 source_html: "china-c2c-otc-risks.html"
 ---
 

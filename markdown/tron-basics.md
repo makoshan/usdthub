@@ -1,5 +1,5 @@
 ---
-title: "TRON 是什么：TRX、超级代表、3 秒出块 | USDT 新手手册"
+title: "TRON 是什么：TRX、超级代表、3 秒出块 | USDT HUB"
 source_html: "tron-basics.html"
 ---
 

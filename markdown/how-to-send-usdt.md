@@ -1,5 +1,5 @@
 ---
-title: "怎么发送 USDT | USDT 新手手册"
+title: "怎么发送 USDT | USDT HUB"
 source_html: "how-to-send-usdt.html"
 ---
 

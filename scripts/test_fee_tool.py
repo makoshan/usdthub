@@ -8,11 +8,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "site/_data/usdt_fee_tool.json"
+HUB_FILE = ROOT / "site/_data/hub_sections.yml"
 PAGE_FILE = ROOT / "site/usdt-gas-fee-comparison.html"
 ENERGY_PAGE_FILE = ROOT / "site/tron-energy-calculator.html"
 SCRIPT_FILE = ROOT / "site/assets/js/usdt-fee-tool.js"
 NAV_FILE = ROOT / "site/_includes/nav.html"
 INDEX_FILE = ROOT / "site/index.html"
+TOOLS_FILE = ROOT / "site/tools.html"
 
 EXPECTED_NETWORKS = {
     "trc20",
@@ -89,9 +91,9 @@ class FeeToolContractTest(unittest.TestCase):
         self.assertIn("data-transfer-count", html)
         self.assertIn("data-address-type", html)
         self.assertIn("data-energy-mode", html)
-        self.assertIn("65,000", html)
-        self.assertIn("130,000", html)
-        self.assertIn("动态能量模型", html)
+        self.assertIn("data-energy-summary", html)
+        self.assertIn("data-energy-table", html)
+        self.assertIn("data-stake-preset", html)
 
     def test_browser_script_exists(self):
         self.assertTrue(SCRIPT_FILE.exists(), "missing browser script")
@@ -104,10 +106,12 @@ class FeeToolContractTest(unittest.TestCase):
         self.assertIn("transferEnergy", js)
 
     def test_site_surfaces_link_to_tool(self):
-        nav_html = NAV_FILE.read_text(encoding="utf-8")
         index_html = INDEX_FILE.read_text(encoding="utf-8")
-        self.assertIn("/usdt-gas-fee-comparison.html", nav_html)
-        self.assertIn("./usdt-gas-fee-comparison.html", index_html)
+        tools_html = TOOLS_FILE.read_text(encoding="utf-8")
+        hub_text = HUB_FILE.read_text(encoding="utf-8")
+        self.assertIn("hub.homepage.featured_tools", index_html)
+        self.assertIn("section_id: tools", tools_html)
+        self.assertIn("/usdt-gas-fee-comparison.html", hub_text)
 
 
 if __name__ == "__main__":

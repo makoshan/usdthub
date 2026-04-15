@@ -3,11 +3,19 @@ layout: bare
 permalink: /llms.txt
 sitemap: false
 ---
-# USDT 新手手册 (usdthub)
+{% assign root_url = site.data.site_meta.site.url | append: site.data.site_meta.site.baseurl %}
+# USDT HUB (usdthub)
 
-> 一份持续更新的中文 USDT 手册：怎么买、怎么存、怎么转、为什么需要 TRX、什么是 TRON 能量、在中国大陆用 C2C / OTC 要怕什么，以及 USDT 除了放着还能拿来做什么（AI 订阅、eSIM、VPN、跨境支付、旅行）。由 Mako Shan 维护，GitHub 公开版本控制。不是投资建议，不是交易平台。
+> 一份持续更新的中文 USDT 使用门户：围绕 Get、Earn、Spend、Tools 和 Blog 五个一级入口组织内容，覆盖买币、钱包、网络、TRON 资源、AI 支付、旅行、礼品卡与工具页。由 Mako Shan 维护，GitHub 公开版本控制。不是投资建议，不是交易平台。
 
-作者：Mako Shan · 仓库：https://github.com/makoshan/usdthub · 站点：{{ '/' | absolute_url }}
+作者：Mako Shan · 仓库：https://github.com/makoshan/usdthub · 站点：{{ root_url }}/
+
+## Portal / Sections
+- [Get]({{ root_url }}/get.html): 获取 USDT、入门、钱包、网络、P2P、中国用户指南和安全
+- [Earn]({{ root_url }}/earn.html): DeFi 收益、RWA、staking、freelance、cashback、prediction 的导航页
+- [Spend]({{ root_url }}/spend.html): AI、礼品卡、VPN、旅行、虚拟卡与跨境消费
+- [Tools]({{ root_url }}/tools.html): Gas Fees、Energy Calculator 和下一批选择器、对比器
+- [Blog]({{ root_url }}/blog.html): 最新文章流
 
 ## 核心概念 / Core concepts
 - [USDT 是什么]({{ '/what-is-usdt.html' | absolute_url }}): USDT 的定义、发行方 Tether、主要网络

@@ -1,5 +1,5 @@
 ---
-title: "USDT 和 USDC 有什么区别 | USDT 新手手册"
+title: "USDT 和 USDC 有什么区别 | USDT HUB"
 source_html: "usdt-vs-usdc.html"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "TRC20、ERC20、BEP20 有什么区别 | USDT 新手手册"
+title: "TRC20、ERC20、BEP20 有什么区别 | USDT HUB"
 source_html: "usdt-networks-explained.html"
 ---
 

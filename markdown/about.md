@@ -1,5 +1,5 @@
 ---
-title: "关于作者 / About | USDT 新手手册"
+title: "关于作者 / About | USDT HUB"
 source_html: "about.html"
 ---
 

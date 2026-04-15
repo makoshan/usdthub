@@ -1,5 +1,5 @@
 ---
-title: "如何购买 Tether USDt（USDT） | USDT 新手手册"
+title: "如何购买 Tether USDt（USDT） | USDT HUB"
 source_html: "how-to-buy-usdt.html"
 ---
 

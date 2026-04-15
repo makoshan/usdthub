@@ -1,5 +1,5 @@
 ---
-title: "USDC 怎么换成 USDT | USDT 新手手册"
+title: "USDC 怎么换成 USDT | USDT HUB"
 source_html: "how-to-swap-usdc-to-usdt.html"
 ---
 

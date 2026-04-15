@@ -1,5 +1,5 @@
 ---
-title: "TRON 能量怎么获得 | USDT 新手手册"
+title: "TRON 能量怎么获得 | USDT HUB"
 source_html: "how-to-get-tron-energy.html"
 ---
 

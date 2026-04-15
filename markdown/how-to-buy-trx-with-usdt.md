@@ -1,5 +1,5 @@
 ---
-title: "如何使用 USDT 购买 TRX | USDT 新手手册"
+title: "如何使用 USDT 购买 TRX | USDT HUB"
 source_html: "how-to-buy-trx-with-usdt.html"
 ---
 

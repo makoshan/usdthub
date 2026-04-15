@@ -1,5 +1,5 @@
 ---
-title: "出国旅游时，USDT 有哪些实际用途 | USDT 新手手册"
+title: "出国旅游时，USDT 有哪些实际用途 | USDT HUB"
 source_html: "use-usdt-for-travel.html"
 ---
 

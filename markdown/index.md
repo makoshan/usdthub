@@ -30,7 +30,6 @@ source_html: "index.html"
 - [人在中国怎么买 USDT / BTC](./china-buy-crypto-notes.md)
 - [在中国买币最容易踩的 7 个坑](./china-7-common-mistakes.md)
 - [C2C / OTC 到底在怕什么](./china-c2c-otc-risks.md)
-- [第一次别碰的事](./china-first-time-donts.md)
 
 ### TRON / TRC20
 

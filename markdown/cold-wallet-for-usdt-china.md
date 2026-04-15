@@ -179,7 +179,7 @@ Ledger、Trezor、OneKey 目前都服务中国用户。
 - [怎么发送 USDT](./how-to-send-usdt.md)——地址、授权、手续费那一套
 - [人在中国怎么买 USDT / BTC](./china-buy-crypto-notes.md)——先把币买到手的路径
 - [币安 P2P 买卖 USDT 实操](./binance-p2p-usdt.md)——入金出金怎么降低冻卡概率
-- [第一次别碰的事](./china-first-time-donts.md)——新手清单
+
 
 ## 参考资料
 

@@ -12,7 +12,6 @@
 - [china-7-common-mistakes](./china-7-common-mistakes.md)
 - [china-buy-crypto-notes](./china-buy-crypto-notes.md)
 - [china-c2c-otc-risks](./china-c2c-otc-risks.md)
-- [china-first-time-donts](./china-first-time-donts.md)
 - [editorial-policy](./editorial-policy.md)
 - [how-to-buy-usdt](./how-to-buy-usdt.md)
 - [how-to-choose-a-wallet](./how-to-choose-a-wallet.md)

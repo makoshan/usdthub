@@ -33,8 +33,8 @@ SEO_EXEMPT = {"404.html"}
 
 REQUIRED_HOME_SNIPPETS = [
     "USDT 新手手册",
-    "2. 常用外部 App 与工具",
-    "4. 最近更新",
+    "1. 章节",
+    "2. 最近更新",
     "USDT 不同链转账手续费对比",
 ]
 

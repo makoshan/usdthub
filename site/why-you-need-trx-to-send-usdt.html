@@ -24,7 +24,7 @@ permalink: /why-you-need-trx-to-send-usdt.html
 
 <p>这是新手最常问的问题之一：<strong>我钱包里明明有 USDT，为什么还要准备 TRX 才能转出去？</strong></p>
 
-<div class="note"><strong>TL;DR</strong><br>因为 TRC20 USDT 不是 TRON 原生币，它是跑在 TRON 上的一个<strong>智能合约</strong>（合约地址 <code>TR7NHqj…jLj6t</code>）。每次转账都在调用这个合约，合约执行要烧 <strong>能量</strong>；能量不够时，TRON 自动按 100 sun/能量烧 TRX 补上。所以「只有 USDT 不够，还得有 TRX」这件事，不是钱包 bug，是链的设计。</p>
+<div class="note"><strong>TL;DR</strong><br>因为 TRC20 USDT 不是 TRON 原生币，它是跑在 TRON 上的一个<strong>智能合约</strong>（合约地址 <code>TR7NHqj…jLj6t</code>）。每次转账都在调用这个合约，合约执行要烧 <strong>能量</strong>；能量不够时，TRON 自动按 100 sun/能量烧 TRX 补上。所以「只有 USDT 不够，还得有 TRX」这件事是链的设计，跟钱包 bug 无关。</p>
 
 <h2 id="s1">一笔标准 TRC20 USDT 转账到底在烧什么</h2>
 <p><strong>一笔 TRC20 USDT 转账消耗两种 TRON 资源</strong>：合约调用产生的"能量"和基础流量消耗的"带宽"。其中能量占绝对大头（每笔约 65,000—130,000），是你必须主动准备的成本；带宽几乎总是免费。</p>

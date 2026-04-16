@@ -54,4 +54,4 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-Sitemap: https://makoshan.github.io/usdthub/sitemap.xml
+Sitemap: http://localhost:4001/usdthub/sitemap.xml

@@ -1,17 +1,16 @@
 # USDT HUB
 
-> 一个持续更新的中文 USDT 使用门户。围绕 `Get / Earn / Spend / Tools / Blog` 五个一级入口组织内容，写给第一次接触 USDT、TRON、钱包和链上支付的人。
+> 一个持续更新的中文 USDT 使用门户。围绕 `Get / Earn / Spend / Tools` 四个一级入口组织内容，写给第一次接触 USDT、TRON、钱包和链上支付的人。
 >
 > 在线阅读（GitHub Pages）：https://makoshan.github.io/usdthub/
 > 作者：Mako Shan · [About](./markdown/about.md) · [Editorial Policy](./markdown/editorial-policy.md) · [LLM discovery](https://makoshan.github.io/usdthub/llms.txt)
 
 我做这个站，现在想解决五类问题：
 
-- `Get`：USDT 怎么买、怎么存、怎么转、怎么避坑。
+- `Get`：把认识 USDT、买币、提币、转账、钱包、TRON 能量和中国用户高频风险放到同一栏里。
 - `Earn`：USDT 持有后有哪些增值路径，哪些只是看起来像“收益”。
 - `Spend`：USDT 除了放着，还能拿来做什么，比如 AI、旅游、eSIM、VPN 和跨境支付。
 - `Tools`：哪些问题应该直接算、直接比，而不是靠印象判断。
-- `Blog`：最近哪些页面值得优先看。
 
 > 这不是交易平台，也不是投资建议。  
 > 我更关心的是：如果你第一次实际使用 USDT，应该先理解什么，先准备什么，哪里最容易翻车。很多站喜欢把你往开户链接和工具页推，我更想先把路讲明白。因为在这个领域里，真正贵的不是手续费，而是你第一次就走错。

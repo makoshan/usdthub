@@ -28,7 +28,9 @@ breadcrumb:
   </ol>
 </nav>
 
-<p>这页只做一件事：<strong>比较不同链上的单笔转账成本</strong>。它回答的是“如果收款方支持多条链，现在走哪条链更省”；它不替你决定平台，不替你承担错链风险，也不把 TRON 的资源模型混进总表里搅浑水。</p>
+<div class="note"><strong>这一页回答的是"哪条链转账更省"</strong>。如果你要的是 "TRC20 / ERC20 到底有什么区别"，去 <a href="./usdt-networks-explained.html">USDT 网络对比</a>；如果你要的是 "TRC20 手续费的三条省钱路径"，去 <a href="./how-to-reduce-trc20-usdt-fees.html">TRC20 手续费怎么省</a>。</div>
+
+<p>这页只做一件事：<strong>比较不同链上的单笔转账成本</strong>。它回答的是"如果收款方支持多条链，现在走哪条链更省"；它不替你决定平台，不替你承担错链风险，也不把 TRON 的资源模型混进总表里搅浑水。</p>
 
 <div class="note"><strong>先说结论</strong><br>如果你只是比较链上这一步，<strong>Polygon、Solana、TON、BEP20</strong> 这几条链通常更轻；而 <strong>TRC20 是否划算，关键看你有没有提前准备能量</strong>。TRON 那部分我已经拆成单独的 <a href="./tron-energy-calculator.html">能量计算器</a>，不和总表硬塞在一起。</div>
 
@@ -115,7 +117,7 @@ breadcrumb:
   数字会随网络拥堵和 TRX 价格波动——想要当前值，点上面任一来源按链查看。</aside>
 
 <h2 id="snapshot">一张表先看价格带</h2>
-<p><strong>下面这张静态表</strong>给的是我会拿来做默认判断的价格带。它不是逐分钟行情，而是为了让你先建立“谁是零点几美分级、谁是一美元级、谁会在资源不足时突然变贵”的感觉。</p>
+<p><strong>下面这张静态表</strong>给的是我会拿来做默认判断的价格带。它给的是一个价格带，为了让你先建立“谁是零点几美分级、谁是一美元级、谁会在资源不足时突然变贵”的感觉。</p>
 
 <table>
   <thead>
@@ -145,11 +147,11 @@ breadcrumb:
 </table>
 
 <h2 id="tron-note">为什么 TRON 要单独看</h2>
-<p><strong>TRON 的特殊性</strong>不是链名，而是资源模型。它的真实成本高度依赖你有没有准备 Energy：准备对了，一笔 TRC20 USDT 可以接近“无额外链上成本”；没准备，费用会直接跳到租能量或直烧 TRX 那一档。所以我把这部分单独拆成了 <a href="./tron-energy-calculator.html">TRON 能量计算器：质押多少 TRX，够转几笔 USDT</a>。</p>
+<p><strong>TRON 的特殊性</strong>在于资源模型。它的真实成本高度依赖你有没有准备 Energy：准备对了，一笔 TRC20 USDT 可以接近“无额外链上成本”；没准备，费用会直接跳到租能量或直烧 TRX 那一档。所以我把这部分单独拆成了 <a href="./tron-energy-calculator.html">TRON 能量计算器：质押多少 TRX，够转几笔 USDT</a>。</p>
 <p>如果你现在关心的是“要质押多少 TRX、大概多少能量、够转几笔、不够差多少”，不要在这页脑补，直接去那一页算。</p>
 
 <h2 id="meaning">这些数字该怎么理解</h2>
-<p><strong>这些数字</strong>不是固定报价，而是一个时间窗口内的典型值。Ethereum、Arbitrum、Polygon 这种链，gas 会跟拥堵一起波动；TRON 则会被你的资源准备情况放大。所以这页给你的不是神谕，而是一张<strong>足够做路径决策的总表</strong>。</p>
+<p><strong>这些数字</strong>是一个时间窗口内的典型值。Ethereum、Arbitrum、Polygon 这种链，gas 会跟拥堵一起波动；TRON 则会被你的资源准备情况放大。这页给你的是一张<strong>足够做路径决策的总表</strong>。</p>
 <ul>
   <li><strong>最便宜不等于最适合</strong>：先确认收款方支持哪条链，再看成本。</li>
   <li><strong>EVM 链最容易出“0x 幻觉”</strong>：BEP20、ERC20、Polygon 都是 0x 地址，别只看前缀。</li>

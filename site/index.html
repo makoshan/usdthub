@@ -1,50 +1,167 @@
 ---
 layout: default
-title: "USDT HUB"
-description: "一个持续更新的中文 USDT 使用门户。围绕 Get、Earn、Spend、Tools 和 Blog 五个入口组织内容。"
+title: "USDT 新手手册"
+description: "一个持续更新的公开笔记。写给第一次接触 USDT、TRON、钱包和链上支付的人，围绕 Get / Earn / Spend / Tools 四个任务入口组织。"
 permalink: /index.html
 hide_utility_nav: true
 hide_footer_meta: true
 ---
-{% assign hub = site.data.hub_sections %}
-<section class="hero">
-  <span class="kicker">USDT HUB</span>
-  <h1>{{ hub.brand.tagline }}</h1>
-  <p class="hero-copy"><strong>USDT HUB</strong> 是一个持续更新的中文 USDT 使用门户：从获取、增值、消费到工具和最新内容，围绕真实任务组织，而不是把你丢进一串文章标题里自己猜。</p>
-  <div class="cta-row">
-    {% for item in hub.brand.ctas %}
-    <a class="button-link" href="{{ item.href | relative_url }}">{{ item.label }}</a>
-    {% endfor %}
-  </div>
-</section>
 
-<h2 id="sections">Portal sections</h2>
-<p><strong>五个一级入口</strong>：Get、Earn、Spend、Tools 和 Blog 分别对应“拿到 USDT”“让 USDT 工作”“把 USDT 花出去”“立刻比较和计算”“看最新更新”这五种任务。</p>
-<div class="portal-grid portal-grid--sections">
-  {% for section in hub.sections %}
-  <a class="portal-card portal-card--section" href="{{ section.permalink | relative_url }}">
-    <span class="card-kicker">{{ section.label }}</span>
-    <strong class="card-title">{{ section.description }}</strong>
-    <span class="card-copy">{{ section.homepage_summary }}</span>
-    <span class="portal-inline-links">
-      {% for item in section.homepage_links %}
-      <span>{{ item.label }}</span>{% unless forloop.last %} · {% endunless %}
-      {% endfor %}
-    </span>
-  </a>
-  {% endfor %}
+<h1>USDT 新手手册</h1>
+<p class="meta">一个持续更新的公开笔记。写给第一次接触 USDT、TRON、钱包和链上支付的人。</p>
+
+<p>我做这个手册，只想解决两类问题：</p>
+<ul>
+  <li>USDT 怎么买、怎么存、怎么转、怎么避坑。</li>
+  <li>USDT 除了放着，还能拿来做什么，比如 AI、旅游、eSIM、VPN 和跨境支付。</li>
+</ul>
+
+<div class="note">
+  <strong>这不是交易平台，也不是投资建议。</strong><br>
+  我更关心的是：如果你第一次实际使用 USDT，应该先理解什么，先准备什么，哪里最容易翻车。很多站喜欢把你往开户链接和工具页推，我更想先把路讲明白。因为在这个领域里，真正贵的是你第一次就走错。
 </div>
 
-<h2 id="featured-paths">Featured paths</h2>
-<p><strong>Featured paths</strong> 把最常见的用户意图直接翻译成起步入口，避免第一次来的人先在结构里迷路。</p>
-{% include hub-card-grid.html items=hub.homepage.featured_paths %}
+<h2 id="chapters">1. 章节</h2>
+<p><strong>按任务入口分四类</strong>：Get（拿到、弄明白、不犯错）、Earn（让 USDT 工作）、Spend（把 USDT 真正花出去）、Tools（立刻比较和计算）。</p>
 
-<h2 id="featured-tools">Featured tools</h2>
-<p><strong>Featured tools</strong> 专门把“现在就用”的页面从长文里拉出来，让工具成为独立产品面，而不只是文章里的一个链接。</p>
-{% include hub-card-grid.html items=hub.homepage.featured_tools %}
+<h3>Get</h3>
+<p>从第一次买 USDT 到把它安全存住、安全转出去。</p>
 
-<h2 id="latest-blog">Latest from Blog</h2>
-<p><strong>Latest from Blog</strong> 是这次改版里替代“最近更新长列表”的内容流入口，让最新工具页和长文都能统一进入 Blog。</p>
-{% include hub-card-grid.html items=hub.homepage.latest %}
+<h3>新手入门</h3>
+<ul class="section-list">
+  <li><a href="{{ '/what-is-usdt.html' | relative_url }}">USDT 是什么？</a></li>
+  <li><a href="{{ '/usdt-vs-usdc.html' | relative_url }}">USDT 和 USDC 有什么区别</a></li>
+  <li><a href="{{ '/how-to-buy-usdt.html' | relative_url }}">如何购买 Tether USDt（USDT）</a></li>
+  <li><a href="{{ '/how-to-choose-a-wallet.html' | relative_url }}">怎么选钱包</a></li>
+  <li><a href="{{ '/cold-wallet-for-usdt-china.html' | relative_url }}">冷钱包（硬件钱包）怎么选：Ledger / Trezor / OneKey / imKey</a></li>
+  <li><a href="{{ '/how-to-send-usdt.html' | relative_url }}">怎么发送 USDT</a></li>
+  <li><a href="{{ '/usdt-networks-explained.html' | relative_url }}">TRC20、ERC20、BEP20 有什么区别</a></li>
+</ul>
 
-<footer><p>如果你是从搜索进来的，先别急着追“最低费率”或“最高年化”。先搞清楚钱包控制权、网络、转账不可撤回和风险边界，再去决定该用哪条路径。</p></footer>
+<h3>常见补充问题</h3>
+<ul class="section-list">
+  <li><a href="{{ '/how-to-swap-usdc-to-usdt.html' | relative_url }}">USDC 怎么换成 USDT</a></li>
+  <li><a href="{{ '/usdt-memo-tag-label-address-alias.html' | relative_url }}">USDT 的 Memo、Tag、Label、Address Alias 是什么</a></li>
+  <li><a href="{{ '/binance-receive-view-transfer-usdt.html' | relative_url }}">Binance 里怎么接收、查看、划转 USDT</a></li>
+  <li><a href="{{ '/what-is-flash-usdt-scam.html' | relative_url }}">什么是 Flash USDT，为什么它基本都和骗局有关</a></li>
+</ul>
+
+<h3>中国用户现实问题</h3>
+<ul class="section-list">
+  <li><a href="{{ '/china-buy-crypto-notes.html' | relative_url }}">人在中国怎么买 USDT / BTC</a></li>
+  <li><a href="{{ '/china-7-common-mistakes.html' | relative_url }}">在中国买币最容易踩的 7 个坑</a></li>
+  <li><a href="{{ '/china-c2c-otc-risks.html' | relative_url }}">C2C / OTC 到底在怕什么</a></li>
+  <li><a href="{{ '/binance-p2p-usdt.html' | relative_url }}">币安 P2P 买卖 USDT 实操：神盾商家 + 防冻卡</a></li>
+  <li><a href="{{ '/binance-p2p-buy-usdt.html' | relative_url }}">币安 P2P 怎么买 USDT</a></li>
+  <li><a href="{{ '/binance-p2p-sell-usdt-freeze-risk.html' | relative_url }}">卖 USDT 怎么尽量降低冻卡风险</a></li>
+</ul>
+
+<h3>TRON / TRC20</h3>
+<ul class="section-list">
+  <li><a href="{{ '/tron-energy-guide.html' | relative_url }}">TRON 能量指南</a></li>
+  <li><a href="{{ '/why-you-need-trx-to-send-usdt.html' | relative_url }}">为什么转 TRC20 USDT 要准备 TRX</a></li>
+  <li><a href="{{ '/how-to-buy-trx-with-usdt.html' | relative_url }}">如何使用 USDT 购买 TRX</a></li>
+  <li><a href="{{ '/tron-bandwidth-and-energy.html' | relative_url }}">TRON 带宽和能量是什么</a></li>
+  <li><a href="{{ '/how-to-get-tron-energy.html' | relative_url }}">TRON 能量怎么获得</a></li>
+  <li><a href="{{ '/how-to-reduce-trc20-usdt-fees.html' | relative_url }}">TRC20 USDT 手续费怎么省</a></li>
+</ul>
+
+<h3>Earn</h3>
+<p>把持有的 USDT 变成现金流。DeFi 收益、RWA、staking、prediction、freelance 赚 USDT、cashback，这一区还在整理，先进 <a href="{{ '/earn.html#earn-overview' | relative_url }}">Earn 目录页</a> 看分类入口。</p>
+
+<h3>Spend</h3>
+<p>把 USDT 从「放着」变成「真能花」：AI 订阅、礼品卡、eSIM、VPN、旅行、U 卡、跨境支付。</p>
+<ul class="section-list">
+  <li><a href="{{ '/what-can-you-do-with-usdt.html' | relative_url }}">USDT 可以拿来做什么</a></li>
+  <li><a href="{{ '/use-usdt-for-ai.html' | relative_url }}">如何用 USDT 订阅 ChatGPT</a></li>
+  <li><a href="{{ '/buy-apple-gift-card-with-usdt.html' | relative_url }}">没有外币信用卡，怎么用 U 币买苹果礼品卡</a></li>
+  <li><a href="{{ '/imtoken-card-usdt-topup.html' | relative_url }}">通过 imToken Card U 卡开卡入金 USDT</a></li>
+  <li><a href="{{ '/use-usdt-for-esim-and-vpn.html' | relative_url }}">如何用 USDT 买 eSIM 和 VPN</a></li>
+  <li><a href="{{ '/use-usdt-for-travel.html' | relative_url }}">出国旅游时，USDT 有哪些实际用途</a></li>
+  <li><a href="{{ '/use-usdt-for-cross-border-payments.html' | relative_url }}">用 USDT 做跨境小额结算前要先确认什么</a></li>
+</ul>
+
+<h3>Tools</h3>
+<p>站内的计算器和对比工具。想一眼决策「现在哪条链最便宜 / 该质押多少 TRX」的时候用。</p>
+<ul class="section-list">
+  <li><a href="{{ '/usdt-gas-fee-comparison.html' | relative_url }}">USDT 不同链转账手续费对比——比 TRC20 / ERC20 / BEP20 / Polygon / Solana / TON 的实际转账成本</a></li>
+  <li><a href="{{ '/tron-energy-calculator.html' | relative_url }}">TRON 能量计算器——质押多少 TRX、够转几笔 TRC20 USDT、差额多少</a></li>
+  <li><a href="{{ '/usdt-vs-usdc.html' | relative_url }}">USDT vs USDC 对比——先学哪个 / 什么场景用哪个</a></li>
+  <li><a href="{{ '/usdt-networks-explained.html' | relative_url }}">USDT 网络解释——TRC20 / ERC20 / BEP20 怎么选</a></li>
+</ul>
+
+<h2 id="apps">2. 常用外部 App 与工具</h2>
+<p><strong>这里不做「最强工具榜」</strong>，只给一套真的适合第一次上手 TRON / TRC20 USDT 的起步工具。顺序也很重要：先会用钱包，再学会查区块浏览器，最后才去碰 DEX、借贷和跨链。</p>
+
+<h3>默认起步方案</h3>
+<p>如果你现在就要开始管理 TRON 和 USDT，我通常会建议先用 imToken 起步；如果你后面准备更深地用 TRON 生态，再补一个 TronLink。前者对新手更友好，后者更像 TRON 原生工具箱。无论你选哪个，先把「备份助记词、收一笔小额 TRX、收一笔小额 USDT、查一次交易记录、做一次小额转账」这五步跑通，比上来就研究 DeFi 更重要。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>工具类型</th>
+      <th>新手先用哪个</th>
+      <th>主要用来干什么</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>钱包</td>
+      <td>imToken / TronLink</td>
+      <td>创建自托管钱包、收发 TRX / TRC20 USDT、查看资源</td>
+    </tr>
+    <tr>
+      <td>区块浏览器</td>
+      <td>TRONSCAN</td>
+      <td>查地址、查交易、看带宽 / 能量、确认 USDT 是否到账</td>
+    </tr>
+    <tr>
+      <td>费用比较</td>
+      <td><a href="{{ '/usdt-gas-fee-comparison.html' | relative_url }}">USDT 不同链转账手续费对比</a></td>
+      <td>先看哪条链的链上成本更低，别靠印象选</td>
+    </tr>
+    <tr>
+      <td>TRON 估算</td>
+      <td><a href="{{ '/tron-energy-calculator.html' | relative_url }}">TRON 能量计算器</a></td>
+      <td>直接算质押多少 TRX、够转几笔、不够差多少</td>
+    </tr>
+    <tr>
+      <td>DEX 兑换</td>
+      <td>SUN.io</td>
+      <td>在 TRON 上兑换代币，查看池子、路由和价格</td>
+    </tr>
+    <tr>
+      <td>跨链</td>
+      <td>BTTC Bridge + BTTCScan</td>
+      <td>在 TRON / Ethereum / BSC 之间转资产，跨链后查记录</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="official-sources">3. 官方资料入口</h2>
+<p><strong>如果你准备真动手，不想只看二手总结</strong>，建议把这页也一起开着：</p>
+<ul class="section-list">
+  <li><a href="{{ '/official-sources.html' | relative_url }}">官方资料入口</a>：集中收录 imToken、TRON、TronScan、TokenPocket、MetaMask、Ledger、Tether、Binance、OKX、Bybit、OSL。</li>
+  <li>TRON / 转账问题优先看：<a href="{{ '/tron-energy-guide.html' | relative_url }}">TRON 能量指南</a>、<a href="{{ '/how-to-send-usdt.html' | relative_url }}">怎么发送 USDT</a>、<a href="{{ '/official-sources.html' | relative_url }}">官方资料入口</a>。</li>
+  <li>买币问题优先看：<a href="{{ '/how-to-buy-usdt.html' | relative_url }}">怎么买 USDT</a>、<a href="{{ '/china-buy-crypto-notes.html' | relative_url }}">人在中国怎么买币</a>、<a href="{{ '/official-sources.html' | relative_url }}">官方资料入口</a>。</li>
+</ul>
+
+<h2 id="updates">4. 最近更新</h2>
+<p><strong>这一轮首页改版的重点</strong>，是把第一次进来的阅读顺序理顺。</p>
+<ul class="section-list">
+  <li>改版首页：分类从五段主题改成 Get / Earn / Spend / Tools 四个任务入口，降低第一次进来要先找对位置的成本。</li>
+  <li>新增：<a href="{{ '/usdt-gas-fee-comparison.html' | relative_url }}">USDT 不同链转账手续费对比</a>，专门看多链链上成本，不再把 TRON 的质押估算硬塞进同一页。</li>
+  <li>新增：<a href="{{ '/tron-energy-calculator.html' | relative_url }}">TRON 能量计算器</a>，直接算质押、能量、可覆盖笔数和差额。</li>
+  <li>新增：<a href="{{ '/usdt-vs-usdc.html' | relative_url }}">USDT 和 USDC 有什么区别</a>，把「先学 USDT 还是 USDC」「两者各自更适合什么场景」单独拆开讲。</li>
+  <li>新增：<a href="{{ '/how-to-swap-usdc-to-usdt.html' | relative_url }}">USDC 怎么换成 USDT</a>、<a href="{{ '/usdt-memo-tag-label-address-alias.html' | relative_url }}">USDT 的 Memo、Tag、Label、Address Alias</a>、<a href="{{ '/binance-receive-view-transfer-usdt.html' | relative_url }}">Binance 里怎么接收、查看、划转 USDT</a>，补上稳定币互换、术语和平台内基础操作。</li>
+  <li>新增：<a href="{{ '/what-is-flash-usdt-scam.html' | relative_url }}">什么是 Flash USDT，为什么它基本都和骗局有关</a>，单独做成反诈页，避免把灰产词混进正常教程里。</li>
+  <li>新增：<a href="{{ '/how-to-buy-trx-with-usdt.html' | relative_url }}">如何使用 USDT 购买 TRX</a>，补上「地址未激活 / TRX 不够付资源费时，怎么直接用 USDT 应急补 TRX」的实际操作路径。</li>
+  <li>新增：<a href="{{ '/cold-wallet-for-usdt-china.html' | relative_url }}">冷钱包（硬件钱包）怎么选</a>，整理 Ledger / Trezor / OneKey / imKey 四家对比、4 个评价维度、中国大陆用户的供应链和物流考虑。</li>
+  <li>新增：<a href="{{ '/buy-apple-gift-card-with-usdt.html' | relative_url }}">没有外币信用卡，怎么用 U 币买苹果礼品卡</a>，把 Bitrefill + USDT + Apple Gift Card 这条更现实的替代路线单独写清楚。</li>
+  <li>新增：<a href="{{ '/china-buy-crypto-notes.html' | relative_url }}">人在中国怎么买币</a> 里的「怎么学习数字货币和投资」「社区 / 频道怎么选」两节。</li>
+</ul>
+
+<div class="note">
+  <strong>如果你是从搜索进来的</strong><br>
+  建议先别急着找「最便宜」「最快」「最强」。先把网络、钱包控制权、转账不可撤回这三件事搞明白，后面会轻松很多。
+</div>

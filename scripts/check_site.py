@@ -32,19 +32,16 @@ HOME_FILE = SITE_DIR / "index.html"
 SEO_EXEMPT = {"404.html"}
 
 REQUIRED_HOME_SNIPPETS = [
-    "USDT HUB",
-    "Featured paths",
-    "Featured tools",
-    "Latest from Blog",
+    "USDT 新手手册",
+    "2. 常用外部 App 与工具",
+    "4. 最近更新",
+    "USDT 不同链转账手续费对比",
 ]
 
 FORBIDDEN_HOME_SNIPPETS = [
     "reading-path.svg",
     "<strong>目录</strong>",
-    "1. 章节",
     "2. 新手常用工具",
-    "3. 官方资料入口",
-    "4. 最近更新",
 ]
 
 # H2 headings whose sections are link directories / FAQ / navigation lists /
@@ -56,6 +53,7 @@ H2_SKIP_PATTERNS = (
     "返回", "下一步", "更新记录", "changelog", "faq", "常见问题",
     "我的建议", "我的下一步", "一句更现实的建议", "一句总结",
     "最后的建议", "结尾", "补一句",
+    "browse another task", "browse another",
 )
 
 # Matcher for every <h2 ...>...</h2> and what directly follows.

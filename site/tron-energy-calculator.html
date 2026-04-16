@@ -112,7 +112,7 @@ breadcrumb:
 
 <div class="note"><strong>TRON 计算公式</strong><br><code>预计可得能量 = 已质押 TRX × 当前模式下的 Energy / TRX</code><br><code>本次所需能量 = 计划转账笔数 × 单笔 Energy</code><br><code>建议补质押 TRX = max(0, 所需能量 - 当前可得能量) ÷ 当前模式下的 Energy / TRX</code></div>
 
-<p><strong>如果你最后决定不质押、而是去 TRXDeFi 租能量</strong>，它的订单字段不是“几笔转账”，而是你要租的 <strong>Energy 数量</strong>。字段名是 <code>{{ tron.trxdefiRental.energyQuantityField }}</code>。所以你应该先在这页把总需求算出来，再去下单，不要在 TRXDeFi 页面上拍脑袋。</p>
+<p><strong>如果你最后决定不质押、而是去 TRXDeFi 租能量</strong>，它的订单字段是你要租的 <strong>Energy 数量</strong>（注意：填的是能量，不是笔数）。字段名是 <code>{{ tron.trxdefiRental.energyQuantityField }}</code>。所以你应该先在这页把总需求算出来，再去下单，不要在 TRXDeFi 页面上拍脑袋。</p>
 
 <aside class="fee-tool-sources">
   <strong>数据来源 / 快照日期：</strong>{{ tron.networkSnapshot.capturedAt }}，取自 TRON 官方 <code>getaccountresource</code> API 的实测样本（地址 <code>{{ tron.networkSnapshot.sampleAddress }}</code>），反推 <code>1 TRX ≈ {{ tron.networkSnapshot.energyPerTrx }} Energy/天</code>。下面是页面所有数字依赖的官方文档：

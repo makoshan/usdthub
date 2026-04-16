@@ -237,6 +237,18 @@
   </header>
   <main class="site-main">
     <div class="wrap">
+      {%- if og_type == 'article' -%}
+      <article>
+        {{ content }}
+        {%- if human_modified and page.hide_footer_meta != true -%}
+        <div class="page-footer-meta" role="contentinfo">
+          最近更新 <time datetime="{{ iso_modified }}">{{ human_modified }}</time> ·
+          <a href="{{ '/about.html' | relative_url }}">作者</a> ·
+          <a href="{{ '/editorial-policy.html' | relative_url }}">Editorial Policy</a>
+        </div>
+        {%- endif -%}
+      </article>
+      {%- else -%}
       {{ content }}
       {%- if human_modified and page.hide_footer_meta != true -%}
       <div class="page-footer-meta" role="contentinfo">
@@ -244,6 +256,7 @@
         <a href="{{ '/about.html' | relative_url }}">作者</a> ·
         <a href="{{ '/editorial-policy.html' | relative_url }}">Editorial Policy</a>
       </div>
+      {%- endif -%}
       {%- endif -%}
     </div>
   </main>

@@ -11,7 +11,7 @@
   <meta property="og:locale" content="zh_CN" />
   <meta property="og:image" content="https://makoshan.github.io/usdthub/assets/og/default.png" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" /><meta property="article:published_time" content="2026-04-14T16:58:10+08:00" /><meta property="article:modified_time" content="2026-04-15T16:20:16+08:00" /><meta property="article:author" content="Mako Shan" />
+  <meta property="og:image:height" content="630" /><meta property="article:published_time" content="2026-04-14T16:58:10+08:00" /><meta property="article:modified_time" content="2026-04-15T17:32:29+08:00" /><meta property="article:author" content="Mako Shan" />
   <meta property="article:section" content="USDT HUB" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@makoshan" /><meta name="twitter:title" content="TRC20、ERC20、BEP20 有什么区别" />
   <meta name="twitter:description" content="写给新手的 USDT 多链对比：TRC20 / ERC20 / BEP20 / Solana / TON 的手续费、速度、钱包支持、适用场景。带 2026-04 实价数据表，明确告诉你什么时候该用哪条链。" />
   <meta name="twitter:image" content="https://makoshan.github.io/usdthub/assets/og/default.png" />
@@ -67,7 +67,7 @@
       "url": "https://makoshan.github.io/usdthub/usdt-networks-explained.html",
       "image": "https://makoshan.github.io/usdthub/assets/og/default.png",
       "datePublished": "2026-04-14T16:58:10+08:00",
-      "dateModified": "2026-04-15T16:20:16+08:00",
+      "dateModified": "2026-04-15T17:32:29+08:00",
       "author": { "@id": "https://makoshan.github.io/usdthub/about.html#person" },
       "publisher": { "@id": "https://makoshan.github.io/usdthub/#organization" }
     },
@@ -99,7 +99,7 @@
       
 <div class="site-header-shell">
   <nav class="site-nav" aria-label="Primary">
-    <a class="brand" href="/usdthub/index.html">USDT HUB</a>
+    <a class="brand" href="/usdthub/index.html">USDT 新手手册</a>
     <div class="site-nav-links">
       
       <a href="/usdthub/get.html">Get</a>
@@ -110,8 +110,6 @@
       
       <a href="/usdthub/tools.html">Tools</a>
       
-      <a href="/usdthub/blog.html">Blog</a>
-      
     </div>
   </nav>
 </div>
@@ -119,8 +117,8 @@
     </div>
   </header>
   <main class="site-main">
-    <div class="wrap">
-      <h1>TRC20、ERC20、BEP20 有什么区别</h1>
+    <div class="wrap"><article>
+        <h1>TRC20、ERC20、BEP20 有什么区别</h1>
 <div class="meta">Chapter 1.5 · Networks</div>
 
 <nav class="toc" aria-label="目录">
@@ -135,7 +133,9 @@
   </ol>
 </nav>
 
-<p>USDT 经常让新手迷惑，不是因为概念有多高深，而是因为它会出现在不同网络上。结论先行：TRC20、ERC20、BEP20 说的都不是不同的 USDT 品牌，而是 <strong>它在不同链上的版本</strong>。而这些版本<strong>不能互相转账</strong> —— 你把 TRC20 USDT 发到一个 ERC20 地址，大概率直接打水漂。</p>
+<div class="note"><strong>这一页回答的是"各条链上的 USDT 互不互通"</strong>——如果你要的是"哪条链现在更省"，去 <a href="./usdt-gas-fee-comparison.html">手续费对比工具</a>；如果你要的是"TRC20 手续费怎么压低"，去 <a href="./how-to-reduce-trc20-usdt-fees.html">TRC20 手续费怎么省</a>。</div>
+
+<p>USDT 经常让新手迷惑，因为它会出现在不同网络上。结论先行：TRC20、ERC20、BEP20 说的都是 <strong>USDT 在不同链上的版本</strong>，跟品牌无关。而这些版本<strong>不能互相转账</strong> —— 你把 TRC20 USDT 发到一个 ERC20 地址，大概率直接打水漂。</p>
 
 <div class="note"><strong>TL;DR</strong><br>收款方支持哪条链，你就用哪条链。2026 年的默认选择：<strong>TRC20 用于 C2C / 日常转账</strong>（Tether 85% 在 TRON 上）、<strong>ERC20 用于 DeFi / 接入以太坊生态</strong>（当前 gas 低到每笔 $0.2）、<strong>BEP20 用于币安生态内流转 / 极低手续费场景</strong>（$0.01–$0.5）。</div>
 
@@ -201,7 +201,7 @@
 </ul>
 
 <h2 id="s3">怎么决定用哪条链</h2>
-<p><strong>选链的第一原则</strong>是看收款方支持什么，而不是看自己觉得哪条便宜。下面按四种典型场景分别给默认建议：C2C / 日常转账、DeFi / 合约交互、币安生态内流转、Telegram 或 Solana 应用。</p>
+<p><strong>选链的第一原则</strong>是看收款方支持什么。下面按四种典型场景分别给默认建议：C2C / 日常转账、DeFi / 合约交互、币安生态内流转、Telegram 或 Solana 应用。</p>
 <h3>收 / 发普通转账（对个人或 C2C）</h3>
 <p><strong>默认 TRC20</strong>。全球流动性最大，几乎所有主流交易所都默认支持，C2C 商家一般也用这条。速度快、成本可控。</p>
 
@@ -240,10 +240,10 @@
 
 <footer>上一篇：<a href="./how-to-send-usdt.html">怎么发送 USDT</a> · 下一篇：<a href="./tron-energy-guide.html">TRON 能量指南</a> · 返回：<a href="./index.html">USDT HUB</a></footer>
 <div class="page-footer-meta" role="contentinfo">
-        最近更新 <time datetime="2026-04-15T16:20:16+08:00">2026-04-15</time> ·
-        <a href="/usdthub/about.html">作者</a> ·
-        <a href="/usdthub/editorial-policy.html">Editorial Policy</a>
-      </div></div>
+          最近更新 <time datetime="2026-04-15T17:32:29+08:00">2026-04-15</time> ·
+          <a href="/usdthub/about.html">作者</a> ·
+          <a href="/usdthub/editorial-policy.html">Editorial Policy</a>
+        </div></article></div>
   </main>
 </body>
 </html>

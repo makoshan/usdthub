@@ -109,7 +109,7 @@ class FeeToolContractTest(unittest.TestCase):
         index_html = INDEX_FILE.read_text(encoding="utf-8")
         tools_html = TOOLS_FILE.read_text(encoding="utf-8")
         hub_text = HUB_FILE.read_text(encoding="utf-8")
-        self.assertIn("hub.homepage.featured_tools", index_html)
+        self.assertIn("USDT 不同链转账手续费对比", index_html)
         self.assertIn("section_id: tools", tools_html)
         self.assertIn("/usdt-gas-fee-comparison.html", hub_text)
 

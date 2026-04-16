@@ -21,9 +21,9 @@ class PortalStructureTest(unittest.TestCase):
             'id: "earn"',
             'id: "spend"',
             'id: "tools"',
-            'id: "blog"',
         ):
             self.assertIn(item, text)
+        self.assertNotIn('id: "transfer"', text)
 
     def test_nav_uses_portal_sections_only(self):
         nav = NAV_FILE.read_text(encoding="utf-8")
@@ -36,41 +36,54 @@ class PortalStructureTest(unittest.TestCase):
 
     def test_homepage_contains_portal_sections(self):
         html = INDEX_FILE.read_text(encoding="utf-8")
-        self.assertIn("USDT HUB", html)
-        self.assertIn("Featured paths", html)
-        self.assertIn("Featured tools", html)
-        self.assertIn("Latest from Blog", html)
-        self.assertNotIn("1. 章节", html)
-        for label in (
-            "About",
-            "Editorial Policy",
-            "Methodology",
-            "Official Sources",
-            "Changelog",
-            "Trust block",
-        ):
-            self.assertNotIn(label, html)
+        hub_text = HUB_FILE.read_text(encoding="utf-8")
+        self.assertIn("USDT 新手手册", html)
+        self.assertIn("一个持续更新的公开笔记", html)
+        self.assertIn("1. 章节", html)
+        self.assertIn("2. 常用外部 App 与工具", html)
+        self.assertIn("3. 官方资料入口", html)
+        self.assertIn("4. 最近更新", html)
+        self.assertIn("Get", html)
+        self.assertIn("Earn", html)
+        self.assertIn("Spend", html)
+        self.assertIn("Tools", html)
+        self.assertIn("USDT 是什么？", html)
+        self.assertIn("这一区还在整理", html)
+        self.assertIn("USDT 不同链转账手续费对比", html)
+        self.assertNotIn("Blog", html)
+        self.assertNotIn("Transfer", html)
+        self.assertNotIn("Latest updates", html)
+        self.assertNotIn("Featured paths", html)
 
     def test_portal_landing_pages_exist(self):
-        for name in ("get", "earn", "spend", "tools", "blog"):
+        for name in ("get", "earn", "spend", "tools"):
             path = ROOT / "site" / f"{name}.html"
             self.assertTrue(path.exists(), f"missing landing page: {name}.html")
+        self.assertFalse((ROOT / "site" / "transfer.html").exists())
 
-    def test_get_and_spend_pages_surface_existing_articles(self):
+    def test_section_pages_surface_existing_articles(self):
         hub_text = HUB_FILE.read_text(encoding="utf-8")
         get_html = (ROOT / "site/get.html").read_text(encoding="utf-8")
         spend_html = (ROOT / "site/spend.html").read_text(encoding="utf-8")
+        earn_html = (ROOT / "site/earn.html").read_text(encoding="utf-8")
+        tools_html = (ROOT / "site/tools.html").read_text(encoding="utf-8")
         self.assertIn("section_id: get", get_html)
+        self.assertIn("section_id: earn", earn_html)
         self.assertIn("section_id: spend", spend_html)
+        self.assertIn("section_id: tools", tools_html)
+        self.assertIn("/what-is-usdt.html", hub_text)
         self.assertIn("/how-to-buy-usdt.html", hub_text)
-        self.assertIn("/how-to-choose-a-wallet.html", hub_text)
+        self.assertIn("/how-to-send-usdt.html", hub_text)
+        self.assertIn("/binance-receive-view-transfer-usdt.html", hub_text)
+        self.assertIn("/how-to-get-tron-energy.html", hub_text)
         self.assertIn("/use-usdt-for-travel.html", hub_text)
         self.assertIn("/buy-apple-gift-card-with-usdt.html", hub_text)
+        self.assertIn("/usdt-vs-usdc.html", hub_text)
 
     def test_readme_mentions_usdt_hub_portal(self):
         readme = README_FILE.read_text(encoding="utf-8")
         self.assertIn("USDT HUB", readme)
-        self.assertIn("Get / Earn / Spend / Tools / Blog", readme)
+        self.assertIn("Get / Earn / Spend / Tools", readme)
 
 
 if __name__ == "__main__":

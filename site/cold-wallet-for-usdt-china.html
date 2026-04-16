@@ -38,7 +38,7 @@ permalink: /cold-wallet-for-usdt-china.html
 
 <p><strong>冷钱包</strong>指的是：把私钥生成和签名都放在一块离线小硬件里完成的物理设备，联网的电脑或手机全程只负责传输未签名和已签名的交易，私钥本身不进入网络。</p>
 
-<p>先回到区块链钱包的本质：<strong>谁拿到私钥 / 助记词，谁就能签名转走里面的钱</strong>。不是谁「登录」，不是谁「有账号」——而是谁能签名。</p>
+<p>先回到区块链钱包的本质：<strong>谁拿到私钥 / 助记词，谁就能签名转走里面的钱</strong>。谁能签名谁就能拿走钱——跟「登录」和「有账号」是两回事。</p>
 
 <p>热钱包（imToken、MetaMask、TokenPocket 等手机 / 浏览器钱包）在这件事上有一个结构性弱点：<strong>私钥存在联网设备里</strong>。哪怕钱包 App 本身做得再好，只要你的手机 / 电脑中了木马、剪贴板被劫持、浏览器装了恶意插件，私钥理论上就可能被远程拿到。</p>
 
@@ -59,7 +59,7 @@ permalink: /cold-wallet-for-usdt-china.html
 
 <h3>1.1 冷钱包会不会坏</h3>
 <p>会。硬件会坏，公司也可能倒闭。但这不影响你的资产，<strong>只要你保管好助记词</strong>。冷钱包只是一个存私钥的容器；助记词才是私钥本身的人类可读版本。硬件坏了 → 买一个新的（任意品牌，只要支持同一套 BIP39 标准）→ 恢复助记词 → 钱全在。</p>
-<p>所以真正的单点风险不是硬件，是<strong>那张助记词纸</strong>。</p>
+<p>所以真正的单点风险在<strong>那张助记词纸</strong>上。</p>
 
 <h3>1.2 助记词纸也会坏——金属备份的意义</h3>
 <p>视频里提到一个容易被忽视的点：单靠纸本抄写助记词，<strong>火、水、搬家、家人误丢</strong>都可能让你把「理论上永存的 12 / 24 个词」弄没。如果你真的打算用冷钱包长期囤大额资产，配一套<strong>金属助记词板</strong>（OneKey KeyTag、Trezor Keep Metal、CryptoSteel Capsule 等不锈钢 / 钛合金刻字备份）非常值得。几十美金，解决一个真实概率不低的事故。</p>
@@ -68,7 +68,7 @@ permalink: /cold-wallet-for-usdt-china.html
 
 <p><strong>主流冷钱包</strong>指的是 Ledger、Trezor、OneKey、imKey 这四家以硬件钱包为主要业务、有长期团队和透明度、能对中国用户提供服务的品牌——新手默认从这四家里挑一家基本不会有大错。</p>
 
-<p>视频只重点讨论了三个主流品牌，其他小众品牌一律归为「等等」。我们沿用这个分类——不是因为其他品牌不好，而是<strong>冷钱包是你要押身家的设备，选存活时间够长、透明度够高的团队最省心</strong>。</p>
+<p>视频只重点讨论了三个主流品牌，其他小众品牌一律归为「等等」。我们沿用这个分类——<strong>冷钱包是你要押身家的设备，选存活时间够长、透明度够高的团队最省心</strong>。</p>
 
 <table>
   <thead><tr><th>品牌</th><th>成立</th><th>总部</th><th>典型产品</th><th>特点</th></tr></thead>
@@ -136,10 +136,10 @@ permalink: /cold-wallet-for-usdt-china.html
 
 <h2 id="how-to-buy">五、具体购买建议</h2>
 
-<p><strong>购买建议</strong>分三块看：中国大陆用户优先选能国内仓直发、不过海关的品牌；海外用户四家官网直邮都是合理选择；再就是按你平时用的生态选，而不是按品牌名气选。</p>
+<p><strong>购买建议</strong>分三块看：中国大陆用户优先选能国内仓直发、不过海关的品牌；海外用户四家官网直邮都是合理选择；再就是按你平时用的生态选。</p>
 
 <h3>5.1 中国大陆：优先国内仓直发的品牌</h3>
-<p><strong>理由不是品牌偏好，而是物流和供应链</strong>：</p>
+<p><strong>理由在于物流和供应链</strong>：</p>
 <ul>
   <li><strong>OneKey（新加坡 / 生产地中国）</strong> 和 <strong>imKey（上海）</strong> 均可从<strong>国内仓直发</strong>，不过海关</li>
   <li><strong>Ledger（法国）/ Trezor（捷克）</strong> 从欧洲邮寄到中国需要<strong>走国际物流 + 海关</strong></li>
@@ -204,8 +204,7 @@ permalink: /cold-wallet-for-usdt-china.html
   <li><strong>授权合约没撤销</strong>：之前授权过的 DeFi 合约，即使你换到硬件钱包地址，如果授权还在，对方合约仍可转走相应代币。定期用 <a href="https://revoke.cash/" target="_blank" rel="noopener noreferrer">revoke.cash</a> 清理</li>
 </ul>
 
-<div class="note"><strong>一句话总结</strong><br>
-冷钱包把攻击面从「网络全世界」缩到了「你自己 + 你身边的人 + 你授权过的合约」。剩下的那部分，还是要靠<strong>手册里反复讲的操作习惯</strong>。</div>
+<div class="note">冷钱包把攻击面从「网络全世界」缩到了「你自己 + 你身边的人 + 你授权过的合约」。剩下的那部分，还是要靠<strong>手册里反复讲的操作习惯</strong>。</div>
 
 <h2 id="related">八、和手册其他章节的关系</h2>
 <p>这篇是<strong>冷钱包决策层</strong>。热钱包选择 / 日常转账 / 中国环境下的买卖流程分别在：</p>

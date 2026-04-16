@@ -11,7 +11,7 @@
   <meta property="og:locale" content="zh_CN" />
   <meta property="og:image" content="https://makoshan.github.io/usdthub/assets/og/default.png" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" /><meta property="article:published_time" content="2026-04-15T16:20:16+08:00" /><meta property="article:modified_time" content="2026-04-15T16:20:16+08:00" /><meta property="article:author" content="Mako Shan" />
+  <meta property="og:image:height" content="630" /><meta property="article:published_time" content="2026-04-15T16:20:16+08:00" /><meta property="article:modified_time" content="2026-04-15T17:32:29+08:00" /><meta property="article:author" content="Mako Shan" />
   <meta property="article:section" content="About · 作者与动机" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@makoshan" /><meta name="twitter:title" content="关于作者 / About" />
   <meta name="twitter:description" content="USDT HUB由 Mako Shan 维护——一份写给第一次接触 USDT / TRON / 自托管钱包的中文读者的公开笔记。写明作者身份、我为什么写、我怎么写、以及为什么这件事重要。" />
   <meta name="twitter:image" content="https://makoshan.github.io/usdthub/assets/og/default.png" />
@@ -65,7 +65,7 @@
       "description": "USDT HUB由 Mako Shan 维护——一份写给第一次接触 USDT / TRON / 自托管钱包的中文读者的公开笔记。写明作者身份、我为什么写、我怎么写、以及为什么这件事重要。",
       "inLanguage": "zh-CN",
       "url": "https://makoshan.github.io/usdthub/about.html",
-      "dateModified": "2026-04-15T16:20:16+08:00"
+      "dateModified": "2026-04-15T17:32:29+08:00"
     },
     {
       "@type": "BreadcrumbList",
@@ -75,12 +75,12 @@
           "@type": "ListItem",
           "position": 1,
           "name": "USDT HUB",
-          "item": "https://makoshan.github.io/usdthub/"
+          "item": "http://localhost:4001/usdthub/"
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "关于作者",
-          "item": "https://makoshan.github.io/usdthub/about.html"
+          "item": "http://localhost:4001/usdthub/about.html"
         }
       ]
     }
@@ -94,7 +94,7 @@
       
 <div class="site-header-shell">
   <nav class="site-nav" aria-label="Primary">
-    <a class="brand" href="/usdthub/index.html">USDT HUB</a>
+    <a class="brand" href="/usdthub/index.html">USDT 新手手册</a>
     <div class="site-nav-links">
       
       <a href="/usdthub/get.html">Get</a>
@@ -105,8 +105,6 @@
       
       <a href="/usdthub/tools.html">Tools</a>
       
-      <a href="/usdthub/blog.html">Blog</a>
-      
     </div>
   </nav>
 </div>
@@ -114,8 +112,8 @@
     </div>
   </header>
   <main class="site-main">
-    <div class="wrap">
-      <h1>关于作者 / About</h1>
+    <div class="wrap"><article>
+        <h1>关于作者 / About</h1>
 <div class="meta">About · 作者与动机</div>
 
 <div class="note"><strong>TL;DR</strong><br>
@@ -134,11 +132,11 @@
 
 <h2 id="why">我为什么写这个站</h2>
 
-<p>第一次用 USDT 的人，真正缺的<strong>不是买币链接，而是一段把路讲明白的中文</strong>。2024–2026 这几年，中文世界里的 USDT 资料普遍有三个问题：</p>
+<p>第一次用 USDT 的人，真正缺的是<strong>一段把路讲明白的中文</strong>。2024–2026 这几年，中文世界里的 USDT 资料普遍有三个问题：</p>
 
 <ul>
-  <li><strong>推广味太重</strong>——所有页面都在把你往某个注册返佣链接推，而不是在解释你在做什么；</li>
-  <li><strong>对中国大陆用户的现实问题避而不谈</strong>——支付风控、冻卡、问题资金、解释成本，这些才是真正会伤到新手的东西，而不是"手续费 0.1% 还是 0.15%"；</li>
+  <li><strong>推广味太重</strong>——所有页面都在把你往某个注册返佣链接推，很少有人在解释你在做什么；</li>
+  <li><strong>对中国大陆用户的现实问题避而不谈</strong>——支付风控、冻卡、问题资金、解释成本，这些才是真正会伤到新手的东西——"手续费 0.1% 还是 0.15%"反而没那么重要；</li>
   <li><strong>把复杂的东西讲得更复杂</strong>——硬件钱包、TRON 能量、TRC20 vs ERC20，这些概念其实都可以讲清楚，不需要夹杂行话。</li>
 </ul>
 
@@ -150,8 +148,8 @@
 
 <ul>
   <li><strong>先解释问题，再推荐工具</strong>——如果你看到我推荐某个钱包或平台，前面一定先讲了它适合谁、为什么适合、局限是什么。</li>
-  <li><strong>冷钱包、交易所、P2P 商家我都实际用过</strong>——不是拿来演示，而是我自己的真实使用场景。具体到某些细节我会注明数据来源（比如官方文档 / 我实测 / 朋友反馈）。</li>
-  <li><strong>每一次更新都有 git 记录</strong>——页面上显示的「最近更新」不是手写的日期，而是由构建脚本直接从 git log 读出来，不会出现「全站统一写成今天」这种粉饰更新频率的情况。</li>
+  <li><strong>冷钱包、交易所、P2P 商家我都实际用过</strong>——都是我自己的真实使用场景。具体到某些细节我会注明数据来源（比如官方文档 / 我实测 / 朋友反馈）。</li>
+  <li><strong>每一次更新都有 git 记录</strong>——页面上显示的「最近更新」由构建脚本直接从 git log 读出来，不会出现「全站统一写成今天」这种粉饰更新频率的情况。</li>
   <li><strong>YMYL 原则</strong>——加密 / 金融属于 Google「Your Money or Your Life」范畴，这类内容容错空间比普通话题小得多。凡涉及风险（冻卡、问题资金、私钥丢失、钓鱼授权），我都会写明风险边界，不会为了流量去掩饰。</li>
 </ul>
 
@@ -182,10 +180,10 @@
 
 <footer>返回：<a href="./index.html">USDT HUB首页</a> · <a href="./editorial-policy.html">Editorial Policy</a> · <a href="./how-we-review-wallets-and-apps.html">How We Review Wallets and Apps</a></footer>
 <div class="page-footer-meta" role="contentinfo">
-        最近更新 <time datetime="2026-04-15T16:20:16+08:00">2026-04-15</time> ·
-        <a href="/usdthub/about.html">作者</a> ·
-        <a href="/usdthub/editorial-policy.html">Editorial Policy</a>
-      </div></div>
+          最近更新 <time datetime="2026-04-15T17:32:29+08:00">2026-04-15</time> ·
+          <a href="/usdthub/about.html">作者</a> ·
+          <a href="/usdthub/editorial-policy.html">Editorial Policy</a>
+        </div></article></div>
   </main>
 </body>
 </html>

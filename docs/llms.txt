@@ -1,7 +1,7 @@
 
 # USDT HUB (usdthub)
 
-> 一份持续更新的中文 USDT 使用门户：围绕 Get、Transfer、Earn、Spend 和 Tools 五个一级入口组织内容，其中 Transfer 单独承接提币、转账、TRON 资源和手续费。由 Mako Shan 维护，GitHub 公开版本控制。不是投资建议，不是交易平台。
+> 一份持续更新的中文 USDT 使用门户：围绕 Get、Transfer、Earn、Spend 四个一级入口组织内容，其中 Transfer 单独承接提币、转账、TRON 资源和手续费。由 Mako Shan 维护，GitHub 公开版本控制。不是投资建议，不是交易平台。
 
 作者：Mako Shan · 仓库：https://github.com/makoshan/usdthub · 站点：https://makoshan.github.io/usdthub/
 
@@ -10,7 +10,6 @@
 - [Transfer](https://makoshan.github.io/usdthub/transfer.html): 交易所提币、钱包转账、TRON 能量、TRX 燃料与手续费
 - [Earn](https://makoshan.github.io/usdthub/earn.html): DeFi 收益、RWA、staking、freelance、cashback、prediction 的导航页
 - [Spend](https://makoshan.github.io/usdthub/spend.html): AI、礼品卡、VPN、旅行、虚拟卡与跨境消费
-- [Tools](https://makoshan.github.io/usdthub/tools.html): Gas Fees、Energy Calculator 和下一批选择器、对比器
 
 ## 核心概念 / Core concepts
 - [USDT 是什么](https://makoshan.github.io/usdthub/what-is-usdt.html): USDT 的定义、发行方 Tether、主要网络

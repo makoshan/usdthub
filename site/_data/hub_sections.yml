@@ -1,16 +1,14 @@
 brand:
-  name: "USDT Hub"
+  name: "USDT 新手手册"
   tagline: "一个持续更新的公开笔记。写给第一次接触 USDT、TRON、钱包和链上支付的人。"
-  description: "按任务分类，不绕弯子。首页保留 Get / Transfer / Earn / Spend / Tools 五个一级入口，把真正需要的文章、工具和外部参考直接摆出来。"
+  description: "按任务分类，不绕弯子。首页保留 Get / Transfer / Earn / Spend 四个一级入口，把真正需要的文章和外部参考直接摆出来。"
   ctas:
     - label: "Open Get"
       href: "/get.html"
-    - label: "Open Tools"
-      href: "/tools.html"
 
 sections:
   - id: "get"
-    label: "Get"
+    label: "入门"
     permalink: "/get.html"
     description: "从认识 USDT，到买到手、存住、避开中国用户最常见的坑。"
     items:
@@ -42,7 +40,7 @@ sections:
         href: "/binance-p2p-sell-usdt-freeze-risk.html"
 
   - id: "transfer"
-    label: "Transfer"
+    label: "转账"
     permalink: "/transfer.html"
     description: "交易所提币、钱包转账、链选择、TRON 资源和手续费。"
     items:
@@ -80,7 +78,7 @@ sections:
         href: "/how-to-reduce-trc20-usdt-fees.html"
 
   - id: "earn"
-    label: "Earn"
+    label: "增值"
     permalink: "/earn.html"
     description: "这一区先收成一个入口页，不在首页展开过多细节。"
     note: "这一区还在整理，先进 Earn 专题页看分类入口（DeFi yields、RWA、staking、freelance、cashback、prediction）。"
@@ -89,7 +87,7 @@ sections:
         href: "/earn.html#earn-overview"
 
   - id: "spend"
-    label: "Spend"
+    label: "使用"
     permalink: "/spend.html"
     description: "把 USDT 真正花出去：数字订阅、礼品卡、旅行、虚拟卡和跨境支付。"
     items:
@@ -107,17 +105,3 @@ sections:
         href: "/use-usdt-for-travel.html"
       - title: "用 USDT 做跨境小额结算前要先确认什么"
         href: "/use-usdt-for-cross-border-payments.html"
-
-  - id: "tools"
-    label: "Tools"
-    permalink: "/tools.html"
-    description: "该算的直接算，该比的直接比。"
-    items:
-      - title: "USDT 不同链转账手续费对比——比 TRC20 / ERC20 / BEP20 / Polygon / Solana / TON 的实际转账成本"
-        href: "/usdt-gas-fee-comparison.html"
-      - title: "TRON 能量计算器——质押多少 TRX、够转几笔 TRC20 USDT、差额多少"
-        href: "/tron-energy-calculator.html"
-      - title: "USDT vs USDC 对比——先学哪个 / 什么场景用哪个"
-        href: "/usdt-vs-usdc.html"
-      - title: "USDT 网络解释——TRC20 / ERC20 / BEP20 怎么选"
-        href: "/usdt-networks-explained.html"

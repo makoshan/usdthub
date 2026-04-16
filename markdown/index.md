@@ -1,20 +1,22 @@
 ---
-title: "USDT HUB"
+title: "USDT 新手手册"
 source_html: "index.html"
 ---
 
-# USDT HUB
+# USDT 新手手册
 
-> 一个持续更新的公开笔记。写给第一次接触 USDT、TRON、钱包和链上支付的人。
+> 一个持续更新的公开笔记。写给第一次接触 USDT、TRON、钱包和链上支付的人。这不是投资建议。
 
 我做这个手册，只想解决两类问题：
 
 - USDT 怎么买、怎么存、怎么转、怎么避坑。
 - USDT 除了放着，还能拿来做什么，比如 AI、旅游、eSIM、VPN 和跨境支付。
 
-> 这不是交易平台，也不是投资建议。我更关心的是：如果你第一次实际使用 USDT，应该先理解什么，先准备什么，哪里最容易翻车。很多站喜欢把你往开户链接和工具页推，我更想先把路讲明白。因为在这个领域里，真正贵的是你第一次就走错。
+> 先把丑话说前面。这不是交易平台，也不是投资建议。我写这些，不是为了劝你频繁操作，而是为了让你第一次动手时少交学费。这个领域里，最贵的通常不是那几块手续费，而是地址填错、网络选错、控制权没搞明白。
 
 ## 1. 章节
+
+如果你是第一次进来，不用从头读完。按你现在卡住的那一步看就行。
 
 ### 新手入门
 
@@ -22,7 +24,7 @@ source_html: "index.html"
 - [USDT 和 USDC 有什么区别](./usdt-vs-usdc.md)
 - [如何购买 Tether USDt（USDT）](./how-to-buy-usdt.md)
 - [怎么选钱包](./how-to-choose-a-wallet.md)
-- [冷钱包（硬件钱包）怎么选：Ledger / Trezor / OneKey](./cold-wallet-for-usdt-china.md)
+- [冷钱包（硬件钱包）怎么选：Ledger / Trezor / OneKey / imKey](./cold-wallet-for-usdt-china.md)
 - [怎么发送 USDT](./how-to-send-usdt.md)
 - [TRC20、ERC20、BEP20 有什么区别](./usdt-networks-explained.md)
 
@@ -38,15 +40,20 @@ source_html: "index.html"
 - [人在中国怎么买 USDT / BTC](./china-buy-crypto-notes.md)
 - [在中国买币最容易踩的 7 个坑](./china-7-common-mistakes.md)
 - [C2C / OTC 到底在怕什么](./china-c2c-otc-risks.md)
+- [币安 P2P 买卖 USDT 实操：神盾商家 + 防冻卡](./binance-p2p-usdt.md)
+- [币安 P2P 怎么买 USDT](./binance-p2p-buy-usdt.md)
+- [卖 USDT 怎么尽量降低冻卡风险](./binance-p2p-sell-usdt-freeze-risk.md)
 
 ### TRON / TRC20
 
 - [TRON 能量指南](./tron-energy-guide.md)
-- [为什么转 TRC20 USDT 要准备 TRX](./tron-basics.md)
+- [为什么转 TRC20 USDT 要准备 TRX](./why-you-need-trx-to-send-usdt.md)
 - [如何使用 USDT 购买 TRX](./how-to-buy-trx-with-usdt.md)
 - [TRON 带宽和能量是什么](./tron-bandwidth-and-energy.md)
 - [TRON 能量怎么获得](./how-to-get-tron-energy.md)
 - [TRC20 USDT 手续费怎么省](./how-to-reduce-trc20-usdt-fees.md)
+- [TRON 能量计算器](./tron-energy-calculator.md)
+- [USDT 不同链转账手续费对比](./usdt-gas-fee-comparison.md)
 
 ### 实际使用场景
 
@@ -58,7 +65,13 @@ source_html: "index.html"
 - [出国旅游时，USDT 有哪些实际用途](./use-usdt-for-travel.md)
 - [用 USDT 做跨境小额结算前要先确认什么](./use-usdt-for-cross-border-payments.md)
 
-## 2. 新手常用工具
+## 2. 最近更新
+
+- 首页结构恢复成 handbook 式目录，不再按 Get / Transfer / Earn / Spend / Tools 五段展开。
+- 保留原来的核心内容入口：新手入门、常见补充问题、中国用户现实问题、TRON / TRC20、实际使用场景。
+- TRON 计算器和手续费对比页仍然保留，但回到内容章节里作为工具型文章，而不是首页主结构。
+
+## 3. 常用外部 App 与工具
 
 | 工具类型 | 新手先用哪个 | 主要用来干什么 |
 | --- | --- | --- |
@@ -77,21 +90,12 @@ source_html: "index.html"
 
 ## 4. 最近更新
 
-- 新增：[USDT 和 USDC 有什么区别](./usdt-vs-usdc.md)，把“先学 USDT 还是 USDC”“两者分别适合什么场景”单独讲清楚。
-- 新增：[USDC 怎么换成 USDT](./how-to-swap-usdc-to-usdt.md)、[USDT 的 Memo、Tag、Label、Address Alias 是什么](./usdt-memo-tag-label-address-alias.md)、[Binance 里怎么接收、查看、划转 USDT](./binance-receive-view-transfer-usdt.md)，补上稳定币互换、术语和平台内基础操作。
-- 新增：[什么是 Flash USDT，为什么它基本都和骗局有关](./what-is-flash-usdt-scam.md)，单独做成反诈页，避免把灰产词混进正常教程里。
-- 新增：[如何使用 USDT 购买 TRX](./how-to-buy-trx-with-usdt.md)，补上“地址未激活 / TRX 不够付资源费时，怎么直接用 USDT 应急补 TRX”的实际操作路径。
-- 新增：[冷钱包（硬件钱包）怎么选](./cold-wallet-for-usdt-china.md)，基于中文视频整理 Ledger / Trezor / OneKey 对比、4 个评价维度、中国用户为什么优先 OneKey（国内直发不过海关）。
-- 新增：[没有外币信用卡，怎么用 U 币买苹果礼品卡](./buy-apple-gift-card-with-usdt.md)，把 `Bitrefill + USDT + Apple Gift Card` 这条更现实的替代路线单独讲清楚。
-- 新增：[imToken Card 能不能用来订阅 ChatGPT、海淘和国内支付](./imtoken-card-for-ai-payments.md)，拆解 `Fiat24` 路线和视频演示之间的共通逻辑与风险点。
-- 新增：[人在中国怎么买币](./china-buy-crypto-notes.md) 里的“怎么学习数字货币和投资”“社区 / 频道怎么选”两节。
-- 新增路线图与流程图：让首页和核心文章不只是文字堆叠。
-- 重写核心链路：[Start Here](./README.md)、[USDT 是什么](./what-is-usdt.md)、[如何购买 Tether USDt（USDT）](./how-to-buy-usdt.md)、[怎么发送 USDT](./how-to-send-usdt.md)、[TRC20、ERC20、BEP20 有什么区别](./usdt-networks-explained.md)。
-- 已整理：[中国用户现实说明](./china-buy-crypto-notes.md)、[TRON 能量指南](./tron-energy-guide.md)、[AI 支付](./use-usdt-for-ai.md)、[官方资料入口](./official-sources.md)。
+- 首页结构恢复成 handbook 式目录，不再按 Get / Transfer / Earn / Spend / Tools 五段展开。
+- 保留原来的核心内容入口：新手入门、常见补充问题、中国用户现实问题、TRON / TRC20、实际使用场景。
+- TRON 计算器和手续费对比页仍然保留，但回到内容章节里作为工具型文章，而不是首页主结构。
 
 ## 5. 下一步读什么
 
-- 先读：[Start Here](./README.md)
 - 如果你还没搞懂 USDT：先读 [USDT 是什么](./what-is-usdt.md)
 - 如果你现在就要开始：读 [怎么买 USDT](./how-to-buy-usdt.md)
 - 如果你人在中国大陆：先看 [现实说明](./china-buy-crypto-notes.md)

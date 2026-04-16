@@ -32,7 +32,7 @@ HOME_FILE = SITE_DIR / "index.html"
 SEO_EXEMPT = {"404.html"}
 
 REQUIRED_HOME_SNIPPETS = [
-    "USDT Hub",
+    "USDT 新手手册",
     "1. 章节",
     "2. 最近更新",
     "USDT 不同链转账手续费对比",

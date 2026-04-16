@@ -1,13 +1,14 @@
 # USDT HUB
 
-> 一个持续更新的中文 USDT 使用门户。围绕 `Get / Earn / Spend / Tools` 四个一级入口组织内容，写给第一次接触 USDT、TRON、钱包和链上支付的人。
+> 一个持续更新的中文 USDT 使用门户。围绕 `Get / Transfer / Earn / Spend / Tools` 五个一级入口组织内容，写给第一次接触 USDT、TRON、钱包和链上支付的人。
 >
 > 在线阅读（GitHub Pages）：https://makoshan.github.io/usdthub/
 > 作者：Mako Shan · [About](./markdown/about.md) · [Editorial Policy](./markdown/editorial-policy.md) · [LLM discovery](https://makoshan.github.io/usdthub/llms.txt)
 
 我做这个站，现在想解决五类问题：
 
-- `Get`：把认识 USDT、买币、提币、转账、钱包、TRON 能量和中国用户高频风险放到同一栏里。
+- `Get`：把认识 USDT、买币、钱包和中国用户高频风险放到同一栏里。
+- `Transfer`：把提币、转账、网络选择、TRON 资源和手续费单独拆成一栏。
 - `Earn`：USDT 持有后有哪些增值路径，哪些只是看起来像“收益”。
 - `Spend`：USDT 除了放着，还能拿来做什么，比如 AI、旅游、eSIM、VPN 和跨境支付。
 - `Tools`：哪些问题应该直接算、直接比，而不是靠印象判断。

@@ -18,12 +18,12 @@ class PortalStructureTest(unittest.TestCase):
         text = HUB_FILE.read_text(encoding="utf-8")
         for item in (
             'id: "get"',
+            'id: "transfer"',
             'id: "earn"',
             'id: "spend"',
             'id: "tools"',
         ):
             self.assertIn(item, text)
-        self.assertNotIn('id: "transfer"', text)
 
     def test_nav_uses_portal_sections_only(self):
         nav = NAV_FILE.read_text(encoding="utf-8")
@@ -44,6 +44,7 @@ class PortalStructureTest(unittest.TestCase):
         self.assertIn("3. 官方资料入口", html)
         self.assertIn("4. 最近更新", html)
         self.assertIn("Get", html)
+        self.assertIn("Transfer", html)
         self.assertIn("Earn", html)
         self.assertIn("Spend", html)
         self.assertIn("Tools", html)
@@ -51,23 +52,23 @@ class PortalStructureTest(unittest.TestCase):
         self.assertIn("这一区还在整理", html)
         self.assertIn("USDT 不同链转账手续费对比", html)
         self.assertNotIn("Blog", html)
-        self.assertNotIn("Transfer", html)
         self.assertNotIn("Latest updates", html)
         self.assertNotIn("Featured paths", html)
 
     def test_portal_landing_pages_exist(self):
-        for name in ("get", "earn", "spend", "tools"):
+        for name in ("get", "transfer", "earn", "spend", "tools"):
             path = ROOT / "site" / f"{name}.html"
             self.assertTrue(path.exists(), f"missing landing page: {name}.html")
-        self.assertFalse((ROOT / "site" / "transfer.html").exists())
 
     def test_section_pages_surface_existing_articles(self):
         hub_text = HUB_FILE.read_text(encoding="utf-8")
         get_html = (ROOT / "site/get.html").read_text(encoding="utf-8")
+        transfer_html = (ROOT / "site/transfer.html").read_text(encoding="utf-8")
         spend_html = (ROOT / "site/spend.html").read_text(encoding="utf-8")
         earn_html = (ROOT / "site/earn.html").read_text(encoding="utf-8")
         tools_html = (ROOT / "site/tools.html").read_text(encoding="utf-8")
         self.assertIn("section_id: get", get_html)
+        self.assertIn("section_id: transfer", transfer_html)
         self.assertIn("section_id: earn", earn_html)
         self.assertIn("section_id: spend", spend_html)
         self.assertIn("section_id: tools", tools_html)
@@ -83,7 +84,7 @@ class PortalStructureTest(unittest.TestCase):
     def test_readme_mentions_usdt_hub_portal(self):
         readme = README_FILE.read_text(encoding="utf-8")
         self.assertIn("USDT HUB", readme)
-        self.assertIn("Get / Earn / Spend / Tools", readme)
+        self.assertIn("Get / Transfer / Earn / Spend / Tools", readme)
 
 
 if __name__ == "__main__":

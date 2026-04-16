@@ -6,12 +6,13 @@ sitemap: false
 {% assign root_url = site.data.site_meta.site.url | append: site.data.site_meta.site.baseurl %}
 # USDT HUB (usdthub)
 
-> 一份持续更新的中文 USDT 使用门户：围绕 Get、Earn、Spend 和 Tools 四个一级入口组织内容，其中 Get 收拢了买币、提币、钱包、网络、TRON 资源和中国用户高频风险。由 Mako Shan 维护，GitHub 公开版本控制。不是投资建议，不是交易平台。
+> 一份持续更新的中文 USDT 使用门户：围绕 Get、Transfer、Earn、Spend 和 Tools 五个一级入口组织内容，其中 Transfer 单独承接提币、转账、TRON 资源和手续费。由 Mako Shan 维护，GitHub 公开版本控制。不是投资建议，不是交易平台。
 
 作者：Mako Shan · 仓库：https://github.com/makoshan/usdthub · 站点：{{ root_url }}/
 
 ## Portal / Sections
-- [Get]({{ root_url }}/get.html): 认识 USDT、买币、钱包、转账、TRON 能量、P2P 与中国用户风险
+- [Get]({{ root_url }}/get.html): 认识 USDT、买币、钱包、P2P 与中国用户风险
+- [Transfer]({{ root_url }}/transfer.html): 交易所提币、钱包转账、TRON 能量、TRX 燃料与手续费
 - [Earn]({{ root_url }}/earn.html): DeFi 收益、RWA、staking、freelance、cashback、prediction 的导航页
 - [Spend]({{ root_url }}/spend.html): AI、礼品卡、VPN、旅行、虚拟卡与跨境消费
 - [Tools]({{ root_url }}/tools.html): Gas Fees、Energy Calculator 和下一批选择器、对比器

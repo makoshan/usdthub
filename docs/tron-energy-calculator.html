@@ -11,7 +11,7 @@
   <meta property="og:locale" content="zh_CN" />
   <meta property="og:image" content="https://makoshan.github.io/usdthub/assets/og/default.png" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" /><meta property="article:published_time" content="2026-04-15T16:20:16+08:00" /><meta property="article:modified_time" content="2026-04-15T17:32:29+08:00" /><meta property="article:author" content="Mako Shan" />
+  <meta property="og:image:height" content="630" /><meta property="article:published_time" content="2026-04-15T16:20:16+08:00" /><meta property="article:modified_time" content="2026-04-16T09:39:00+08:00" /><meta property="article:author" content="Mako Shan" />
   <meta property="article:section" content="Tools · TRON Energy Calculator" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@makoshan" /><meta name="twitter:title" content="TRON 能量计算器：质押多少 TRX，够转几笔 USDT" />
   <meta name="twitter:description" content="按当前 TRON 网络快照直接计算：质押多少 TRX 大概能拿到多少能量、够不够转 1 笔 / N 笔 TRC20 USDT、不够还差多少。" />
   <meta name="twitter:image" content="https://makoshan.github.io/usdthub/assets/og/default.png" />
@@ -67,7 +67,7 @@
       "url": "https://makoshan.github.io/usdthub/tron-energy-calculator.html",
       "image": "https://makoshan.github.io/usdthub/assets/og/default.png",
       "datePublished": "2026-04-15T16:20:16+08:00",
-      "dateModified": "2026-04-15T17:32:29+08:00",
+      "dateModified": "2026-04-16T09:39:00+08:00",
       "author": { "@id": "https://makoshan.github.io/usdthub/about.html#person" },
       "publisher": { "@id": "https://makoshan.github.io/usdthub/#organization" },
       "articleSection": "Tools · TRON Energy Calculator"
@@ -107,7 +107,7 @@
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock"
       },
-      "dateModified": "2026-04-15T17:32:29+08:00"
+      "dateModified": "2026-04-16T09:39:00+08:00"
     }
   ]
 }
@@ -123,6 +123,8 @@
     <div class="site-nav-links">
       
       <a href="/usdthub/get.html">Get</a>
+      
+      <a href="/usdthub/transfer.html">Transfer</a>
       
       <a href="/usdthub/earn.html">Earn</a>
       
@@ -270,7 +272,7 @@
 <script id="usdt-fee-tool-data" type="application/json">{"lastUpdated":"2026-04-15","profiles":[{"id":"low","label":"低费时段","description":"链上活动较少时更常见的参考值"},{"id":"typical","label":"常见时段","description":"更适合作为默认判断的中位参考值"},{"id":"high","label":"高位估算","description":"拥堵、风控或资源未准备时更接近的高位值"}],"sources":[{"label":"Tether Transparency","url":"https://tether.to/en/transparency/"},{"label":"Etherscan Gas Tracker","url":"https://etherscan.io/gastracker"},{"label":"Polygon Gas Station","url":"https://gasstation.polygon.technology/"},{"label":"TronScan","url":"https://tronscan.org/"},{"label":"TON Scan","url":"https://tonscan.org/"}],"networks":[{"id":"trc20","name":"TRC20","family":"TRON","gasToken":"TRX","addressHint":"T 开头，34 位","speed":"~3 秒出块，通常 1 分钟内确认","feeUsd":{"low":0.9,"typical":1.3,"high":4.2},"bestFor":"交易所提币、C2C 常见收款、对方明确要 TRON 路线时","watchFor":"没有租能量或没有准备 TRX 时，实际成本会直接跳高","supportsSmallTransfers":false},{"id":"erc20","name":"ERC20","family":"Ethereum","gasToken":"ETH","addressHint":"0x 开头，42 位","speed":"~12 秒出块，几分钟到十几分钟更稳","feeUsd":{"low":0.15,"typical":0.7,"high":7.0},"bestFor":"要接以太坊 DeFi、合约交互、大额结算","watchFor":"高峰波动最大，交易所提现费也常比链上 gas 高","supportsSmallTransfers":false},{"id":"bep20","name":"BEP20","family":"BNB Smart Chain","gasToken":"BNB","addressHint":"0x 开头，42 位","speed":"~3 秒","feeUsd":{"low":0.02,"typical":0.08,"high":0.35},"bestFor":"币安生态内流转、想压低成本但仍走 EVM 链时","watchFor":"和 ERC20 地址格式一样，最容易只看 0x 就发错链","supportsSmallTransfers":true},{"id":"polygon","name":"Polygon","family":"Polygon PoS","gasToken":"POL","addressHint":"0x 开头，42 位","speed":"~2 秒","feeUsd":{"low":0.003,"typical":0.01,"high":0.08},"bestFor":"小额转账、对方支持 Polygon 时的低成本路线","watchFor":"不是所有交易所或商家都默认支持，先确认收款方","supportsSmallTransfers":true},{"id":"solana","name":"Solana","family":"Solana","gasToken":"SOL","addressHint":"Base58，32-44 位","speed":"< 1 秒体感，几秒内基本可见","feeUsd":{"low":0.001,"typical":0.002,"high":0.02},"bestFor":"高频小额、对方已经在 Solana 生态里时","watchFor":"地址格式和 EVM / TRON 完全不同，新手先小额测试","supportsSmallTransfers":true},{"id":"ton","name":"TON","family":"The Open Network","gasToken":"TON","addressHint":"EQ / UQ 开头","speed":"~5 秒","feeUsd":{"low":0.003,"typical":0.01,"high":0.05},"bestFor":"Telegram 场景、对方已明确用 TON 钱包时","watchFor":"对中国新手仍偏陌生，不要默认所有钱包或交易所都支持","supportsSmallTransfers":true}],"tronEnergy":{"lastUpdated":"2026-04-15","dailyEnergySupply":180000000000,"burnPriceSun":100,"transferEnergy":{"oldAddress":65000,"newAddress":130000},"networkSnapshot":{"source":"https://api.trongrid.io/wallet/getaccountresource","sampleAddress":"T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb","totalEnergyLimit":180000000000,"totalEnergyWeight":19552985115,"energyPerTrx":9.206,"capturedAt":"2026-04-15"},"modes":{"current":{"label":"当前网络快照","energyPerTrx":9.206,"description":"按 TRON 当前网络总能量和总质押权重快照反推"},"safe":{"label":"保守估算","energyPerTrx":8.285,"description":"在当前快照基础上预留约 10% 安全边际"}},"trxdefiRental":{"provider":"TRXDeFi","endpoint":"https://app-api.trxdefi.ai/openapi/tron/energy/order/batchPay","energyQuantityField":"payNums","minimumRentHours":1},"sources":[{"label":"TRON Resource Model","url":"https://developers.tron.network/docs/resource-model"},{"label":"TRON Staking on the Network","url":"https://developers.tron.network/docs/staking-on-tron-network"},{"label":"TRON Resource Calculator (TronStation)","url":"https://developers.tron.network/docs/tronstation"},{"label":"TRON getaccountresource API","url":"https://api.trongrid.io/wallet/getaccountresource"},{"label":"TRXDeFi Energy Order","url":"https://trxdefi.gitbook.io/trxdefi-en/energy-order"},{"label":"imToken TRON Fee Reduction Notice","url":"https://support.token.im/hc/en-us/articles/50231479330585-TRON-Network-Transaction-Fee-Reduction-Notice"},{"label":"imToken Transaction Failed After Freezing TRX","url":"https://support.token.im/hc/en-us/articles/4591618892185-Transaction-Failed-After-Freezing-TRX"}]}}</script>
 <script src="/usdthub/assets/js/usdt-fee-tool.js"></script>
 <div class="page-footer-meta" role="contentinfo">
-          最近更新 <time datetime="2026-04-15T17:32:29+08:00">2026-04-15</time> ·
+          最近更新 <time datetime="2026-04-16T09:39:00+08:00">2026-04-16</time> ·
           <a href="/usdthub/about.html">作者</a> ·
           <a href="/usdthub/editorial-policy.html">Editorial Policy</a>
         </div></article></div>

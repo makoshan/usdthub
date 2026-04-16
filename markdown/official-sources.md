@@ -49,7 +49,7 @@ source_html: "official-sources.html"
 - [imToken 帮助中心](https://support.token.im/hc/zh-cn)
 - [TronScan](https://tronscan.org/)：任何一笔 TRON 交易，最终都建议回到链上自己查 TxID
 
-> 提醒：任何要求你提供助记词、私钥、Keystore 的“客服”“租能量服务”“钱包恢复助手”，都不是资料入口，是钓鱼入口。官方资料页最多让你登录账户，不会让你把钱包控制权交出去。
+> 提醒：任何要求你提供助记词、私钥、Keystore 的“客服”“租能量服务”“钱包恢复助手”，都是钓鱼入口。官方资料页最多让你登录账户，不会让你把钱包控制权交出去。
 
 ## 上一篇 / 返回
 

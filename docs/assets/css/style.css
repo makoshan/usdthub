@@ -52,6 +52,20 @@ h3 {
   margin: 24px 0 8px;
 }
 
+.home-section-heading {
+  font-size: clamp(24px, 3.5vw, 32px);
+  line-height: 1.2;
+  margin-top: 30px;
+}
+
+.home-intro-heading {
+  font-size: 17px;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+  font-weight: 400;
+  margin: 0 0 4px;
+}
+
 p { margin: 0 0 14px; }
 ul, ol { margin: 10px 0 16px 22px; }
 li { margin: 6px 0; }

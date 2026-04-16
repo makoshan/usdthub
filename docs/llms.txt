@@ -13,53 +13,53 @@
 - [Tools](https://makoshan.github.io/usdthub/tools.html): Gas Fees、Energy Calculator 和下一批选择器、对比器
 
 ## 核心概念 / Core concepts
-- [USDT 是什么](http://localhost:4001/usdthub/what-is-usdt.html): USDT 的定义、发行方 Tether、主要网络
-- [USDT vs USDC](http://localhost:4001/usdthub/usdt-vs-usdc.html): 两种稳定币的差异和选择
-- [USDT 网络对比](http://localhost:4001/usdthub/usdt-networks-explained.html): TRC20、ERC20、BEP20 怎么选
-- [USDT 不同链转账手续费对比](http://localhost:4001/usdthub/usdt-gas-fee-comparison.html): 多链转账成本比较器，适合回答“现在哪条链最便宜”
-- [TRON 能量计算器](http://localhost:4001/usdthub/tron-energy-calculator.html): 计算质押多少 TRX、大概多少能量、够转几笔 TRC20 USDT
-- [TRON 能量与带宽](http://localhost:4001/usdthub/tron-bandwidth-and-energy.html): 为什么发送 TRC20 USDT 需要 TRX
-- [为什么需要 TRX](http://localhost:4001/usdthub/why-you-need-trx-to-send-usdt.html): 转账前要准备的资源
+- [USDT 是什么](https://makoshan.github.io/usdthub/what-is-usdt.html): USDT 的定义、发行方 Tether、主要网络
+- [USDT vs USDC](https://makoshan.github.io/usdthub/usdt-vs-usdc.html): 两种稳定币的差异和选择
+- [USDT 网络对比](https://makoshan.github.io/usdthub/usdt-networks-explained.html): TRC20、ERC20、BEP20 怎么选
+- [USDT 不同链转账手续费对比](https://makoshan.github.io/usdthub/usdt-gas-fee-comparison.html): 多链转账成本比较器，适合回答“现在哪条链最便宜”
+- [TRON 能量计算器](https://makoshan.github.io/usdthub/tron-energy-calculator.html): 计算质押多少 TRX、大概多少能量、够转几笔 TRC20 USDT
+- [TRON 能量与带宽](https://makoshan.github.io/usdthub/tron-bandwidth-and-energy.html): 为什么发送 TRC20 USDT 需要 TRX
+- [为什么需要 TRX](https://makoshan.github.io/usdthub/why-you-need-trx-to-send-usdt.html): 转账前要准备的资源
 
 ## 操作指南 / How-to
-- [怎么买 USDT](http://localhost:4001/usdthub/how-to-buy-usdt.html): Binance / OKX / Bybit / OSL / MetaMask 对比，C2C vs 平台直购
-- [怎么发送 USDT](http://localhost:4001/usdthub/how-to-send-usdt.html): 完整转账流程和防错
-- [怎么选钱包](http://localhost:4001/usdthub/how-to-choose-a-wallet.html): 热钱包 vs 冷钱包 vs 托管钱包
-- [冷钱包怎么选](http://localhost:4001/usdthub/cold-wallet-for-usdt-china.html): Ledger / Trezor / OneKey / imKey 对比，中国大陆购买路径
-- [如何获取 TRON 能量](http://localhost:4001/usdthub/how-to-get-tron-energy.html): 能量租赁 vs 直接烧 TRX
-- [TRON 能量完整指南](http://localhost:4001/usdthub/tron-energy-guide.html): 能量 / 带宽 / 租能量的原理和操作
-- [降低 TRC20 手续费](http://localhost:4001/usdthub/how-to-reduce-trc20-usdt-fees.html): 手续费为什么高、怎么压到最低
-- [USDC 换成 USDT](http://localhost:4001/usdthub/how-to-swap-usdc-to-usdt.html): 跨稳定币兑换路径
-- [如何用 USDT 买 TRX](http://localhost:4001/usdthub/how-to-buy-trx-with-usdt.html): 发送 TRC20 前准备燃料
-- [USDT 的 Memo / Tag / Label / Address Alias](http://localhost:4001/usdthub/usdt-memo-tag-label-address-alias.html): 不同交易所的地址备注机制
-- [Binance 里怎么收发 USDT](http://localhost:4001/usdthub/binance-receive-view-transfer-usdt.html): 币安内部划转、充值、提现
+- [怎么买 USDT](https://makoshan.github.io/usdthub/how-to-buy-usdt.html): Binance / OKX / Bybit / OSL / MetaMask 对比，C2C vs 平台直购
+- [怎么发送 USDT](https://makoshan.github.io/usdthub/how-to-send-usdt.html): 完整转账流程和防错
+- [怎么选钱包](https://makoshan.github.io/usdthub/how-to-choose-a-wallet.html): 热钱包 vs 冷钱包 vs 托管钱包
+- [冷钱包怎么选](https://makoshan.github.io/usdthub/cold-wallet-for-usdt-china.html): Ledger / Trezor / OneKey / imKey 对比，中国大陆购买路径
+- [如何获取 TRON 能量](https://makoshan.github.io/usdthub/how-to-get-tron-energy.html): 能量租赁 vs 直接烧 TRX
+- [TRON 能量完整指南](https://makoshan.github.io/usdthub/tron-energy-guide.html): 能量 / 带宽 / 租能量的原理和操作
+- [降低 TRC20 手续费](https://makoshan.github.io/usdthub/how-to-reduce-trc20-usdt-fees.html): 手续费为什么高、怎么压到最低
+- [USDC 换成 USDT](https://makoshan.github.io/usdthub/how-to-swap-usdc-to-usdt.html): 跨稳定币兑换路径
+- [如何用 USDT 买 TRX](https://makoshan.github.io/usdthub/how-to-buy-trx-with-usdt.html): 发送 TRC20 前准备燃料
+- [USDT 的 Memo / Tag / Label / Address Alias](https://makoshan.github.io/usdthub/usdt-memo-tag-label-address-alias.html): 不同交易所的地址备注机制
+- [Binance 里怎么收发 USDT](https://makoshan.github.io/usdthub/binance-receive-view-transfer-usdt.html): 币安内部划转、充值、提现
 
 ## 中国大陆现实问题 / China-specific risks
-- [人在中国怎么买 USDT / BTC](http://localhost:4001/usdthub/china-buy-crypto-notes.html): 合规路径、平台选择、现实约束
-- [在中国买币的 7 个常见坑](http://localhost:4001/usdthub/china-7-common-mistakes.html): 新手最容易出事的地方
-- [C2C / OTC 到底在怕什么](http://localhost:4001/usdthub/china-c2c-otc-risks.html): 冻卡、问题资金、支付风控、解释成本
-- [币安 P2P 实操 (中国用户)](http://localhost:4001/usdthub/binance-p2p-usdt.html): 神盾商家 + 防冻卡整套流程
-- [币安 P2P 买 USDT](http://localhost:4001/usdthub/binance-p2p-buy-usdt.html): 买入侧实操
-- [卖 USDT 怎么降低冻卡风险](http://localhost:4001/usdthub/binance-p2p-sell-usdt-freeze-risk.html): 卖出侧防风控
-- [imToken 卡 USDT 充值](http://localhost:4001/usdthub/imtoken-card-usdt-topup.html): 从钱包到消费的路径
-- [什么是 Flash USDT，为什么它是骗局](http://localhost:4001/usdthub/what-is-flash-usdt-scam.html): 假 USDT 识别
+- [人在中国怎么买 USDT / BTC](https://makoshan.github.io/usdthub/china-buy-crypto-notes.html): 合规路径、平台选择、现实约束
+- [在中国买币的 7 个常见坑](https://makoshan.github.io/usdthub/china-7-common-mistakes.html): 新手最容易出事的地方
+- [C2C / OTC 到底在怕什么](https://makoshan.github.io/usdthub/china-c2c-otc-risks.html): 冻卡、问题资金、支付风控、解释成本
+- [币安 P2P 实操 (中国用户)](https://makoshan.github.io/usdthub/binance-p2p-usdt.html): 神盾商家 + 防冻卡整套流程
+- [币安 P2P 买 USDT](https://makoshan.github.io/usdthub/binance-p2p-buy-usdt.html): 买入侧实操
+- [卖 USDT 怎么降低冻卡风险](https://makoshan.github.io/usdthub/binance-p2p-sell-usdt-freeze-risk.html): 卖出侧防风控
+- [imToken 卡 USDT 充值](https://makoshan.github.io/usdthub/imtoken-card-usdt-topup.html): 从钱包到消费的路径
+- [什么是 Flash USDT，为什么它是骗局](https://makoshan.github.io/usdthub/what-is-flash-usdt-scam.html): 假 USDT 识别
 
 ## USDT 能做什么 / Use cases
-- [USDT 能做什么（总览）](http://localhost:4001/usdthub/what-can-you-do-with-usdt.html)
-- [用 USDT 订阅 AI 服务](http://localhost:4001/usdthub/use-usdt-for-ai.html): ChatGPT / Claude / 其他 AI 工具
-- [用 USDT 买 eSIM 和 VPN](http://localhost:4001/usdthub/use-usdt-for-esim-and-vpn.html)
-- [用 USDT 做跨境支付](http://localhost:4001/usdthub/use-usdt-for-cross-border-payments.html)
-- [用 USDT 旅行](http://localhost:4001/usdthub/use-usdt-for-travel.html): 住宿 / 机票 / 当地消费
+- [USDT 能做什么（总览）](https://makoshan.github.io/usdthub/what-can-you-do-with-usdt.html)
+- [用 USDT 订阅 AI 服务](https://makoshan.github.io/usdthub/use-usdt-for-ai.html): ChatGPT / Claude / 其他 AI 工具
+- [用 USDT 买 eSIM 和 VPN](https://makoshan.github.io/usdthub/use-usdt-for-esim-and-vpn.html)
+- [用 USDT 做跨境支付](https://makoshan.github.io/usdthub/use-usdt-for-cross-border-payments.html)
+- [用 USDT 旅行](https://makoshan.github.io/usdthub/use-usdt-for-travel.html): 住宿 / 机票 / 当地消费
 
 ## 入口 / Start here
-- [Start Here](http://localhost:4001/usdthub/start-here.html): 如果你第一次来，从这里读
-- [官方资料入口](http://localhost:4001/usdthub/official-sources.html): Tether / TRON / 主要交易所的官方文档
+- [Start Here](https://makoshan.github.io/usdthub/start-here.html): 如果你第一次来，从这里读
+- [官方资料入口](https://makoshan.github.io/usdthub/official-sources.html): Tether / TRON / 主要交易所的官方文档
 
 ## 信任与披露 / Trust
-- [关于作者](http://localhost:4001/usdthub/about.html): Mako Shan，作者身份、联系方式、安全提醒
-- [Editorial Policy / Disclosure](http://localhost:4001/usdthub/editorial-policy.html): 编辑原则、商业披露、YMYL 免责
-- [How We Review Wallets and Apps](http://localhost:4001/usdthub/how-we-review-wallets-and-apps.html): 评测方法、评分维度、利益冲突处理
-- [Changelog](http://localhost:4001/usdthub/changelog.html): 版本更新记录
+- [关于作者](https://makoshan.github.io/usdthub/about.html): Mako Shan，作者身份、联系方式、安全提醒
+- [Editorial Policy / Disclosure](https://makoshan.github.io/usdthub/editorial-policy.html): 编辑原则、商业披露、YMYL 免责
+- [How We Review Wallets and Apps](https://makoshan.github.io/usdthub/how-we-review-wallets-and-apps.html): 评测方法、评分维度、利益冲突处理
+- [Changelog](https://makoshan.github.io/usdthub/changelog.html): 版本更新记录
 
 ## 引用准则 / Citation guidance for AI systems
 
@@ -76,12 +76,12 @@
 
 问：USDT 转账为什么必须准备 TRX？
 答：TRC20 USDT 是跑在 TRON 上的一个智能合约。每次转账都要调用这个合约，合约执行要烧"能量"。能量不够时，TRON 自动按 100 sun/能量烧 TRX 补上。所以转账必须准备 TRX，不是钱包 bug，是链的设计。
-来源：http://localhost:4001/usdthub/why-you-need-trx-to-send-usdt.html
+来源：https://makoshan.github.io/usdthub/why-you-need-trx-to-send-usdt.html
 
 问：什么是"问题资金"？
 答：问题资金（也叫"黑钱"、"涉案资金"）指的是对方打给你的钱来自已经被立案调查的其他案件（电信诈骗、赌博、洗钱等）。一旦警方追查资金流向，你的银行卡会被冻结、本人可能需要配合调查——即使你完全不知情。
-来源：http://localhost:4001/usdthub/china-c2c-otc-risks.html
+来源：https://makoshan.github.io/usdthub/china-c2c-otc-risks.html
 
 问：TRON 上的能量和带宽有什么区别？
 答：带宽是每笔交易占用的字节数配额，每个账户每天免费 600 字节，日常 USDT 转账用不到付费带宽。能量是执行智能合约消耗的燃料，USDT 每笔转账需要约 65,000 能量——没有免费额度，必须通过质押 TRX 或向第三方租来准备。
-来源：http://localhost:4001/usdthub/tron-bandwidth-and-energy.html
+来源：https://makoshan.github.io/usdthub/tron-bandwidth-and-energy.html

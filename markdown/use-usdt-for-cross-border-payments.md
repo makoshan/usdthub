@@ -7,7 +7,7 @@ source_html: "use-usdt-for-cross-border-payments.html"
 
 > Use Case · Cross-border Payments
 
-USDT 适合做跨境小额结算，不是因为它神奇，而是在某些场景里它的路径更直接。但“能不能结算”远不止链上这一步。
+USDT 适合做跨境小额结算，因为在某些场景里它的路径更直接。但“能不能结算”远不止链上这一步。
 
 > TL;DR 跨境小额结算前先确认四件事：双方说的是不是同一条链、对方真能收这类资产、后续怎么落地用、当地规则和服务条款是否允许。
 

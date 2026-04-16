@@ -119,9 +119,25 @@ font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
 9. Hero 文案「Welcome to X / Unlock the power of...」
 10. Hero → 3 features → 测评 → 价格 → CTA 同质节奏
 
+## 内容语气（talk-normal 规则）
+
+基于 [talk-normal](https://github.com/hexiecs/talk-normal) v0.6.2，2026-04-16 起全站执行。
+
+**硬规则——写新内容和编辑旧内容时都必须遵守：**
+
+1. **禁止「不是X而是Y」否定对比句式。** 所有变体都禁：「不是X，而是Y」「X，而不是Y」「不是A，不是B，而是C」。直接说正面结论。如果被否定的那半句承载读者常见误解，拆成两个正面短句。
+2. **禁止 summary stamp 结尾。** 「一句话总结」「综上所述」「总而言之」「简而言之」——去掉标签，直接说最后一句话。
+3. **禁止 filler 开头。** 「值得注意的是」「首先我们需要」「让我们一起来看看」——删掉，直接进内容。
+4. **禁止「翻成人话」重述。** 已经说清楚的内容不要用「简单来说」「换句话说」再重复一遍。
+5. **禁止条件式 menu 结尾。** 「如果你愿意，我还可以...」「如果你告诉我X，我就Y」——删。
+6. **PM 腔禁令。** 「按任务入口分X类」「拆成独立入口」「降低...成本」「看分类入口」——这是产品文档的语气，手册不用。直接说内容是什么。
+
+**语气标准：** 像一个用过这些东西的人在跟朋友讲，不像一个产品经理在写 PRD。短句优先。能删的字都删。
+
 ## 流程约定
 
 - 新文章一律用 `site/_layouts/default.html` 布局，不要写自定义 HTML 壳。
 - 如需新 CSS 类，**先在 `site/assets/css/style.css` 里定义**，再在文章里用。规则：如果写 HTML 时引用了一个类，它必须已经在 CSS 里存在。
 - `site/assets/css/style.css` 是 master，`docs/assets/css/style.css` 由 Jekyll build 生成或手动同步。
 - 超过 5 个 H2 的长文**必须**在顶部加 `.toc`，并为每个 H2 添加 id（kebab-case 英文 slug）。
+- **构建必须用** `JEKYLL_ENV=production bundle exec jekyll build`。`jekyll serve` 会把 `site.url` 覆盖为 `localhost:4000`，污染 canonical / OG / sitemap / llms.txt。pre-push hook 会拦截带 localhost 的 docs/ 提交。

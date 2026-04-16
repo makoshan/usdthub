@@ -37,8 +37,9 @@ class PortalStructureTest(unittest.TestCase):
     def test_homepage_contains_portal_sections(self):
         html = INDEX_FILE.read_text(encoding="utf-8")
         hub_text = HUB_FILE.read_text(encoding="utf-8")
-        self.assertIn("USDT 新手手册", html)
-        self.assertIn("写给第一次碰 USDT、TRON、钱包和链上转账的人。", html)
+        self.assertIn("个人经验分享", html)
+        self.assertIn("写给第一次碰 USDT、TRON、钱包的人。", html)
+        self.assertIn("这里主要记我自己一路用下来留下来的经验。怎么买 USDT，怎么存 USDT，怎么转 USDT；以及拿到 USDT 以后，它到底还能怎么用", html)
         self.assertIn("1. 章节", html)
         self.assertIn("2. 最近更新", html)
         self.assertIn("Get", html)
@@ -54,6 +55,9 @@ class PortalStructureTest(unittest.TestCase):
         self.assertNotIn("官方资料入口", html)
         self.assertNotIn("Latest updates", html)
         self.assertNotIn("Featured paths", html)
+        self.assertNotIn("TRON / TRC20", html)
+        self.assertNotIn("<h1>USDT Hub</h1>", html)
+        self.assertNotIn("写给第一次碰 USDT、TRON、钱包和链上转账的人。", html)
 
     def test_portal_landing_pages_exist(self):
         for name in ("get", "transfer", "earn", "spend", "tools"):
